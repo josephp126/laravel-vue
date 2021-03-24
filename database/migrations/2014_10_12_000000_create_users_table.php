@@ -13,29 +13,30 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'users',
+            function (Blueprint $table) {
+                $table->id();
 
-            $table->string('Firstname');
-            $table->string('Lastname');
-            $table->string('Username');
-            $table->string('Password');
-            $table->string('Email');
-            $table->string('IsActive');
-            $table->string('DateJoined');
-            $table->string('Guid');
-            $table->string('Address');
-            $table->string('ZIP')
-            $table->string('City');
-            $table->string('Phone');
+                $table->string('first_name');
+                $table->string('last_name');
+                $table->string('username');
+                $table->string('password');
+                $table->string('email');
+                $table->string('is_active');
+                $table->string('date_joined');
+                $table->string('guid');
+                $table->string('phone');
 
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->string('email')->unique();
+                $table->timestamp('email_verified_at')->nullable();
+                $table->string('password');
+
+                $table->rememberToken();
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

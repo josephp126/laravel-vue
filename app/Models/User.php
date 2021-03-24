@@ -12,8 +12,6 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable, SoftDeletes;
 
-    protected $table = 'user';
-
     /**
      * The attributes that are mass assignable.
      *
