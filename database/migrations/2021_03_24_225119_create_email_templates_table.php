@@ -13,14 +13,18 @@ class CreateEmailTemplatesTable extends Migration
      */
     public function up()
     {
-        Schema::create('email_templates', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'email_templates',
+            function (Blueprint $table) {
+                $table->id();
 
-            // TODO :: fill out migration for the table email_templates
+                $table->string('name');
+                $table->longText('content');
 
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

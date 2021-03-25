@@ -13,14 +13,20 @@ class CreateResourcesTable extends Migration
      */
     public function up()
     {
-        Schema::create('resources', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'resources',
+            function (Blueprint $table) {
+                $table->id();
 
-            // TODO :: fill out migration for the table resources
+                $table->string('user_id');
+                $table->string('title');
+                $table->string('filename');
+                $table->string('resource_type_id');
 
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

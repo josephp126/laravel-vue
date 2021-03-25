@@ -13,14 +13,18 @@ class CreateAttributesTable extends Migration
      */
     public function up()
     {
-        Schema::create('attributes', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'attributes',
+            function (Blueprint $table) {
+                $table->id();
 
-            // TODO :: fill out migration for the table attributes
+                $table->string('name');
+                $table->string('attribute_type_id');
 
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

@@ -13,14 +13,18 @@ class CreateResourceGroupsTable extends Migration
      */
     public function up()
     {
-        Schema::create('resource_groups', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'resource_groups',
+            function (Blueprint $table) {
+                $table->id();
 
-            // TODO :: fill out migration for the table resource_groups
+                $table->string('AAA');
+                // TODO :: fill out migration for the table resource_groups
 
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

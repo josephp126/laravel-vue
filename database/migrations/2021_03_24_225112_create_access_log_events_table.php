@@ -13,14 +13,17 @@ class CreateAccessLogEventsTable extends Migration
      */
     public function up()
     {
-        Schema::create('access_log_events', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'access_log_events',
+            function (Blueprint $table) {
+                $table->id();
 
-            $table->string('name');
+                $table->string('name');
 
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

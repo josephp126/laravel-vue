@@ -13,14 +13,18 @@ class CreateCategoryResourcesTable extends Migration
      */
     public function up()
     {
-        Schema::create('category_resources', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'category_resources',
+            function (Blueprint $table) {
+                $table->id();
 
-            // TODO :: fill out migration for the table category_resources
+                $table->unsignedBigInteger('category_id');
+                $table->unsignedBigInteger('resource_id');
 
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

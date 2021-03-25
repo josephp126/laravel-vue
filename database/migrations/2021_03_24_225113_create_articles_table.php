@@ -13,14 +13,20 @@ class CreateArticlesTable extends Migration
      */
     public function up()
     {
-        Schema::create('articles', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'articles',
+            function (Blueprint $table) {
+                $table->id();
 
-            // TODO :: fill out migration for the table articles
+                $table->string('link');
+                $table->string('content');
+                $table->string('title');
+                $table->boolean('is_active');
 
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

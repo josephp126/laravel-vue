@@ -13,14 +13,18 @@ class CreateCategoryImagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('category_images', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'category_images',
+            function (Blueprint $table) {
+                $table->id();
 
-            // TODO :: fill out migration for the table category_images
+                $table->unsignedBigInteger('category_id');
+                $table->unsignedBigInteger('image_id');
 
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

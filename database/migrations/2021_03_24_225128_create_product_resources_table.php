@@ -13,14 +13,18 @@ class CreateProductResourcesTable extends Migration
      */
     public function up()
     {
-        Schema::create('product_resources', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'product_resources',
+            function (Blueprint $table) {
+                $table->id();
 
-            // TODO :: fill out migration for the table product_resources
+                $table->string('product_id');
+                $table->string('resource_id');
 
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

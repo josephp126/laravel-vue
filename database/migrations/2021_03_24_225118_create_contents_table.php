@@ -13,14 +13,19 @@ class CreateContentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('contents', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'contents',
+            function (Blueprint $table) {
+                $table->id();
 
-            // TODO :: fill out migration for the table contents
+                $table->string('title');
+                $table->string('link');
+                $table->string('content');
 
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

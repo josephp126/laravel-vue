@@ -13,14 +13,18 @@ class CreateSlidesTable extends Migration
      */
     public function up()
     {
-        Schema::create('slides', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'slides',
+            function (Blueprint $table) {
+                $table->id();
 
-            // TODO :: fill out migration for the table slides
+                $table->string('link');
+                $table->string('filename');
 
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

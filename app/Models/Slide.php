@@ -13,12 +13,13 @@ class Slide extends Model
 {
     use HasFactory, SoftDeletes;
 
-        /**
-         * The attributes that are mass assignable.
-         *
-         * @var array
-         */
-        protected $fillable = [
-            //TODO :: add columns here
-        ];
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'link',
+'filename',
+    ];
 }

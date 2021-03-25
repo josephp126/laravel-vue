@@ -13,18 +13,21 @@ class CreateAccessLogsTable extends Migration
      */
     public function up()
     {
-        Schema::create('access_logs', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'access_logs',
+            function (Blueprint $table) {
+                $table->id();
 
-            $table->string('user_id');
-            $table->string('event_id');
-            $table->string('entity_id');
+                $table->string('user_id');
+                $table->string('event_id');
+                $table->string('entity_id');
 
-            $table->nullableMorphs('accessable');
+                $table->nullableMorphs('accessable');
 
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

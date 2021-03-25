@@ -13,14 +13,19 @@ class CreateEventsTable extends Migration
      */
     public function up()
     {
-        Schema::create('events', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'events',
+            function (Blueprint $table) {
+                $table->id();
 
-            // TODO :: fill out migration for the table events
+                $table->string('name');
+                $table->string('description');
+                $table->dateTime('start_at')->comment('event date and time');
 
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

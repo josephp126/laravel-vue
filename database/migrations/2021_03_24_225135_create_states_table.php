@@ -13,14 +13,20 @@ class CreateStatesTable extends Migration
      */
     public function up()
     {
-        Schema::create('states', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'states',
+            function (Blueprint $table) {
+                $table->id();
 
-            // TODO :: fill out migration for the table states
+                $table->string('name');
+                $table->string('standard_abbreviation');
+                $table->string('postal_abbreviation');
+                $table->string('capital_city');
 
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

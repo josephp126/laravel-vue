@@ -13,14 +13,19 @@ class CreateProductAttributesTable extends Migration
      */
     public function up()
     {
-        Schema::create('product_attributes', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'product_attributes',
+            function (Blueprint $table) {
+                $table->id();
 
-            // TODO :: fill out migration for the table product_attributes
+                $table->string('value');
+                $table->unsignedBigInteger('attribute_id');
+                $table->unsignedBigInteger('product_id');
 
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

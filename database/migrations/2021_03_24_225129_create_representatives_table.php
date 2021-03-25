@@ -13,14 +13,21 @@ class CreateRepresentativesTable extends Migration
      */
     public function up()
     {
-        Schema::create('representatives', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'representatives',
+            function (Blueprint $table) {
+                $table->id();
 
-            // TODO :: fill out migration for the table representatives
+                $table->string('name');
+                $table->string('website');
+                $table->string('phone');
+                $table->string('fax');
+                $table->boolean('is_international');
 
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

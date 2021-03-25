@@ -13,14 +13,17 @@ class CreateAttributeTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('attribute_types', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'attribute_types',
+            function (Blueprint $table) {
+                $table->id();
 
-            // TODO :: fill out migration for the table attribute_types
+                $table->string('name');
 
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

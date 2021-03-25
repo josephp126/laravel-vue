@@ -13,14 +13,22 @@ class CreateProductsTable extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'products',
+            function (Blueprint $table) {
+                $table->id();
 
-            // TODO :: fill out migration for the table products
+                $table->string('description');
+                $table->string('link');
+                $table->string('code');
+                $table->string('more_info');
+                $table->string('subtitle');
+                $table->string('title');
 
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

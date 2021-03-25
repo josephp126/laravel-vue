@@ -13,19 +13,22 @@ class CreateAddressesTable extends Migration
      */
     public function up()
     {
-        Schema::create('addresses', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'addresses',
+            function (Blueprint $table) {
+                $table->id();
 
-            $table->string('address');
-            $table->string('zip');
-            $table->string('state_id');
-            $table->string('city');
+                $table->string('address');
+                $table->string('zip');
+                $table->string('state_id');
+                $table->string('city');
 
-            $table->morphs('addressable');
+                $table->morphs('addressable');
 
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

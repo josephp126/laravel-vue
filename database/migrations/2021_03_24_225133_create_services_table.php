@@ -13,14 +13,18 @@ class CreateServicesTable extends Migration
      */
     public function up()
     {
-        Schema::create('services', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'services',
+            function (Blueprint $table) {
+                $table->id();
 
-            // TODO :: fill out migration for the table services
+                $table->string('title');
+                $table->string('content');
 
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

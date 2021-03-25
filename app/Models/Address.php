@@ -24,7 +24,8 @@ class Address extends Model
         'city',
     ];
 
-    public function addressable(){
+    public function addressable()
+    {
         return $this->morphTo();
     }
 }

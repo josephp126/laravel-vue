@@ -13,14 +13,20 @@ class CreateCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'categories',
+            function (Blueprint $table) {
+                $table->id();
 
-            // TODO :: fill out migration for the table categories
+                $table->string('name');
+                $table->unsignedBigInteger('parent_id');
+                $table->unsignedBigInteger('root_id');
+                $table->integer('order');
 
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

@@ -13,14 +13,18 @@ class CreateGalleryImagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('gallery_images', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'gallery_images',
+            function (Blueprint $table) {
+                $table->id();
 
-            // TODO :: fill out migration for the table gallery_images
+                $table->string('gallery_id');
+                $table->string('image_id');
 
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**

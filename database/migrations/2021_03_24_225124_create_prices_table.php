@@ -13,14 +13,19 @@ class CreatePricesTable extends Migration
      */
     public function up()
     {
-        Schema::create('prices', function (Blueprint $table) {
-            $table->id();
+        Schema::create(
+            'prices',
+            function (Blueprint $table) {
+                $table->id();
 
-            // TODO :: fill out migration for the table prices
+                $table->string('product_id');
+                $table->string('value');
+                $table->string('comment');
 
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->timestamps();
+                $table->softDeletes();
+            }
+        );
     }
 
     /**
