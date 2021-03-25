@@ -11,6 +11,15 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
+mix
+    .js('resources/js/app.js', 'public/js')
+    .js('resources/js/calypso/bootstrap.js', 'public/js')
+    .js('resources/js/calypso/jquery.js', 'public/js')
+    .js('resources/js/calypso/plugins.js', 'public/js')
+    .js('resources/js/calypso/common.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
-    .sourceMaps();
+    .sourceMaps()
+    .version();
+
+
+mix.browserSync('http://127.0.0.1:8000/');
