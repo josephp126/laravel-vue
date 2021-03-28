@@ -4,7 +4,7 @@
         <div class="container animated fadeInUpNow notransition">
             <div class="row">
                 <div class="col-md-3">
-                    <h1 class="footerbrand">Calypso</h1>
+                    <h1 class="footerbrand">POTTORFF</h1>
                     <p>
                         Introducing a premium HTML5 & CSS3 template for multipurpose use.
                     </p>

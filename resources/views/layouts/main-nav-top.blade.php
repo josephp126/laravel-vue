@@ -2,11 +2,21 @@
 <nav class="navbar navbar-fixed-top wowmenu" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand logo-nav" href="index.html"><img src="img/logo.png" alt="logo"></a>
+            <a class="navbar-brand logo-nav" href="{{route('home')}}">
+                <img src="{{url('images/Pottorff-Logo-Black.png')}}" alt="logo" style="max-height:100%;" />
+            </a>
         </div>
         <ul id="nav" class="nav navbar-nav pull-right">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li class="dropdown">
+            <li class="{{request()->is('/')? 'active': ''}}"><a href="{{route('home')}}">Home</a></li>
+
+            <li><a href="#TODO-FILL">PRODUCTS</a></li>
+            <li><a href="#TODO-FILL">QUICK REFERENCE</a></li>
+            <li><a href="#TODO-FILL">SELECTION TOOLS</a></li>
+            <li><a href="#TODO-FILL">RESOURCES</a></li>
+            <li><a href="#TODO-FILL">ABOUT</a></li>
+            <li><a href="#TODO-FILL">REP LOGIN</a></li>
+
+            {{--<li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="icon-angle-down"></i></a>
                 <ul class="dropdown-menu">
                     <li><a href="home2.html">Home Alt</a></li>
@@ -52,7 +62,7 @@
                     </li>
                 </ul>
             </li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>--}}
         </ul>
     </div>
 </nav>

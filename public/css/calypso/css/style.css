@@ -1157,9 +1157,9 @@ h1.small {
 	background-size:cover !Important;
 }
 .footerbrand {
-	font-family:Pacifico;
+	/*font-family:Pacifico;*/
 	font-size:30px !Important;
-	font-weight:300 !Important;
+	font-weight:600 !Important;
 	text-transform:none !Important;
 	margin-bottom:20px !important;
 	border-bottom:0px !Important;
@@ -1392,7 +1392,7 @@ ul.social-icons li a:hover {
 				opacity:1;
 	}
 }
-​.quote_wrap {
+.quote_wrap {
 	height:100% !Important;
 }
 .textItem {
@@ -1835,7 +1835,7 @@ ul.social-icons li a:hover {
 	color:#fff;
 	display:inline-block;
 	font-weight:700;
-	
+
 	margin-top:30px;
 	margin-bottom:0;
 	line-height:0;
@@ -2327,7 +2327,7 @@ ul#skill {
 	display:block;
 }
 .list_carousel li {
-	
+
 	display:block;
 	float:left;
 	margin-left:10px;
@@ -3045,7 +3045,7 @@ span.meta {
 	color:#f54828;
 	width:260px;
 	padding:0px 20px;
-	border-bottom:3px solid;	
+	border-bottom:3px solid;
 }
 .landingpage-button span {
 	width:50px;
@@ -3082,7 +3082,7 @@ h3.landingpage {
 	margin-bottom:30px;
 	line-height:35px;
 	margin-top:0;
-	
+
 }
 .btn-wrap span {
 	margin:5px 10px;
@@ -9420,20 +9420,20 @@ div.pp_overlay {
 @-ms-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
-}​
+}
 
 /* Opera */
 @-o-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
-}​
+}
 
 .simplefade{ -webkit-animation: fadein 2s; /* Safari and Chrome */
        -moz-animation: fadein 2s; /* Firefox */
         -ms-animation: fadein 2s; /* Internet Explorer */
          -o-animation: fadein 2s; /* Opera */
             animation: fadein 2s;}
-			
+
 /* =========================================================== */
 /*List Styles /* ============================================================== */
 ul.checklist li:before {
@@ -9510,7 +9510,7 @@ ul.longarrowlist li:before {
 	font-size:36px;
 	font-weight:bold;
 	line-height:50px;/*	box-shadow:0px 1px 0px #FFF*/
-	
+
 	text-transform:uppercase;
 	color:#fff;
 	background:#f54828;
@@ -9522,19 +9522,19 @@ ul.longarrowlist li:before {
 {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
-		border-radius: 5px;	
+		border-radius: 5px;
 }
 .drop-cap.circle
 {
 	-webkit-border-radius: 50px;
 	-moz-border-radius: 50px;
-		border-radius: 50px;	
+		border-radius: 50px;
 }
 
 
 
 
-/*================================================== * 
+/*================================================== *
 Fancy Boxes
 * ===============================================*/
 .fancyy-box,.fancyy-box i,.fancyy-box p,.fancyy-box h3 {
@@ -9626,7 +9626,7 @@ color:#444;
 
 
 
-/******************************************************************************************************************** 
+/********************************************************************************************************************
 Animated Boxes
 *******************************************************************************************************************/
 .ca-menu {
