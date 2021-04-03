@@ -4,7 +4,7 @@
         <a href="{{$article->link}}" class="title">{{$article->title}}</a>
         <div class="summary">{!! $article->summary !!}</div>
     @empty
-        Sorry no literature today
+        No literature today
     @endforelse
 
 </div>
