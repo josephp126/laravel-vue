@@ -17,7 +17,11 @@ class CreateImagesTable extends Migration
             'images',
             function (Blueprint $table) {
                 $table->id();
+                $table->uuid('uuid');
 
+                $table->morphs('imageable');
+
+                $table->string('mime_type');
                 $table->string('path');
                 $table->string('title');
                 $table->string('code_number');

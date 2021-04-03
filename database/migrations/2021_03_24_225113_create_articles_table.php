@@ -17,11 +17,13 @@ class CreateArticlesTable extends Migration
             'articles',
             function (Blueprint $table) {
                 $table->id();
+                $table->uuid('uuid');
 
                 $table->string('link');
                 $table->string('content');
                 $table->string('title');
-                $table->boolean('is_active');
+                $table->longText('summary');
+                $table->string('is_homepage')->nullable()->default(false);
 
                 $table->timestamps();
                 $table->softDeletes();

@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration
             'users',
             function (Blueprint $table) {
                 $table->id();
+                $table->uuid('uuid');
 
                 $table->string('first_name');
                 $table->string('last_name');
@@ -24,10 +25,9 @@ class CreateUsersTable extends Migration
                 $table->string('password');
                 $table->string('email')->unique();
                 $table->timestamp('email_verified_at')->nullable();
-                $table->string('is_active');
                 $table->string('date_joined');
-                $table->string('guid');
-                $table->string('phone');
+                $table->string('guid')->nullable();
+                $table->string('phone')->nullable();
 
                 $table->rememberToken();
                 $table->timestamps();

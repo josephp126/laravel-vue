@@ -17,10 +17,13 @@ class CreateNewsTable extends Migration
             'news',
             function (Blueprint $table) {
                 $table->id();
+                $table->uuid('uuid');
 
                 $table->string('title');
                 $table->string('link');
-                $table->string('content');
+                $table->longText('summary');
+                $table->longText('content');
+                $table->string('is_homepage')->nullable()->default(false);
 
                 $table->timestamps();
                 $table->softDeletes();

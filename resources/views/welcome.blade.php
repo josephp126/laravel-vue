@@ -182,8 +182,7 @@
         </section>
 
         <!-- /.intro-note end-->
-        <!-- SERVICE BOXES==================================================-
-        ->
+        <!-- SERVICE BOXES==================================================-->
 
             <section class="service-box topspace30">
 
@@ -479,11 +478,22 @@
 
         </section>
 
+        <section id="news-section" class="news-section mt-30 animated fadeInUpNow notransition article-divider mx-40">
+            <div class="row">
+                <div class="col-md-6">
+                    <livewire:home-news-list />
+                </div>
+                <div class="col-md-6">
+                    <livewire:literature />
+                </div>
+            </div>
+        </section>
+
         <!-- /.home-features end-->
         <section class="grayarea recent-projects-home topspace30 animated fadeInUpNow notransition">
             <div class="container">
                 <div class="row">
-                    <h1 class="small text-center topspace0">LATEST PROJECTS</h1>
+                    <h1 class="small text-center topspace0 text-primary">PROJECTS AND CASES</h1>
                     <p class="animated fadeInRightNow notransition text-center topspace20">Calypso offers multiple
                         layouts and ways of displaying your content in
                         a manner that best suits for you and
@@ -722,7 +732,7 @@
                 },
                 width: '200px',
                 height: '295px',
-                auto: true,
+                auto: false,
                 circular: true,
                 infinite: false,
                 prev: {

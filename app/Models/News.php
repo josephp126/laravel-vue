@@ -19,8 +19,22 @@ class News extends Model
      * @var array
      */
     protected $fillable = [
+        'mime_type',
+        'path',
         'title',
-        'link',
-        'content',
+        'code_number',
+        'hash',
     ];
+
+    protected $casts = ['is_homepage' => 'bool'];
+
+    public function image()
+    {
+        return $this->morphOne(Image::class, 'imageable');
+    }
+
+    public function getUrlAttribute()
+    {
+        return route('news.show', $this->uuid);
+    }
 }

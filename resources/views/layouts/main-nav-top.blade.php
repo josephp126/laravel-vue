@@ -7,8 +7,20 @@
             </a>
         </div>
         <ul id="nav" class="nav navbar-nav pull-right">
-            <li><a href="/">Home</a></li>
-            <li class="dropdown active">
+            <li class="active"><a href="/">HOME</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">PRODUCTS <i class="icon-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/">test 1</a></li>
+                    <li><a href="/">test 2</a></li>
+                </ul>
+            </li>
+            <li><a href="/">QUICK REFERENCE</a></li>
+            <li><a href="/">SELECTION TOOLS</a></li>
+            <li><a href="/">RESOURCES</a></li>
+            <li><a href="/">ABOUT</a></li>
+            <li><a href="/">REP LOGIN</a></li>
+            {{--<li class="dropdown active">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="icon-angle-down"></i></a>
                 <ul class="dropdown-menu">
                     <li><a href="home2.html">Home Alt</a></li>
@@ -52,7 +64,7 @@
                     </li>
                 </ul>
             </li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>--}}
         </ul>
     </div>
 </nav>
