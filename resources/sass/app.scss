@@ -1,6 +1,6 @@
 // Fonts
 //@import url('https://fonts.googleapis.com/css?family=Nunito');
-@import '~font-awesome/scss/font-awesome';
+//@import '~font-awesome/scss/font-awesome';
 
 // Variables
 //@import 'variables';
@@ -34,11 +34,16 @@
 
 .article-divider{
     border-top: 1px solid #ebebeb;
-    .row{
+
+    .row {
         margin-top: 10px;
 
         .col-md-6:first-child {
             border-right: 1px solid #ebebeb;
         }
     }
+}
+
+.img-sm {
+    max-height: 100px;
 }

@@ -20,7 +20,6 @@ class CreateNewsTable extends Migration
                 $table->uuid('uuid');
 
                 $table->string('title');
-                $table->string('link');
                 $table->longText('summary');
                 $table->longText('content');
                 $table->string('is_homepage')->nullable()->default(false);

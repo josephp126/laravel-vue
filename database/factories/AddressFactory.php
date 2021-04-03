@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\News;
+use App\Models\Address;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class NewsFactory extends Factory
+class AddressFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = News::class;
+    protected $model = Address::class;
 
     /**
      * Define the model's default state.
@@ -22,11 +22,10 @@ class NewsFactory extends Factory
     public function definition()
     {
         return [
-//            'link'        => $this->faker->url,
-'summary'     => $this->faker->realText(),
-'title'       => $this->faker->jobTitle,
-'content'     => $this->faker->realText(200),
-'is_homepage' => $this->faker->boolean(80),
+            'address'  => $this->faker->streetAddress,
+            'zip'      => $this->faker->postcode,
+            'state_id' => $this->faker->numberBetween(1, 50),
+            'city'     => $this->faker->city,
         ];
     }
 }

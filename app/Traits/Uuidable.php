@@ -15,7 +15,7 @@ trait Uuidable
         });
     }
 
-    public function getRouteKey()
+    public function getRouteKeyName()
     {
         return 'uuid';
     }

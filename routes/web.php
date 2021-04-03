@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ImagesController;
 use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,4 +21,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('news', 'NewsController')->only('show');
+Route::resource('news', NewsController::class)->only('show');
+
+$router->get('images/{image}/name/{name}', [ImagesController::class, 'show'])->name('image.request');
