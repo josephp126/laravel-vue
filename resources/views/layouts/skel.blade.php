@@ -9,8 +9,11 @@
 
     <title>{{ config('app.name', 'Pottorff') }}</title>
 
+    @livewireStyles
+
     <!-- Scripts -->
     @yield('skel_scripts')
+
     <script src="{{ mix('js/app.js') }}"></script>
 
     <!-- Fonts -->
@@ -22,8 +25,7 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="off">
-<div id="app">
     @yield('skel_content')
-</div>
+@livewireScripts
 </body>
 </html>

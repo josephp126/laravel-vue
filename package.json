@@ -25,6 +25,8 @@
         "sass-loader": "^8.0.0"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.3",
+        "font-awesome": "^4.7.0",
         "pm2": "^4.5.5"
     }
 }

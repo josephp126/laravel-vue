@@ -19,6 +19,7 @@ return [
         'phone' => env('CONTACT_PHONE', '(817) 509-2300'),
         'name'  => env('CONTACT_NAME', 'Info'),
         'email' => env('CONTACT_EMAIL', 'info@pottorff.com'),
+        'ADDRESS' => env('CONTACT_ADDRESS', '123 fake st'),
     ],
 
     /*

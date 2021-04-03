@@ -8,7 +8,10 @@ window._ = require('lodash');
 
 try {
     window.Popper = require('popper.js').default;
-} catch (e) {}
+} catch (e) {
+    alert("error1");
+    console.log({e});
+}
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests

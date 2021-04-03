@@ -2,21 +2,13 @@
 <nav class="navbar navbar-fixed-top wowmenu" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand logo-nav" href="{{route('home')}}">
-                <img src="{{url('images/Pottorff-Logo-Black.png')}}" alt="logo" style="max-height:100%;" />
+            <a class="navbar-brand logo-nav" href="/">
+                <img src="/images/Pottorff-Logo-Black.png" alt="logo">
             </a>
         </div>
         <ul id="nav" class="nav navbar-nav pull-right">
-            <li class="{{request()->is('/')? 'active': ''}}"><a href="{{route('home')}}">Home</a></li>
-
-            <li><a href="#TODO-FILL">PRODUCTS</a></li>
-            <li><a href="#TODO-FILL">QUICK REFERENCE</a></li>
-            <li><a href="#TODO-FILL">SELECTION TOOLS</a></li>
-            <li><a href="#TODO-FILL">RESOURCES</a></li>
-            <li><a href="#TODO-FILL">ABOUT</a></li>
-            <li><a href="#TODO-FILL">REP LOGIN</a></li>
-
-            {{--<li class="dropdown">
+            <li><a href="/">Home</a></li>
+            <li class="dropdown active">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="icon-angle-down"></i></a>
                 <ul class="dropdown-menu">
                     <li><a href="home2.html">Home Alt</a></li>
@@ -30,8 +22,7 @@
                 </ul>
             </li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <i
-                        class="icon-angle-down"></i></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <i class="icon-angle-down"></i></a>
                 <ul class="dropdown-menu">
                     <li><a href="portfolio3.html">Three Columns</a></li>
                     <li><a href="portfolio2.html">Two Columns</a></li>
@@ -47,8 +38,7 @@
                 </ul>
             </li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Features <i
-                        class="icon-angle-down"></i></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Features <i class="icon-angle-down"></i></a>
                 <ul class="dropdown-menu">
                     <li><a href="elements.html">Elements</a></li>
                     <li><a href="columns.html">Columns</a></li>
@@ -62,8 +52,8 @@
                     </li>
                 </ul>
             </li>
-            <li><a href="contact.html">Contact</a></li>--}}
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
 </nav>
-<!-- /nav end-->
+<!-- /nav end--->

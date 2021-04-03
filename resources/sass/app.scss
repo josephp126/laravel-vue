@@ -1,16 +1,21 @@
 // Fonts
 //@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import '~font-awesome/scss/font-awesome';
 
 // Variables
 //@import 'variables';
 
-// Bootstrap
-//@import '~bootstrap/scss/bootstrap';
-
 //@import "calypso";
+@import "../calypso-theme/scss/theme";
 
 .footer-logo{
     width: 316px;
     height: 41px;
     background-color: #fdfafa;
+}
+
+.logo-nav{
+    img{
+        height: 100%;
+    }
 }

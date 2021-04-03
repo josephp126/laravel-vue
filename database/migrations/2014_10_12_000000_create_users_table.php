@@ -22,15 +22,12 @@ class CreateUsersTable extends Migration
                 $table->string('last_name');
                 $table->string('username');
                 $table->string('password');
-                $table->string('email');
+                $table->string('email')->unique();
+                $table->timestamp('email_verified_at')->nullable();
                 $table->string('is_active');
                 $table->string('date_joined');
                 $table->string('guid');
                 $table->string('phone');
-
-                $table->string('email')->unique();
-                $table->timestamp('email_verified_at')->nullable();
-                $table->string('password');
 
                 $table->rememberToken();
                 $table->timestamps();

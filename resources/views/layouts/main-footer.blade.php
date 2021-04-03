@@ -19,16 +19,13 @@
                     <h1 class="title"><span class="colortext">F</span>ind <span class="font100">Us</span></h1>
                     <div class="footermap">
                         <p>
-                            <strong>Address: </strong> No.42 - 54816 Inc Calypso
+                            <strong>Address: </strong> {{config('app.contact.address')}}
                         </p>
                         <p>
-                            <strong>Phone: </strong> + 1 (280) 482 9537
+                            <strong>Phone: </strong> + 1 {{config('app.contact.phone')}}
                         </p>
                         <p>
-                            <strong>Fax: </strong> + 1 (372) 742 9532
-                        </p>
-                        <p>
-                            <strong>Email: </strong> wowthemesnet@gmail.com
+                            <strong>Email: </strong> {{config('app.contact.email')}}
                         </p>
                         <ul class="social-icons list-soc">
                             <li><a href="#"><i class="icon-facebook"></i></a></li>
@@ -74,6 +71,7 @@
                     </div>
                     <form method="post" action="contact.php" id="contactform">
                         <div class="form">
+                            <livewire:input name="name" placeholder="Name" />
                             <input class="col-md-6" type="text" name="name" placeholder="Name">
                             <input class="col-md-6" type="text" name="email" placeholder="E-mail">
                             <textarea class="col-md-12" name="comment" rows="4"
@@ -93,7 +91,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <p class="pull-left">
-                        &copy; Copyright 2014 WowThemes.net
+                        &copy; Copyright {{date('Y')}} Pottorff
                     </p>
                 </div>
                 <div class="col-md-8">
