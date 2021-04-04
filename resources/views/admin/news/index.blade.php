@@ -35,8 +35,8 @@
                             {{$record->title}}
                         </a>
                     </td>
-                    <td>{{Str::limit($record->summary, 100)}}</td>
-                    <td>{{Str::limit($record->content, 100)}}</td>
+                    <td>{!! Str::limit($record->summary, 100) !!}</td>
+                    <td>{!! Str::limit($record->content, 100) !!}</td>
                     <td>{{$record->updated_at->format('m/d/Y @ h:m A')}}</td>
                     <td class="text-center">
                         <a onclick="event.preventDefault(); document.getElementById('update-form-{{$record->uuid}}').submit();">

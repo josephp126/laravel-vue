@@ -7,19 +7,15 @@
             </a>
         </div>
         <ul id="nav" class="nav navbar-nav pull-right">
-            <li><a href="/admin">HOME</a></li>
-            <li class="dropdown">
+            <li class="{{request()->is('admin')? "active": ""}}"><a href="/admin">HOME</a></li>
+            <li class="dropdown class="{{request()->is('*product*')? "active": ""}}"">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">PRODUCTS <i class="icon-angle-down"></i></a>
                 <ul class="dropdown-menu">
-                    <li><a href="/admin">test 1</a></li>
+                    <li><a href="/admin/product">test 1</a></li>
                     <li><a href="/admin">test 2</a></li>
                 </ul>
             </li>
             <li class="{{request()->is('*news*')? "active": ""}}"><a href="{{route('admin.news.index')}}">NEWS</a></li>
-            <li><a href="/admin">SELECTION TOOLS</a></li>
-            <li><a href="/admin">RESOURCES</a></li>
-            <li><a href="/admin">ABOUT</a></li>
-            <li><a href="/admin">REP LOGIN</a></li>
             {{--<li class="dropdown active">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="icon-angle-down"></i></a>
                 <ul class="dropdown-menu">
