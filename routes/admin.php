@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'admin/welcome');
+Route::view('/', 'admin/dashboard');
 Route::resource('news', NewsController::class);

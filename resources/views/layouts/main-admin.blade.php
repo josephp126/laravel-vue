@@ -14,7 +14,9 @@
     <!-- /.wrapbox start-->
     <div class="wrapbox">
         @include('layouts.admin-bar-top')
-        @include('layouts.admin-nav-top')
+        @if(auth()->check())
+            @include('layouts.admin-nav-top')
+        @endif
         <div class="clearfix"></div>
 
         <div class="container">

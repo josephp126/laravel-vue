@@ -15,7 +15,7 @@
     <div class="wrapbox">
         @include('layouts.main-bar-top')
         @include('layouts.main-nav-top')
-
+        <div class="clearfix"></div>
         @yield('content')
 
         @include('layouts.main-footer')

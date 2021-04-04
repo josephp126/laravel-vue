@@ -2,24 +2,24 @@
 <nav class="navbar navbar-fixed-top wowmenu" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand logo-nav" href="/">
+            <a class="navbar-brand logo-nav" href="/admin">
                 <img src="/images/Pottorff-Logo-Black.png" alt="logo">
             </a>
         </div>
         <ul id="nav" class="nav navbar-nav pull-right">
-            <li><a href="/">HOME</a></li>
+            <li><a href="/admin">HOME</a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">PRODUCTS <i class="icon-angle-down"></i></a>
                 <ul class="dropdown-menu">
-                    <li><a href="/">test 1</a></li>
-                    <li><a href="/">test 2</a></li>
+                    <li><a href="/admin">test 1</a></li>
+                    <li><a href="/admin">test 2</a></li>
                 </ul>
             </li>
             <li class="{{request()->is('*news*')? "active": ""}}"><a href="{{route('admin.news.index')}}">NEWS</a></li>
-            <li><a href="/">SELECTION TOOLS</a></li>
-            <li><a href="/">RESOURCES</a></li>
-            <li><a href="/">ABOUT</a></li>
-            <li><a href="/">REP LOGIN</a></li>
+            <li><a href="/admin">SELECTION TOOLS</a></li>
+            <li><a href="/admin">RESOURCES</a></li>
+            <li><a href="/admin">ABOUT</a></li>
+            <li><a href="/admin">REP LOGIN</a></li>
             {{--<li class="dropdown active">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="icon-angle-down"></i></a>
                 <ul class="dropdown-menu">

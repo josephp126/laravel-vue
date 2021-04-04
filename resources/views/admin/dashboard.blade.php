@@ -1,7 +1,8 @@
 @extends('layouts.main-admin')
 
 @section('content')
-    <div class="container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam dolores doloribus
+    <div class="container mt-30">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam dolores doloribus
         exercitationem harum non quae. Debitis dicta eaque enim praesentium recusandae? Culpa dolorum esse facere omnis.
         Beatae debitis dolor eius eligendi ipsam iure optio quaerat. Asperiores autem illo inventore labore molestias
         nihil nostrum numquam, odit quo veritatis! Accusantium aspernatur assumenda commodi consectetur consequatur
