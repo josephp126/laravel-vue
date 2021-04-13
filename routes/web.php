@@ -23,4 +23,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('news', NewsController::class)->only('show');
 
-$router->get('images/{image}/name/{name}', [ImagesController::class, 'show'])->name('image.request');
+Route::get('images/{image}/name/{name}', [ImagesController::class, 'show'])->name('image.request');
