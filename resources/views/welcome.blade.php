@@ -327,23 +327,10 @@
                         <img src="http://wowthemes.net/demo/biscaya/img/demo/avatar.jpg" alt="">
 
                         <blockquote>
-
-                            <p class="bigquote">
-
-                                <i class="icon-quote-left colortext quoteicon"></i> Lorem ipsum dolor sit adipiscing
-
-                                elit. Praesent tempus eleifend risus ut congue eset nec lacus. Lorem ipsum dolor sit
-
-                                adipiscing elit. Praesent tempus eleifend risus ut congue eset nec lacus. Praesent
-
-                                dignissim sem sapien, a vulputate enim auctor vitae. Duis non lorem porta,
-
-                                adipiscing eros sit amet, tempor sem.
-
-                            </p>
-
-                            <footer>John Doe / Owner of <a href="#">calypso.com</a></footer>
-
+                            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, numquam?" -
+                            <span class="name">
+                                Lorem ipsum.
+                            </span>
                         </blockquote>
 
                     </div>
@@ -378,7 +365,7 @@
 
                 <br>
 
-                <div class="col-lg-10 offset-md-1 animated slidea notransition">
+                <div class="col-lg-10 col-md-offset-1 animated slidea notransition">
 
                     <div class="row">
 
