@@ -23,16 +23,16 @@
                     <h1 class="title"><span class="colortext">F</span>ind <span class="font100">Us</span></h1>
                     <div class="footermap">
                         <p>
-                            <strong>Address: </strong> @obfuscate(config('app.contact.address'))
+                            <strong>Address: </strong> {{config('app.contact.address')}}
                         </p>
                         <p>
-                            <strong>Phone: </strong> + 1 @obfuscate(config('app.contact.phone'))
+                            <strong>Phone: </strong> + 1 {{config('app.contact.phone')}}
                         </p>
                         <p>
-                            <strong>Fax: </strong> + 1 @obfuscate(config('app.contact.fax'))
+                            <strong>Fax: </strong> + 1 {{config('app.contact.fax')}}
                         </p>
                         <p>
-                            <strong>Email: </strong> @obfuscate(config('app.contact.email'))
+                            <strong>Email: </strong> {{config('app.contact.email')}}
                         </p>
                         <ul class="social-icons list-soc">
                             <li><a href="#"><i class="icon-facebook"></i></a></li>
