@@ -15,4 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'admin/dashboard');
+
 Route::resource('news', NewsController::class);
+Route::put('news/{news}/star', [NewsController::class, 'star'])->name('news.star');
