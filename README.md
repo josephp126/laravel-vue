@@ -1,7 +1,10 @@
 # Pottorff
 
+
+
 ## Links
 
+* https://laravelcollective.com/docs/6.x/html
 * Components - https://laravel-livewire.com/docs/2.x/
 * Permissions and roles - https://github.com/JosephSilber/bouncer
 

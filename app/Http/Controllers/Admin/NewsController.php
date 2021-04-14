@@ -74,6 +74,16 @@ class NewsController extends Controller
         return view('admin.news.edit', compact('news'));
     }
 
+    public function star(Request $request, News $news)
+    {
+        if ($request->input('action') === 'star') {
+            $news->update(['is_homepage' => !$news->is_homepage]);
+            session()->flash('admin.news.updated');
+        }
+
+        return redirect()->route('admin.news.index');
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -83,11 +93,6 @@ class NewsController extends Controller
      */
     public function update(NewsRequest $request, News $news)
     {
-        if ($request->get('action') === 'star') {
-            $news->update(['is_homepage' => !$news->is_homepage]);
-            return redirect()->route('admin.news.index');
-        }
-
         $news->update($request->validated());
 
         $this->dispatch(new SaveImageJob($news, $request->file('file')));
