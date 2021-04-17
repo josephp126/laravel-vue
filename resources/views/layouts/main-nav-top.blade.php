@@ -12,6 +12,9 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">PRODUCTS <i class="icon-angle-down"></i></a>
                 <ul class="dropdown-menu">
                     <li><a href="/">test 1</a></li>
+                    <li><a href="/">test 1</a></li>
+                    <li><a href="/">test 1</a></li>
+                    <li><a href="/">test 1</a></li>
                     <li><a href="/">test 2</a></li>
                 </ul>
             </li>

@@ -8,16 +8,21 @@
 //@import "calypso";
 @import "../calypso-theme/scss/theme";
 @import "./space";
+@import "./grid";
 @import "./color";
 
-.footer-logo{
+* {
+    font-family: "Helvetica Neue LT Std - Bd Cn", sans-serif;
+}
+
+.footer-logo {
     width: 316px;
     height: 41px;
     background-color: #fdfafa;
 }
 
-.logo-nav{
-    img{
+.logo-nav {
+    img {
         max-width: 200px !important;
 
         @media (max-width 1021px) {
@@ -26,9 +31,49 @@
     }
 }
 
-.news-section{
+.heading {
+    @extend .text-primary;
+    min-height: 14px;
+    color: #42659f;
+    font-size: 32px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.news-section {
+    .heading-image {
+        width: 42px;
+        height: 36px;
+    }
+
     .col-md-6 {
         min-height: 200px;
+
+        .article-image {
+            width: 124px;
+            height: 100px;
+        }
+
+        .article-text {
+            color: #010000;
+            font-family: "Arial MT";
+            font-size: 17px;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: 17px;
+            text-align: left;
+
+            .title {
+                display: block;
+                margin-bottom: 3px;
+            }
+        }
+
     }
 }
 
@@ -46,4 +91,23 @@
 
 .img-sm {
     max-height: 100px;
+}
+
+.what-our-reps-say {
+    .quotes {
+        list-style: none;
+
+        li {
+            font-weight: 600;
+            line-height: 48px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .name {
+            color: #42659f;
+            font-weight: 700;
+            display: inline-block;
+        }
+    }
 }

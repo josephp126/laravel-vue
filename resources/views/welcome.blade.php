@@ -192,19 +192,35 @@
 
                         <livewire:home-product-card title="Air Control Dampers" description="Commercial, Industrial, Manual Balancing, Specialty, Backdraft Dampers" image="images/Product Photos/Backdraft Damper.png">
 
-                        <livewire:home-product-card title="Ceiling Radiation Dampers" description="Butterfly, Curtain Style, Wood Truss and Steel Truss" image="images/Product Photos/Ceiling Radiation Damper.png">
+                            <livewire:home-product-card title="Ceiling Radiation Dampers"
+                                                        description="Butterfly, Curtain Style, Wood Truss and Steel Truss"
+                                                        image="images/Product Photos/Ceiling Radiation Damper.png">
 
-                        <livewire:home-product-card title="UL Rated Fire/Smoke Dampers" description="Fire/Smoke Dampers, Dynamic and Static Fire Dampers, Corridor and Smoke Dampers" image="images/Product Photos/FSD.png">
+                                <livewire:home-product-card title="UL Rated Fire/Smoke Dampers"
+                                                            description="Fire/Smoke Dampers, Dynamic and Static Fire Dampers, Corridor and Smoke Dampers"
+                                                            image="images/Product Photos/FSD.png">
 
-                        <livewire:home-product-card title="Louvers and Penthouses" description="Drainable, Operable, Miami-Dade,Florida Building Code, Penthouses, Specialty" image="images/Product Photos/Louver.png">
+                                    <livewire:home-product-card title="Louvers and Penthouses"
+                                                                description="Drainable, Operable, Miami-Dade,Florida Building Code, Penthouses, Specialty"
+                                                                image="images/Product Photos/Louver.png">
 
-                    </livewire:home-product-card></livewire:home-product-card></livewire:home-product-card></livewire:home-product-card></div>
+                                    </livewire:home-product-card>
+                                </livewire:home-product-card>
+                            </livewire:home-product-card>
+                        </livewire:home-product-card>
+                    </div>
 
                 </div>
 
+                <ul class="d-flex">
+                    <li>
+                        height: 36px;
+                    </li>
+                </ul>
+
             </section>
 
-            <!-- /.service-box end-->
+        <!-- /.service-box end-->
         <!-- RECENT WORK==================================================-->
 
         <section class="home-portfolio bgarea topspace30">
@@ -304,7 +320,7 @@
         <!-- /.recent-work end-->
         <!-- FEATURES==================================================-->
 
-        <section class="home-features topspace30">
+        <section class="home-features topspace30 what-our-reps-say">
 
             <div class="container animated fadeInUpNow notransition">
 
@@ -320,146 +336,20 @@
 
                 </div>
 
-                <div id="cbp-qtrotator" class="cbp-qtrotator">
-
-                    <div class="cbp-qtcontent">
-
-                        <img src="http://wowthemes.net/demo/biscaya/img/demo/avatar.jpg" alt="">
-
-                        <blockquote>
-                            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, numquam?" -
-                            <span class="name">
-                                Lorem ipsum.
-                            </span>
-                        </blockquote>
-
-                    </div>
-
-                    <div class="cbp-qtcontent">
-
-                        <img src="http://wowthemes.net/demo/biscaya/img/demo/avatar.jpg" alt="">
-
-                        <blockquote>
-
-                            <p class="bigquote">
-
-                                <i class="icon-quote-left colortext quoteicon"></i> Lorem ipsum dolor sit adipiscing
-
-                                elit. Praesent tempus eleifend risus ut congue eset nec lacus. Lorem ipsum dolor sit
-
-                                adipiscing elit. Praesent tempus eleifend risus ut congue eset nec lacus. Praesent
-
-                                dignissim sem sapien, a vulputate enim auctor vitae. Duis non lorem porta,
-
-                                adipiscing eros sit amet, tempor sem.
-
-                            </p>
-
-                            <footer>Pino Caruso / Director of <a href="#">hisweb.com</a></footer>
-
-                        </blockquote>
-
-                    </div>
-
-                </div>
-
-                <br>
-
-                <div class="col-lg-10 col-md-offset-1 animated slidea notransition">
-
-                    <div class="row">
-
-                        <div class="col-lg-4">
-
-                            <h4><i class="icon icon-microphone">
-
-                                </i> A Playground for Web</h4>
-
-                            <div class="bottomspace30">
-
-                                Trigger ideas: quickly experiment with site colors &amp; patterns, try out web
-
-                                typography and much more.
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-lg-4">
-
-                            <h4><i class="icon icon-anchor">
-
-                                </i> Great Project for Clients</h4>
-
-                            <div class="bottomspace30">
-
-                                Trigger ideas: quickly experiment with site colors &amp; patterns, try out web
-
-                                typography and much more.
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-lg-4">
-
-                            <h4><i class="icon icon-user">
-
-                                </i> Ready to Use Template</h4>
-
-                            Trigger ideas: quickly experiment with site colors &amp; patterns, try out web
-
-                            typography and much more. <br>
-
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-lg-4">
-
-                            <h4><i class="icon icon-pushpin">
-
-                                </i> New Modern Functions</h4>
-
-                            Trigger ideas: quickly experiment with site colors &amp; patterns, try out web
-
-                            typography and much more. <br>
-
-                        </div>
-
-                        <div class="col-lg-4">
-
-                            <h4><i class="icon icon-cogs">
-
-                                </i> Top Notch Support</h4>
-
-                            Trigger ideas: quickly experiment with site colors &amp; patterns, try out web
-
-                            typography and much more. <br>
-
-                        </div>
-
-                        <div class="col-lg-4">
-
-                            <h4><i class="icon icon-leaf">
-
-                                </i> Awesome Animations</h4>
-
-                            <div class="bottomspace30">
-
-                                Trigger ideas: quickly experiment with site colors &amp; patterns, try out web
-
-                                typography and much more.
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                <ul class="quotes">
+                    <li>
+                        "Pottorff does what they say they will do. Honest, competitive and supportive" -
+                        <div class="name">Jeremy Hobbs, J.M. O'Conner, Inc.</div>
+                    </li>
+                    <li>
+                        "Quality manufacturing locations, knowledgeable staff and customer service" -
+                        <div class="name">Todd Williams, Florida Air Solutions</div>
+                    </li>
+                    <li>
+                        "Great customer service, factory support, product development, pricing software" -
+                        <div class="name">Joe Paul, Deckman Company</div>
+                    </li>
+                </ul>
 
             </div>
 
