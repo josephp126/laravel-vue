@@ -1,8 +1,8 @@
 @extends('layouts.main-admin')
 
 @section('content')
-    <div class="container mt-30">
-        <a href="{{route('admin.news.create')}}" class="btn btn-primary">
+    <div class="container">
+        <a href="{{route('admin.news.create')}}" class="btn btn-primary my-3">
             <span class="icon-plus" />
             Create
         </a>
@@ -14,7 +14,7 @@
                 Showing {{$data->count()}} of {{$data->total()}} result(s) on page {{$data->currentPage()}}
             @endif
         </h3>
-        <table class="table table-hover table-striped">
+        <table class="table table-hover table-striped mt-3">
             <thead>
             <th></th>
             <th>Title</th>

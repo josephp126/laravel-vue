@@ -3,16 +3,46 @@
 //@import '~font-awesome/scss/font-awesome';
 
 // Variables
-//@import 'variables';
+@import 'variables';
 
 //@import "calypso";
+@import "./bootstrap-4.3.1/scss/bootstrap";
 @import "../calypso-theme/scss/theme";
-@import "./space";
-@import "./grid";
+//@import "./space";
+//@import "./grid";
 @import "./color";
 
 * {
     font-family: "Helvetica Neue LT Std - Bd Cn", sans-serif;
+}
+
+//.wowmenu{
+//    position: -webkit-sticky;
+//    position: sticky;
+//    top: 35px;
+//}
+
+.bragging-logos{
+    &>li{
+        margin-right: 10px;
+    }
+    img{
+        height: 55px;
+    }
+}
+
+.list-louver-pull-left{
+    position: relative;
+    left: -161px;
+}
+
+.select-based-on-push-right{
+    margin-left: 20px;
+}
+
+.header-icon{
+    width: 63px;
+    height: 55px;
 }
 
 .footer-logo {
@@ -56,11 +86,12 @@
         .article-image {
             width: 124px;
             height: 100px;
+            padding-right: 15px;
         }
 
         .article-text {
             color: #010000;
-            font-family: "Arial MT";
+            font-family: "Arial MT", sans-serif;
             font-size: 17px;
             font-weight: 400;
             font-style: normal;
@@ -108,6 +139,21 @@
             color: #42659f;
             font-weight: 700;
             display: inline-block;
+        }
+    }
+}
+
+.mew-literature {
+    color: #010000;
+    font-size: 23px;
+    line-height: 23px;
+    font-weight: 500;
+}
+
+.literature-section {
+    .literature-images{
+        img{
+            height: 318px;
         }
     }
 }

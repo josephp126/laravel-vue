@@ -22,7 +22,7 @@
 
         <div class="container">
             @if ($errors->any())
-                <div class="alert alert-danger mt-30">
+                <div class="alert alert-danger mt-3">
                     <ul>
                         @foreach ($errors->all() as $error)
                             <li>{{ $error }}</li>
@@ -32,7 +32,7 @@
             @endif
         </div>
 
-        <div class="admin-container-size">
+        <div class="admin-container-size mt-3">
             @yield('content')
         </div>
 

@@ -6,7 +6,7 @@
                 <div class="col-md-3">
                     <h1 class="footerbrand">POTTORFF</h1>
                     <p>The Preferred Solution for Life Safety and Air Control Products</p>
-                    <p class="mt-30">Air Control Damper</p>
+                    <p class="mt-3">Air Control Damper</p>
                     <p>Ceiling Radiation Dampers</p>
                     <p>UL Rated Fire/Smoke Dampers</p>
                     <p>Louvers and Penthouses</p>
@@ -14,7 +14,7 @@
                 <div class="col-md-3 text-white">
                     <p class="mt-40"><a href="#">About</a></p>
                     <p><a href="#">History</a></p>
-                    <p class="mt-30"><a href="#">Quick Reference</a></p>
+                    <p class="mt-3"><a href="#">Quick Reference</a></p>
                     <p><a href="#">Cross Reference</a></p>
                     <p><a href="#">Louver Selection Tool</a></p>
                     <p><a href="#">Repfinder</a></p>
@@ -54,11 +54,12 @@
                     </div>
                     <form method="post" action="contact.php" id="contactform">
                         <div class="form">
-                            <livewire:input name="name" placeholder="Name" />
-                            <input class="col-md-6" type="text" name="name" placeholder="Name">
-                            <input class="col-md-6" type="text" name="email" placeholder="E-mail">
-                            <textarea class="col-md-12" name="comment" rows="4"
-                                      placeholder="Message"></textarea>
+                            <div class="row">
+                                <input class="col-md-6" type="text" name="name" placeholder="Name">
+                                <input class="col-md-6" type="text" name="email" placeholder="E-mail">
+                                <textarea class="col-md-12" name="comment" rows="4"
+                                          placeholder="Message"></textarea>
+                            </div>
                             <input type="submit" id="submit" class="btn" value="Send">
                         </div>
                     </form>

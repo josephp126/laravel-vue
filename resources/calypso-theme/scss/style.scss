@@ -65,7 +65,7 @@ strong, b {
     color: #ccc;
     padding-top: 15px;
     padding-bottom: 15px;
-    margin-bottom: 75px;
+    //margin-bottom: 75px;
 }
 
 .toparea a {
@@ -143,7 +143,7 @@ strong, b {
 }
 
 .navbar-fixed-top {
-    top: 47px;
+    //top: 47px;
 }
 
 .navbar > .container .navbar-brand {
@@ -315,6 +315,10 @@ strong, b {
     left: 10px;
     top: 11px;
     left: -6px;
+}
+
+.wowmenu{
+    //top: 53px;
 }
 
 .wowmenu.tiny {
@@ -1131,7 +1135,7 @@ h1.small {
 }
 
 .bgarea {
-    background: url(../img/demo/1.jpg);
+    background: url('/images/Louver Selection Tool Area/Blue Louver.png');
     position: relative;
     -webkit-background-size: cover !important;
     -moz-background-size: cover !important;

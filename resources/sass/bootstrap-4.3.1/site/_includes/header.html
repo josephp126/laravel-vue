@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+<meta content="{{ page.description | default: site.description | smartify }}" name="description">
+<meta content="{{ site.authors }}" name="author">
+<meta content="Jekyll v{{ jekyll.version }}" name="generator">
+
+<meta content="en" name="docsearch:language">
+<meta content="{{ site.docs_version }}" name="docsearch:version">
+
+<title>
+  {%- if page.title -%}
+    {{ page.title | smartify }} · {{ site.title | smartify }}
+  {%- else -%}
+    {{ site.title | smartify }} · {{ site.description | smartify }}
+  {%- endif -%}
+</title>
+
+<link href="{{ site.url | append: page.url }}" rel="canonical">
+
+{% include stylesheet.html %}
+{% include favicons.html %}
+{% include social.html %}
+{% include analytics.html %}
