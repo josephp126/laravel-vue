@@ -12,6 +12,8 @@
 //@import "./grid";
 @import "./color";
 
+//@import "~tinymce/skins/ui/oxide-dark/skin.css";
+
 * {
     font-family: "Helvetica Neue LT Std - Bd Cn", sans-serif;
 }
@@ -121,7 +123,7 @@
 }
 
 .img-sm {
-    max-height: 100px;
+    max-height: 300px;
 }
 
 .what-our-reps-say {
@@ -151,9 +153,13 @@
 }
 
 .literature-section {
-    .literature-images{
-        img{
+    .literature-images {
+        img {
             height: 318px;
         }
     }
+}
+
+.wrapsemibox {
+    min-height: 500px;
 }

@@ -10,13 +10,34 @@ try {
     window.Popper = require('popper.js').default;
 
     window.$ = window.jQuery = require('jquery');
-    console.log("window.$", window.$);
+    console.log('window.$', window.$);
 
     require('bootstrap');
     require('jquery-appear-original');
 } catch (e) {
     // alert("error1");
-    console.log({e});
+    console.log({ e });
+}
+
+try {
+    const tinyMCE = require('tinymce/tinymce');
+    require('tinymce/icons/default');
+    require('tinymce/themes/silver');
+
+    tinyMCE.init({
+        selector: '.tinymce',
+    }).then(aa => {
+        console.log('first', { aa });
+    });
+
+    tinyMCE.init({
+        selector: 'textarea#default',
+    }).then(bb => {
+        console.log('second', { bb });
+    });
+
+} catch (e) {
+    console.error('tinymce', { e });
 }
 
 require('../../public/js/plugins');

@@ -11469,14 +11469,14 @@ ul.social-icons li a:hover {
 }
 
 .pageheader-default h1 {
-  color: #fff;
-  display: inline-block;
-  font-weight: 700;
-  margin-top: 30px;
-  margin-bottom: 0;
-  line-height: 0;
-  font-size: 35px;
-  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+    color: #fff;
+    display: inline-block;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 0;
+    line-height: 45px;
+    font-size: 35px;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
 }
 
 .pageheader-default .semitransparentbg {
@@ -18926,7 +18926,7 @@ blockquote {
 }
 
 .img-sm {
-  max-height: 100px;
+    max-height: 300px;
 }
 
 .what-our-reps-say .quotes {
@@ -18945,12 +18945,16 @@ blockquote {
 }
 
 .mew-literature {
-  color: #010000;
-  font-size: 23px;
-  line-height: 23px;
-  font-weight: 500;
+    color: #010000;
+    font-size: 23px;
+    line-height: 23px;
+    font-weight: 500;
 }
 
 .literature-section .literature-images img {
-  height: 318px;
+    height: 318px;
+}
+
+.wrapsemibox {
+    min-height: 500px;
 }

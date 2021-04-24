@@ -32,6 +32,7 @@
         "font-awesome": "^4.7.0",
         "jquery": "^3.6.0",
         "jquery-appear-original": "^0.6.2",
-        "pm2": "^4.5.6"
+        "pm2": "^4.5.6",
+        "tinymce": "^5.7.1"
     }
 }

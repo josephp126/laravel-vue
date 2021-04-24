@@ -15,12 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome');
+Route::view('/', 'welcome')->name('home');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 
-Route::resource('news', NewsController::class)->only('show');
+Route::resource('news', NewsController::class)->only('index', 'show');
 
 Route::get('images/{image}/name/{name}', [ImagesController::class, 'show'])->name('image.request');

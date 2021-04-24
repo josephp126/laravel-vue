@@ -11,11 +11,15 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
-    .sass('resources/sass/admin.scss', 'public/css')
-    .sourceMaps()
-    .version();
+mix.js('resources/js/app.js', 'public/js').
+    sass('resources/sass/app.scss', 'public/css').
+    sass('resources/sass/admin.scss', 'public/css').
+    sourceMaps().
+    version();
 
+// mix.copyDirectory('node_modules/tinymce/icons', 'public/vendors/tinymce/icons');
+// mix.copyDirectory('node_modules/tinymce/plugins', 'public/vendors/tinymce/plugins');
+mix.copyDirectory('node_modules/tinymce/skins', 'public/js/skins');
+// mix.copyDirectory('node_modules/tinymce/themes', 'public/vendors/tinymce/themes');
 
 mix.browserSync('http://127.0.0.1:8000/');

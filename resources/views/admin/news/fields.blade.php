@@ -22,7 +22,7 @@
     <div class="col-md-12">
         <div class="form-group">
             <label for="content">Content</label>
-            {!! Form::textarea('content', null, ['class' => 'form-control', 'id' => 'content', 'required' => true]) !!}
+            {!! Form::textarea('content', null, ['class' => 'form-control tinymce', 'id' => 'content', 'required' => true]) !!}
         </div>
     </div>
 </div>

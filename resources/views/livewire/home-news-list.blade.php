@@ -7,7 +7,7 @@
         <div class="d-flex mb-3">
             <img src="{{$article->imageUrl}}" class="article-image" alt="image" height="75" />
             <div class="article-text">
-                <a href="{{$article->link}}" class="title">{{$article->title}}</a>
+                <a href="{{route('news.show', $article)}}" class="title">{{$article->title}}</a>
                 <div class="summary">{!! $article->summary !!}</div>
             </div>
         </div>
