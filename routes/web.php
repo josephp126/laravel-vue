@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ImagesController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\RepFinderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,5 +27,8 @@ Auth::routes();
 
 Route::resource('news', NewsController::class)->only('index', 'show');
 Route::post('quick/message', [ContactController::class, 'store'])->name('contact.store');
+Route::get('about', [AboutController::class, 'index'])->name('about.index');
+Route::get('rep/finder', [RepFinderController::class, 'index'])->name('repfinder.index');
+Route::get('company', [CompanyController::class, 'index'])->name('company.index');
 
 Route::get('images/{image}/name/{name}', [ImagesController::class, 'show'])->name('image.request');
