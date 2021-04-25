@@ -16,11 +16,11 @@ return [
     'name' => env('APP_NAME', 'Pottorff'),
 
     'contact' => [
-        'phone' => env('CONTACT_PHONE', '(817) 509-2300'),
-        'fax' => env('CONTACT_FAX', '(817) 318-3133'),
-        'name'  => env('CONTACT_NAME', 'Info'),
-        'email' => env('CONTACT_EMAIL', 'info@pottorff.com'),
-        'address' => env('CONTACT_ADDRESS', '123 fake st'),
+        'phone'   => env('CONTACT_PHONE', '(817) 509-2300'),
+        'fax'     => env('CONTACT_FAX', '(817) 318-3133'),
+        'name'    => env('CONTACT_NAME', 'Info'),
+        'email'   => env('CONTACT_EMAIL', 'info@pottorff.com'),
+        'address' => env('CONTACT_ADDRESS', '5101 Blue Mound Road'),
     ],
 
     /*

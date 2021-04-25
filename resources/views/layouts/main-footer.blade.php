@@ -19,7 +19,7 @@
                     <p><a href="#">Louver Selection Tool</a></p>
                     <p><a href="#">Repfinder</a></p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" id="footer-find-us" data-label="find us">
                     <h1 class="title"><span class="colortext">F</span>ind <span class="font100">Us</span></h1>
                     <div class="footermap">
                         <p>
