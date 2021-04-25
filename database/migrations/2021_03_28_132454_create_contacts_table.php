@@ -13,6 +13,10 @@ class CreateContactsTable extends Migration
                 function (Blueprint $table) {
                     $table->bigIncrements('id');
 
+                    $table->bigInteger('user_id')
+                        ->nullable()
+                        ->comment('If the user is logged in track their user id');
+
                     $table->string('name');
                     $table->string('email');
                     $table->string('message');

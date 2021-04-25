@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ImagesController;
 use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
@@ -22,5 +23,6 @@ Auth::routes();
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 
 Route::resource('news', NewsController::class)->only('index', 'show');
+Route::post('quick/message', [ContactController::class, 'store'])->name('contact.store');
 
 Route::get('images/{image}/name/{name}', [ImagesController::class, 'show'])->name('image.request');

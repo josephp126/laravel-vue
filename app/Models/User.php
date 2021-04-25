@@ -29,6 +29,8 @@ class User extends Authenticatable
         'date_joined',
         'guid',
         'phone',
+        'is_contact',
+        'notification_preferences',
     ];
 
     /**
@@ -47,7 +49,9 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        'email_verified_at'        => 'datetime',
+        'is_contact'               => 'boolean',
+        'notification_preferences' => 'json',
     ];
 
     public function getNameAttribute()

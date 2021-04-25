@@ -52,17 +52,18 @@
                             Your message has been sent. Thank you!
                         </div>
                     </div>
-                    <form method="post" action="contact.php" id="contactform">
-                        <div class="form">
-                            <div class="row">
-                                <input class="col-md-6" type="text" name="name" placeholder="Name">
-                                <input class="col-md-6" type="text" name="email" placeholder="E-mail">
-                                <textarea class="col-md-12" name="comment" rows="4"
-                                          placeholder="Message"></textarea>
-                            </div>
-                            <input type="submit" id="submit" class="btn" value="Send">
+
+                    {!! Form::open(['route' => 'contact.store']) !!}
+                    <div class="form">
+                        <div class="row">
+                            <input required class="col-md-6" type="text" name="name" placeholder="Name">
+                            <input required class="col-md-6" type="text" name="email" placeholder="E-mail">
+                            <textarea required class="col-md-12" name="message" rows="4"
+                                      placeholder="Message"></textarea>
                         </div>
-                    </form>
+                        <button type="submit" id="submit" class="btn">Send</button>
+                    </div>
+                    {!! Form::close() !!}
                 </div>
             </div>
         </div>

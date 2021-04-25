@@ -29,6 +29,10 @@ class CreateUsersTable extends Migration
                 $table->string('guid')->nullable();
                 $table->string('phone')->nullable();
 
+                $table->json('notification_preferences')->nullable()->default('["mail"]');
+
+                $table->boolean('is_contact')->nullable()->default(false);
+
                 $table->rememberToken();
                 $table->timestamps();
                 $table->softDeletes();

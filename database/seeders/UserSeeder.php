@@ -23,7 +23,7 @@ class UserSeeder extends Seeder
         if (User::where(['email' => 'admin@admin.com'])->count() == 0) {
             $user = User::factory()
                 ->hasAddress()
-                ->create(['email' => 'admin@admin.com']);
+                ->create(['email' => 'admin@admin.com', 'is_contact' => true]);
 
             $user->assign('admin');
         }
