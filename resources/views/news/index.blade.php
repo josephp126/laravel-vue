@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('breadcrumbs')
-    <li class="breadcrumb-item active" aria-current="page">News</li>
+    News
 @endsection
 
 @section('content')
