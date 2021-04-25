@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         Bouncer::allow('admin')->everything();
 
-        User::where('email', 'admin@admin.com')->forceDelete();
+//        User::where('email', 'admin@admin.com')->forceDelete();
 
         if (User::where(['email' => 'admin@admin.com'])->count() == 0) {
             $user = User::factory()

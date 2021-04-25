@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Arr;
+use Str;
 
 /**
  *
@@ -25,6 +26,7 @@ class News extends Model
     protected $fillable = [
         'mime_type',
         'summary',
+        'slug',
         'content',
         'title',
         'code_number',
@@ -33,6 +35,19 @@ class News extends Model
     ];
 
     protected $casts = ['is_homepage' => 'bool'];
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(
+            function ($model) {
+                $model->setAttribute('uuid', (string)Str::uuid());
+                $model->setAttribute('slug', Str::slug($model->title));
+            }
+        );
+    }
+
 
     public function image()
     {
@@ -47,5 +62,10 @@ class News extends Model
     public function getImageUrlAttribute()
     {
         return Arr::get($this->image, 'url', url('images/broken.png'));
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
     }
 }

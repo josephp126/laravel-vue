@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\News;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Str;
 
 class NewsFactory extends Factory
 {
@@ -22,11 +23,11 @@ class NewsFactory extends Factory
     public function definition()
     {
         return [
-//            'link'        => $this->faker->url,
-'summary'     => $this->faker->realText(),
-'title'       => $this->faker->jobTitle,
-'content'     => $this->faker->realText(200),
-'is_homepage' => $this->faker->boolean(80),
+            'title'       => $title = $this->faker->jobTitle,
+            'slug'        => Str::slug($title),
+            'summary'     => $this->faker->realText(),
+            'content'     => $this->faker->realText(200),
+            'is_homepage' => $this->faker->boolean(80),
         ];
     }
 }

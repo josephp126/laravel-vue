@@ -51,7 +51,7 @@
                             <a onclick="event.preventDefault(); document.getElementById('update-form-{{$record->uuid}}').submit();">
                                 <span class="icon-2x icon-star{{$record->is_homepage? '': '-empty'}}" />
                             </a>
-                            {!! Form::open(['method' => 'put', 'class' => 'hidden', 'route' => ['admin.news.star', $record->uuid], 'id' => "update-form-{$record->uuid}" ])!!}
+                            {!! Form::open(['method' => 'put', 'class' => 'hidden', 'route' => ['admin.news.star', $record], 'id' => "update-form-{$record->uuid}" ])!!}
                             <input type="hidden" name="action" value="star" />
                             {!! Form::close() !!}
                         </td>
