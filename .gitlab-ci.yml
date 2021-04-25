@@ -34,8 +34,8 @@ before_script:
   # Install php extensions
   - docker-php-ext-install mbstring pdo_mysql curl json intl gd xml zip bz2 opcache
   # Install & enable Xdebug for code coverage reports
-  - pecl install xdebug
-  - docker-php-ext-enable xdebug
+  #  - pecl install xdebug
+  #  - docker-php-ext-enable xdebug
   # Install Composer and project dependencies.
   - curl -sS https://getcomposer.org/installer | php
   - php composer.phar install
@@ -65,7 +65,7 @@ before_script:
 test:
   script:
     # run laravel tests
-    - php vendor/bin/phpunit --coverage-text --colors=never
+    - php artisan test --parallel
     # run frontend tests
     # if you have any task for testing frontend
     # set it in your package.json script
