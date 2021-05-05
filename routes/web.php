@@ -28,6 +28,7 @@ Auth::routes();
 Route::resource('news', NewsController::class)->only('index', 'show');
 Route::post('quick/message', [ContactController::class, 'store'])->name('contact.store');
 Route::get('about', [AboutController::class, 'index'])->name('about.index');
+Route::get('contact', [ContactController::class, 'index'])->name('contact.index');
 Route::get('rep/finder', [RepFinderController::class, 'index'])->name('repfinder.index');
 Route::get('company', [CompanyController::class, 'index'])->name('company.index');
 

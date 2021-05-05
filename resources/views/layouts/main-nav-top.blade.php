@@ -30,6 +30,7 @@
                     <a class="dropdown-item" href="{{route('repfinder.index')}}">Repfinder</a>
                     <a class="dropdown-item" href="{{route('about.index')}}">History</a>
                     <a class="dropdown-item" href="{{route('news.index')}}">News</a>
+                    <a class="dropdown-item" href="{{route('contact.index')}}">Contact</a>
                 </div>
             </li>
             <li class="nav-item"><a href="/" class="nav-link">REP LOGIN</a>

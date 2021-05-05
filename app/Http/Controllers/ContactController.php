@@ -8,6 +8,11 @@ use Session;
 
 class ContactController extends Controller
 {
+    public function index()
+    {
+        return view('contact.index');
+    }
+
     public function store(ContactSave $request)
     {
         Contact::create($request->validated() + ['user_id' => auth()->id()]);
