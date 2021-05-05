@@ -15,7 +15,8 @@
         "laravel/ui": "^3.2",
         "laravelcollective/html": "^6.2",
         "livewire/livewire": "^2.4",
-        "silber/bouncer": "v1.0.0-rc.10"
+        "silber/bouncer": "v1.0.0-rc.10",
+        "venturecraft/revisionable": "^1.38"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",

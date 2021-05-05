@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Arr;
 use Str;
+use Venturecraft\Revisionable\RevisionableTrait;
 
 /**
  *
@@ -16,7 +17,7 @@ use Str;
  */
 class News extends Model
 {
-    use HasFactory, SoftDeletes, Uuidable;
+    use HasFactory, SoftDeletes, Uuidable, RevisionableTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -35,6 +36,10 @@ class News extends Model
     ];
 
     protected $casts = ['is_homepage' => 'bool'];
+
+    protected $revisionEnabled = true;
+    protected $revisionCleanup = true; //Remove old revisions (works only when used with $historyLimit)
+    protected $historyLimit = 500;     //Maintain a maximum of 500 changes at any point of time, while cleaning up old revisions.
 
     protected static function boot()
     {
