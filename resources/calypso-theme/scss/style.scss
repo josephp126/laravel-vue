@@ -179,21 +179,21 @@ strong, b {
     border-radius: 3px 3px 0 0 !Important;
 }
 
-.navbar-nav > li.active > a:before, .navbar-nav > li > a:hover:before, .navbar-nav > li > a:focus:before, .extra-nav-class a.dropdown-toggle:before {
-    content: "";
-    width: 0;
-    height: 0;
-    border-bottom: 6px solid #f54828;
-    border-right: 6px solid transparent;
-    position: absolute;
-    top: 0px;
-    right: -4px;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-}
+//.navbar-nav > li.active > a:before, .navbar-nav > li > a:hover:before, .navbar-nav > li > a:focus:before, .extra-nav-class a.dropdown-toggle:before {
+//    content: "";
+//    width: 0;
+//    height: 0;
+//    border-bottom: 6px solid #f54828;
+//    border-right: 6px solid transparent;
+//    position: absolute;
+//    top: 0px;
+//    right: -4px;
+//    -webkit-transition: all 0.2s ease-in-out;
+//    -moz-transition: all 0.2s ease-in-out;
+//    -o-transition: all 0.2s ease-in-out;
+//    -ms-transition: all 0.2s ease-in-out;
+//    transition: all 0.2s ease-in-out;
+//}
 
 .navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
     border-radius: 3px 3px 0 0 !Important;

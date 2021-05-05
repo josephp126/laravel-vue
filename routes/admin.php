@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CommandsController;
 use App\Http\Controllers\Admin\NewsController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,7 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'admin/dashboard');
+Route::view('/', 'admin/dashboard')->name('index');
 
 Route::resource('news', NewsController::class);
 Route::put('news/{news}/star', [NewsController::class, 'star'])->name('news.star');
+
+Route::middleware('can:special-admin')->name('special.')->group(
+    function ($routes) {
+        $routes->get('commands', [CommandsController::class, 'index'])->name('commands.index');
+        $routes->get('command/migration', [CommandsController::class, 'migrations'])->name('commands.migrations');
+    }
+);

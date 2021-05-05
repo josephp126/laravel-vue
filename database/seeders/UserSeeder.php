@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-use Bouncer;
 use Illuminate\Database\Seeder;
 
 class UserSeeder extends Seeder
@@ -16,7 +15,6 @@ class UserSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-        Bouncer::allow('admin')->everything();
 
 //        User::where('email', 'admin@admin.com')->forceDelete();
 

@@ -18,14 +18,25 @@
     font-family: "Helvetica Neue LT Std - Bd Cn", sans-serif;
 }
 
+.navbar {
+    z-index: 10000;
+
+    .nav-item.dropdown {
+        .dropdown-item {
+            @extend .text-white;
+            @extend .bg-dark;
+        }
+    }
+}
+
 //.wowmenu{
 //    position: -webkit-sticky;
 //    position: sticky;
 //    top: 35px;
 //}
 
-.bragging-logos{
-    &>li{
+.bragging-logos {
+    & > li {
         margin-right: 10px;
     }
     img{

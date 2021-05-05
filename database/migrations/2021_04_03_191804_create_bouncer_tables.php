@@ -88,6 +88,9 @@ class CreateBouncerTables extends Migration
                     ->onUpdate('cascade')->onDelete('cascade');
             }
         );
+
+        Bouncer::allow('superadmin')->everything();
+        Bouncer::allow('admin')->to('work-pottorff');
     }
 
     /**

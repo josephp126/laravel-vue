@@ -30,7 +30,7 @@ class UserFactory extends Factory
             'phone'             => $this->faker->phoneNumber,
             'email_verified_at' => now(),
             'date_joined'       => $this->faker->dateTimeBetween('-10 years'),
-            'password'          => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'password'          => bcrypt('admin'),
             'remember_token'    => Str::random(10),
         ];
     }

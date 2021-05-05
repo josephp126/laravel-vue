@@ -14,9 +14,9 @@
 @section('skel_content')
     <!-- /.wrapbox start-->
     <div class="wrapbox admin-container">
-        @include('layouts.admin-bar-top')
+        @include('admin.layouts.admin-bar-top')
         @if(auth()->check())
-            @include('layouts.admin-nav-top')
+            @include('admin.layouts.admin-nav-top')
         @endif
         <div class="clearfix"></div>
 
@@ -32,7 +32,7 @@
             @endif
         </div>
 
-        <div class="admin-container-size mt-3">
+        <div class="container container-fluid admin-container-size mt-3">
             @yield('content')
         </div>
 
