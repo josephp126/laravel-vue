@@ -21,6 +21,11 @@ return [
         'name'    => env('CONTACT_NAME', 'Info'),
         'email'   => env('CONTACT_EMAIL', 'info@pottorff.com'),
         'address' => env('CONTACT_ADDRESS', '5101 Blue Mound Road'),
+
+        'facebook' => 'https://www.facebook.com/pottorffmanufacturing',
+        'twitter'  => '#',
+        'linkedin' => 'https://www.linkedin.com/company/pottorff/',
+        'youtube'  => 'https://www.youtube.com/channel/UClNKNFnQ2R7SoKpEJi_GBEQ',
     ],
 
     /*

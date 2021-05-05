@@ -12,12 +12,12 @@
                     <p>Louvers and Penthouses</p>
                 </div>
                 <div class="col-md-3 text-white">
-                    <p class="mt-40"><a href="#">About</a></p>
-                    <p><a href="#">History</a></p>
+                    <p class="mt-40">About</p>
+                    <p><a href="{{route('about.index')}}">History</a></p>
                     <p class="mt-3"><a href="#">Quick Reference</a></p>
                     <p><a href="#">Cross Reference</a></p>
                     <p><a href="#">Louver Selection Tool</a></p>
-                    <p><a href="#">Repfinder</a></p>
+                    <p><a href="{{route('repfinder.index')}}">Repfinder</a></p>
                 </div>
                 <div class="col-md-3" id="footer-find-us" data-label="find us">
                     <h1 class="title"><span class="colortext">F</span>ind <span class="font100">Us</span></h1>
@@ -35,11 +35,14 @@
                             <strong>Email: </strong> {{config('app.contact.email')}}
                         </p>
                         <ul class="social-icons list-soc">
-                            <li><a href="#"><i class="icon-facebook"></i></a></li>
-                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                            <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                            <li><a href="#"><i class="icon-google-plus"></i></a></li>
-                            <li><a href="#"><i class="icon-skype"></i></a></li>
+                            <li><a target="_blank" rel="nofollow" href="{{config('app.contact.facebook')}}"><i
+                                        class="icon-facebook"></i></a></li>
+                            <li><a target="_blank" rel="nofollow" href="{{config('app.contact.twitter')}}"><i
+                                        class="icon-twitter"></i></a></li>
+                            <li><a target="_blank" rel="nofollow" href="{{config('app.contact.linkedin')}}"><i
+                                        class="icon-linkedin"></i></a></li>
+                            <li><a target="_blank" rel="nofollow" href="{{config('app.contact.youtube')}}"><i
+                                        class="icon-youtube-play"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -76,15 +79,14 @@
             <div class="row">
                 <div class="col-md-4">
                     <p class="pull-left">
-                        &copy; Copyright {{date('Y')}} Pottorff
+                        &copy; Copyright {{date('Y')}} {{config('app.name')}}
                     </p>
                 </div>
                 <div class="col-md-8">
                     <ul class="footermenu pull-right">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="{{route('home')}}">Home</a></li>
                         <li><a href="#">Work</a></li>
-                        <li><a href="#">Pages</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="{{route('about.index')}}">News</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
