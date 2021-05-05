@@ -11,8 +11,37 @@
                     PRODUCTS
                 </a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="/">test 1</a>
-                    <a class="dropdown-item" href="/">test 1</a>
+                    <a class="dropdown-item" href="/">
+                        <img src="{{url('images/menu/menu1.png')}}" alt="Menu" class="pr-2 img-circle" width="60" />
+                        Air Control and Backdraft Dampers
+                    </a>
+                    <a class="dropdown-item" href="/">
+                        <img src="{{url('images/menu/menu2.png')}}" alt="Menu" class="pr-2 img-circle" width="60" />
+                        UL Rated Fire, Smoke and Ceiling Radiation Dampers
+                    </a>
+                    <a class="dropdown-item" href="/">
+                        <img src="{{url('images/menu/menu3.png')}}" alt="Menu" class="pr-2 img-circle" width="60" />
+                        Louvers and Penthouses
+                    </a>
+                    <a class="dropdown-item" href="/">
+                        <img src="{{url('images/menu/menu4.png')}}" alt="Menu" class="pr-2 img-circle" width="60" />
+                        Actuators and Accessories
+                    </a>
+                </div>
+            </li>
+            <li class="{{request()->is('/')? 'product*': ''}} dropdown nav-item">
+                <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                    Quick Reference
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item d-flex flex-row" href="/">
+                        <img src="{{url('images/menu/qmenu0.png')}}" alt="Menu" class="pr-2 img-circle" width="60" />
+                        Louvers and Dampers
+                    </a>
+                    <a class="dropdown-item d-flex flex-row" href="/">
+                        <img src="{{url('images/menu/qmenu1.png')}}" alt="Menu" class="pr-2 img-circle" width="60" />
+                        Louvers and Dampers<br> Quick Reference
+                    </a>
                 </div>
             </li>
             <li class="{{request()->is('quick-reference*')? 'active': ''}}nav-item"><a href="/" class="nav-link">QUICK
