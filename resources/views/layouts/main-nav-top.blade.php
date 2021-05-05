@@ -5,9 +5,9 @@
             <img src="/images/Pottorff-Logo-Black.png" alt="logo">
         </a>
         <ul id="nav" class="nav navbar-nav float-right">
-            <li class="active nav-item"><a href="/" class="nav-link">HOME</a></li>
-            <li class="dropdown nav-item">
-                <a href="javascript:void()" class="dropdown-toggle nav-link" data-toggle="dropdown">
+            <li class="{{request()->is('/')? 'active': ''}} nav-item"><a href="/" class="nav-link">HOME</a></li>
+            <li class="{{request()->is('/')? 'product*': ''}} dropdown nav-item">
+                <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-toggle="dropdown">
                     PRODUCTS
                 </a>
                 <div class="dropdown-menu">
@@ -15,11 +15,14 @@
                     <a class="dropdown-item" href="/">test 1</a>
                 </div>
             </li>
-            <li class="nav-item"><a href="/" class="nav-link">QUICK REFERENCE</a></li>
-            <li class="nav-item"><a href="/" class="nav-link">SELECTION TOOLS</a></li>
-            <li class="nav-item"><a href="/" class="nav-link">RESOURCES</a></li>
-            <li class="nav-item dropdown">
-                <a href="javascript:void()" class="nav-link dropdown-toggle" data-toggle="dropdown">
+            <li class="{{request()->is('quick-reference*')? 'active': ''}}nav-item"><a href="/" class="nav-link">QUICK
+                    REFERENCE</a></li>
+            <li class="{{request()->is('selection-tools*')? 'active': ''}}nav-item"><a href="/" class="nav-link">SELECTION
+                    TOOLS</a></li>
+            <li class="{{request()->is('resources*')? 'active': ''}}nav-item"><a href="/" class="nav-link">RESOURCES</a>
+            </li>
+            <li class="{{request()->is(['about', 'company', 'repfinder', 'history', 'news*'])? 'active': ''}} nav-item dropdown">
+                <a href="javascript:void(0)" class="nav-link dropdown-toggle" data-toggle="dropdown">
                     ABOUT
                 </a>
                 <div class="dropdown-menu">

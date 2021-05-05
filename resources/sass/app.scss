@@ -77,7 +77,7 @@
 .heading {
     @extend .text-primary;
     min-height: 14px;
-    color: #42659f;
+    color: #42659f !important;
     font-size: 32px;
     font-weight: 400;
     font-style: normal;
@@ -85,6 +85,11 @@
     line-height: 24px;
     text-align: left;
     text-transform: uppercase;
+}
+
+.article-heading {
+    @extend .text-primary;
+    margin-bottom: 15px;
 }
 
 .news-section {
@@ -104,7 +109,6 @@
 
         .article-text {
             color: #010000;
-            font-family: "Arial MT", sans-serif;
             font-size: 17px;
             font-weight: 400;
             font-style: normal;
@@ -114,7 +118,6 @@
 
             .title {
                 display: block;
-                margin-bottom: 3px;
             }
         }
 
