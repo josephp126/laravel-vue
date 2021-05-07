@@ -5,7 +5,6 @@
     <script src="{{ url('/js/bootstrap.js') }}"></script>
     <script src="{{ url('/js/plugins.js') }}"></script>
     <script src="{{ url('/js/common.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/gh/livewire/sortable@v0.x.x/dist/livewire-sortable.js"></script>
 @endsection
 
 @section('skel_styles')
@@ -14,7 +13,7 @@
 
 @section('skel_content')
     <!-- /.wrapbox start-->
-    <div class="wrapbox admin-container">
+    <div id="app" class="wrapbox admin-container">
         @include('admin.layouts.admin-bar-top')
         @if(auth()->check())
             @include('admin.layouts.admin-nav-top')

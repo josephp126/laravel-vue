@@ -2,9 +2,7 @@
 
 @section('content')
     <div class="container mt-3">
-
-        <livewire:product-category></livewire:product-category>
-
+        <example-component></example-component>
     </div>
 @endsection
 

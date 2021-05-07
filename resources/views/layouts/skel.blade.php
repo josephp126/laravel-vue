@@ -12,8 +12,6 @@
     @livewireStyles
 
 
-    <script src="{{ mix('js/app.js') }}"></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -23,9 +21,15 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="off">
-    @yield('skel_content')
-@livewireScripts
+
+    <div id="pottorffApp">
+        @yield('skel_content')
+    </div>
+
     <!-- Scripts -->
     @yield('skel_scripts')
+
+    <script src="{{ mix('js/app.js') }}"></script>
+    @livewireScripts
 </body>
 </html>
