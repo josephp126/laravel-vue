@@ -11,8 +11,6 @@
 
     @livewireStyles
 
-    <!-- Scripts -->
-    @yield('skel_scripts')
 
     <script src="{{ mix('js/app.js') }}"></script>
 
@@ -27,5 +25,7 @@
 <body class="off">
     @yield('skel_content')
 @livewireScripts
+    <!-- Scripts -->
+    @yield('skel_scripts')
 </body>
 </html>

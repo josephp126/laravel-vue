@@ -19,7 +19,13 @@ class ProductCategory extends Model
      * @var array
      */
     protected $fillable = [
+        'parent_id',
         'product_id',
-'category_id',
+        'category_id',
     ];
+
+    public function getChildrenAttribute()
+    {
+        return self::where('parent_id', $this->id)->orderBy('sort')->get();
+    }
 }

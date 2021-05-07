@@ -18,8 +18,9 @@ class CreateProductCategoriesTable extends Migration
             function (Blueprint $table) {
                 $table->id();
 
-                $table->unsignedBigInteger('product_id');
-                $table->unsignedBigInteger('category_id');
+                $table->string('name');
+                $table->unsignedBigInteger('parent_id')->nullable();
+                $table->integer('sort')->nullable();
 
                 $table->timestamps();
                 $table->softDeletes();

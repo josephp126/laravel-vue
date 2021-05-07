@@ -13,8 +13,8 @@
                     PRODUCTS
                 </a>
                 <div class="dropdown-menu">
-                    <a href="/" class="dropdown-item">test 1</a>
-                    <a href="/" class="dropdown-item">test 1</a>
+                    <a href="/" class="dropdown-item">Products</a>
+                    <a href="/" class="dropdown-item">Categories</a>
                 </div>
             </li>
             <li class="{{request()->is('news')? "active": ""}} nav-item"><a href="{{route('admin.news.index')}}"
