@@ -22,6 +22,8 @@ class ProductCategory extends Model
         'parent_id',
         'product_id',
         'category_id',
+        'name',
+        'sort',
     ];
 
     public function getChildrenAttribute()

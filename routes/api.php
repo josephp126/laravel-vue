@@ -22,3 +22,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::resources([
     'product_categories' => ProductCategoriesController::class,
 ]);
+
+Route::put('product_categories', [ProductCategoriesController::class, 'saveSort']);

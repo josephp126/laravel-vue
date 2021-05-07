@@ -34,7 +34,8 @@
         "sass-loader": "^8.0.0",
         "tinymce": "^5.7.1",
         "vue": "^2.5.17",
-        "vue-template-compiler": "^2.6.10"
+        "vue-template-compiler": "^2.6.10",
+        "vuedraggable": "^2.24.3"
     },
     "devDependencies": {
         "vue-loader": "^15.9.5"

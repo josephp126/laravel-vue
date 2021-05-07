@@ -28,13 +28,33 @@ class ProductCategoriesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $category = ProductCategory::where('parent_id', $request->get('parent_id'))->orderBy('sort', 'desc')->first();
+        ProductCategory::create(
+            [
+                'parent_id' => $request->get('parent_id'),
+                'name'      => $request->get('name'),
+                'order'     => (optional($category)->sort || 1) + 1,
+            ]
+        );
+
+        return response()->json(['status' => true]);
+    }
+
+    public function saveSort(Request $request)
+    {
+        $ids = $request->get('ids');
+
+        foreach ($ids as $sort => $id) {
+            ProductCategory::find($id)->update(compact('sort'));
+        }
+
+        return response()->json(['status' => true]);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\ProductCategory  $productCategory
+     * @param \App\Models\ProductCategory $productCategory
      * @return \Illuminate\Http\Response
      */
     public function show(ProductCategory $productCategory)
@@ -62,6 +82,7 @@ class ProductCategoriesController extends Controller
      */
     public function destroy(ProductCategory $productCategory)
     {
-        //
+        $productCategory->delete();
+        return response()->json(['status' => true]);
     }
 }
