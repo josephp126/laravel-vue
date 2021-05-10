@@ -1,157 +1,96 @@
 @extends('layouts.main')
 
+<style>
+    /* jssor slider loading skin spin css */
+    .jssorl-009-spin img {
+        animation-name: jssorl-009-spin;
+        animation-duration: 1.6s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes jssorl-009-spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+
+    /*jssor slider bullet skin 132 css*/
+    .jssorb132 {position:absolute;}
+    .jssorb132 .i {position:absolute;cursor:pointer;}
+    .jssorb132 .i .b {fill:#fff;fill-opacity:0.8;stroke:#000;stroke-width:1600;stroke-miterlimit:10;stroke-opacity:0.7;}
+    .jssorb132 .i:hover .b {fill:#000;fill-opacity:.7;stroke:#fff;stroke-width:2000;stroke-opacity:0.8;}
+    .jssorb132 .iav .b {fill:#000;stroke:#fff;stroke-width:2400;fill-opacity:0.8;stroke-opacity:1;}
+    .jssorb132 .i.idn {opacity:0.3;}
+
+    .jssora051 {display:block;position:absolute;cursor:pointer;}
+    .jssora051 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
+    .jssora051:hover {opacity:.8;}
+    .jssora051.jssora051dn {opacity:.5;}
+    .jssora051.jssora051ds {opacity:.3;pointer-events:none;}
+</style>
+
 @section('content')
     <!-- CAROUSEL
 ================================================== -->
-    <section class="carousel carousel-fade slide home-slider" id="c-slide" data-ride="carousel" data-interval="4500"
-             data-pause="false">
-        <ol class="carousel-indicators">
-            <li data-target="#c-slide" data-slide-to="0" class="active"></li>
-            <li data-target="#c-slide" data-slide-to="1" class=""></li>
-            <li data-target="#c-slide" data-slide-to="2" class=""></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="item active"
-                 style="background: url(http://www.wowthemes.net/demo/calypso/img/demo/slide3.jpg);">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <br>
-                            <br>
-                            <div class="animated fadeInDownBig notransition">
-                                <span class="car-largetext">Vivid Skins <span class="font300">&amp; Three</span> Layouts</span><br>
-                            </div>
-                            <br>
-                            <br>
-                            <div class="car-widecircle animated fadeInLeftBig notransition">
-                                <span>Wide</span>
-                            </div>
-                            <div class="car-middlecircle animated fadeInUpBig notransition">
-                                <span>Boxed</span>
-                            </div>
-                            <div class="car-smallcircle animated fadeInRightBig notransition">
-                                <span>Narrow</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item" style="background: url(http://www.wowthemes.net/demo/calypso/img/demo/bg.jpg);">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 fadein scaleInv anim_1">
-                            <div class="fadein scaleInv anim_2">
-                                <h1 class="carouselText1 animated fadeInUpBig">Welcome to <span class="colortext">Calypso</span>
-                                </h1>
-                            </div>
-                            <div class="fadein scaleInv anim_1">
-                                <p class="carouselText2 animated fadeInLeft">
-                                    MultiPurpose Template
-                                </p>
-                            </div>
-                            <div class="fadein scaleInv anim_2">
-                                <p class="carouselText3">
-                                    <i class="icon-ok"></i> Bootstrap 3.2.0 + Compatible
-                                </p>
-                            </div>
-                            <div class="fadein scaleInv anim_3">
-                                <p class="carouselText3">
-                                    <i class="icon-ok"></i> Responsive Layouts
-                                </p>
-                            </div>
-                            <div class="fadein scaleInv anim_4">
-                                <p class="carouselText3">
-                                    <i class="icon-ok"></i> Beautiful Animation Effects
-                                </p>
-                            </div>
-                            <div class="fadein scaleInv anim_5">
-                                <p class="carouselText3">
-                                    <i class="icon-ok"></i> Top Notch Support
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 text-center fadein scaleInv anim_2">
-                            <div class="text-center">
-                                <div class="fadein scaleInv anim_3">
-                                    <img src="http://www.wowthemes.net/demo/calypso/img/demo/slide1-3.png" alt=""
-                                         class="slide1-3 animated rollIn">
-                                </div>
-                                <div class="fadein scaleInv anim_8">
-                                    <img src="http://www.wowthemes.net/demo/calypso/img/demo/slide1-1.png" alt=""
-                                         class="slide1-1 animated rollIn">
-                                </div>
-                                <div class="fadein scaleInv anim_5">
-                                    <img src="http://www.wowthemes.net/demo/calypso/img/demo/slide1-2.png" alt=""
-                                         class="slide1-2 animated rollIn">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item" style="background: url(http://www.wowthemes.net/demo/calypso/img/demo/slide1.jpg);">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 animated fadeInUp notransition">
-                            <img src="http://www.wowthemes.net/demo/calypso/img/demo/desktop3.png" alt=""
-                                 style="width:90%;">
-                        </div>
-                        <div class="col-md-6 animated fadeInDown  notransition mt-5 text-right">
-                            <div class="car-highlight1 animated fadeInLeftBig">
-                                Add ANYTHING in Slider
-                            </div>
-                            <br>
-                            <div class="car-highlight2 animated fadeInRightBig notransition">
-                                Powerful Options
-                            </div>
-                            <br>
-                            <div class="car-highlight3 animated fadeInUpBig notransition">
-                                Video, Audio, Text, Iframes etc
-                            </div>
-                            <br>
-                            <div class="car-highlight4 animated flipInX notransition">
-                                Any HTML5 code you wish
-                            </div>
-                            <br>
-                            <div class="car-highlight5 animated rollIn notransition">
-                                Slider with <span class="font100">Total Control</span><br>
-                                <span class="font100" style="font-size:20px;">Embed Practically</span> Anything<br>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item" style="background: url(http://www.wowthemes.net/demo/calypso/img/demo/slide3.jpg);">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <br>
-                            <br>
-                            <div class="animated fadeInDownBig notransition">
-                                <span class="car-largetext">Vivid Skins <span class="font300">&amp; Three</span> Layouts</span><br>
-                            </div>
-                            <br>
-                            <br>
-                            <div class="car-widecircle animated fadeInLeftBig notransition">
-                                <span>Wide</span>
-                            </div>
-                            <div class="car-middlecircle animated fadeInUpBig notransition">
-                                <span>Boxed</span>
-                            </div>
-                            <div class="car-smallcircle animated fadeInRightBig notransition">
-                                <span>Narrow</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div id="carousel" style="position:relative;margin:0 auto;top:0px;left:0px;width:1600px;height:530px;overflow:hidden;visibility:hidden;">
+    <!-- Loading Screen -->
+    <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+        <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="images/homepage/carousel/spin.svg" />
+    </div>
+    <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1600px;height:530px;overflow:hidden;">
+        <div data-fillmode="0" data-p="1065">
+            <img data-u="image" src="images/homepage/carousel/slider-1-back.png" />
+            <img data-to="50% 50%" data-t="0" style="left:1696px;top:0px;width:706px;height:479px;position:absolute;max-width:706px;" src="images/homepage/carousel/slider-1-res-1.png" />
+            <div data-to="50% 50%" data-t="1" style="left:-600px;top:104px;width:539px;height:57px;position:absolute;color:#000d;font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:900;text-align:left;padding:6px 10px 6px 10px;text-shadow:0px 1px #fff;box-sizing:border-box;background-color:#fffc;background-clip:padding-box;">HIGH-PERFORMING LOUVERS</div>
+            <div data-to="50% 50%" data-t="2" style="left:-542px;top:384px;width:423px;height:86px;position:absolute;color:#fff;font-size:36px;font-weight:900;line-height:1.2;letter-spacing:0.05em;text-align:left;">PERFECT FOR <span style="color:#1d568d">ANY</span><br />&nbsp; &nbsp;CONDITION </div>
         </div>
-        <!-- /.carousel-inner -->
-        <a class="left carousel-control animated fadeInLeft" href="#c-slide" data-slide="prev"><i
-                class="icon-angle-left"></i></a>
-        <a class="right carousel-control animated fadeInRight" href="#c-slide" data-slide="next"><i
-                class="icon-angle-right"></i></a>
-    </section>
+        <div data-p="1065">
+            <img data-u="image" src="images/homepage/carousel/slider-2-back.png" />
+            <img data-to="50% 50%" data-t="3" style="left:-300px;top:14px;width:267px;height:448px;position:absolute;max-width:267px;" src="images/homepage/carousel/slider-2-res-1.png" />
+            <img data-to="50% 50%" data-t="4" style="left:1700px;top:34px;width:300px;height:350px;position:absolute;max-width:300px;" src="images/homepage/carousel/slider-2-res-4.png" />
+            <img data-to="50% 50%" data-t="5" style="left:250px;top:600px;width:345px;height:251px;position:absolute;max-width:345px;" src="images/homepage/carousel/slider-2-res-3.png" />
+            <img data-to="50% 50%" data-t="6" style="left:569px;top:600px;width:297px;height:257px;position:absolute;max-width:297px;" src="images/homepage/carousel/slider-2-res-2.png" />
+            <div data-to="50% 50%" data-t="7" style="left:125px;top:-100px;width:686px;height:57px;position:absolute;color:#000d;font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:900;text-align:left;padding:6px 10px 6px 10px;text-shadow:0px 1px #ffffff;box-sizing:border-box;background-color:#fffc;background-clip:padding-box;">UL CLASSIFIED LIFE SAFETY DAMPERS</div>
+            <div data-to="50% 50%" data-t="8" style="left:325px;top:-100px;width:460px;height:40px;position:absolute;color:#b74a1c;font-size:36px;font-weight:700;line-height:1.2;text-align:center;">TESTED AND TRUSTED<br /><br /></div>
+        </div>
+        <div data-p="1065">
+            <img data-u="image" src="images/homepage/carousel/slider-3-back.png" />
+            <img data-to="50% 50%" data-t="9" style="left:1181px;top:-500px;width:266px;height:375px;position:absolute;max-width:266px;" src="images/homepage/carousel/slider-3-res-3.png" />
+            <img data-to="50% 50%" data-t="10" style="left:416px;top:-500px;width:255px;height:450px;position:absolute;max-width:255px;" src="images/homepage/carousel/slider-3-res-4.png" />
+            <img data-to="50% 50%" data-t="11" style="left:586px;top:-500px;width:291px;height:246px;position:absolute;max-width:291px;" src="images/homepage/carousel/slider-3-res-2.png" />
+            <img data-to="50% 50%" data-t="12" style="left:820px;top:-500px;width:389px;height:193px;position:absolute;max-width:389px;" src="images/homepage/carousel/slider-3-res-1.png" />
+            <div data-to="50% 50%" data-t="13" style="left:-650px;top:56px;width:616px;height:57px;position:absolute;color:#000d;font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:900;text-align:left;padding:6px 10px 6px 10px;text-shadow:0px 1px #fff;box-sizing:border-box;background-color:#fffc;background-clip:padding-box;">COMMERCIAL CONTROL DAMPEERS<br /><br /></div>
+            <div data-to="50% 50%" data-t="14" style="left:500px;top:-200px;width:553px;height:92px;position:absolute;color:#fff;font-size:40px;font-weight:700;line-height:1.2;text-align:center;">
+                DESIGNED FOR<br />
+                <span style="margin-left:300px;color:#e16048">SAFETY</span></div>
+        </div>
+    </div>
+    <!-- Bullet Navigator -->
+    <div data-u="navigator" class="jssorb132" style="position:absolute;bottom:24px;right:16px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+        <div data-u="prototype" class="i" style="width:12px;height:12px;">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+            </svg>
+        </div>
+    </div>
+    <!-- Arrow Navigator -->
+    <div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+        <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+            <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+        </svg>
+    </div>
+    <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+        <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+            <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+        </svg>
+    </div>
+</div>
     <!-- /.carousel end-->
 
 
@@ -542,43 +481,75 @@
 @endsection
 
 @section('scripts')
+    <script src="js/jssor.slider-28.1.0.min.js" type="text/javascript"></script>
     <script>
         /* ---------------------------------------------------------------------- */
         /*	Carousel
         /* ---------------------------------------------------------------------- */
         $(function () {
-            $('#carousel-projects').carouFredSel({
-                responsive: true,
-                items: {
-                    width: 200,
-                    height: 295,
-                    visible: {
-                        min: 1,
-                        max: 4,
-                    },
-                },
-                width: '200px',
-                height: '295px',
-                auto: false,
-                circular: true,
-                infinite: false,
-                prev: {
-                    button: '#car_prev',
-                    key: 'left',
-                },
-                next: {
-                    button: '#car_next',
-                    key: 'right',
-                },
-                swipe: {
-                    onMouse: true,
-                    onTouch: true,
-                },
-                scroll: {
-                    easing: '',
-                    duration: 1200,
-                },
-            });
+            var carousel_SlideoTransitions = [
+              [{b:0,d:800,x:791,e:{x:1}}],
+              [{b:600,d:600,x:112}],
+              [{b:680,d:720,x:120,y:260}],
+              [{b:0,d:600,x:88}],
+              [{b:200,d:600,x:806}],
+              [{b:400,d:600,y:256}],
+              [{b:600,d:600,x:570,y:258}],
+              [{b:800,d:600,y:95}],
+              [{b:800,d:600,y:175}],
+              [{b:500,d:600,x:1180,y:90}],
+              [{b:200,d:600,y:52}],
+              [{b:400,d:600,y:257}],
+              [{b:280,d:620,y:286}],
+              [{b:700,d:600,x:673}],
+              [{b:800,d:600,x:630,y:152}]
+            ];
+
+            var carousel_options = {
+              $AutoPlay: 1,
+              $SlideDuration: 800,
+              $SlideEasing: $Jease$.$Swing,
+              $PauseOnHover: 0,
+              $CaptionSliderOptions: {
+                $Class: $JssorCaptionSlideo$,
+                $Transitions: carousel_SlideoTransitions
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$,
+                $SpacingX: 20,
+                $SpacingY: 20
+              }
+            };
+
+            var carousel_slider = new $JssorSlider$("carousel", carousel_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 3000;
+
+            function ScaleSlider() {
+                var containerElement = carousel_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    carousel_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
         });
     </script>
     <script>
