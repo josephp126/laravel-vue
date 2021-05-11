@@ -12,6 +12,7 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+    .js('resources/js/jssor.slider-28.1.0.min.js', 'public/js')
     // .js('resources/js/calypso/bootstrap.js', 'public/js')
     // .js('resources/js/calypso/jquery.js', 'public/js')
     .js('resources/calypso-theme/js/plugins.js', 'public/js').
