@@ -17,6 +17,7 @@ class CreateProductResourcesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('product_id');
             $table->unsignedBigInteger('resource_id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -18,6 +18,7 @@ class CreateContentsTable extends Migration
             $table->string('title');
             $table->string('link');
             $table->string('content');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

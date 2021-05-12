@@ -28,6 +28,7 @@ class CreateUsersTable extends Migration
             $table->text('notification_preferences')->nullable()->default('[\"mail\"]');
             $table->boolean('is_contact')->nullable()->default(0);
             $table->string('remember_token', 100)->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -20,6 +20,7 @@ class CreateAddressesTable extends Migration
             $table->unsignedBigInteger('state_id')->nullable();
             $table->string('city')->nullable();
             $table->string('addressable');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

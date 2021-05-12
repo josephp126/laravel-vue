@@ -19,6 +19,7 @@ class CreateCategoriesTable extends Migration
             $table->unsignedBigInteger('parent_id');
             $table->unsignedBigInteger('root_id');
             $table->integer('order');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

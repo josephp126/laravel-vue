@@ -18,6 +18,7 @@ class CreateProductAttributesTable extends Migration
             $table->string('value');
             $table->unsignedBigInteger('attribute_id');
             $table->unsignedBigInteger('product_id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

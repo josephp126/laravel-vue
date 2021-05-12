@@ -17,6 +17,7 @@ class CreateCategoryResourcesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('resource_id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

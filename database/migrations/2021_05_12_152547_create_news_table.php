@@ -21,6 +21,7 @@ class CreateNewsTable extends Migration
             $table->text('summary');
             $table->text('content');
             $table->string('is_homepage')->nullable()->default('0');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

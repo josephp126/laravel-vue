@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome')->name('home');
 
-Auth::routes();
+Auth::routes()
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 
@@ -33,3 +33,410 @@ Route::get('rep/finder', [RepFinderController::class, 'index'])->name('repfinder
 Route::get('company', [CompanyController::class, 'index'])->name('company.index');
 
 Route::get('images/{image}/name/{name}', [ImagesController::class, 'show'])->name('image.request');
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index');
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index');
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index');
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+Route::resource('user', App\Http\Controllers\Admin\UserController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+Route::resource('user', App\Http\Controllers\Admin\UserController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+Route::resource('user', App\Http\Controllers\Admin\UserController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+Route::resource('user', App\Http\Controllers\Admin\UserController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+Route::resource('user', App\Http\Controllers\Admin\UserController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+Route::resource('user', App\Http\Controllers\Admin\UserController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+Route::resource('user', App\Http\Controllers\Admin\UserController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+Route::resource('user', App\Http\Controllers\Admin\UserController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+Route::resource('user', App\Http\Controllers\Admin\UserController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+Route::resource('user', App\Http\Controllers\Admin\UserController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+Route::resource('user', App\Http\Controllers\Admin\UserController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+Route::resource('user', App\Http\Controllers\Admin\UserController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+Route::resource('user', App\Http\Controllers\Admin\UserController::class);
+
+
+Route::resource('about', App\Http\Controllers\AboutController::class)->only('index');
+
+Route::resource('company', App\Http\Controllers\CompanyController::class)->only('index', 'show');
+
+Route::resource('news', App\Http\Controllers\NewsController::class)->only('index', 'show');
+
+Route::get('news/star', [App\Http\Controllers\Admin\NewsController::class, 'star']);
+Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
+
+Route::resource('user', App\Http\Controllers\Admin\UserController::class);

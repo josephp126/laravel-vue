@@ -19,6 +19,7 @@ class CreateStatesTable extends Migration
             $table->string('standard_abbreviation');
             $table->string('postal_abbreviation');
             $table->string('capital_city');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

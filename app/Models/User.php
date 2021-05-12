@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class User extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -49,4 +50,10 @@ class User extends Model
         'email_verified_at' => 'datetime',
         'is_contact' => 'boolean',
     ];
+
+
+    public function accessLogs()
+    {
+        return $this->hasMany(\App\Models\AccessLog::class);
+    }
 }

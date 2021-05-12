@@ -14,16 +14,21 @@ models:
     notification_preferences: text nullable default:["mail"]
     is_contact: boolean nullable default:0
     remember_token: string:100 nullable
+    softDeletes
+
+    relationships:
+      hasMany: AccessLog
 
   AccessLog:
     user_id: id
-    event_id: id
+    access_log_event: id
     entity_id: id
     accessable_type: string nullable
     accessable_id: 'biginteger unsigned nullable'
 
   AccessLogEvent:
     name: string
+    softDeletes
 
   Address:
     address: string
@@ -31,6 +36,7 @@ models:
     state_id: id nullable
     city: string nullable
     addressable: morph
+    softDeletes
 
   Article:
     uuid: 'string:36'
@@ -39,46 +45,64 @@ models:
     title: string
     summary: text
     is_homepage: 'string nullable default:0'
+    softDeletes
 
   Attribute:
     name: string
     attribute_type_id: id
+    softDeletes
 
   AttributeType:
     name: string
+    softDeletes
 
   Category:
     name: string
     parent_id: biginteger unsigned
     root_id: biginteger unsigned
     order: integer
+    softDeletes
+
   CategoryImage:
     category_id: biginteger unsigned
     image_id: biginteger unsigned
+
   CategoryResource:
     category_id: biginteger unsigned
     resource_id: biginteger unsigned
+    softDeletes
+
   Contact:
     user_id: 'biginteger nullable'
     name: string
     email: string
     message: string
+    softDeletes
+
   Content:
     title: string
     link: string
     content: string
+    softDeletes
+
   EmailTemplate:
     name: string
     content: text
+    softDeletes
+
   Event:
     name: string
     description: string
     start_at: datetime
+    softDeletes
+
   Gallery:
     name: string
+
   GalleryImage:
     gallery_id: id
     image_id: id
+
   Image:
     uuid: 'string:36'
     imageable_type: string
@@ -87,6 +111,7 @@ models:
     title: string
     code_number: string
     hash: string
+
   News:
     uuid: 'string:36'
     title: string
@@ -94,10 +119,14 @@ models:
     summary: text
     content: text
     is_homepage: 'string nullable default:0'
+    softDeletes
+
   Price:
     product_id: id
     value: string
     comment: string
+    softDeletes
+
   Product:
     description: string
     link: string
@@ -105,43 +134,56 @@ models:
     more_info: string
     subtitle: string
     title: string
+    softDeletes
+
   ProductAttribute:
     value: string
     attribute_id: biginteger unsigned
     product_id: biginteger unsigned
+    softDeletes
+
   ProductCategory:
     name: string
     parent_id: 'biginteger unsigned nullable'
     sort: 'integer nullable'
+    softDeletes
+
   ProductImage:
     product_id: id
     image_id: id
+    softDeletes
+
   ProductResource:
     product_id: id
     resource_id: id
+    softDeletes
+
   Representative:
     name: string
     website: string
     phone: string
     fax: string
-    is_international: boolean
+    is_international: boolean nullable defalt:1
+    softDeletes
+
   Resource:
     user_id: id
     title: string
     filename: string
     resource_type_id: id
+
   ResourceGroup:
     name: string
+    softDeletes
+
   ResourceType:
     name: string
-  Role:
-    name: string
-    title: string nullable
-    level: 'integer unsigned nullable'
-    scope: 'integer nullable'
+    softDeletes
+
   Service:
     title: string
     content: string
+    softDeletes
 
   Slide:
     link: string
@@ -152,9 +194,39 @@ models:
     standard_abbreviation: string
     postal_abbreviation: string
     capital_city: string
+    softDeletes
 
+seeders: User, News
 
 controllers:
   About:
     index:
       render: about.index
+
+  Company:
+    resource: index, show
+
+  News:
+    resource: index, show
+    index:
+      query: paginate:news
+      render: admin.news.index with:news
+
+
+  Admin/News:
+    resource
+    index:
+      resource: paginate:news
+    star:
+      flash: 'admin.news.updated'
+      update: is_homepage
+      redirect: admin.news.index
+
+  Admin/User:
+    resource
+    index:
+      query: paginate:users
+      render: admin.users.index with:users
+    show:
+      render: admin.users.show with:user
+

@@ -18,6 +18,7 @@ class CreatePricesTable extends Migration
             $table->unsignedBigInteger('product_id');
             $table->string('value');
             $table->string('comment');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

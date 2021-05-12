@@ -19,7 +19,8 @@ class CreateRepresentativesTable extends Migration
             $table->string('website');
             $table->string('phone');
             $table->string('fax');
-            $table->boolean('is_international');
+            $table->boolean('is_international')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

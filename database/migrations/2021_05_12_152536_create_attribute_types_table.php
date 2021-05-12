@@ -16,6 +16,7 @@ class CreateAttributeTypesTable extends Migration
         Schema::create('attribute_types', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

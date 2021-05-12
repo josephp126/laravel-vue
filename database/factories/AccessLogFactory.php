@@ -5,8 +5,8 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 use App\Models\AccessLog;
+use App\Models\AccessLogEvent;
 use App\Models\Entity;
-use App\Models\Event;
 use App\Models\User;
 
 class AccessLogFactory extends Factory
@@ -27,7 +27,7 @@ class AccessLogFactory extends Factory
     {
         return [
             'user_id' => User::factory(),
-            'event_id' => Event::factory(),
+            'access_log_event' => AccessLogEvent::factory(),
             'entity_id' => Entity::factory(),
             'accessable_type' => $this->faker->word,
             'accessable_id' => $this->faker->randomNumber(),

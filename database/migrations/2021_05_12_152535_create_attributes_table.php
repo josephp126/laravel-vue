@@ -17,6 +17,7 @@ class CreateAttributesTable extends Migration
             $table->id();
             $table->string('name');
             $table->unsignedBigInteger('attribute_type_id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
