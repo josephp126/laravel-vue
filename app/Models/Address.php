@@ -4,14 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- *
- **/
 class Address extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory;
 
     /**
      * The attributes that are mass assignable.
@@ -21,11 +17,24 @@ class Address extends Model
     protected $fillable = [
         'address',
         'zip',
+        'state_id',
         'city',
+        'addressable',
     ];
 
-    public function addressable()
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'id' => 'integer',
+        'state_id' => 'integer',
+    ];
+
+
+    public function state()
     {
-        return $this->morphTo();
+        return $this->belongsTo(\App\Models\State::class);
     }
 }

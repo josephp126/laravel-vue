@@ -4,14 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- *
- **/
 class Representative extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory;
 
     /**
      * The attributes that are mass assignable.
@@ -20,13 +16,19 @@ class Representative extends Model
      */
     protected $fillable = [
         'name',
-'website',
-'phone',
-'fax',
-'is_international',
+        'website',
+        'phone',
+        'fax',
+        'is_international',
     ];
 
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
     protected $casts = [
+        'id' => 'integer',
         'is_international' => 'boolean',
     ];
 }

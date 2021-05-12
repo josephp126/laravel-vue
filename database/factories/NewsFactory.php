@@ -2,9 +2,9 @@
 
 namespace Database\Factories;
 
-use App\Models\News;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Str;
+use Illuminate\Support\Str;
+use App\Models\News;
 
 class NewsFactory extends Factory
 {
@@ -23,11 +23,12 @@ class NewsFactory extends Factory
     public function definition()
     {
         return [
-            'title'       => $title = $this->faker->jobTitle,
-            'slug'        => Str::slug($title),
-            'summary'     => $this->faker->realText(),
-            'content'     => $this->faker->realText(200),
-            'is_homepage' => $this->faker->boolean(80),
+            'uuid' => $this->faker->uuid,
+            'title' => $this->faker->sentence(4),
+            'slug' => $this->faker->slug,
+            'summary' => $this->faker->text,
+            'content' => $this->faker->paragraphs(3, true),
+            'is_homepage' => $this->faker->word,
         ];
     }
 }

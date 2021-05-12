@@ -2,16 +2,12 @@
 
 namespace App\Models;
 
-use App\Traits\Uuidable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Silber\Bouncer\Database\HasRolesAndAbilities;
+use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+class User extends Model
 {
-    use HasFactory, Notifiable, SoftDeletes, Uuidable, HasRolesAndAbilities;
+    use HasFactory;
 
     /**
      * The attributes that are mass assignable.
@@ -19,22 +15,22 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
+        'uuid',
         'first_name',
         'last_name',
         'username',
         'password',
         'email',
         'email_verified_at',
-        'is_active',
         'date_joined',
         'guid',
         'phone',
-        'is_contact',
         'notification_preferences',
+        'is_contact',
     ];
 
     /**
-     * The attributes that should be hidden for arrays.
+     * The attributes that should be hidden for serialization.
      *
      * @var array
      */
@@ -49,18 +45,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
-        'email_verified_at'        => 'datetime',
-        'is_contact'               => 'boolean',
-        'notification_preferences' => 'json',
+        'id' => 'integer',
+        'email_verified_at' => 'datetime',
+        'is_contact' => 'boolean',
     ];
-
-    public function getNameAttribute()
-    {
-        return "{$this->first_name} {$this->last_name}";
-    }
-
-    public function address()
-    {
-        return $this->morphOne(Address::class, 'addressable');
-    }
 }

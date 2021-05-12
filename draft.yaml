@@ -1,0 +1,160 @@
+models:
+
+  User:
+    uuid: string:36
+    first_name: string
+    last_name: string
+    username: string
+    password: string
+    email: string
+    email_verified_at: datetime nullable
+    date_joined: string
+    guid: string nullable
+    phone: string nullable
+    notification_preferences: text nullable default:["mail"]
+    is_contact: boolean nullable default:0
+    remember_token: string:100 nullable
+
+  AccessLog:
+    user_id: id
+    event_id: id
+    entity_id: id
+    accessable_type: string nullable
+    accessable_id: 'biginteger unsigned nullable'
+
+  AccessLogEvent:
+    name: string
+
+  Address:
+    address: string
+    zip: string nullable
+    state_id: id nullable
+    city: string nullable
+    addressable: morph
+
+  Article:
+    uuid: 'string:36'
+    link: string
+    content: string
+    title: string
+    summary: text
+    is_homepage: 'string nullable default:0'
+
+  Attribute:
+    name: string
+    attribute_type_id: id
+
+  AttributeType:
+    name: string
+
+  Category:
+    name: string
+    parent_id: biginteger unsigned
+    root_id: biginteger unsigned
+    order: integer
+  CategoryImage:
+    category_id: biginteger unsigned
+    image_id: biginteger unsigned
+  CategoryResource:
+    category_id: biginteger unsigned
+    resource_id: biginteger unsigned
+  Contact:
+    user_id: 'biginteger nullable'
+    name: string
+    email: string
+    message: string
+  Content:
+    title: string
+    link: string
+    content: string
+  EmailTemplate:
+    name: string
+    content: text
+  Event:
+    name: string
+    description: string
+    start_at: datetime
+  Gallery:
+    name: string
+  GalleryImage:
+    gallery_id: id
+    image_id: id
+  Image:
+    uuid: 'string:36'
+    imageable_type: string
+    imageable_id: biginteger unsigned
+    mime_type: string
+    title: string
+    code_number: string
+    hash: string
+  News:
+    uuid: 'string:36'
+    title: string
+    slug: string nullable
+    summary: text
+    content: text
+    is_homepage: 'string nullable default:0'
+  Price:
+    product_id: id
+    value: string
+    comment: string
+  Product:
+    description: string
+    link: string
+    code: string
+    more_info: string
+    subtitle: string
+    title: string
+  ProductAttribute:
+    value: string
+    attribute_id: biginteger unsigned
+    product_id: biginteger unsigned
+  ProductCategory:
+    name: string
+    parent_id: 'biginteger unsigned nullable'
+    sort: 'integer nullable'
+  ProductImage:
+    product_id: id
+    image_id: id
+  ProductResource:
+    product_id: id
+    resource_id: id
+  Representative:
+    name: string
+    website: string
+    phone: string
+    fax: string
+    is_international: boolean
+  Resource:
+    user_id: id
+    title: string
+    filename: string
+    resource_type_id: id
+  ResourceGroup:
+    name: string
+  ResourceType:
+    name: string
+  Role:
+    name: string
+    title: string nullable
+    level: 'integer unsigned nullable'
+    scope: 'integer nullable'
+  Service:
+    title: string
+    content: string
+
+  Slide:
+    link: string
+    filename: string
+
+  State:
+    name: string
+    standard_abbreviation: string
+    postal_abbreviation: string
+    capital_city: string
+
+
+controllers:
+  About:
+    index:
+      render: about.index

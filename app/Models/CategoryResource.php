@@ -4,14 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- *
- **/
 class CategoryResource extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory;
 
     /**
      * The attributes that are mass assignable.
@@ -19,6 +15,18 @@ class CategoryResource extends Model
      * @var array
      */
     protected $fillable = [
-        //TODO :: add columns here
+        'category_id',
+        'resource_id',
+    ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'id' => 'integer',
+        'category_id' => 'integer',
+        'resource_id' => 'integer',
     ];
 }

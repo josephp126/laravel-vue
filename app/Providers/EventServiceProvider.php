@@ -28,6 +28,6 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Contact::observe(ContactObserver::class);
+//        Contact::observe(ContactObserver::class);
     }
 }
