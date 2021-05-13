@@ -6,24 +6,24 @@
         </a>
         <ul id="nav" class="nav navbar-nav float-right">
             <li class="{{request()->is('/')? 'active': ''}} nav-item"><a href="/" class="nav-link">HOME</a></li>
-            <li class="{{request()->is('/')? 'product*': ''}} dropdown nav-item">
+            <li class="{{request()->is('product*')? 'active': ''}} dropdown nav-item">
                 <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-toggle="dropdown">
                     PRODUCTS
                 </a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="/">
+                    <a class="dropdown-item" href="/product?type=1">
                         <img src="{{url('images/menu/menu1.png')}}" alt="Menu" class="pr-2 img-circle" width="60" />
                         Air Control and Backdraft Dampers
                     </a>
-                    <a class="dropdown-item" href="/">
+                    <a class="dropdown-item" href="/product?type=2">
                         <img src="{{url('images/menu/menu2.png')}}" alt="Menu" class="pr-2 img-circle" width="60" />
                         UL Rated Fire, Smoke and Ceiling Radiation Dampers
                     </a>
-                    <a class="dropdown-item" href="/">
+                    <a class="dropdown-item" href="/product?type=3">
                         <img src="{{url('images/menu/menu3.png')}}" alt="Menu" class="pr-2 img-circle" width="60" />
                         Louvers and Penthouses
                     </a>
-                    <a class="dropdown-item" href="/">
+                    <a class="dropdown-item" href="/product?type=4">
                         <img src="{{url('images/menu/menu4.png')}}" alt="Menu" class="pr-2 img-circle" width="60" />
                         Actuators and Accessories
                     </a>

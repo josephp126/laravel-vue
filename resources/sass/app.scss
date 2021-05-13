@@ -177,3 +177,12 @@
 .wrapsemibox {
     min-height: 500px;
 }
+.product-table th, .product-table td {
+    text-align: center;
+    vertical-align: middle;
+}
+.action-icon {
+    cursor: pointer;
+    padding: 2px;
+    margin: 2px;
+}
