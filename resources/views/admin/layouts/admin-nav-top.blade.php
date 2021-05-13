@@ -5,8 +5,8 @@
             <img src="/images/Pottorff-Logo-Black.png" alt="logo">
         </a>
         <ul id="nav" class="nav navbar-nav float-right">
-            <li class="{{request()->is('admin')? "active": ""}} nav-item"><a href="/admin" class="nav-link">HOME</a>
-            </li>
+            <li class="{{request()->is('admin')? "active": ""}} nav-item"><a href="/admin" class="nav-link">HOME</a></li>
+            <li class="{{request()->is('*/slider')? "active": ""}} nav-item"><a href="{{ route('admin.slider.index') }}" class="nav-link">Slider</a></li>
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true"
                    aria-expanded="false">

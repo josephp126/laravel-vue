@@ -305,173 +305,7 @@
         <section class="grayarea recent-projects-home mt-5 animated fadeInUpNow notransition">
             <div class="container">
                 <div class="row">
-                    <div class="text-center heading w-100 mb-3">
-                        <img src="/images/icons/Case Studies.jpg" alt="cases" class="header-icon">
-                        PROJECTS AND CASE STUDIES
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="list_carousel text-center">
-                            <div class="carousel_nav"><a class="prev" id="car_prev" href="#"><span>prev</span></a>
-                                <a class="next"
-                                   id="car_next" href="#"><span>next</span></a>
-                            </div>
-                            <div class="clearfix"></div>
-                            <ul id="carousel-projects">
-                                <!--featured-projects 1-->
-                                <li>
-                                    <div class="boxcontainer">
-                                        <img src="http://www.wowthemes.net/demo/calypso/img/demo/showcase1.jpg"
-                                             alt="">
-                                        <div class="roll">
-                                            <div class="wrapcaption"><a href="projectdetail.html"><i
-                                                        class="icon-link captionicons"></i></a>
-                                                <a
-                                                    data-gal="prettyPhoto[gallery1]"
-                                                    href="http://www.wowthemes.net/demo/calypso/img/demo/showcase1.jpg"
-                                                    title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <h1><a href="projectdetail.html">Trains</a></h1>
-                                        <p>Lore ipsum</p>
-                                    </div>
-                                </li>
-                                <!--featured-projects 2-->
-                                <li>
-                                    <div class="boxcontainer">
-                                        <img src="http://www.wowthemes.net/demo/calypso/img/demo/showcase2.jpg"
-                                             alt="">
-                                        <div class="roll">
-                                            <div class="wrapcaption"><a href="projectdetail.html"><i
-                                                        class="icon-link captionicons"></i></a>
-                                                <a
-                                                    data-gal="prettyPhoto[gallery1]"
-                                                    href="http://www.wowthemes.net/demo/calypso/img/demo/showcase2.jpg"
-                                                    title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <h1><a href="projectdetail.html">Automobiles</a></h1>
-                                        <p>Jura mountains</p>
-                                    </div>
-                                </li>
-                                <!--featured-projects 3-->
-                                <li>
-                                    <div class="boxcontainer">
-                                        <img src="http://www.wowthemes.net/demo/calypso/img/demo/showcase3.jpg"
-                                             alt="">
-                                        <div class="roll">
-                                            <div class="wrapcaption"><a href="projectdetail.html"><i
-                                                        class="icon-link captionicons"></i></a>
-                                                <a
-                                                    data-gal="prettyPhoto[gallery1]"
-                                                    href="http://www.wowthemes.net/demo/calypso/img/demo/showcase3.jpg"
-                                                    title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <h1><a href="projectdetail.html">Biscaya</a></h1>
-                                        <p>Clio sorevins</p>
-                                    </div>
-                                </li>
-                                <!--featured-projects 4-->
-                                <li>
-                                    <div class="boxcontainer">
-                                        <img src="http://www.wowthemes.net/demo/calypso/img/demo/showcase4.jpg"
-                                             alt="">
-                                        <div class="roll">
-                                            <div class="wrapcaption"><a href="projectdetail.html"><i
-                                                        class="icon-link captionicons"></i></a>
-                                                <a
-                                                    data-gal="prettyPhoto[gallery1]"
-                                                    href="http://www.wowthemes.net/demo/calypso/img/demo/showcase4.jpg"
-                                                    title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <h1><a href="projectdetail.html">Serenity</a></h1>
-                                        <p>Tabiscum rocens</p>
-                                    </div>
-                                </li>
-                                <!--featured-projects 5-->
-                                <li>
-                                    <div class="boxcontainer">
-                                        <img src="http://www.wowthemes.net/demo/calypso/img/demo/showcase1.jpg"
-                                             alt="">
-                                        <div class="roll">
-                                            <div class="wrapcaption"><a href="projectdetail.html"><i
-                                                        class="icon-link captionicons"></i></a>
-                                                <a
-                                                    data-gal="prettyPhoto[gallery1]"
-                                                    href="http://www.wowthemes.net/demo/calypso/img/demo/showcase1.jpg"
-                                                    title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <h1><a href="projectdetail.html">BizLeaders</a></h1>
-                                        <p>Larius trano</p>
-                                    </div>
-                                </li>
-                                <!--featured-projects 6-->
-                                <li>
-                                    <div class="boxcontainer">
-                                        <img src="http://www.wowthemes.net/demo/calypso/img/demo/showcase2.jpg"
-                                             alt="">
-                                        <div class="roll">
-                                            <div class="wrapcaption"><a href="projectdetail.html"><i
-                                                        class="icon-link captionicons"></i></a>
-                                                <a
-                                                    data-gal="prettyPhoto[gallery1]"
-                                                    href="http://www.wowthemes.net/demo/calypso/img/demo/showcase2.jpg"
-                                                    title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <h1><a href="projectdetail.html">Salma</a></h1>
-                                        <p>Vobiscum atens</p>
-                                    </div>
-                                </li>
-                                <!--featured-projects 7-->
-                                <li>
-                                    <div class="boxcontainer">
-                                        <img src="http://www.wowthemes.net/demo/calypso/img/demo/showcase3.jpg"
-                                             alt="">
-                                        <div class="roll">
-                                            <div class="wrapcaption"><a href="projectdetail.html"><i
-                                                        class="icon-link captionicons"></i></a>
-                                                <a
-                                                    data-gal="prettyPhoto[gallery1]"
-                                                    href="http://www.wowthemes.net/demo/calypso/img/demo/showcase3.jpg"
-                                                    title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <h1><a href="projectdetail.html">RetroDoe</a></h1>
-                                        <p>Oliya verder</p>
-                                    </div>
-                                </li>
-                                <!--featured-projects 8-->
-                                <li>
-                                    <div class="boxcontainer">
-                                        <img src="http://www.wowthemes.net/demo/calypso/img/demo/showcase4.jpg"
-                                             alt="">
-                                        <div class="roll">
-                                            <div class="wrapcaption"><a href="projectdetail.html"><i
-                                                        class="icon-link captionicons"></i></a>
-                                                <a
-                                                    data-gal="prettyPhoto[gallery1]"
-                                                    href="http://www.wowthemes.net/demo/calypso/img/demo/showcase4.jpg"
-                                                    title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <h1><a href="projectdetail.html">Chaux Fonds</a></h1>
-                                        <p>Diva menthol</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <livewire:home-bottom-slide />
                 </div>
             </div>
         </section>
@@ -551,6 +385,49 @@
             $(window).bind("resize", ScaleSlider);
             $(window).bind("orientationchange", ScaleSlider);
         });
+        /* ----------------------------------------------------------------------*/
+    </script>
+    <script>
+        /* ---------------------------------------------------------------------- */
+        /*  http://caroufredsel.falsecode.ru/
+        /*	Bottom carousel
+        /* ---------------------------------------------------------------------- */
+        $(document).ready(function() {
+            $('#carousel-projects').carouFredSel({
+                responsive: true,
+                items: {
+                    width: 200,
+                    height: 295,
+                    visible: {
+                        min: 1,
+                        max: 4,
+                    },
+                },
+                width: '200px',
+                height: '295px',
+                auto: true,
+                circular: true,
+                infinite: false,
+                prev: {
+                    button: '#car_prev',
+                    key: 'left',
+                },
+                next: {
+                    button: '#car_next',
+                    key: 'right',
+                },
+                swipe: {
+                    onMouse: true,
+                    onTouch: true,
+                },
+                scroll: {
+                    items:1,
+                    easing: 'swing',
+                    duration: 1200,
+                },
+            });
+        });
+        /* ----------------------------------------------------------------------*/
     </script>
     <script>
         //CALL TESTIMONIAL ROTATOR
