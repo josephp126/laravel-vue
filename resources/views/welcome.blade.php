@@ -55,24 +55,43 @@
             <img data-to="50% 50%" data-t="3" style="left:-300px;top:14px;width:267px;height:448px;position:absolute;max-width:267px;" src="images/homepage/carousel/slider-2-res-1.png" />
             <img data-to="50% 50%" data-t="4" style="left:1700px;top:34px;width:300px;height:350px;position:absolute;max-width:300px;" src="images/homepage/carousel/slider-2-res-4.png" />
             <img data-to="50% 50%" data-t="5" style="left:250px;top:600px;width:345px;height:251px;position:absolute;max-width:345px;" src="images/homepage/carousel/slider-2-res-3.png" />
-            <img data-to="50% 50%" data-t="6" style="left:569px;top:600px;width:297px;height:257px;position:absolute;max-width:297px;" src="images/homepage/carousel/slider-2-res-2.png" />
-            <div data-to="50% 50%" data-t="7" style="left:125px;top:-100px;width:686px;height:57px;position:absolute;color:#000d;font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:900;text-align:left;padding:6px 10px 6px 10px;text-shadow:0px 1px #ffffff;box-sizing:border-box;background-color:#fffc;background-clip:padding-box;">UL CLASSIFIED LIFE SAFETY DAMPERS</div>
-            <div data-to="50% 50%" data-t="8" style="left:325px;top:-100px;width:460px;height:40px;position:absolute;color:#b74a1c;font-size:36px;font-weight:700;line-height:1.2;text-align:center;">TESTED AND TRUSTED<br /><br /></div>
+            <img data-to="50% 50%" data-t="6"
+                 style="left:569px;top:600px;width:297px;height:257px;position:absolute;max-width:297px;"
+                 src="images/homepage/carousel/slider-2-res-2.png" />
+            <div data-to="50% 50%" data-t="7"
+                 style="left:125px;top:-100px;width:686px;height:57px;position:absolute;color:#000d;font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:900;text-align:left;padding:6px 10px 6px 10px;text-shadow:0px 1px #ffffff;box-sizing:border-box;background-color:#fffc;background-clip:padding-box;">
+                UL CLASSIFIED LIFE SAFETY DAMPERS
+            </div>
+            <div data-to="50% 50%" data-t="8"
+                 style="left:325px;top:-100px;width:460px;height:40px;position:absolute;color:#b74a1c;font-size:36px;font-weight:700;line-height:1.2;text-align:center;">
+                TESTED AND TRUSTED<br /><br /></div>
         </div>
         <div data-p="1065">
             <img data-u="image" src="images/homepage/carousel/slider-3-back.png" />
-            <img data-to="50% 50%" data-t="9" style="left:1181px;top:-500px;width:266px;height:375px;position:absolute;max-width:266px;" src="images/homepage/carousel/slider-3-res-3.png" />
-            <img data-to="50% 50%" data-t="10" style="left:416px;top:-500px;width:255px;height:450px;position:absolute;max-width:255px;" src="images/homepage/carousel/slider-3-res-4.png" />
-            <img data-to="50% 50%" data-t="11" style="left:586px;top:-500px;width:291px;height:246px;position:absolute;max-width:291px;" src="images/homepage/carousel/slider-3-res-2.png" />
-            <img data-to="50% 50%" data-t="12" style="left:820px;top:-500px;width:389px;height:193px;position:absolute;max-width:389px;" src="images/homepage/carousel/slider-3-res-1.png" />
-            <div data-to="50% 50%" data-t="13" style="left:-650px;top:56px;width:616px;height:57px;position:absolute;color:#000d;font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:900;text-align:left;padding:6px 10px 6px 10px;text-shadow:0px 1px #fff;box-sizing:border-box;background-color:#fffc;background-clip:padding-box;">COMMERCIAL CONTROL DAMPEERS<br /><br /></div>
-            <div data-to="50% 50%" data-t="14" style="left:500px;top:-200px;width:553px;height:92px;position:absolute;color:#fff;font-size:40px;font-weight:700;line-height:1.2;text-align:center;">
+            <img data-to="50% 50%" data-t="9"
+                 style="left:1181px;top:-500px;width:266px;height:375px;position:absolute;max-width:266px;"
+                 src="images/homepage/carousel/slider-3-res-3.png" />
+            <img data-to="50% 50%" data-t="10"
+                 style="left:416px;top:-500px;width:255px;height:450px;position:absolute;max-width:255px;"
+                 src="images/homepage/carousel/slider-3-res-4.png" />
+            <img data-to="50% 50%" data-t="11"
+                 style="left:586px;top:-500px;width:291px;height:246px;position:absolute;max-width:291px;"
+                 src="images/homepage/carousel/slider-3-res-2.png" />
+            <img data-to="50% 50%" data-t="12"
+                 style="left:820px;top:-500px;width:389px;height:193px;position:absolute;max-width:389px;"
+                 src="images/homepage/carousel/slider-3-res-1.png" />
+            <div data-to="50% 50%" data-t="13"
+                 style="left:-650px;top:56px;width:616px;height:57px;position:absolute;color:#000d;font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:900;text-align:left;padding:6px 10px 6px 10px;text-shadow:0px 1px #fff;box-sizing:border-box;background-color:#fffc;background-clip:padding-box;">
+                COMMERCIAL CONTROL DAMPERS<br /><br /></div>
+            <div data-to="50% 50%" data-t="14"
+                 style="left:500px;top:-200px;width:553px;height:92px;position:absolute;color:#fff;font-size:40px;font-weight:700;line-height:1.2;text-align:center;">
                 DESIGNED FOR<br />
                 <span style="margin-left:300px;color:#e16048">SAFETY</span></div>
         </div>
     </div>
     <!-- Bullet Navigator -->
-    <div data-u="navigator" class="jssorb132" style="position:absolute;bottom:24px;right:16px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+    <div data-u="navigator" class="jssorb132" style="position:absolute;bottom:24px;right:16px;" data-autocenter="1"
+         data-scale="0.5" data-scale-bottom="0.75">
         <div data-u="prototype" class="i" style="width:12px;height:12px;">
             <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
                 <circle class="b" cx="8000" cy="8000" r="5800"></circle>
