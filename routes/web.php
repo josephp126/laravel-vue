@@ -6,7 +6,6 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ImagesController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\RepFinderController;
-use App\Http\Controllers\ProductsContoller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,4 +33,3 @@ Route::get('rep/finder', [RepFinderController::class, 'index'])->name('repfinder
 Route::get('company', [CompanyController::class, 'index'])->name('company.index');
 
 Route::get('images/{image}/name/{name}', [ImagesController::class, 'show'])->name('image.request');
-Route::resource('product', ProductsContoller::class);

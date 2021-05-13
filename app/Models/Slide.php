@@ -20,6 +20,6 @@ class Slide extends Model
      */
     protected $fillable = [
         'link',
-'filename',
+        'filename',
     ];
 }
