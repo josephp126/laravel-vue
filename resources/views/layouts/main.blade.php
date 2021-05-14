@@ -1,7 +1,5 @@
 @extends('layouts.skel')
 
-{{--@section('skel_scripts')--}}
-{{--@endsection--}}
 
 {{--@section('skel_styles')--}}
 {{--@endsection--}}
@@ -32,5 +30,8 @@
     </div>
     <!-- /.wrapbox ends-->
 
+@endsection
+
+@section('skel_scripts')
     @yield('scripts')
 @endsection

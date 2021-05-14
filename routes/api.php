@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\ProductCategoriesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,7 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::resources([
-    'product_categories' => ProductCategoriesController::class,
-]);
+     'category' => CategoryController::class,
+ ]);
 
-Route::put('product_categories', [ProductCategoriesController::class, 'saveSort']);
+Route::put('category/save-sort', [ProductCategoriesController::class, 'saveSort']);

@@ -14,16 +14,6 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-
-//        User::where('email', 'admin@admin.com')->forceDelete();
-
-        if (User::where(['email' => 'admin@admin.com'])->count() == 0) {
-            $user = User::factory()
-                ->hasAddress()
-                ->create(['email' => 'admin@admin.com', 'is_contact' => true]);
-
-            $user->assign('admin');
-        }
+        User::factory()->count(5)->create();
     }
 }

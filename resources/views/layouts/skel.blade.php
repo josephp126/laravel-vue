@@ -11,8 +11,11 @@
 
     @livewireStyles
 
+    <script src="{{ mix('js/app.js') }}"></script>
+    <!-- Scripts -->
+    @yield('skel_scripts')
 
-    <!-- Fonts -->
+<!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
