@@ -2,27 +2,36 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- * Class Contact
- * @property string name
- * @property string email
- * @property string message
- * @package App\Models
- * @method static create(array $param)
- */
 class Contact extends Model
 {
-    use SoftDeletes;
+    use HasFactory, SoftDeletes;
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
     protected $fillable = [
         'user_id',
         'name',
         'email',
         'message',
     ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'id' => 'integer',
+        'user_id' => 'integer',
+    ];
+
 
     public function user()
     {

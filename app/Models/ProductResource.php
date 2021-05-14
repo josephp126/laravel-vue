@@ -6,9 +6,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- *
- **/
 class ProductResource extends Model
 {
     use HasFactory, SoftDeletes;
@@ -20,6 +17,28 @@ class ProductResource extends Model
      */
     protected $fillable = [
         'product_id',
-'resource_id',
+        'resource_id',
     ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'id' => 'integer',
+        'product_id' => 'integer',
+        'resource_id' => 'integer',
+    ];
+
+
+    public function product()
+    {
+        return $this->belongsTo(\App\Models\Product::class);
+    }
+
+    public function resource()
+    {
+        return $this->belongsTo(\App\Models\Resource::class);
+    }
 }
