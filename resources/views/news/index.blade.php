@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="wrapsemibox d-flex flex-wrap flex-row">
-        @forelse($data as $article)
+        @forelse($news as $article)
             <div class="card flex-grow-1">
                 <div class="card-body d-flex flex-row">
                     <div class="article-image mr-3">

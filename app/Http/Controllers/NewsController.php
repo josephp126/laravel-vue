@@ -3,33 +3,27 @@
 namespace App\Http\Controllers;
 
 use App\Models\News;
-use Exception;
-use Illuminate\Contracts\View\View;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class NewsController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @param  Request  $request
-     * @return View
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
      */
-    public function index(Request  $request)
+    public function index(Request $request)
     {
-        $data = News::paginate($request->get('perPage', 50));
+        $news = News::paginate(news)->get();
 
-        return view('news.index', compact('data'));
+        return view('admin.news.index', compact('news'));
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  News  $news
-     * @return View
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Models\News $news
+     * @return \Illuminate\Http\Response
      */
-    public function show(News $news)
+    public function show(Request $request, News $news)
     {
         return view('news.show', compact('news'));
     }

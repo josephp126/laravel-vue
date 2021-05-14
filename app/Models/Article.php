@@ -2,17 +2,13 @@
 
 namespace App\Models;
 
-use App\Traits\Uuidable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- *
- **/
 class Article extends Model
 {
-    use HasFactory, SoftDeletes, Uuidable;
+    use HasFactory, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -20,6 +16,7 @@ class Article extends Model
      * @var array
      */
     protected $fillable = [
+        'uuid',
         'link',
         'content',
         'title',
@@ -27,15 +24,12 @@ class Article extends Model
         'is_homepage',
     ];
 
-    protected $casts = ['is_homepage' => 'bool'];
-
-    public function image()
-    {
-        return $this->morphOne(Image::class, 'imageable');
-    }
-
-    public function getUrlAttribute()
-    {
-        return route('news.show', $this->uuid);
-    }
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'id' => 'integer',
+    ];
 }

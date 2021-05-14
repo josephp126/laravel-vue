@@ -17,3 +17,30 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('category/save-sort', [App\Http\Controllers\Api\CategoryController::class, 'saveSort']);
+Route::apiResource('category', App\Http\Controllers\Api\CategoryController::class);
+
+
+Route::get('category/save-sort', [App\Http\Controllers\Api\CategoryController::class, 'saveSort']);
+Route::apiResource('category', App\Http\Controllers\Api\CategoryController::class);
+
+
+Route::get('category/save-sort', [App\Http\Controllers\Api\CategoryController::class, 'saveSort']);
+Route::apiResource('category', App\Http\Controllers\Api\CategoryController::class);
+
+
+Route::get('category/save-sort', [App\Http\Controllers\Api\CategoryController::class, 'saveSort']);
+Route::apiResource('category', App\Http\Controllers\Api\CategoryController::class);
+
+
+Route::get('category/save-sort', [App\Http\Controllers\Api\CategoryController::class, 'saveSort']);
+Route::apiResource('category', App\Http\Controllers\Api\CategoryController::class);
+
+
+Route::get('category/save-sort', [App\Http\Controllers\Api\CategoryController::class, 'saveSort']);
+Route::apiResource('category', App\Http\Controllers\Api\CategoryController::class);
+
+
+Route::get('category/save-sort', [App\Http\Controllers\Api\CategoryController::class, 'saveSort']);
+Route::apiResource('category', App\Http\Controllers\Api\CategoryController::class);

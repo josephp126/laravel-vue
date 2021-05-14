@@ -6,9 +6,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- *
- **/
 class ProductAttribute extends Model
 {
     use HasFactory, SoftDeletes;
@@ -23,4 +20,26 @@ class ProductAttribute extends Model
         'attribute_id',
         'product_id',
     ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'id' => 'integer',
+        'attribute_id' => 'integer',
+        'product_id' => 'integer',
+    ];
+
+
+    public function attribute()
+    {
+        return $this->belongsTo(Attribute::class);
+    }
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
 }
