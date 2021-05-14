@@ -5,19 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Venturecraft\Revisionable\RevisionableTrait;
 
-/**
- *
- **/
 class Product extends Model
 {
-    use HasFactory, SoftDeletes, RevisionableTrait;
-
-
-    protected $revisionEnabled = true;
-    protected $revisionCleanup = true; //Remove old revisions (works only when used with $historyLimit)
-    protected $historyLimit = 500;     //Main
+    use HasFactory, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -32,4 +23,29 @@ class Product extends Model
         'subtitle',
         'title',
     ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'id' => 'integer',
+    ];
+
+
+    public function productAttributes()
+    {
+        return $this->hasMany(ProductAttribute::class);
+    }
+
+    public function productCategories()
+    {
+        return $this->hasMany(ProductCategory::class);
+    }
+
+    public function productImages()
+    {
+        return $this->hasMany(ProductImage::class);
+    }
 }

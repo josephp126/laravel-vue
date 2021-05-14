@@ -2,8 +2,10 @@
 
 namespace Database\Factories;
 
-use App\Models\Address;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
+use App\Models\Address;
+use App\Models\State;
 
 class AddressFactory extends Factory
 {
@@ -22,10 +24,11 @@ class AddressFactory extends Factory
     public function definition()
     {
         return [
-            'address'  => $this->faker->streetAddress,
-            'zip'      => $this->faker->postcode,
-            'state_id' => $this->faker->numberBetween(1, 50),
-            'city'     => $this->faker->city,
+            'address' => $this->faker->word,
+            'zip' => $this->faker->postcode,
+            'state_id' => State::factory(),
+            'city' => $this->faker->city,
+            'addressable' => $this->faker->word,
         ];
     }
 }

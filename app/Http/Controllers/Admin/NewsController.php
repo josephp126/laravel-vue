@@ -2,117 +2,105 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Admin\IsHomepage;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\NewsRequest;
-use App\Jobs\SaveImageJob;
+use App\Http\Requests\Admin\NewsStoreRequest;
+use App\Http\Requests\Admin\NewsUpdateRequest;
+use App\Http\Resources\Admin\NewsCollection;
 use App\Models\News;
-use Exception;
-use Illuminate\Contracts\View\View;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class NewsController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @param Request $request
-     * @return View
+     * @param \Illuminate\Http\Request $request
+     * @return \App\Http\Resources\Admin\NewsCollection
      */
     public function index(Request $request)
     {
-        $data = News::paginate($request->get('perPage', 50));
+        $news = News::paginate();
 
-        return view('admin.news.index', compact('data'));
+        return new NewsCollection($news);
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return View
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        return view('admin.news.create');
+        return view('news.create');
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param NewsRequest $request
-     * @return RedirectResponse
+     * @param \App\Http\Requests\Admin\NewsStoreRequest $request
+     * @return \Illuminate\Http\Response
      */
-    public function store(NewsRequest $request)
+    public function store(NewsStoreRequest $request)
     {
         $news = News::create($request->validated());
 
-        $this->dispatch(new SaveImageJob($news, $request->file('file')));
+        $request->session()->flash('news.id', $news->id);
 
-        session()->flash('admin.news.created');
-        return redirect()->route('admin.news.index');
+        return redirect()->route('news.index');
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param News $news
-     * @return View
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Models\News $news
+     * @return \Illuminate\Http\Response
      */
-    public function show(News $news)
+    public function show(Request $request, News $news)
     {
-        return view('admin.news.show', compact('news'));
+        return view('news.show', compact('news'));
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param News $news
-     * @return View
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Models\News $news
+     * @return \Illuminate\Http\Response
      */
-    public function edit(News $news)
+    public function edit(Request $request, News $news)
     {
-        return view('admin.news.edit', compact('news'));
-    }
-
-    public function star(Request $request, News $news)
-    {
-        if ($request->input('action') === 'star') {
-            $news->update(['is_homepage' => !$news->is_homepage]);
-            session()->flash('admin.news.updated');
-        }
-
-        return redirect()->route('admin.news.index');
+        return view('news.edit', compact('news'));
     }
 
     /**
-     * Update the specified resource in storage.
-     *
-     * @param NewsRequest $request
-     * @param News        $news
-     * @return RedirectResponse
+     * @param \App\Http\Requests\Admin\NewsUpdateRequest $request
+     * @param \App\Models\News $news
+     * @return \Illuminate\Http\Response
      */
-    public function update(NewsRequest $request, News $news)
+    public function update(NewsUpdateRequest $request, News $news)
     {
         $news->update($request->validated());
 
-        $this->dispatch(new SaveImageJob($news, $request->file('file')));
+        $request->session()->flash('news.id', $news->id);
 
-        session()->flash('admin.news.updated');
-        return redirect()->route('admin.news.index');
+        return redirect()->route('news.index');
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param News $news
-     * @return RedirectResponse
-     * @throws Exception
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Models\News $news
+     * @return \Illuminate\Http\Response
      */
-    public function destroy(News $news)
+    public function destroy(Request $request, News $news)
     {
         $news->delete();
 
-        session()->flash('admin.news.deleted');
+        return redirect()->route('news.index');
+    }
+
+    /**
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function star(Request $request)
+    {
+        $request->session()->flash('admin.news.updated', $admin->news->updated);
+
+        $isHomepage->update([]);
+
         return redirect()->route('admin.news.index');
     }
 }

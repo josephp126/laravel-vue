@@ -1,10 +1,10 @@
 @extends('layouts.main')
 
-@section('pageTitle', $news->title)
+{{--@section('pageTitle', $news->title)--}}
 
-@section('breadcrumbs')
-    <a href="{{route('news.index')}}" class="text-dark">News</a> / {{$news->title}}
-@endsection
+{{--@section('breadcrumbs')--}}
+{{--    <a href="{{route('news.index')}}" class="text-dark">News</a> / {{$news->title}}--}}
+{{--@endsection--}}
 
 @section('content')
 
