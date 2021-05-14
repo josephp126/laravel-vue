@@ -18,7 +18,6 @@ class AccessLog extends Model
         'user_id',
         'access_log_event_id',
         'entity_id',
-        'accessable',
     ];
 
     /**
@@ -27,12 +26,17 @@ class AccessLog extends Model
      * @var array
      */
     protected $casts = [
-        'id' => 'integer',
-        'user_id' => 'integer',
+        'id'                  => 'integer',
+        'user_id'             => 'integer',
         'access_log_event_id' => 'integer',
-        'entity_id' => 'integer',
+        'entity_id'           => 'integer',
     ];
 
+
+    public function accessable()
+    {
+        return $this->morphTo();
+    }
 
     public function user()
     {

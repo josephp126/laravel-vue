@@ -20,7 +20,6 @@ class Address extends Model
         'zip',
         'state_id',
         'city',
-        'addressable',
     ];
 
     /**
@@ -29,13 +28,18 @@ class Address extends Model
      * @var array
      */
     protected $casts = [
-        'id' => 'integer',
+        'id'       => 'integer',
         'state_id' => 'integer',
     ];
+
+    public function addressable()
+    {
+        return $this->morphTo();
+    }
 
 
     public function state()
     {
-        return $this->belongsTo(\App\Models\State::class);
+        return $this->belongsTo(State::class);
     }
 }

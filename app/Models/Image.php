@@ -16,7 +16,6 @@ class Image extends Model
      */
     protected $fillable = [
         'uuid',
-        'imageable',
         'mime_type',
         'title',
         'code_number',
@@ -31,4 +30,9 @@ class Image extends Model
     protected $casts = [
         'id' => 'integer',
     ];
+
+    public function imageable()
+    {
+        return $this->morphTo();
+    }
 }

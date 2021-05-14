@@ -18,7 +18,7 @@ class CreateAccessLogsTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('access_log_event_id');
             $table->unsignedBigInteger('entity_id');
-            $table->string('accessable');
+            $table->nullableMorphs('accessable');
             $table->timestamps();
         });
     }

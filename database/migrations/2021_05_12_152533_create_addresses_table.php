@@ -19,7 +19,7 @@ class CreateAddressesTable extends Migration
             $table->string('zip')->nullable();
             $table->unsignedBigInteger('state_id')->nullable();
             $table->string('city')->nullable();
-            $table->string('addressable');
+            $table->morphs('addressable');
             $table->softDeletes();
             $table->timestamps();
         });
