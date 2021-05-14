@@ -11,8 +11,12 @@ models:
     date_joined: string
     guid: string nullable
     phone: string nullable
+    fax: string nullable
+    website: string nullable
     notification_preferences: text nullable default:["mail"]
     is_contact: boolean nullable default:0
+    is_representative: boolean nullable default:0
+    is_international: boolean nullable defalt:1
     remember_token: string:100 nullable
     softDeletes
 
@@ -21,10 +25,9 @@ models:
 
   AccessLog:
     user_id: id
-    access_log_event: id
+    access_log_event_id: id
     entity_id: id
-    accessable_type: string nullable
-    accessable_id: 'biginteger unsigned nullable'
+    accessable: morph
 
   AccessLogEvent:
     name: string
@@ -36,6 +39,14 @@ models:
     state_id: id nullable
     city: string nullable
     addressable: morph
+    softDeletes
+
+
+  State:
+    name: string
+    standard_abbreviation: string
+    postal_abbreviation: string
+    capital_city: string
     softDeletes
 
   Article:
@@ -73,7 +84,7 @@ models:
     softDeletes
 
   Contact:
-    user_id: 'biginteger nullable'
+    user_id: id nullable
     name: string
     email: string
     message: string
@@ -105,8 +116,7 @@ models:
 
   Image:
     uuid: 'string:36'
-    imageable_type: string
-    imageable_id: biginteger unsigned
+    imageable: morph
     mime_type: string
     title: string
     code_number: string
@@ -118,7 +128,7 @@ models:
     slug: string nullable
     summary: text
     content: text
-    is_homepage: 'string nullable default:0'
+    is_homepage: boolean nullable default:0
     softDeletes
 
   Price:
@@ -136,15 +146,19 @@ models:
     title: string
     softDeletes
 
+    relationships:
+      hasMany: ProductAttribute, ProductCategory, ProductImage
+
   ProductAttribute:
     value: string
-    attribute_id: biginteger unsigned
-    product_id: biginteger unsigned
+    attribute_id: id
+    product_id: id
     softDeletes
 
   ProductCategory:
-    name: string
-    parent_id: 'biginteger unsigned nullable'
+    parent_id: id:ProductCategory
+    category_id: id
+    product_id: id
     sort: 'integer nullable'
     softDeletes
 
@@ -158,19 +172,12 @@ models:
     resource_id: id
     softDeletes
 
-  Representative:
-    name: string
-    website: string
-    phone: string
-    fax: string
-    is_international: boolean nullable defalt:1
-    softDeletes
-
   Resource:
     user_id: id
     title: string
     filename: string
     resource_type_id: id
+    resource_group_id: id
 
   ResourceGroup:
     name: string
@@ -188,13 +195,7 @@ models:
   Slide:
     link: string
     filename: string
-
-  State:
-    name: string
-    standard_abbreviation: string
-    postal_abbreviation: string
-    capital_city: string
-    softDeletes
+    is_homepage: boolean nullable default:0
 
 seeders: User, News
 
@@ -229,4 +230,24 @@ controllers:
       render: admin.users.index with:users
     show:
       render: admin.users.show with:user
+  Admin/Product:
+    resource
+    index:
+      query: paginate:products
+      render: products.index with:products
+  Admin/Category:
+    resource
+    index:
+      query: paginate:categories
+      render: admin.categories.index with:categories
+  Admin/AccessLog:
+    index:
+      query:  paginate:access_logs
+      render: access_logs.index with:accessLogs
+
+
+  Api/Category:
+    resource: api
+    saveSort:
+      update: sort
 

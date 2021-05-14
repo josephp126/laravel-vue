@@ -19,6 +19,7 @@ class CreateResourcesTable extends Migration
             $table->string('title');
             $table->string('filename');
             $table->unsignedBigInteger('resource_type_id');
+            $table->unsignedBigInteger('resource_group_id');
             $table->timestamps();
         });
     }

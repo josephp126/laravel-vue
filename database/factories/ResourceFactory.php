@@ -2,11 +2,11 @@
 
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 use App\Models\Resource;
+use App\Models\ResourceGroup;
 use App\Models\ResourceType;
 use App\Models\User;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ResourceFactory extends Factory
 {
@@ -29,6 +29,7 @@ class ResourceFactory extends Factory
             'title' => $this->faker->sentence(4),
             'filename' => $this->faker->word,
             'resource_type_id' => ResourceType::factory(),
+            'resource_group_id' => ResourceGroup::factory(),
         ];
     }
 }

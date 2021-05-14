@@ -16,8 +16,7 @@ class Image extends Model
      */
     protected $fillable = [
         'uuid',
-        'imageable_type',
-        'imageable_id',
+        'imageable',
         'mime_type',
         'title',
         'code_number',
@@ -31,6 +30,5 @@ class Image extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'imageable_id' => 'integer',
     ];
 }

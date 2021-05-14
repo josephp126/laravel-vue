@@ -2,9 +2,8 @@
 
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 use App\Models\Slide;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class SlideFactory extends Factory
 {
@@ -25,6 +24,7 @@ class SlideFactory extends Factory
         return [
             'link' => $this->faker->word,
             'filename' => $this->faker->word,
+            'is_homepage' => $this->faker->boolean,
         ];
     }
 }

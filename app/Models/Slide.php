@@ -17,6 +17,7 @@ class Slide extends Model
     protected $fillable = [
         'link',
         'filename',
+        'is_homepage',
     ];
 
     /**
@@ -26,5 +27,6 @@ class Slide extends Model
      */
     protected $casts = [
         'id' => 'integer',
+        'is_homepage' => 'boolean',
     ];
 }

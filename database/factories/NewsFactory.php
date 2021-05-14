@@ -2,9 +2,8 @@
 
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 use App\Models\News;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class NewsFactory extends Factory
 {
@@ -28,7 +27,7 @@ class NewsFactory extends Factory
             'slug' => $this->faker->slug,
             'summary' => $this->faker->text,
             'content' => $this->faker->paragraphs(3, true),
-            'is_homepage' => $this->faker->word,
+            'is_homepage' => $this->faker->boolean,
         ];
     }
 }

@@ -16,10 +16,9 @@ class AccessLog extends Model
      */
     protected $fillable = [
         'user_id',
-        'access_log_event',
+        'access_log_event_id',
         'entity_id',
-        'accessable_type',
-        'accessable_id',
+        'accessable',
     ];
 
     /**
@@ -30,24 +29,23 @@ class AccessLog extends Model
     protected $casts = [
         'id' => 'integer',
         'user_id' => 'integer',
-        'access_log_event' => 'integer',
+        'access_log_event_id' => 'integer',
         'entity_id' => 'integer',
-        'accessable_id' => 'integer',
     ];
 
 
     public function user()
     {
-        return $this->belongsTo(\App\Models\User::class);
+        return $this->belongsTo(User::class);
     }
 
     public function accessLogEvent()
     {
-        return $this->belongsTo(\App\Models\AccessLogEvent::class);
+        return $this->belongsTo(AccessLogEvent::class);
     }
 
     public function entity()
     {
-        return $this->belongsTo(\App\Models\Entity::class);
+        return $this->belongsTo(Entity::class);
     }
 }

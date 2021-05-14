@@ -4,10 +4,15 @@ created:
     - app/Http/Controllers/NewsController.php
     - app/Http/Controllers/Admin/NewsController.php
     - app/Http/Controllers/Admin/UserController.php
+    - app/Http/Controllers/Admin/ProductController.php
+    - app/Http/Controllers/Admin/CategoryController.php
+    - app/Http/Controllers/Admin/AccessLogController.php
+    - app/Http/Controllers/Api/CategoryController.php
     - database/factories/UserFactory.php
     - database/factories/AccessLogFactory.php
     - database/factories/AccessLogEventFactory.php
     - database/factories/AddressFactory.php
+    - database/factories/StateFactory.php
     - database/factories/ArticleFactory.php
     - database/factories/AttributeFactory.php
     - database/factories/AttributeTypeFactory.php
@@ -28,17 +33,16 @@ created:
     - database/factories/ProductCategoryFactory.php
     - database/factories/ProductImageFactory.php
     - database/factories/ProductResourceFactory.php
-    - database/factories/RepresentativeFactory.php
     - database/factories/ResourceFactory.php
     - database/factories/ResourceGroupFactory.php
     - database/factories/ResourceTypeFactory.php
     - database/factories/ServiceFactory.php
     - database/factories/SlideFactory.php
-    - database/factories/StateFactory.php
     - app/Models/User.php
     - app/Models/AccessLog.php
     - app/Models/AccessLogEvent.php
     - app/Models/Address.php
+    - app/Models/State.php
     - app/Models/Article.php
     - app/Models/Attribute.php
     - app/Models/AttributeType.php
@@ -59,13 +63,11 @@ created:
     - app/Models/ProductCategory.php
     - app/Models/ProductImage.php
     - app/Models/ProductResource.php
-    - app/Models/Representative.php
     - app/Models/Resource.php
     - app/Models/ResourceGroup.php
     - app/Models/ResourceType.php
     - app/Models/Service.php
     - app/Models/Slide.php
-    - app/Models/State.php
     - database/seeders/UserSeeder.php
     - database/seeders/NewsSeeder.php
     - tests/Feature/Http/Controllers/AboutControllerTest.php
@@ -73,11 +75,16 @@ created:
     - tests/Feature/Http/Controllers/NewsControllerTest.php
     - tests/Feature/Http/Controllers/Admin/NewsControllerTest.php
     - tests/Feature/Http/Controllers/Admin/UserControllerTest.php
+    - tests/Feature/Http/Controllers/Admin/ProductControllerTest.php
+    - tests/Feature/Http/Controllers/Admin/CategoryControllerTest.php
+    - tests/Feature/Http/Controllers/Admin/AccessLogControllerTest.php
+    - tests/Feature/Http/Controllers/Api/CategoryControllerTest.php
 updated:
     - database/migrations/2021_05_12_152530_create_users_table.php
     - database/migrations/2021_05_12_152531_create_access_logs_table.php
     - database/migrations/2021_05_12_152532_create_access_log_events_table.php
     - database/migrations/2021_05_12_152533_create_addresses_table.php
+    - database/migrations/2021_05_12_152601_create_states_table.php
     - database/migrations/2021_05_12_152534_create_articles_table.php
     - database/migrations/2021_05_12_152535_create_attributes_table.php
     - database/migrations/2021_05_12_152536_create_attribute_types_table.php
@@ -98,13 +105,12 @@ updated:
     - database/migrations/2021_05_12_152551_create_product_categories_table.php
     - database/migrations/2021_05_12_152552_create_product_images_table.php
     - database/migrations/2021_05_12_152553_create_product_resources_table.php
-    - database/migrations/2021_05_12_152554_create_representatives_table.php
     - database/migrations/2021_05_12_152555_create_resources_table.php
     - database/migrations/2021_05_12_152556_create_resource_groups_table.php
     - database/migrations/2021_05_12_152557_create_resource_types_table.php
     - database/migrations/2021_05_12_152559_create_services_table.php
     - database/migrations/2021_05_12_152600_create_slides_table.php
-    - database/migrations/2021_05_12_152601_create_states_table.php
+    - routes/api.php
     - routes/web.php
 models:
     Models\AccessLog: { user_id: string, event_id: string, entity_id: string, accessable_type: 'string nullable', accessable_id: 'biginteger unsigned nullable' }
@@ -138,9 +144,9 @@ models:
     Models\Slide: { link: string, filename: string }
     Models\State: { name: string, standard_abbreviation: string, postal_abbreviation: string, capital_city: string }
     Models\User: { uuid: 'string:36', first_name: string, last_name: string, username: string, password: string, email: string, email_verified_at: 'datetime nullable', date_joined: string, guid: 'string nullable', phone: 'string nullable', notification_preferences: 'text nullable default:["mail"]', is_contact: 'boolean nullable default:0', remember_token: 'string:100 nullable' }
-    User: { uuid: 'string:36', first_name: string, last_name: string, username: string, password: string, email: string, email_verified_at: 'datetime nullable', date_joined: string, guid: 'string nullable', phone: 'string nullable', notification_preferences: 'text nullable default:["mail"]', is_contact: 'boolean nullable default:0', remember_token: 'string:100 nullable', softdeletes: softDeletes, relationships: { hasMany: AccessLog } }
-    AccessLog: { user_id: id, access_log_event: id, entity_id: id, accessable_type: 'string nullable', accessable_id: 'biginteger unsigned nullable' }
-    AccessLogEvent: { name: string, slug: slug, softdeletes: softDeletes }
+    User: { uuid: 'string:36', first_name: string, last_name: string, username: string, password: string, email: string, email_verified_at: 'datetime nullable', date_joined: string, guid: 'string nullable', phone: 'string nullable', fax: 'string nullable', website: 'string nullable', notification_preferences: 'text nullable default:["mail"]', is_contact: 'boolean nullable default:0', is_representative: 'boolean nullable default:0', is_international: 'boolean nullable defalt:1', remember_token: 'string:100 nullable', softdeletes: softDeletes, relationships: { hasMany: AccessLog } }
+    AccessLog: { user_id: id, access_log_event_id: id, entity_id: id, accessable: morph }
+    AccessLogEvent: { name: string, softdeletes: softDeletes }
     Address: { address: string, zip: 'string nullable', state_id: 'id nullable', city: 'string nullable', addressable: morph, softdeletes: softDeletes }
     Article: { uuid: 'string:36', link: string, content: string, title: string, summary: text, is_homepage: 'string nullable default:0', softdeletes: softDeletes }
     Attribute: { name: string, attribute_type_id: id, softdeletes: softDeletes }
@@ -148,24 +154,24 @@ models:
     Category: { name: string, parent_id: 'biginteger unsigned', root_id: 'biginteger unsigned', order: integer, softdeletes: softDeletes }
     CategoryImage: { category_id: 'biginteger unsigned', image_id: 'biginteger unsigned' }
     CategoryResource: { category_id: 'biginteger unsigned', resource_id: 'biginteger unsigned', softdeletes: softDeletes }
-    Contact: { user_id: 'biginteger nullable', name: string, email: string, message: string, softdeletes: softDeletes }
+    Contact: { user_id: 'id nullable', name: string, email: string, message: string, softdeletes: softDeletes }
     Content: { title: string, link: string, content: string, softdeletes: softDeletes }
     EmailTemplate: { name: string, content: text, softdeletes: softDeletes }
     Event: { name: string, description: string, start_at: datetime, softdeletes: softDeletes }
     Gallery: { name: string }
     GalleryImage: { gallery_id: id, image_id: id }
-    Image: { uuid: 'string:36', imageable_type: string, imageable_id: 'biginteger unsigned', mime_type: string, title: string, code_number: string, hash: string }
-    News: { uuid: 'string:36', title: string, slug: 'string nullable', summary: text, content: text, is_homepage: 'string nullable default:0', softdeletes: softDeletes }
+    Image: { uuid: 'string:36', imageable: morph, mime_type: string, title: string, code_number: string, hash: string }
+    News: { uuid: 'string:36', title: string, slug: 'string nullable', summary: text, content: text, is_homepage: 'boolean nullable default:0', softdeletes: softDeletes }
     Price: { product_id: id, value: string, comment: string, softdeletes: softDeletes }
-    Product: { description: string, link: string, code: string, more_info: string, subtitle: string, title: string, softdeletes: softDeletes }
-    ProductAttribute: { value: string, attribute_id: 'biginteger unsigned', product_id: 'biginteger unsigned', softdeletes: softDeletes }
-    ProductCategory: { name: string, parent_id: 'biginteger unsigned nullable', sort: 'integer nullable', softdeletes: softDeletes }
+    Product: { description: string, link: string, code: string, more_info: string, subtitle: string, title: string, softdeletes: softDeletes, relationships: { hasMany: 'ProductAttribute, ProductCategory, ProductImage' } }
+    ProductAttribute: { value: string, attribute_id: id, product_id: id, softdeletes: softDeletes }
+    ProductCategory: { parent_id: 'id:ProductCategory', category_id: id, product_id: id, sort: 'integer nullable', softdeletes: softDeletes }
     ProductImage: { product_id: id, image_id: id, softdeletes: softDeletes }
     ProductResource: { product_id: id, resource_id: id, softdeletes: softDeletes }
     Representative: { name: string, website: string, phone: string, fax: string, is_international: 'boolean nullable defalt:1', softdeletes: softDeletes }
-    Resource: { user_id: id, title: string, filename: string, resource_type_id: id }
+    Resource: { user_id: id, title: string, filename: string, resource_type_id: id, resource_group_id: id }
     ResourceGroup: { name: string, softdeletes: softDeletes }
     ResourceType: { name: string, softdeletes: softDeletes }
     Service: { title: string, content: string, softdeletes: softDeletes }
-    Slide: { link: string, filename: string }
+    Slide: { link: string, filename: string, is_homepage: 'boolean nullable default:0' }
     State: { name: string, standard_abbreviation: string, postal_abbreviation: string, capital_city: string, softdeletes: softDeletes }

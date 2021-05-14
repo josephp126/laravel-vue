@@ -2,9 +2,8 @@
 
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 use App\Models\Image;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ImageFactory extends Factory
 {
@@ -24,8 +23,7 @@ class ImageFactory extends Factory
     {
         return [
             'uuid' => $this->faker->uuid,
-            'imageable_type' => $this->faker->word,
-            'imageable_id' => $this->faker->randomNumber(),
+            'imageable' => $this->faker->word,
             'mime_type' => $this->faker->word,
             'title' => $this->faker->sentence(4),
             'code_number' => $this->faker->word,

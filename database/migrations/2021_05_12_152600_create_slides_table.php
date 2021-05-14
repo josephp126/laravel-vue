@@ -17,6 +17,7 @@ class CreateSlidesTable extends Migration
             $table->id();
             $table->string('link');
             $table->string('filename');
+            $table->boolean('is_homepage')->nullable()->default(0);
             $table->timestamps();
         });
     }

@@ -2,9 +2,8 @@
 
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 use App\Models\AccessLogEvent;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class AccessLogEventFactory extends Factory
 {
@@ -24,7 +23,6 @@ class AccessLogEventFactory extends Factory
     {
         return [
             'name' => $this->faker->name,
-            'slug' => $this->faker->slug,
         ];
     }
 }

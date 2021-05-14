@@ -25,8 +25,12 @@ class CreateUsersTable extends Migration
             $table->string('date_joined');
             $table->string('guid')->nullable();
             $table->string('phone')->nullable();
+            $table->string('fax')->nullable();
+            $table->string('website')->nullable();
             $table->text('notification_preferences')->nullable()->default('[\"mail\"]');
             $table->boolean('is_contact')->nullable()->default(0);
+            $table->boolean('is_representative')->nullable()->default(0);
+            $table->boolean('is_international')->nullable();
             $table->string('remember_token', 100)->nullable();
             $table->softDeletes();
             $table->timestamps();

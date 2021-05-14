@@ -19,6 +19,7 @@ class Resource extends Model
         'title',
         'filename',
         'resource_type_id',
+        'resource_group_id',
     ];
 
     /**
@@ -30,16 +31,22 @@ class Resource extends Model
         'id' => 'integer',
         'user_id' => 'integer',
         'resource_type_id' => 'integer',
+        'resource_group_id' => 'integer',
     ];
 
 
     public function user()
     {
-        return $this->belongsTo(\App\Models\User::class);
+        return $this->belongsTo(User::class);
     }
 
     public function resourceType()
     {
-        return $this->belongsTo(\App\Models\ResourceType::class);
+        return $this->belongsTo(ResourceType::class);
+    }
+
+    public function resourceGroup()
+    {
+        return $this->belongsTo(ResourceGroup::class);
     }
 }

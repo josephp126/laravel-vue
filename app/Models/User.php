@@ -26,8 +26,12 @@ class User extends Model
         'date_joined',
         'guid',
         'phone',
+        'fax',
+        'website',
         'notification_preferences',
         'is_contact',
+        'is_representative',
+        'is_international',
     ];
 
     /**
@@ -49,11 +53,13 @@ class User extends Model
         'id' => 'integer',
         'email_verified_at' => 'datetime',
         'is_contact' => 'boolean',
+        'is_representative' => 'boolean',
+        'is_international' => 'boolean',
     ];
 
 
     public function accessLogs()
     {
-        return $this->hasMany(\App\Models\AccessLog::class);
+        return $this->hasMany(AccessLog::class);
     }
 }

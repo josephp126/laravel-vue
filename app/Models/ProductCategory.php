@@ -16,8 +16,9 @@ class ProductCategory extends Model
      * @var array
      */
     protected $fillable = [
-        'name',
         'parent_id',
+        'category_id',
+        'product_id',
         'sort',
     ];
 
@@ -29,5 +30,23 @@ class ProductCategory extends Model
     protected $casts = [
         'id' => 'integer',
         'parent_id' => 'integer',
+        'category_id' => 'integer',
+        'product_id' => 'integer',
     ];
+
+
+    public function parent()
+    {
+        return $this->belongsTo(ProductCategory::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
 }

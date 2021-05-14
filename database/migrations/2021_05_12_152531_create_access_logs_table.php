@@ -16,10 +16,9 @@ class CreateAccessLogsTable extends Migration
         Schema::create('access_logs', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('access_log_event');
+            $table->unsignedBigInteger('access_log_event_id');
             $table->unsignedBigInteger('entity_id');
-            $table->string('accessable_type')->nullable();
-            $table->unsignedBigInteger('accessable_id')->nullable();
+            $table->string('accessable');
             $table->timestamps();
         });
     }

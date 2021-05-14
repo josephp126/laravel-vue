@@ -2,9 +2,10 @@
 
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
+use App\Models\Attribute;
+use App\Models\Product;
 use App\Models\ProductAttribute;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ProductAttributeFactory extends Factory
 {
@@ -24,8 +25,8 @@ class ProductAttributeFactory extends Factory
     {
         return [
             'value' => $this->faker->word,
-            'attribute_id' => $this->faker->randomNumber(),
-            'product_id' => $this->faker->randomNumber(),
+            'attribute_id' => Attribute::factory(),
+            'product_id' => Product::factory(),
         ];
     }
 }

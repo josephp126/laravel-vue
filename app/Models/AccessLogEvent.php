@@ -17,7 +17,6 @@ class AccessLogEvent extends Model
      */
     protected $fillable = [
         'name',
-        'slug',
     ];
 
     /**

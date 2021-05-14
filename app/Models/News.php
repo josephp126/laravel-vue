@@ -31,5 +31,6 @@ class News extends Model
      */
     protected $casts = [
         'id' => 'integer',
+        'is_homepage' => 'boolean',
     ];
 }

@@ -2,9 +2,10 @@
 
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
+use App\Models\Category;
+use App\Models\Product;
 use App\Models\ProductCategory;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ProductCategoryFactory extends Factory
 {
@@ -23,8 +24,9 @@ class ProductCategoryFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name,
-            'parent_id' => $this->faker->randomNumber(),
+            'parent_id' => ProductCategory::factory(),
+            'category_id' => Category::factory(),
+            'product_id' => Product::factory(),
             'sort' => $this->faker->numberBetween(-10000, 10000),
         ];
     }

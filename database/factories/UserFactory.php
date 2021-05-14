@@ -2,9 +2,8 @@
 
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 use App\Models\User;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class UserFactory extends Factory
 {
@@ -33,8 +32,12 @@ class UserFactory extends Factory
             'date_joined' => $this->faker->word,
             'guid' => $this->faker->uuid,
             'phone' => $this->faker->phoneNumber,
+            'fax' => $this->faker->word,
+            'website' => $this->faker->word,
             'notification_preferences' => $this->faker->text,
             'is_contact' => $this->faker->boolean,
+            'is_representative' => $this->faker->boolean,
+            'is_international' => $this->faker->boolean,
             'remember_token' => $this->faker->regexify('[A-Za-z0-9]{100}'),
         ];
     }

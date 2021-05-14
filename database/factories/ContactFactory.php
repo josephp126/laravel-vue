@@ -2,9 +2,9 @@
 
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 use App\Models\Contact;
+use App\Models\User;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ContactFactory extends Factory
 {
@@ -23,7 +23,7 @@ class ContactFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => $this->faker->numberBetween(-100000, 100000),
+            'user_id' => User::factory(),
             'name' => $this->faker->name,
             'email' => $this->faker->safeEmail,
             'message' => $this->faker->word,
