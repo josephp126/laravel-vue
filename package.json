@@ -13,26 +13,31 @@
         "posttest": "php artisan test --parallel",
         "postinstall": "composer install"
     },
-    "devDependencies": {
-        "axios": "^0.21",
-        "browser-sync": "^2.26.14",
-        "browser-sync-webpack-plugin": "2.2.2",
-        "laravel-mix": "^6.0.6",
-        "lodash": "^4.17.19",
-        "popper.js": "^1.12",
-        "postcss": "^8.1.14",
-        "resolve-url-loader": "^3.1.2",
-        "sass": "^1.15.2",
-        "sass-loader": "^8.0.0"
-    },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.15.3",
+        "axios": "^0.21",
         "bootstrap": "^4.6.0",
+        "browser-sync": "^2.26.14",
+        "browser-sync-webpack-plugin": "2.2.2",
         "dotenv": "^8.2.0",
         "font-awesome": "^4.7.0",
         "jquery": "^3.6.0",
         "jquery-appear-original": "^0.6.2",
+        "laravel-mix": "^6.0.6",
+        "livewire-sortable": "^0.2.2",
+        "lodash": "^4.17.19",
         "pm2": "^4.5.6",
-        "tinymce": "^5.7.1"
+        "popper.js": "^1.12",
+        "postcss": "^8.1.14",
+        "resolve-url-loader": "^2.3.1",
+        "sass": "^1.20.1",
+        "sass-loader": "^8.0.0",
+        "tinymce": "^5.7.1",
+        "vue": "^2.5.17",
+        "vue-template-compiler": "^2.6.10",
+        "vuedraggable": "^2.24.3"
+    },
+    "devDependencies": {
+        "vue-loader": "^15.9.5"
     }
 }

@@ -2,13 +2,16 @@
 
 namespace App\Models;
 
+use App\Traits\Uuidable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Silber\Bouncer\Database\HasRolesAndAbilities;
 
-class User extends Model
+class User extends Authenticatable
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, Notifiable, SoftDeletes, Uuidable, HasRolesAndAbilities;
 
     /**
      * The attributes that are mass assignable.
@@ -50,12 +53,17 @@ class User extends Model
      * @var array
      */
     protected $casts = [
-        'id' => 'integer',
+        'id'                => 'integer',
         'email_verified_at' => 'datetime',
-        'is_contact' => 'boolean',
+        'is_contact'        => 'boolean',
         'is_representative' => 'boolean',
-        'is_international' => 'boolean',
+        'is_international'  => 'boolean',
     ];
+
+    public function address()
+    {
+        return $this->morphOne(Address::class, 'addressable');
+    }
 
 
     public function accessLogs()

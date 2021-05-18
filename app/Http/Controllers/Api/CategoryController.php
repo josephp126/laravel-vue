@@ -6,23 +6,34 @@ use App\Api\Sort;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\CategoryUpdateRequest;
 use App\Http\Requests\Api\CategoryStoreRequest;
-use App\Http\Resources\Api\CategoryCollection;
 use App\Http\Resources\Api\CategoryResource;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
 
 class CategoryController extends Controller
 {
     /**
      * @param Request $request
-     * @return CategoryCollection
+     * @return AnonymousResourceCollection
      */
     public function index(Request $request)
     {
-        $categories = Category::all();
+        $categories = Category::where('parent_id', $request->get('parent_id'))->get();
 
-        return new CategoryCollection($categories);
+        return CategoryResource::collection($categories);
+    }
+
+    public function saveSort(Request $request)
+    {
+        $ids = $request->get('ids');
+
+        foreach ($ids as $sort => $id) {
+            Category::find($id)->update(compact('sort'));
+        }
+
+        return response()->json(['status' => true]);
     }
 
     /**
@@ -68,14 +79,5 @@ class CategoryController extends Controller
         $category->delete();
 
         return response()->noContent();
-    }
-
-    /**
-     * @param Request $request
-     * @return Response
-     */
-    public function saveSort(Request $request)
-    {
-        $sort->update([]);
     }
 }

@@ -3,31 +3,39 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\Slide;
+use Exception;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
+use Throwable;
 
 class SliderController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Application|Factory|View|Response
      */
     public function index()
     {
-        //
-        $sliders = Slide::get();
+        $sliders = Slide::all();
+
         foreach ($sliders as $key => $value) {
             $value->path = Storage::url($value->link);
         }
+
         return view('admin.slide.index', compact('sliders'));
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
@@ -37,13 +45,13 @@ class SliderController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return RedirectResponse
      */
     public function store(Request $request)
     {
-        //
         $files = $request->file('file');
+
         if ($files) {
             foreach ($files as $key => $file) {
                 $fileName = time() . $key . '.' . ($file->extension());
@@ -54,14 +62,15 @@ class SliderController extends Controller
                 ]);
             }
         }
+
         return back();
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     * @return Response
      */
     public function show($id)
     {
@@ -71,8 +80,8 @@ class SliderController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     * @return Response
      */
     public function edit($id)
     {
@@ -82,9 +91,9 @@ class SliderController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param int     $id
+     * @return Response
      */
     public function update(Request $request, $id)
     {
@@ -93,18 +102,20 @@ class SliderController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     * @return Response
+     * @throws Exception
      */
-    public function destroy($id)
+    public function destroy(Slide $slide)
     {
-        //
-        $link = Slide::where('id', $id)->value('link');
-        Slide::where("id", $id)->delete();
+        $link = $slide->link;
+
         try {
-            Storage::delete([$link]);
-        } catch (\Throwable $th) {
+            $slide->delete();
+            Storage::delete($link);
+        } catch (Throwable $th) {
         }
-        return back()->withStatus(__('Match successfully deleted.'));
+
+        return back()->withStatus(__('Slide successfully deleted.'));
     }
 }

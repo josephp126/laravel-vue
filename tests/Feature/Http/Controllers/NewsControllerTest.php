@@ -23,7 +23,7 @@ class NewsControllerTest extends TestCase
         $response = $this->get(route('news.index'));
 
         $response->assertOk();
-        $response->assertViewIs('admin.news.index');
+        $response->assertViewIs('news.index');
         $response->assertViewHas('news');
     }
 

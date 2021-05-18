@@ -2,6 +2,9 @@
 
 namespace Tests\Feature\Http\Controllers\Admin;
 
+use App\Http\Controllers\Admin\NewsController;
+use App\Http\Requests\Admin\NewsStoreRequest;
+use App\Http\Requests\Admin\NewsUpdateRequest;
 use App\Models\IsHomepage;
 use App\Models\News;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -46,9 +49,9 @@ class NewsControllerTest extends TestCase
     public function store_uses_form_request_validation()
     {
         $this->assertActionUsesFormRequest(
-            \App\Http\Controllers\Admin\NewsController::class,
+            NewsController::class,
             'store',
-            \App\Http\Requests\Admin\NewsStoreRequest::class
+            NewsStoreRequest::class
         );
     }
 
@@ -57,17 +60,20 @@ class NewsControllerTest extends TestCase
      */
     public function store_saves_and_redirects()
     {
-        $uuid = $this->faker->uuid;
-        $title = $this->faker->sentence(4);
+        $uuid    = $this->faker->uuid;
+        $title   = $this->faker->sentence(4);
         $summary = $this->faker->text;
         $content = $this->faker->paragraphs(3, true);
 
-        $response = $this->post(route('news.store'), [
-            'uuid' => $uuid,
-            'title' => $title,
-            'summary' => $summary,
-            'content' => $content,
-        ]);
+        $response = $this->post(
+            route('news.store'),
+            [
+                'uuid'    => $uuid,
+                'title'   => $title,
+                'summary' => $summary,
+                'content' => $content,
+            ]
+        );
 
         $news = News::query()
             ->where('uuid', $uuid)
@@ -84,6 +90,7 @@ class NewsControllerTest extends TestCase
 
 
     /**
+     * @group news
      * @test
      */
     public function show_displays_view()
@@ -119,9 +126,9 @@ class NewsControllerTest extends TestCase
     public function update_uses_form_request_validation()
     {
         $this->assertActionUsesFormRequest(
-            \App\Http\Controllers\Admin\NewsController::class,
+            NewsController::class,
             'update',
-            \App\Http\Requests\Admin\NewsUpdateRequest::class
+            NewsUpdateRequest::class
         );
     }
 
@@ -130,18 +137,21 @@ class NewsControllerTest extends TestCase
      */
     public function update_redirects()
     {
-        $news = News::factory()->create();
-        $uuid = $this->faker->uuid;
-        $title = $this->faker->sentence(4);
+        $news    = News::factory()->create();
+        $uuid    = $this->faker->uuid;
+        $title   = $this->faker->sentence(4);
         $summary = $this->faker->text;
         $content = $this->faker->paragraphs(3, true);
 
-        $response = $this->put(route('news.update', $news), [
-            'uuid' => $uuid,
-            'title' => $title,
-            'summary' => $summary,
-            'content' => $content,
-        ]);
+        $response = $this->put(
+            route('news.update', $news),
+            [
+                'uuid'    => $uuid,
+                'title'   => $title,
+                'summary' => $summary,
+                'content' => $content,
+            ]
+        );
 
         $news->refresh();
 
@@ -175,11 +185,11 @@ class NewsControllerTest extends TestCase
      */
     public function star_redirects()
     {
-        $response = $this->get(route('news.star'));
+        $news     = News::factory()->create();
+        $response = $this->get(route('admin.news.star', $news));
 
         $news->refresh();
 
         $response->assertRedirect(route('admin.news.index'));
-        $response->assertSessionHas('admin.news.updated', $admin->news->updated);
     }
 }

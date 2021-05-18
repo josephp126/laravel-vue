@@ -1,8 +1,6 @@
 @extends('layouts.skel')
 
 @section('skel_scripts')
-    {{-- <script src="{{ url('/js/jquery.js') }}"></script>
-    <script src="{{ url('/js/bootstrap.js') }}"></script>
     <script src="{{ url('/js/plugins.js') }}"></script>
     <script src="{{ url('/js/common.js') }}"></script> --}}
 @endsection
@@ -13,7 +11,7 @@
 
 @section('skel_content')
     <!-- /.wrapbox start-->
-    <div class="wrapbox admin-container">
+    <div id="app" class="wrapbox admin-container">
         @include('admin.layouts.admin-bar-top')
         @if(auth()->check())
             @include('admin.layouts.admin-nav-top')
@@ -39,6 +37,9 @@
         @include('layouts.main-footer')
     </div>
     <!-- /.wrapbox ends-->
+@endsection
 
+
+@section('skel_scripts')
     @yield('scripts')
 @endsection
