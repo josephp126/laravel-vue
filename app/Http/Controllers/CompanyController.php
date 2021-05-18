@@ -2,15 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Company;
-use App\company;
+use App\Models\Company;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class CompanyController extends Controller
 {
     /**
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Application|Factory|View|Response
      */
     public function index(Request $request)
     {
@@ -20,9 +23,9 @@ class CompanyController extends Controller
     }
 
     /**
-     * @param \Illuminate\Http\Request $request
+     * @param Request      $request
      * @param \App\company $company
-     * @return \Illuminate\Http\Response
+     * @return Application|Factory|View|Response
      */
     public function show(Request $request, Company $company)
     {
