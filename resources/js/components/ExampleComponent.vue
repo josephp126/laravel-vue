@@ -12,10 +12,15 @@
                         placeholder="New Category"
                     />
                     <div class="input-group-append">
-                        <button type="submit" class="btn btn-primary btn-sm">Add category to '<span v-text="!parent_id? 'Parent': 'Child'"></span>'</button>
+                        <button class="btn btn-primary btn-sm" type="submit">Add category to '<span
+                            v-text="!parent_id? 'Parent': 'Child'"></span>'
+                        </button>
                     </div>
                 </div>
             </form>
+            <pre v-html="categories">
+
+            </pre>
             <draggable v-model="categories" :draggable="`.card-${parent_id}`">
                 <div v-for="category in categories" :class="`card-${parent_id}`">
                     <div class="card-header bg-dark p-0" role="tab" :id="`section${category.id}HeaderId`">
@@ -30,25 +35,22 @@
                                        :aria-controls="`section${category.id}ContentId`">
                                         <span v-if="categories.length > 0">
                                             <i class="icon-expand-alt mr-3"></i>
-                                        </span> {{category.name}}
-                                </a>
-                            </li>
-                                <li class="nav-item bg-primary col-md-auto d-flex flex-row">
-                                    <a class="nav-link" :href="void(0)">Add Subcategory</a>
+                                        </span> {{ category.name }}
+                                    </a>
                                 </li>
-                            <li class="nav-item bg-secondary col-md-auto">
-                                <a class="nav-link" :href="void(0)">Edit</a>
-                            </li>
-                            <li class="nav-item bg-danger col-md-auto">
-                                <a class="nav-link" :href="void(0)" @click="remove(category)">Delete</a>
-                            </li>
-                        </ul>
-                    </div>
+                                <li class="nav-item bg-secondary col-md-auto">
+                                    <a :href="void(0)" class="nav-link" @click="editCategory(category)">Edit</a>
+                                </li>
+                                <li class="nav-item bg-danger col-md-auto">
+                                    <a :href="void(0)" class="nav-link" @click="remove(category)">Delete</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div :id="`section${category.id}ContentId`"
                          :class="`collapse ${category.parent_id === null? 'show': 'in'}`" role="tabpanel"
                          :aria-labelledby="`section${category.id}HeaderId`">
-                        <div class="card-body pr-0">
+                        <div v-if="category.id" class="card-body pr-0">
                             <example-component :parent_id="category.id"></example-component>
                         </div>
                     </div>
@@ -76,43 +78,49 @@ export default {
     components: { draggable },
     watch: {
         categories (val) {
-            const ids = val.map(({ id }) => id);
-            if(ids.length <= 1){
-                return;
+            if (this.categories.length > 0) {
+                const ids = val.map(({ id }) => id);
+                if (ids.length <= 1) {
+                    return;
+                }
+                axios.put('/api/sort/category/save', { ids }).then(({ data }) => {
+                    console.log({ data });
+                });
             }
-            axios.put('/api/product_categories', { ids }).then(({ data }) => {
-                console.log({ data });
-            });
         },
     },
     methods: {
-        async remove({ id }){
-            axios.delete(`/api/product_categories/${id}`).then(({ data }) => {
+        async remove ({ id }) {
+            axios.delete(`/api/category/${id}`).then(({ data }) => {
                 this.loadCategories();
             });
         },
-        handleAddCategory(){
-            console.log("would add to " + this.parent_id + ".");
+        async editCategory (category) {
+            const newCategoryName = prompt('Enter a new name for ' + category.name + '.', category.name);
+
+            if (newCategoryName) {
+                await axios.put(`/api/category/${category.id}`, category);
+                await this.loadCategories();
+            }
+        },
+        handleAddCategory () {
             const data = {
                 parent_id: this.parent_id || '',
                 name: this.newCategory,
-            }
+            };
 
-            axios.post('/api/product_categories', data).then(({ data }) => {
+            axios.post('/api/category', data).then(({ data }) => {
                 this.loadCategories();
                 this.newCategory = '';
             });
         },
         async loadCategories () {
-            this.categories = await axios.get(`/api/product_categories?parent_id=${this.parent_id || ''}`).
-                then(({ data }) => {
-                    console.log({ data });
-                    return data;
-                });
+            this.categories = await axios.get(`/api/category?parent_id=${this.parent_id || ''}`)
+                .then(({ data }) => data);
         },
     },
-        mounted() {
-            this.loadCategories();
-        }
-    }
+    mounted () {
+        this.loadCategories();
+    },
+};
 </script>

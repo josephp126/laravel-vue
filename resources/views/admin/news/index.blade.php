@@ -8,10 +8,10 @@
         </a>
 
         <h3>
-            @if($data->count() == $data->total())
+            @if($news->count() == $news->total())
                 Showing all results
             @else
-                Showing {{$data->count()}} of {{$data->total()}} result(s) on page {{$data->currentPage()}}
+                Showing {{$news->count()}} of {{$news->total()}} result(s) on page {{$news->currentPage()}}
             @endif
         </h3>
         <div class="table-responsive">
@@ -26,7 +26,7 @@
                 <th></th>
                 </thead>
                 <tbody>
-                @forelse($data as $record)
+                @forelse($news as $record)
                     <tr>
                         <td>
                             <img class="img-thumbnail img-sm" src="{{$record->imageUrl}}" alt="placehodler" />
@@ -80,6 +80,6 @@
             </table>
         </div>
 
-        {!! $data->links() !!}
+        {!! $news->links() !!}
     </div>
 @endsection

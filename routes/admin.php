@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoriesController;
 use App\Http\Controllers\Admin\CommandsController;
 use App\Http\Controllers\Admin\NewsController;
-use App\Http\Controllers\Admin\ProductCategoriesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,8 +20,8 @@ Route::view('/', 'admin/dashboard')->name('index');
 
 Route::resources(
     [
-        'news'             => NewsController::class,
-        'product_category' => ProductCategoriesController::class,
+        'news'     => NewsController::class,
+        'category' => CategoriesController::class,
     ]
 );
 

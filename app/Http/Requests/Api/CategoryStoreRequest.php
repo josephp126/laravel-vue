@@ -24,10 +24,9 @@ class CategoryStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required', 'string'],
-            'parent_id' => ['required', 'integer'],
-            'root_id' => ['required', 'integer'],
-            'order' => ['required', 'integer'],
+            'name'      => ['required', 'string'],
+            'parent_id' => [],
+            'order'     => [],
         ];
     }
 }

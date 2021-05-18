@@ -1,8 +1,6 @@
 @extends('layouts.skel')
 
 @section('skel_scripts')
-    <script src="{{ url('/js/jquery.js') }}"></script>
-    <script src="{{ url('/js/bootstrap.js') }}"></script>
     <script src="{{ url('/js/plugins.js') }}"></script>
     <script src="{{ url('/js/common.js') }}"></script>
 @endsection
@@ -39,6 +37,9 @@
         @include('layouts.main-footer')
     </div>
     <!-- /.wrapbox ends-->
+@endsection
 
+
+@section('skel_scripts')
     @yield('scripts')
 @endsection

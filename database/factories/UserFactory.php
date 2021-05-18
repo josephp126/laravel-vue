@@ -37,8 +37,8 @@ class UserFactory extends Factory
             'notification_preferences' => $this->faker->text,
             'is_contact'               => $this->faker->boolean,
             'is_representative'        => $this->faker->boolean,
-            'is_international' => $this->faker->boolean,
-            'remember_token' => $this->faker->regexify('[A-Za-z0-9]{100}'),
+            'is_international'         => $this->faker->boolean,
+            'remember_token'           => $this->faker->regexify('[A-Za-z0-9]{100}'),
         ];
     }
 }

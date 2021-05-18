@@ -3,25 +3,29 @@
 namespace App\Http\Controllers;
 
 use App\Models\News;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class NewsController extends Controller
 {
     /**
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Application|Factory|View|Response
      */
     public function index(Request $request)
     {
-        $news = News::paginate(news)->get();
+        $news = News::paginate();
 
-        return view('admin.news.index', compact('news'));
+        return view('news.index', compact('news'));
     }
 
     /**
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Models\News $news
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param News    $news
+     * @return Application|Factory|View|Response
      */
     public function show(Request $request, News $news)
     {

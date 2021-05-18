@@ -2,6 +2,9 @@
 
 namespace Tests\Feature\Http\Controllers\Admin;
 
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Requests\Admin\UserStoreRequest;
+use App\Http\Requests\Admin\UserUpdateRequest;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -22,7 +25,7 @@ class UserControllerTest extends TestCase
     {
         $users = User::factory()->count(3)->create();
 
-        $response = $this->get(route('user.index'));
+        $response = $this->get(route('admin.user.index'));
 
         $response->assertOk();
         $response->assertViewIs('admin.users.index');
@@ -35,7 +38,7 @@ class UserControllerTest extends TestCase
      */
     public function create_displays_view()
     {
-        $response = $this->get(route('user.create'));
+        $response = $this->get(route('admin.user.create'));
 
         $response->assertOk();
         $response->assertViewIs('user.create');
@@ -48,9 +51,9 @@ class UserControllerTest extends TestCase
     public function store_uses_form_request_validation()
     {
         $this->assertActionUsesFormRequest(
-            \App\Http\Controllers\Admin\UserController::class,
+            UserController::class,
             'store',
-            \App\Http\Requests\Admin\UserStoreRequest::class
+            UserStoreRequest::class
         );
     }
 
@@ -59,23 +62,26 @@ class UserControllerTest extends TestCase
      */
     public function store_saves_and_redirects()
     {
-        $uuid = $this->faker->uuid;
-        $first_name = $this->faker->firstName;
-        $last_name = $this->faker->lastName;
-        $username = $this->faker->userName;
-        $password = $this->faker->password;
-        $email = $this->faker->safeEmail;
+        $uuid        = $this->faker->uuid;
+        $first_name  = $this->faker->firstName;
+        $last_name   = $this->faker->lastName;
+        $username    = $this->faker->userName;
+        $password    = $this->faker->password;
+        $email       = $this->faker->safeEmail;
         $date_joined = $this->faker->word;
 
-        $response = $this->post(route('user.store'), [
-            'uuid' => $uuid,
-            'first_name' => $first_name,
-            'last_name' => $last_name,
-            'username' => $username,
-            'password' => $password,
-            'email' => $email,
-            'date_joined' => $date_joined,
-        ]);
+        $response = $this->post(
+            route('admin.user.store'),
+            [
+                'uuid'        => $uuid,
+                'first_name'  => $first_name,
+                'last_name'   => $last_name,
+                'username'    => $username,
+                'password'    => $password,
+                'email'       => $email,
+                'date_joined' => $date_joined,
+            ]
+        );
 
         $users = User::query()
             ->where('uuid', $uuid)
@@ -89,7 +95,7 @@ class UserControllerTest extends TestCase
         $this->assertCount(1, $users);
         $user = $users->first();
 
-        $response->assertRedirect(route('user.index'));
+        $response->assertRedirect(route('admin.user.index'));
         $response->assertSessionHas('user.id', $user->id);
     }
 
@@ -101,7 +107,7 @@ class UserControllerTest extends TestCase
     {
         $user = User::factory()->create();
 
-        $response = $this->get(route('user.show', $user));
+        $response = $this->get(route('admin.user.show', $user));
 
         $response->assertOk();
         $response->assertViewIs('admin.users.show');
@@ -116,7 +122,7 @@ class UserControllerTest extends TestCase
     {
         $user = User::factory()->create();
 
-        $response = $this->get(route('user.edit', $user));
+        $response = $this->get(route('admin.user.edit', $user));
 
         $response->assertOk();
         $response->assertViewIs('user.edit');
@@ -130,9 +136,9 @@ class UserControllerTest extends TestCase
     public function update_uses_form_request_validation()
     {
         $this->assertActionUsesFormRequest(
-            \App\Http\Controllers\Admin\UserController::class,
+            UserController::class,
             'update',
-            \App\Http\Requests\Admin\UserUpdateRequest::class
+            UserUpdateRequest::class
         );
     }
 
@@ -141,28 +147,31 @@ class UserControllerTest extends TestCase
      */
     public function update_redirects()
     {
-        $user = User::factory()->create();
-        $uuid = $this->faker->uuid;
-        $first_name = $this->faker->firstName;
-        $last_name = $this->faker->lastName;
-        $username = $this->faker->userName;
-        $password = $this->faker->password;
-        $email = $this->faker->safeEmail;
+        $user        = User::factory()->create();
+        $uuid        = $this->faker->uuid;
+        $first_name  = $this->faker->firstName;
+        $last_name   = $this->faker->lastName;
+        $username    = $this->faker->userName;
+        $password    = $this->faker->password;
+        $email       = $this->faker->safeEmail;
         $date_joined = $this->faker->word;
 
-        $response = $this->put(route('user.update', $user), [
-            'uuid' => $uuid,
-            'first_name' => $first_name,
-            'last_name' => $last_name,
-            'username' => $username,
-            'password' => $password,
-            'email' => $email,
-            'date_joined' => $date_joined,
-        ]);
+        $response = $this->put(
+            route('admin.user.update', $user),
+            [
+                'uuid'        => $uuid,
+                'first_name'  => $first_name,
+                'last_name'   => $last_name,
+                'username'    => $username,
+                'password'    => $password,
+                'email'       => $email,
+                'date_joined' => $date_joined,
+            ]
+        );
 
         $user->refresh();
 
-        $response->assertRedirect(route('user.index'));
+        $response->assertRedirect(route('admin.user.index'));
         $response->assertSessionHas('user.id', $user->id);
 
         $this->assertEquals($uuid, $user->uuid);
@@ -182,9 +191,9 @@ class UserControllerTest extends TestCase
     {
         $user = User::factory()->create();
 
-        $response = $this->delete(route('user.destroy', $user));
+        $response = $this->delete(route('admin.user.destroy', $user));
 
-        $response->assertRedirect(route('user.index'));
+        $response->assertRedirect(route('admin.user.index'));
 
         $this->assertSoftDeleted($user);
     }

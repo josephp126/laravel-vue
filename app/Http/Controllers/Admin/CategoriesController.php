@@ -9,15 +9,15 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
-class ProductCategoriesController extends Controller
+class CategoriesController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @param  Request  $request
+     * @param Request $request
      * @return View
      */
-    public function index(Request  $request)
+    public function index(Request $request)
     {
         return view('admin.productCategory.index');
     }

@@ -8,13 +8,15 @@ use App\Http\Requests\Admin\NewsStoreRequest;
 use App\Http\Requests\Admin\NewsUpdateRequest;
 use App\Http\Resources\Admin\NewsCollection;
 use App\Models\News;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class NewsController extends Controller
 {
     /**
-     * @param \Illuminate\Http\Request $request
-     * @return \App\Http\Resources\Admin\NewsCollection
+     * @param Request $request
+     * @return NewsCollection
      */
     public function index(Request $request)
     {
@@ -24,8 +26,8 @@ class NewsController extends Controller
     }
 
     /**
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Response
      */
     public function create(Request $request)
     {
@@ -33,8 +35,8 @@ class NewsController extends Controller
     }
 
     /**
-     * @param \App\Http\Requests\Admin\NewsStoreRequest $request
-     * @return \Illuminate\Http\Response
+     * @param NewsStoreRequest $request
+     * @return Response
      */
     public function store(NewsStoreRequest $request)
     {
@@ -46,9 +48,9 @@ class NewsController extends Controller
     }
 
     /**
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Models\News $news
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param News    $news
+     * @return Response
      */
     public function show(Request $request, News $news)
     {
@@ -56,9 +58,9 @@ class NewsController extends Controller
     }
 
     /**
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Models\News $news
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param News    $news
+     * @return Response
      */
     public function edit(Request $request, News $news)
     {
@@ -66,9 +68,9 @@ class NewsController extends Controller
     }
 
     /**
-     * @param \App\Http\Requests\Admin\NewsUpdateRequest $request
-     * @param \App\Models\News $news
-     * @return \Illuminate\Http\Response
+     * @param NewsUpdateRequest $request
+     * @param News              $news
+     * @return Response
      */
     public function update(NewsUpdateRequest $request, News $news)
     {
@@ -80,9 +82,9 @@ class NewsController extends Controller
     }
 
     /**
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Models\News $news
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param News    $news
+     * @return Response
      */
     public function destroy(Request $request, News $news)
     {
@@ -92,14 +94,14 @@ class NewsController extends Controller
     }
 
     /**
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return RedirectResponse
      */
-    public function star(Request $request)
+    public function star(Request $request, News $news)
     {
-        $request->session()->flash('admin.news.updated', $admin->news->updated);
+//        $request->session()->flash('admin.news.updated', $admin->news->updated);
 
-        $isHomepage->update([]);
+        $news->update(['is_homepage' => !$request->get('is_homepage', false)]);
 
         return redirect()->route('admin.news.index');
     }
