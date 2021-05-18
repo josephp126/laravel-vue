@@ -143,7 +143,9 @@
         margin-top: -40px;
     }
 }
-
+.notransition {
+    opacity: 1 !important;
+}
 @media screen and (max-width: 600px) {
     .landingpage-button strong {
         margin-left: 0;
