@@ -11302,3 +11302,13 @@ ul.ca-menu {
         animation: none !important;
     }
 }
+.carousel-item img {
+    visibility: visible !important;
+}
+.carousel-indicators li, .carousel-indicators .active {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.carousel-control-prev, .carousel-control-next {
+    width: 10%;
+}

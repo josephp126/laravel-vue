@@ -3,78 +3,33 @@
 @section('content')
     <!-- CAROUSEL
 ================================================== -->
-<div id="carousel" style="position:relative;margin:0 auto;top:0px;left:0px;width:1600px;height:530px;overflow:hidden;visibility:hidden;">
-    <!-- Loading Screen -->
-    <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-        <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="images/homepage/carousel/spin.svg" />
+<div id="carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel" data-slide-to="1"></li>
+      <li data-target="#carousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="{{ url('images/homepage/carousel/slider-1.png') }}" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{{ url('images/homepage/carousel/slider-2.png') }}" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{{ url('images/homepage/carousel/slider-3.png') }}" alt="Third slide">
+      </div>
     </div>
-    <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1600px;height:530px;overflow:hidden;">
-        <div data-fillmode="0" data-p="1065">
-            <img data-u="image" src="images/homepage/carousel/slider-1-back.png" />
-            <img data-to="50% 50%" data-t="0" style="left:1696px;top:0px;width:706px;height:479px;position:absolute;max-width:706px;" src="images/homepage/carousel/slider-1-res-1.png" />
-            <div data-to="50% 50%" data-t="1" style="left:-600px;top:104px;width:539px;height:57px;position:absolute;color:#000d;font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:900;text-align:left;padding:6px 10px 6px 10px;text-shadow:0px 1px #fff;box-sizing:border-box;background-color:#fffc;background-clip:padding-box;">HIGH-PERFORMING LOUVERS</div>
-            <div data-to="50% 50%" data-t="2" style="left:-542px;top:384px;width:423px;height:86px;position:absolute;color:#fff;font-size:36px;font-weight:900;line-height:1.2;letter-spacing:0.05em;text-align:left;">PERFECT FOR <span style="color:#1d568d">ANY</span><br />&nbsp; &nbsp;CONDITION </div>
-        </div>
-        <div data-p="1065">
-            <img data-u="image" src="images/homepage/carousel/slider-2-back.png" />
-            <img data-to="50% 50%" data-t="3" style="left:-300px;top:14px;width:267px;height:448px;position:absolute;max-width:267px;" src="images/homepage/carousel/slider-2-res-1.png" />
-            <img data-to="50% 50%" data-t="4" style="left:1700px;top:34px;width:300px;height:350px;position:absolute;max-width:300px;" src="images/homepage/carousel/slider-2-res-4.png" />
-            <img data-to="50% 50%" data-t="5" style="left:250px;top:600px;width:345px;height:251px;position:absolute;max-width:345px;" src="images/homepage/carousel/slider-2-res-3.png" />
-            <img data-to="50% 50%" data-t="6"
-                 style="left:569px;top:600px;width:297px;height:257px;position:absolute;max-width:297px;"
-                 src="images/homepage/carousel/slider-2-res-2.png" />
-            <div data-to="50% 50%" data-t="7"
-                 style="left:125px;top:-100px;width:686px;height:57px;position:absolute;color:#000d;font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:900;text-align:left;padding:6px 10px 6px 10px;text-shadow:0px 1px #ffffff;box-sizing:border-box;background-color:#fffc;background-clip:padding-box;">
-                UL CLASSIFIED LIFE SAFETY DAMPERS
-            </div>
-            <div data-to="50% 50%" data-t="8"
-                 style="left:325px;top:-100px;width:460px;height:40px;position:absolute;color:#b74a1c;font-size:36px;font-weight:700;line-height:1.2;text-align:center;">
-                TESTED AND TRUSTED<br /><br /></div>
-        </div>
-        <div data-p="1065">
-            <img data-u="image" src="images/homepage/carousel/slider-3-back.png" />
-            <img data-to="50% 50%" data-t="9"
-                 style="left:1181px;top:-500px;width:266px;height:375px;position:absolute;max-width:266px;"
-                 src="images/homepage/carousel/slider-3-res-3.png" />
-            <img data-to="50% 50%" data-t="10"
-                 style="left:416px;top:-500px;width:255px;height:450px;position:absolute;max-width:255px;"
-                 src="images/homepage/carousel/slider-3-res-4.png" />
-            <img data-to="50% 50%" data-t="11"
-                 style="left:586px;top:-500px;width:291px;height:246px;position:absolute;max-width:291px;"
-                 src="images/homepage/carousel/slider-3-res-2.png" />
-            <img data-to="50% 50%" data-t="12"
-                 style="left:820px;top:-500px;width:389px;height:193px;position:absolute;max-width:389px;"
-                 src="images/homepage/carousel/slider-3-res-1.png" />
-            <div data-to="50% 50%" data-t="13"
-                 style="left:-650px;top:56px;width:616px;height:57px;position:absolute;color:#000d;font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:900;text-align:left;padding:6px 10px 6px 10px;text-shadow:0px 1px #fff;box-sizing:border-box;background-color:#fffc;background-clip:padding-box;">
-                COMMERCIAL CONTROL DAMPERS<br /><br /></div>
-            <div data-to="50% 50%" data-t="14"
-                 style="left:500px;top:-200px;width:553px;height:92px;position:absolute;color:#fff;font-size:40px;font-weight:700;line-height:1.2;text-align:center;">
-                DESIGNED FOR<br />
-                <span style="margin-left:300px;color:#e16048">SAFETY</span></div>
-        </div>
-    </div>
-    <!-- Bullet Navigator -->
-    <div data-u="navigator" class="jssorb132" style="position:absolute;bottom:24px;right:16px;" data-autocenter="1"
-         data-scale="0.5" data-scale-bottom="0.75">
-        <div data-u="prototype" class="i" style="width:12px;height:12px;">
-            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                <circle class="b" cx="8000" cy="8000" r="5800"></circle>
-            </svg>
-        </div>
-    </div>
-    <!-- Arrow Navigator -->
-    <div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
-        <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-            <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
-        </svg>
-    </div>
-    <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
-        <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-            <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
-        </svg>
-    </div>
-</div>
+    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  
     <!-- /.carousel end-->
 
 
@@ -300,75 +255,12 @@
 
 
 @section('scripts')
-    <script src="js/jssor.slider-28.1.0.min.js" type="text/javascript"></script>
     <script>
         /* ---------------------------------------------------------------------- */
         /*	Carousel
         /* ---------------------------------------------------------------------- */
         $(function () {
-            var carousel_SlideoTransitions = [
-              [{b:0,d:800,x:791,e:{x:1}}],
-              [{b:600,d:600,x:112}],
-              [{b:680,d:720,x:120,y:260}],
-              [{b:0,d:600,x:88}],
-              [{b:200,d:600,x:806}],
-              [{b:400,d:600,y:256}],
-              [{b:600,d:600,x:570,y:258}],
-              [{b:800,d:600,y:95}],
-              [{b:800,d:600,y:175}],
-              [{b:500,d:600,x:1180,y:90}],
-              [{b:200,d:600,y:52}],
-              [{b:400,d:600,y:257}],
-              [{b:280,d:620,y:286}],
-              [{b:700,d:600,x:673}],
-              [{b:800,d:600,x:630,y:152}]
-            ];
-
-            var carousel_options = {
-              $AutoPlay: 1,
-              $SlideDuration: 800,
-              $SlideEasing: $Jease$.$Swing,
-              $PauseOnHover: 0,
-              $CaptionSliderOptions: {
-                $Class: $JssorCaptionSlideo$,
-                $Transitions: carousel_SlideoTransitions
-              },
-              $ArrowNavigatorOptions: {
-                $Class: $JssorArrowNavigator$
-              },
-              $BulletNavigatorOptions: {
-                $Class: $JssorBulletNavigator$,
-                $SpacingX: 20,
-                $SpacingY: 20
-              }
-            };
-
-            var carousel_slider = new $JssorSlider$("carousel", carousel_options);
-
-            /*#region responsive code begin*/
-
-            var MAX_WIDTH = 3000;
-
-            function ScaleSlider() {
-                var containerElement = carousel_slider.$Elmt.parentNode;
-                var containerWidth = containerElement.clientWidth;
-
-                if (containerWidth) {
-
-                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
-
-                    carousel_slider.$ScaleWidth(expectedWidth);
-                }
-                else {
-                    window.setTimeout(ScaleSlider, 30);
-                }
-            }
-
-            ScaleSlider();
-
-            $(window).bind("load", ScaleSlider);
-            $(window).bind("resize", ScaleSlider);
-            $(window).bind("orientationchange", ScaleSlider);
+            $("#carousel").carousel();
         });
         /* ----------------------------------------------------------------------*/
     </script>
