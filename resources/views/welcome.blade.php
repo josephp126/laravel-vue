@@ -3,36 +3,31 @@
 @section('content')
     <!-- CAROUSEL
 ================================================== -->
-    <div id="carousel" class="carousel slide overflow-hidden" data-ride="carousel" style="max-height: 480px;">
-        <ol class="carousel-indicators">
-            <li data-target="#carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel" data-slide-to="1"></li>
-            <li data-target="#carousel" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block h-100 w-100" src="{{ url('images/homepage/carousel/slider-1.png') }}"
-                     alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block h-100 w-100" src="{{ url('images/homepage/carousel/slider-2.png') }}"
-                     alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block h-100 w-100" src="{{ url('images/homepage/carousel/slider-3.png') }}"
-                     alt="Third slide">
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+<div id="carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel" data-slide-to="1"></li>
+      <li data-target="#carousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="{{ url('images/homepage/carousel/slider-1.png') }}" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{{ url('images/homepage/carousel/slider-2.png') }}" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{{ url('images/homepage/carousel/slider-3.png') }}" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev left carousel-control animated" href="#carousel" role="button" data-slide="prev">
+      <i class="icon-angle-left"></i>
+    </a>
+    <a class="carousel-control-next right carousel-control" href="#carousel" role="button" data-slide="next">
+      <i class="icon-angle-right"></i>
+    </a>
   </div>
-
+  
     <!-- /.carousel end-->
 
 
@@ -263,7 +258,9 @@
         /*	Carousel
         /* ---------------------------------------------------------------------- */
         $(function () {
-            $("#carousel").carousel();
+            $("#carousel").carousel({
+                interval:1000,
+            });
         });
         /* ----------------------------------------------------------------------*/
     </script>

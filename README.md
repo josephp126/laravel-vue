@@ -1,6 +1,6 @@
 # Pottorff
 
-Mysql version is 8.0.25
+
 
 ## Links
 
