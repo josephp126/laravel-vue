@@ -3,15 +3,15 @@
 @section('content')
     <!-- CAROUSEL
 ================================================== -->
-<div id="carousel" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carousel" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel" data-slide-to="1"></li>
-      <li data-target="#carousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="{{ url('images/homepage/carousel/slider-1.png') }}" alt="First slide">
+    <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="10000">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="{{ url('images/homepage/carousel/slider-1.png') }}" alt="First slide">
       </div>
       <div class="carousel-item">
         <img class="d-block w-100" src="{{ url('images/homepage/carousel/slider-2.png') }}" alt="Second slide">
@@ -27,7 +27,7 @@
       <i class="icon-angle-right"></i>
     </a>
   </div>
-  
+
     <!-- /.carousel end-->
 
 
@@ -253,17 +253,6 @@
 
 
 @section('scripts')
-    <script>
-        /* ---------------------------------------------------------------------- */
-        /*	Carousel
-        /* ---------------------------------------------------------------------- */
-        $(function () {
-            $("#carousel").carousel({
-                interval:1000,
-            });
-        });
-        /* ----------------------------------------------------------------------*/
-    </script>
     <script>
         /* ---------------------------------------------------------------------- */
         /*  http://caroufredsel.falsecode.ru/
