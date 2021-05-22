@@ -20,13 +20,12 @@
         <img class="d-block w-100" src="{{ url('images/homepage/carousel/slider-3.png') }}" alt="Third slide">
       </div>
     </div>
-    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <a class="carousel-control-prev left carousel-control animated" href="#carousel" role="button" data-slide="prev">
+      <i class="icon-angle-left"></i>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
+    <a class="carousel-control-next right carousel-control" href="#carousel" role="button" data-slide="next">
+      <i class="icon-angle-right"></i>
     </a>
   </div>
   
@@ -260,7 +259,9 @@
         /*	Carousel
         /* ---------------------------------------------------------------------- */
         $(function () {
-            $("#carousel").carousel();
+            $("#carousel").carousel({
+                interval:1000,
+            });
         });
         /* ----------------------------------------------------------------------*/
     </script>
