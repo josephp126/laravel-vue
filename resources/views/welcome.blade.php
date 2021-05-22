@@ -22,7 +22,6 @@
     </div>
     <a class="carousel-control-prev left carousel-control animated" href="#carousel" role="button" data-slide="prev">
       <i class="icon-angle-left"></i>
-      <span class="sr-only">Previous</span>
     </a>
     <a class="carousel-control-next right carousel-control" href="#carousel" role="button" data-slide="next">
       <i class="icon-angle-right"></i>
