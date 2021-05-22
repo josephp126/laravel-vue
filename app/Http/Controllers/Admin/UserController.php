@@ -40,7 +40,7 @@ class UserController extends Controller
 
         $request->session()->flash('user.id', $user->id);
 
-        return redirect()->route('user.index');
+        return redirect()->route('admin.user.index');
     }
 
     /**
@@ -74,7 +74,7 @@ class UserController extends Controller
 
         $request->session()->flash('user.id', $user->id);
 
-        return redirect()->route('user.index');
+        return redirect()->route('admin.user.index');
     }
 
     /**
@@ -86,6 +86,6 @@ class UserController extends Controller
     {
         $user->delete();
 
-        return redirect()->route('user.index');
+        return redirect()->route('admin.user.index');
     }
 }
