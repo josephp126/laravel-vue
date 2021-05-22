@@ -152,10 +152,11 @@ strong, b {
 
 .navbar-nav > li {
     margin-left: 2px;
+    margin-top: -10px;
 }
 
 .navbar-nav > li > a {
-    color: #555;
+    color: #fff;
     border-radius: 0px;
     margin-top: -26px;
     padding-top: 26px;
@@ -11302,7 +11303,7 @@ ul.ca-menu {
         animation: none !important;
     }
 }
-.carousel-item img {
+img {
     visibility: visible !important;
 }
 .carousel-indicators li, .carousel-indicators .active {
@@ -11311,4 +11312,11 @@ ul.ca-menu {
 }
 .carousel-control-prev, .carousel-control-next {
     width: 10%;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: .8rem;
+    padding-left: .8rem;
+}
+.active > .nav-link{
+    color: #fff !important;
 }

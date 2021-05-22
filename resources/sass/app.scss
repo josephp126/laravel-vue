@@ -84,8 +84,8 @@
 
 .logo-nav {
     img {
-        max-width: 200px !important;
-
+        max-width: 300px !important;
+        height: 35px;
         @media (max-width 1021px) {
             max-width: 100px !important;
         }
