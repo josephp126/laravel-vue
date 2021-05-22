@@ -34,7 +34,7 @@
 
 
     <!-- /.wrapsemibox start-->
-    <div class="wrapsemibox">
+    <div class="wrapsemibox shadow">
         <div class="semiboxshadow text-center">
             {{--            <img src="img/shp.png" class="img-fluid" alt="">--}}
         </div>
@@ -56,7 +56,7 @@
                             committed
 
                             to superior customer service - delivering high-performing HVAC products on time and at
-                            competitive process.
+                            competitive prices.
 
                         </p>
 
@@ -71,7 +71,7 @@
         <!-- /.intro-note end-->
         <!-- SERVICE BOXES==================================================-->
 
-        <section class="service-box mt-5">
+        <section class="service-box my-2">
 
             <div class="container">
 
@@ -85,7 +85,7 @@
                                                 description="Butterfly, Curtain Style, Wood Truss and Steel Truss"
                                                 image="images/Product Photos/Ceiling Radiation Damper.png" />
 
-                    <livewire:home-product-card title="UL Rated Fire/Smoke Dampers"
+                    <livewire:home-product-card title="Fire/Smoke Dampers"
                                                 description="Fire/Smoke Dampers, Dynamic and Static Fire Dampers, Corridor and Smoke Dampers"
                                                 image="images/Product Photos/FSD.png" />
 

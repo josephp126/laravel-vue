@@ -15,7 +15,7 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('uuid', 36);
+            $table->uuid('uuid', 36);
             $table->string('first_name');
             $table->string('last_name');
             $table->string('username');
@@ -27,7 +27,7 @@ class CreateUsersTable extends Migration
             $table->string('phone')->nullable();
             $table->string('fax')->nullable();
             $table->string('website')->nullable();
-            $table->text('notification_preferences')->nullable()->default('[\"mail\"]');
+            $table->text('notification_preferences')->nullable();//->default('["mail"]');
             $table->boolean('is_contact')->nullable()->default(0);
             $table->boolean('is_representative')->nullable()->default(0);
             $table->boolean('is_international')->nullable();
