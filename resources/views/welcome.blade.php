@@ -101,7 +101,7 @@
                             committed
 
                             to superior customer service - delivering high-performing HVAC products on time and at
-                            competitive process.
+                            competitive prices.
 
                         </p>
 
