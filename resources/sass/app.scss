@@ -58,6 +58,24 @@
     height: 55px;
 }
 
+.main-top-nav{
+    .navbar-nav > li > a{
+        padding-top: 30px;
+        padding-bottom: 25px;
+
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .dropdown-menu{
+        transition: opacity 1s ease-out;
+
+        &.show{
+            margin-top: 3px !important;
+        }
+    }
+}
+
 .footer-logo {
     width: 316px;
     height: 41px;
