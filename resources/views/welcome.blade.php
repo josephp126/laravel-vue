@@ -3,17 +3,29 @@
 @section('content')
     <!-- CAROUSEL
 ================================================== -->
-<div id="carousel" style="position:relative;margin:0 auto;top:0px;left:0px;width:1600px;height:530px;overflow:hidden;visibility:hidden;">
-    <!-- Loading Screen -->
-    <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-        <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="images/homepage/carousel/spin.svg" />
-    </div>
-    <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1600px;height:530px;overflow:hidden;">
-        <div data-fillmode="0" data-p="1065">
-            <img data-u="image" src="images/homepage/carousel/slider-1-back.png" />
-            <img data-to="50% 50%" data-t="0" style="left:1696px;top:0px;width:706px;height:479px;position:absolute;max-width:706px;" src="images/homepage/carousel/slider-1-res-1.png" />
-            <div data-to="50% 50%" data-t="1" style="left:-600px;top:104px;width:539px;height:57px;position:absolute;color:#000d;font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:900;text-align:left;padding:6px 10px 6px 10px;text-shadow:0px 1px #fff;box-sizing:border-box;background-color:#fffc;background-clip:padding-box;">HIGH-PERFORMING LOUVERS</div>
-            <div data-to="50% 50%" data-t="2" style="left:-542px;top:384px;width:423px;height:86px;position:absolute;color:#fff;font-size:36px;font-weight:900;line-height:1.2;letter-spacing:0.05em;text-align:left;">PERFECT FOR <span style="color:#1d568d">ANY</span><br />&nbsp; &nbsp;CONDITION </div>
+    <div id="carousel"
+         style="position:relative;margin:0 auto;top:0px;left:0px;width:1600px;height:480px;overflow:hidden;visibility:hidden;max-height: 480px !important">
+        <!-- Loading Screen -->
+        <div data-u="loading" class="jssorl-009-spin"
+             style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;"
+                 src="images/homepage/carousel/spin.svg" />
+        </div>
+        <div data-u="slides"
+             style="cursor:default;position:relative;top:0px;left:0px;width:1600px;height:530px;overflow:hidden;">
+            <div data-fillmode="0" data-p="1065">
+                <img data-u="image" src="images/homepage/carousel/slider-1-back.png" />
+                <img data-to="50% 50%" data-t="0"
+                     style="left:1696px;top:0px;width:706px;height:479px;position:absolute;max-width:706px;"
+                     src="images/homepage/carousel/slider-1-res-1.png" />
+                <div data-to="50% 50%" data-t="1"
+                     style="left:-600px;top:104px;width:539px;height:57px;position:absolute;color:#000d;font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:900;text-align:left;padding:6px 10px 6px 10px;text-shadow:0px 1px #fff;box-sizing:border-box;background-color:#fffc;background-clip:padding-box;">
+                    HIGH-PERFORMING LOUVERS
+                </div>
+                <div data-to="50% 50%" data-t="2"
+                     style="left:-542px;top:384px;width:423px;height:86px;position:absolute;color:#fff;font-size:36px;font-weight:900;line-height:1.2;letter-spacing:0.05em;text-align:left;">
+                    PERFECT FOR <span style="color:#1d568d">ANY</span><br />&nbsp; &nbsp;CONDITION
+                </div>
         </div>
         <div data-p="1065">
             <img data-u="image" src="images/homepage/carousel/slider-2-back.png" />
@@ -69,17 +81,18 @@
             <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
         </svg>
     </div>
-    <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
-        <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-            <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
-        </svg>
+        <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;"
+             data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+            </svg>
+        </div>
     </div>
-</div>
     <!-- /.carousel end-->
 
 
     <!-- /.wrapsemibox start-->
-    <div class="wrapsemibox">
+    <div class="wrapsemibox shadow">
         <div class="semiboxshadow text-center">
             {{--            <img src="img/shp.png" class="img-fluid" alt="">--}}
         </div>
@@ -116,7 +129,7 @@
         <!-- /.intro-note end-->
         <!-- SERVICE BOXES==================================================-->
 
-        <section class="service-box mt-5">
+        <section class="service-box my-2">
 
             <div class="container">
 
@@ -130,7 +143,7 @@
                                                 description="Butterfly, Curtain Style, Wood Truss and Steel Truss"
                                                 image="images/Product Photos/Ceiling Radiation Damper.png" />
 
-                    <livewire:home-product-card title="UL Rated Fire/Smoke Dampers"
+                    <livewire:home-product-card title="Fire/Smoke Dampers"
                                                 description="Fire/Smoke Dampers, Dynamic and Static Fire Dampers, Corridor and Smoke Dampers"
                                                 image="images/Product Photos/FSD.png" />
 
