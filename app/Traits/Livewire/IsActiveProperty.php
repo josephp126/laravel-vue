@@ -10,12 +10,16 @@ trait IsActiveProperty
     {
         $navItems = array_map(
             function ($n) {
-                return $n . "*";
+                return str_replace(url('/') . '/', '', $n) . "*";
             },
             array_keys($this->navItems ?? [])
         );
 
         try {
+            if ($navItems[0] == '/*') {
+                $navItems[0] = '/';
+            }
+
             return request()->is($navItems) ? 'active' : '';
         } catch (Exception $e) {
             return '';

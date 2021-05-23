@@ -3,37 +3,29 @@
     <div class="footer">
         <div class="container animated fadeInUpNow notransition">
             <div class="row">
+                <div class="col-md-12"><h1 class="footerbrand">POTTORFF</h1></div>
                 <div class="col-md-3">
-                    <h1 class="footerbrand">POTTORFF</h1>
-                    <p>The Preferred Solution for Life Safety and Air Control Products</p>
-                    <p class="mt-3">Air Control Damper</p>
-                    <p>Ceiling Radiation Dampers</p>
-                    <p>UL Rated Fire/Smoke Dampers</p>
-                    <p>Louvers and Penthouses</p>
+                    <div>The Preferred Solution for Life Safety and Air Control Products</div>
+                    <div class="mt-3">Air Control Damper</div>
+                    <div>Ceiling Radiation Dampers</div>
+                    <div>UL Rated Fire/Smoke Dampers</div>
+                    <div>Louvers and Penthouses</div>
                 </div>
-                <div class="col-md-3 text-white">
-                    <p class="mt-40">About</p>
-                    <p><a href="{{route('about.index')}}">History</a></p>
-                    <p class="mt-3"><a href="#">Quick Reference</a></p>
-                    <p><a href="#">Cross Reference</a></p>
-                    <p><a href="#">Louver Selection Tool</a></p>
-                    <p><a href="{{route('repfinder.index')}}">Repfinder</a></p>
+                <div class="col-md-3 ">
+                    <div><a href="{{route('about.index')}}">About</a></div>
+                    <div><a href="{{route('about.index')}}">History</a></div>
+                    <div class="mt-3"><a href="#">Quick Reference</a></div>
+                    <div><a href="#">Cross Reference</a></div>
+                    <div><a href="#">Louver Selection Tool</a></div>
+                    <div><a href="{{route('repfinder.index')}}">Repfinder</a></div>
                 </div>
                 <div class="col-md-3" id="footer-find-us" data-label="find us">
                     <h1 class="title"><span class="colortext">F</span>ind <span class="font100">Us</span></h1>
                     <div class="footermap">
-                        <p>
-                            <strong>Address: </strong> {{config('app.contact.address')}}
-                        </p>
-                        <p>
-                            <strong>Phone: </strong> + 1 {{config('app.contact.phone')}}
-                        </p>
-                        <p>
-                            <strong>Fax: </strong> + 1 {{config('app.contact.fax')}}
-                        </p>
-                        <p>
-                            <strong>Email: </strong> {{config('app.contact.email')}}
-                        </p>
+                        <div><strong>Address: </strong> {{config('app.contact.address')}}</div>
+                        <div><strong>Phone: </strong> + 1 {{config('app.contact.phone')}}</div>
+                        <div><strong>Fax: </strong> + 1 {{config('app.contact.fax')}}</div>
+                        <div><strong>Email: </strong> {{config('app.contact.email')}}</div>
                         <ul class="social-icons list-soc">
                             <li><a target="_blank" rel="nofollow" href="{{config('app.contact.facebook')}}"><i
                                         class="icon-facebook"></i></a></li>

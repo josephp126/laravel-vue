@@ -3,7 +3,9 @@
 @section('content')
     <!-- CAROUSEL
 ================================================== -->
-    <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="10000">
+    <div id="carousel" class="overflow-hidden carousel slide" data-ride="carousel" data-interval="10000"
+         data-auto="false"
+         style="max-height: 480px; min-height: 200px;">
         <ol class="carousel-indicators">
             <li data-target="#carousel" data-slide-to="0" class="active"></li>
             <li data-target="#carousel" data-slide-to="1"></li>
@@ -12,21 +14,22 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img class="d-block w-100" src="{{ url('images/homepage/carousel/slider-1.png') }}" alt="First slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="{{ url('images/homepage/carousel/slider-2.png') }}" alt="Second slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="{{ url('images/homepage/carousel/slider-3.png') }}" alt="Third slide">
-      </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="{{ url('images/homepage/carousel/slider-2.png') }}" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="{{ url('images/homepage/carousel/slider-3.png') }}" alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev left carousel-control animated" href="#carousel" role="button"
+           data-slide="prev">
+            <i class="icon-angle-left"></i>
+        </a>
+        <a class="carousel-control-next right carousel-control" href="#carousel" role="button" data-slide="next">
+            <i class="icon-angle-right"></i>
+        </a>
     </div>
-    <a class="carousel-control-prev left carousel-control animated" href="#carousel" role="button" data-slide="prev">
-      <i class="icon-angle-left"></i>
-    </a>
-    <a class="carousel-control-next right carousel-control" href="#carousel" role="button" data-slide="next">
-      <i class="icon-angle-right"></i>
-    </a>
-  </div>
 
     <!-- /.carousel end-->
 
@@ -151,7 +154,8 @@
 
                 <div class="container">
 
-                    <img class="float-left" src="{{url('/images/Louver Selection Tool Area/Monitor.png')}}" alt="Computer" height="447" />
+                    <img class="float-left" src="{{url('/images/Louver Selection Tool Area/Monitor.png')}}"
+                         alt="Computer" height="447" style="max-width: 100%" />
 
                     <div class="list-louver-pull-left">
                         <h1 class="small animated fadeInLeftNow notransition">

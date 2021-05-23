@@ -1,21 +1,22 @@
 // Fonts
-//@import url('https://fonts.googleapis.com/css?family=Nunito');
-//@import '~font-awesome/scss/font-awesome';
 
 // Variables
 @import 'variables';
 
-//@import "calypso";
 @import "./bootstrap-4.3.1/scss/bootstrap";
 @import "../calypso-theme/scss/theme";
-//@import "./space";
-//@import "./grid";
 @import "./color";
 
 //@import "~tinymce/skins/ui/oxide-dark/skin.css";
 
 * {
     font-family: "Helvetica Neue LT Std - Bd Cn", sans-serif;
+}
+
+.navbar-nav > li.active > a, .navbar-nav > li.active > a {
+    &:hover, &:focus {
+        background: $primary;
+    }
 }
 
 .navbar {
@@ -39,21 +40,25 @@
     & > li {
         margin-right: 10px;
     }
-    img{
+
+    img {
         height: 55px;
     }
 }
 
-.list-louver-pull-left{
-    position: relative;
-    left: -161px;
+//@media
+@media screen and (min-width: 991px) {
+    .list-louver-pull-left {
+        position: relative;
+        left: -161px;
+    }
 }
 
-.select-based-on-push-right{
+.select-based-on-push-right {
     margin-left: 20px;
 }
 
-.header-icon{
+.header-icon {
     width: 63px;
     height: 55px;
 }
@@ -67,13 +72,17 @@
         margin-bottom: 0;
     }
 
-    .dropdown-menu{
+    .dropdown-menu {
         transition: opacity 1s ease-out;
 
-        &.show{
+        &.show {
             margin-top: 3px !important;
         }
     }
+}
+
+.footer {
+    color: #fff;
 }
 
 .footer-logo {
