@@ -27,18 +27,10 @@
                 <div class="col-md-3" id="footer-find-us" data-label="find us">
                     <h1 class="title"><span class="colortext">F</span>ind <span class="font100">Us</span></h1>
                     <div class="footermap">
-                        <p>
-                            <strong>Address: </strong> {{config('app.contact.address')}}
-                        </p>
-                        <p>
-                            <strong>Phone: </strong> + 1 {{config('app.contact.phone')}}
-                        </p>
-                        <p>
-                            <strong>Fax: </strong> + 1 {{config('app.contact.fax')}}
-                        </p>
-                        <p>
-                            <strong>Email: </strong> {{config('app.contact.email')}}
-                        </p>
+                        <div><strong>Address: </strong> {{config('app.contact.address')}}</div>
+                        <div><strong>Phone: </strong> + 1 {{config('app.contact.phone')}}</div>
+                        <div><strong>Fax: </strong> + 1 {{config('app.contact.fax')}}</div>
+                        <div><strong>Email: </strong> {{config('app.contact.email')}}</div>
                         <ul class="social-icons list-soc">
                             <li><a target="_blank" rel="nofollow" href="{{config('app.contact.facebook')}}"><i
                                         class="icon-facebook"></i></a></li>

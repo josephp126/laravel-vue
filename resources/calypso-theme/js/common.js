@@ -152,10 +152,10 @@ $(function () {
 });
 
 //////----Placeholder for IE---////////
-$(function () {
-    // Invoke the plugin
-    $('input, textarea').placeholder();
-});
+// $(function () {
+// Invoke the plugin
+// $('input, textarea').placeholder();
+// });
 
 //----ANIMATIONS---//
 jQuery(document).ready(function ($) {

@@ -11,19 +11,19 @@
             <livewire:nav-dropdown
                 title="PRODUCTS"
                 :navItems="[
-                    route('company.index') => [
+                    '/product?type=1' => [
                         'label' => 'Air Control and Backdraft Dampers',
                         'image' => url('images/menu/menu1.png'),
                     ],
-                    route('repfinder.index') => [
+                    '/product?type=2' => [
                         'label' => 'UL Rated Fire, Smoke and Ceiling Radiation Dampers',
                         'image' => url('images/menu/menu2.png'),
                     ],
-                    route('about.index') => [
+                    '/product?type=3' => [
                         'label' => 'Louvers and Penthouses',
                         'image' => url('images/menu/menu3.png'),
                     ],
-                    route('news.index') => [
+                    '/product?type=4' => [
                         'label' => 'Actuators and Accessories',
                         'image' => url('images/menu/menu4.png'),
                     ],
