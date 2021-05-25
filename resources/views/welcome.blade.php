@@ -12,14 +12,14 @@
             <li data-target="#carousel" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="{{ url('images/homepage/carousel/slider-1.png') }}" alt="First slide">
+            <div class="carousel-item item active">
+                <img class="d-block w-100 h-100" src="{{ url('images/homepage/carousel/slider-1.png') }}" alt="First slide">
             </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="{{ url('images/homepage/carousel/slider-2.png') }}" alt="Second slide">
+            <div class="carousel-item item">
+                <img class="d-block w-100 h-100" src="{{ url('images/homepage/carousel/slider-2.png') }}" alt="Second slide">
             </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="{{ url('images/homepage/carousel/slider-3.png') }}" alt="Third slide">
+            <div class="carousel-item item">
+                <img class="d-block w-100 h-100" src="{{ url('images/homepage/carousel/slider-3.png') }}" alt="Third slide">
             </div>
         </div>
         <a class="carousel-control-prev left carousel-control animated" href="#carousel" role="button"
