@@ -4,16 +4,10 @@
 </div>
 <div class="col-lg-12">
     <div class="list_carousel text-center">
-        <div class="carousel_nav"><a class="prev" id="car_prev" href="#"><span>prev</span></a>
-            <a class="next"
-               id="car_next" href="#"><span>next</span></a>
-        </div>
-        <div class="clearfix"></div>
-        <ul id="carousel-projects">
+        <div class="row">
             <!--featured-projects 1-->
            @foreach ($sliders as $slider)
-                <li>
-                    <div class="boxcontainer">
+                    <div class="boxcontainer col-md-3">
                         <img src="{{ $slider->path }}" alt="">
                         <div class="roll" style="top: 0">
                             <div class="wrapcaption">
@@ -26,8 +20,7 @@
                         {{-- <h1><a href="projectdetail.html">Automobiles</a></h1>
                         <p>Jura mountains</p> --}}
                     </div>
-                </li>
             @endforeach
-        </ul>
+        </div>
     </div>
 </div>

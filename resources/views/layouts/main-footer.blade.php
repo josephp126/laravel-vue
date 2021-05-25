@@ -1,23 +1,28 @@
 <!-- BEGIN FOOTER ================================================== -->
 <section>
+    <style>
+        p {
+            margin-bottom: .4em !important;
+        }
+    </style>
     <div class="footer">
         <div class="container animated fadeInUpNow notransition">
+            <h1 class="footerbrand">POTTORFF</h1>
             <div class="row">
                 <div class="col-md-3">
-                    <h1 class="footerbrand">POTTORFF</h1>
-                    <p>The Preferred Solution for Life Safety and Air Control Products</p>
-                    <p class="mt-3">Air Control Damper</p>
-                    <p>Ceiling Radiation Dampers</p>
-                    <p>UL Rated Fire/Smoke Dampers</p>
-                    <p>Louvers and Penthouses</p>
+                    <p class="mt-2 mb-2">The Preferred Solution for Life Safety and Air Control Products</p>
+                    <p class="mt-4 mb-2">Air Control Damper</p>
+                    <p class="mt-2 mb-2">Ceiling Radiation Dampers</p>
+                    <p class="mt-2 mb-2">UL Rated Fire/Smoke Dampers</p>
+                    <p class="mt-2 mb-2">Louvers and Penthouses</p>
                 </div>
                 <div class="col-md-3 text-white">
-                    <p class="mt-40">About</p>
-                    <p><a href="{{route('about.index')}}">History</a></p>
-                    <p class="mt-3"><a href="#">Quick Reference</a></p>
-                    <p><a href="#">Cross Reference</a></p>
-                    <p><a href="#">Louver Selection Tool</a></p>
-                    <p><a href="{{route('repfinder.index')}}">Repfinder</a></p>
+                    <p class="mt-2 mb-2">About</p>
+                    <p class="mt-2 mb-2"><a href="{{route('about.index')}}">History</a></p>
+                    <p class="mt-3 mb-2"><a href="#">Quick Reference</a></p>
+                    <p class="mt-2 mb-2"><a href="#">Cross Reference</a></p>
+                    <p class="mt-2 mb-2"><a href="#">Louver Selection Tool</a></p>
+                    <p class="mt-2 mb-2"><a href="{{route('repfinder.index')}}">Repfinder</a></p>
                 </div>
                 <div class="col-md-3" id="footer-find-us" data-label="find us">
                     <h1 class="title"><span class="colortext">F</span>ind <span class="font100">Us</span></h1>

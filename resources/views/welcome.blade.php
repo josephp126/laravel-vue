@@ -153,13 +153,9 @@
 
                     <img class="float-left" src="{{url('/images/Louver Selection Tool Area/Monitor.png')}}" alt="Computer" height="447" />
 
-                    <div class="list-louver-pull-left">
-                        <h1 class="small animated fadeInLeftNow notransition">
-                            LIST LOUVER INFORMATION AND SELECTION
-                        </h1>
-
-                        <p class="animated fadeInRightNow notransition  topspace20">
-
+                    <div class="list-louver-pull-left" style="width: 105%; ">
+                        <p class="animated fadeInLeftNow notransition learn-more-title">LIST LOUVER INFORMATION AND SELECTION</p>
+                        <p class="animated fadeInRightNow notransition  topspace20" style="font-size: 14px">
                             Pottorff's LIST Louver Information and Selection program was developed
                             with engineers and architects in mind. With its intuitive design, this industry
                             leading online tool takes all the guesswork out of picking the right louver
@@ -187,6 +183,9 @@
                         </ul>
                     </div>
 
+                    <div class="learn-more">
+                    <button type="button" class="btn btn-danger btn-sm">LEARN MORE</button>
+                    </div>
                     <div class="clearfix"></div>
                 </div>
             </div>
@@ -253,48 +252,6 @@
 
 
 @section('scripts')
-    <script>
-        /* ---------------------------------------------------------------------- */
-        /*  http://caroufredsel.falsecode.ru/
-        /*	Bottom carousel
-        /* ---------------------------------------------------------------------- */
-        $(document).ready(function() {
-            $('#carousel-projects').carouFredSel({
-                responsive: true,
-                items: {
-                    width: 200,
-                    height: 295,
-                    visible: {
-                        min: 1,
-                        max: 4,
-                    },
-                },
-                width: '200px',
-                height: '295px',
-                auto: true,
-                circular: true,
-                infinite: false,
-                prev: {
-                    button: '#car_prev',
-                    key: 'left',
-                },
-                next: {
-                    button: '#car_next',
-                    key: 'right',
-                },
-                swipe: {
-                    onMouse: true,
-                    onTouch: true,
-                },
-                scroll: {
-                    items:1,
-                    easing: 'swing',
-                    duration: 1200,
-                },
-            });
-        });
-        /* ----------------------------------------------------------------------*/
-    </script>
     <script>
         //CALL TESTIMONIAL ROTATOR
         $(function () {

@@ -1,6 +1,6 @@
 
 body {
-    font-family: "Helvetica Neue LT Std - Bd Cn", 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 13px;
     line-height: 22px;
     color: #777;
@@ -1338,7 +1338,7 @@ h1.small {
 
 .footer {
     background: #222 url(../img/bgfooter.jpg);
-    color: #888;
+    color: #fff;
     margin-top: 50px;
     padding-top: 50px;
     padding-bottom: 30px;
@@ -11313,10 +11313,41 @@ img {
 .carousel-control-prev, .carousel-control-next {
     width: 10%;
 }
-.navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: .8rem;
-    padding-left: .8rem;
+@media (max-width: 1199px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0.2rem;
+        padding-left: 0.2rem;
+    }
 }
-.active > .nav-link{
+.active > .nav-link {
     color: #fff !important;
+}
+.text-primary {
+    color:#42659f !important
+}
+.text-primary:hover {
+    color:#426590 !important
+}
+.btn-primary {
+    background-color:#42659f !important
+}
+.btn-primary:hover {
+    background-color:#426590 !important
+}
+.learn-more-title {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.learn-more {
+ position: relative;
+}
+.learn-more button {
+    top: 100px;
+    position: absolute;
+    right: 30px;
+    width: 120px;
+}
+.select-louvers-based h4, .select-louvers-based li {
+    font-weight: bold;
 }

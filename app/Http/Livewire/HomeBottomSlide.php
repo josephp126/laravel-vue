@@ -12,7 +12,7 @@ class HomeBottomSlide extends Component
 
     public function mount()
     {
-        $sliders = Slide::get();
+        $sliders = Slide::take(4)->get();
         foreach ($sliders as $key => $value) {
             $value->path = Storage::url($value->link);
         }

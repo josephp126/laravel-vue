@@ -1,8 +1,8 @@
 @extends('admin.layouts.main-admin')
 
 @section('content')
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" onclick="selectFile()"> Add New Image</button>
+    <label class="btn btn-primary" for="file" style="cursor: pointer"> Add New Image</label>
+    
     <form class="modal-footer" action="{{ route('admin.slider.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <input hidden type="file" id="file" name="file[]"
@@ -27,9 +27,4 @@
             </div>
         @endforeach
     </div>
-@endsection
-@section('scripts')
-    <script>
-        const selectFile = () => $("#file").click()
-    </script>
 @endsection
