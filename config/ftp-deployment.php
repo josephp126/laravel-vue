@@ -14,7 +14,7 @@ return [
      * remember to use the command line command for php if it is not standard!
      */
     'remote'         => [
-        'yarn install',
+        'yarn install --prod',
         'yarn production',
     ],
 
@@ -50,6 +50,7 @@ return [
         'routes',
         'vendor',
         'yarn.lock',
+        'composer.lock',
         'package.json',
     ],
 
