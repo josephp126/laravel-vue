@@ -15,7 +15,7 @@ return [
      */
     'remote'         => [
         'yarn install',
-        'yarn prod',
+        'yarn production',
     ],
 
     /**
@@ -49,6 +49,8 @@ return [
         'storage/framework/views',
         'routes',
         'vendor',
+        'yarn.lock',
+        'package.json',
     ],
 
     // exclude paths from deploying

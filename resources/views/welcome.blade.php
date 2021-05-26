@@ -36,8 +36,8 @@
 
     <!-- /.wrapsemibox start-->
     <div class="wrapsemibox shadow">
-        <div class="semiboxshadow text-center">
-            {{--            <img src="img/shp.png" class="img-fluid" alt="">--}}
+        <div class="semiboxshadow">
+            <img src="{{url('images/shp.png')}}" class="img-fluid" alt="">
         </div>
         <!-- INTRO NOTE==================================================-->
 

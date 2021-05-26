@@ -31,6 +31,18 @@
     }
 }
 
+.wrapsemibox {
+    max-width: 1200px;
+    background: #fff;
+    box-shadow: 0 0 4px rgb(0 0 0 / 15%);
+    z-index: 1000;
+    position: relative;
+    margin: -40px auto -100px;
+    padding-bottom: 40px;
+    border-bottom: medium double #ccc;
+    padding-top: 0;
+}
+
 //.wowmenu{
 //    position: -webkit-sticky;
 //    position: sticky;
