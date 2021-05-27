@@ -188,13 +188,14 @@
                     </div>
 
                     <div class="learn-more">
-                    <button type="button" class="btn btn-danger btn-sm">LEARN MORE</button>
+                        <button type="button" class="btn btn-danger btn-sm">LEARN MORE</button>
                     </div>
                     <div class="clearfix"></div>
                 </div>
             </div>
-            <div class="bottom bg-primary w-100 mt-3 py-3 text-center">
-                NO NEED TO REGISTER TO SELECT LOUVERS AND CREATE YOUR PRODUCT SCHEDULE. IMPORT DIRECTLY INTO SPECS PRICING PROGRAM.
+            <div class="bottom bg-primary w-100 mt-3 py-3 text-center font-weight-bold">
+                NO NEED TO REGISTER TO SELECT LOUVERS AND CREATE YOUR PRODUCT SCHEDULE. IMPORT DIRECTLY INTO SPECS
+                PRICING PROGRAM.
             </div>
         </section>
         <!-- /.recent-work end-->

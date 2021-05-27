@@ -9,8 +9,17 @@
 
 //@import "~tinymce/skins/ui/oxide-dark/skin.css";
 
-* {
-    font-family: "Helvetica Neue LT Std - Bd Cn", sans-serif;
+//* {
+//    font-family: "Helvetica Neue LT Std - Bd Cn", sans-serif;
+//}
+
+.custom-title {
+    font-size: 16px;
+    line-height: 17px;
+    text-transform: uppercase;
+
+    @extend .font-weight-bolder;
+    @extend .text-primary;
 }
 
 .navbar-nav > li.active > a, .navbar-nav > li.active > a {

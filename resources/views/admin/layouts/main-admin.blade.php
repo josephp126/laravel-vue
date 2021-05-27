@@ -1,8 +1,7 @@
 @extends('layouts.skel')
 
 @section('skel_scripts')
-    <script src="{{ url('/js/plugins.js') }}"></script>
-    <script src="{{ url('/js/common.js') }}"></script> --}}
+    <script src="{{ url('/js/common.js') }}"></script>
 @endsection
 
 @section('skel_styles')

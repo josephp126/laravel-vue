@@ -33,5 +33,6 @@
 @endsection
 
 @section('skel_scripts')
+    <script src="{{ url('/js/common.js') }}"></script>
     @yield('scripts')
 @endsection

@@ -59,7 +59,7 @@ class News extends Model
 
     public function image()
     {
-        return $this->morphOne(Image::class, 'imageable');
+        return $this->morphOne(Image::class, 'imageable')->orderBy('id', 'desc');
     }
 
     public function getUrlAttribute()

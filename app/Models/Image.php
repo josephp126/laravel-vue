@@ -2,13 +2,14 @@
 
 namespace App\Models;
 
+use App\Traits\Uuidable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Storage;
 
 class Image extends Model
 {
-    use HasFactory;
+    use HasFactory, Uuidable;
 
     /**
      * The attributes that are mass assignable.
