@@ -22,6 +22,15 @@
     @extend .text-primary;
 }
 
+.custom-section-title {
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+
+    @extend .font-weight-bolder;
+    @extend .text-primary;
+}
+
 .navbar-nav > li.active > a, .navbar-nav > li.active > a {
     &:hover, &:focus {
         background: $primary;

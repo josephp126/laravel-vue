@@ -105,10 +105,10 @@
                                 <img src="/images/icons/Revit Logo.png" alt="News" />
                             </li>
                             <li>
-                                <img src="/images/icons/News.jpg" alt="News" />
+                                <img src="/images/icons/News.png" alt="News" />
                             </li>
                             <li>
-                                <img src="/images/icons/Case Studies.jpg" alt="Case" />
+                                <img src="/images/icons/Case Studies.png" alt="Case" />
                             </li>
                             <li>
                                 <img src="/images/icons/CSI.png" alt="CSI" />

@@ -1,6 +1,6 @@
 @if(count($sliders) > 0)
 <div class="text-center heading w-100 mb-3">
-    <img src="/images/icons/Case Studies.jpg" alt="cases" class="header-icon">
+    <img src="/images/icons/Case Studies.png" alt="cases" class="header-icon">
     PROJECTS AND CASE STUDIES
 </div>
 <div class="col-lg-12">

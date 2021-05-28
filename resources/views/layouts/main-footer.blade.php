@@ -7,7 +7,9 @@
     </style>
     <div class="footer">
         <div class="container animated fadeInUpNow notransition">
-            <h1 class="footerbrand">POTTORFF</h1>
+            <h1 class="footerbrand">
+                <img style="height: 30px;" src="{{url('/images/Pottorff Logo White.png')}}" alt="POTTORFF" />
+            </h1>
             <div class="row">
                 <div class="col-md-3">
                     <p class="mt-2 mb-2">The Preferred Solution for Life Safety and Air Control Products</p>

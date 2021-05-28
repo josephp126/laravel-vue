@@ -1,8 +1,8 @@
 <div class="article">
-    <h3 class="heading section-heading-text">
-        <img src="{{url('images/icons/News.jpg')}}" alt="News" class="heading-image" />
+    <div class="custom-section-title mb-3">
+        <img src="{{url('images/icons/News.png')}}" alt="News" class="heading-image" />
         POTTORFF NEWS
-    </h3>
+    </div>
     @forelse($articles as $article)
         <div class="d-flex mb-3">
             <img src="{{$article->imageUrl}}" class="article-image" alt="image" height="75" />
