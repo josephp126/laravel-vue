@@ -22,6 +22,7 @@ class CreateImagesTable extends Migration
             $table->string('code_number');
             $table->string('hash');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
