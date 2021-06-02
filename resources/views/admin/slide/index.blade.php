@@ -1,6 +1,6 @@
 @extends('admin.layouts.main-admin')
 
-@section('title', 'PROJECTS AND CASE STUDIES');
+@section('title', 'PROJECTS AND CASE STUDIES')
 
 @section('content')
     <label class="btn btn-primary" for="file" style="cursor: pointer"> Add New Image</label>
@@ -10,7 +10,6 @@
         <input hidden type="file" id="file" name="file[]"
                onchange="this.files.length > 0 ? this.parentElement.submit() : ''" multiple="true" accept="image/*">
     </form>
-
 
     <div class="row">
         @foreach ($sliders as $slide)

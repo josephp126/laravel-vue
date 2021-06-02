@@ -1,0 +1,36 @@
+
+.navbar-nav > li.active > a, .navbar-nav > li.active > a {
+    &:hover, &:focus {
+        background: $primary;
+    }
+}
+
+.navbar {
+    z-index: 10000;
+    height: 85px;
+
+    .nav-item.dropdown {
+        .dropdown-item {
+            @extend .text-white;
+            @extend .bg-dark;
+        }
+    }
+}
+
+.main-top-nav {
+    .navbar-nav > li > a {
+        padding-top: 30px;
+        padding-bottom: 25px;
+
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .dropdown-menu {
+        transition: opacity 1s ease-out;
+
+        &.show {
+            margin-top: 3px !important;
+        }
+    }
+}
