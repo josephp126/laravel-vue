@@ -17,8 +17,12 @@ class CreateSlidesTable extends Migration
             $table->id();
             $table->string('link');
             $table->string('filename');
+            $table->string('title')->nullable();
+            $table->string('description')->nullable();
             $table->boolean('is_homepage')->nullable()->default(0);
+            $table->integer('sort')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

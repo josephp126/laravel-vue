@@ -1,4 +1,3 @@
-
 try {
     const tinyMCE = require('tinymce/tinymce');
     require('tinymce/icons/default');

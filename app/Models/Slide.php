@@ -4,10 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * @property string link
+ * @property Image  image
+ * @observer SlideObserver
+ */
 class Slide extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -18,6 +24,9 @@ class Slide extends Model
         'link',
         'filename',
         'is_homepage',
+        'title',
+        'description',
+        'sort'
     ];
 
     /**
@@ -26,7 +35,20 @@ class Slide extends Model
      * @var array
      */
     protected $casts = [
-        'id' => 'integer',
+        'id'          => 'integer',
         'is_homepage' => 'boolean',
     ];
+
+    public function image()
+    {
+        return $this->morphOne(Image::class, 'imageable');
+    }
+
+    public function scopeSorted($query)
+    {
+        return $query
+            ->orderBy('is_homepage', 'desc')
+            ->orderBy('sort', 'asc')
+            ->orderBy('id', 'desc');
+    }
 }

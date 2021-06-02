@@ -3,7 +3,9 @@
 use App\Http\Controllers\Admin\CategoriesController;
 use App\Http\Controllers\Admin\CommandsController;
 use App\Http\Controllers\Admin\NewsController;
+use App\Http\Controllers\Admin\ProductsController;
 use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,16 +20,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'admin/dashboard')->name('index');
-
-Route::resources(
-    [
-        'news'     => NewsController::class,
-        'category' => CategoriesController::class,
-    ]
-);
-
 Route::put('news/{news}/star', [NewsController::class, 'star'])->name('news.star');
-Route::resource('slider', SliderController::class);
+
+Route::resources([
+    'news' => NewsController::class,
+    'category' => CategoriesController::class,
+    'slider' => SliderController::class,
+    'product' => ProductsController::class,
+    'user' => UserController::class,
+]);
+
 
 Route::middleware('can:special-admin')->name('special.')->group(
     function ($routes) {

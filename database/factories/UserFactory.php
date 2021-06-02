@@ -26,7 +26,7 @@ class UserFactory extends Factory
             'first_name'               => $this->faker->firstName,
             'last_name'                => $this->faker->lastName,
             'username'                 => $this->faker->userName,
-            'password'                 => bcrypt($this->faker->password),
+            'password'                 => bcrypt('admin'),
             'email'                    => $this->faker->safeEmail,
             'email_verified_at'        => $this->faker->dateTime(),
             'date_joined'              => $this->faker->word,

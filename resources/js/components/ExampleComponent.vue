@@ -1,15 +1,15 @@
 <template>
     <div>
-        <div id="product-category" role="tablist" aria-multiselectable="true">
+        <div id="product-category" aria-multiselectable="true" role="tablist">
             <form method="post" @submit.prevent="handleAddCategory">
                 <div class="input-group">
                     <input
+                        id="newCategory"
                         v-model="newCategory"
-                        type="text"
                         class="form-control"
                         name="newCategory"
-                        id="newCategory"
                         placeholder="New Category"
+                        type="text"
                     />
                     <div class="input-group-append">
                         <button class="btn btn-primary btn-sm" type="submit">Add category to '<span
@@ -23,16 +23,16 @@
             </pre>
             <draggable v-model="categories" :draggable="`.card-${parent_id}`">
                 <div v-for="category in categories" :class="`card-${parent_id}`">
-                    <div class="card-header bg-dark p-0" role="tab" :id="`section${category.id}HeaderId`">
+                    <div :id="`section${category.id}HeaderId`" class="card-header bg-dark p-0" role="tab">
                         <div class="mb-0">
                             <ul class="nav text-white bg-dark d-flex">
                                 <li class="nav-item w-25 col">
-                                    <a data-toggle="collapse"
-                                       data-parent="#product-category"
+                                    <a :aria-controls="`section${category.id}ContentId`"
                                        :href="`#section${category.id}ContentId`"
-                                       class="nav-link"
                                        aria-expanded="true"
-                                       :aria-controls="`section${category.id}ContentId`">
+                                       class="nav-link"
+                                       data-parent="#product-category"
+                                       data-toggle="collapse">
                                         <span v-if="categories.length > 0">
                                             <i class="icon-expand-alt mr-3"></i>
                                         </span> {{ category.name }}
@@ -48,8 +48,9 @@
                         </div>
                     </div>
                     <div :id="`section${category.id}ContentId`"
-                         :class="`collapse ${category.parent_id === null? 'show': 'in'}`" role="tabpanel"
-                         :aria-labelledby="`section${category.id}HeaderId`">
+                         :aria-labelledby="`section${category.id}HeaderId`"
+                         :class="`collapse ${category.parent_id === null? 'show': 'in'}`"
+                         role="tabpanel">
                         <div v-if="category.id" class="card-body pr-0">
                             <example-component :parent_id="category.id"></example-component>
                         </div>

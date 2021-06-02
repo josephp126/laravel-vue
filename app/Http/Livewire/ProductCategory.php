@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use Illuminate\View\View;
 use Livewire\Component;
 
 class ProductCategory extends Component
@@ -10,7 +11,7 @@ class ProductCategory extends Component
 
     public function mount($categories = false)
     {
-        if($categories !== false){
+        if ($categories !== false) {
             $this->categories = $categories;
             return true;
         }
@@ -19,8 +20,9 @@ class ProductCategory extends Component
         return true;
     }
 
-    public function updateTaskOrder($records){
-        foreach($records as $record){
+    public function updateTaskOrder($records)
+    {
+        foreach ($records as $record) {
             \App\Models\ProductCategory::find($record['value'])->update(['order' => $record['order']]);
         }
     }
@@ -28,7 +30,7 @@ class ProductCategory extends Component
     /**
      * Get the view / contents that represent the component.
      *
-     * @return \Illuminate\View\View|string
+     * @return View|string
      */
     public function render()
     {

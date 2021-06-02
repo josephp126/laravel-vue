@@ -35,6 +35,20 @@ return [
             'root'   => storage_path('app'),
         ],
 
+        'pottorff-dev' => [
+            'driver'   => 'ftp',
+            'host'     => env('DEV_FTP_HOST'),
+            'username' => env('DEV_FTP_USER'),
+            'password' => env('DEV_FTP_PASS'),
+
+            // Optional FTP Settings
+            'port'     => 21,
+            'root'     => env('DEV_FTP_ROOT', '/var/www/html/dev/pottorff'),
+            'passive'  => true,
+            'ssl'      => true,
+            'timeout'  => 30,
+        ],
+
         'images' => [
             'driver' => 'local',
             'root'   => storage_path('app/images/'),

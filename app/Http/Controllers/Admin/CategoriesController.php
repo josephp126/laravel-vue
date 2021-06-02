@@ -35,14 +35,18 @@ class CategoriesController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  Request  $request
+     * @param Request $request
      * @return RedirectResponse
      */
     public function store(Request $request)
     {
-        $productCategory = ProductCategory::create($request->validate([
-            // TODO :: validation here
-        ]));
+        $productCategory = ProductCategory::create(
+            $request->validate(
+                [
+                    // TODO :: validation here
+                ]
+            )
+        );
 
         session()->flash('ProductCategory.created');
         return redirect()->route('ProductCategory.index');
@@ -51,7 +55,7 @@ class CategoriesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  ProductCategory  $productCategory
+     * @param ProductCategory $productCategory
      * @return View
      */
     public function show(ProductCategory $productCategory)
@@ -62,7 +66,7 @@ class CategoriesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  ProductCategory  $productCategory
+     * @param ProductCategory $productCategory
      * @return View
      */
     public function edit(ProductCategory $productCategory)
@@ -73,15 +77,19 @@ class CategoriesController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  Request  $request
-     * @param  ProductCategory  $productCategory
+     * @param Request         $request
+     * @param ProductCategory $productCategory
      * @return RedirectResponse
      */
     public function update(Request $request, ProductCategory $productCategory)
     {
-        $productCategory->update($request->validate([
-            // TODO :: validation here
-        ]));
+        $productCategory->update(
+            $request->validate(
+                [
+                    // TODO :: validation here
+                ]
+            )
+        );
 
         session()->flash('ProductCategory.updated');
         return redirect()->route('productCategory.index');
@@ -90,7 +98,7 @@ class CategoriesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  ProductCategory  $productCategory
+     * @param ProductCategory $productCategory
      * @return RedirectResponse
      * @throws Exception
      */

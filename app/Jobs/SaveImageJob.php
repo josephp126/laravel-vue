@@ -46,7 +46,7 @@ class SaveImageJob
             );
 
             $newFile = Imager::make($file)->resize(
-                200,
+                900,
                 null,
                 function ($c) {
                     $c->aspectRatio();

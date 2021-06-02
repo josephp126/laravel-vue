@@ -19,11 +19,14 @@ class Sort extends BaseSearchPipeline
             $mainTableName = $mainModel->getTable();
 
             return $builder
-                ->leftJoin('addresses', function ($join) use ($mainTableName, $mainModalName) {
-                    $join->on("$mainTableName.id", "addresses.addressable_id")
-                        ->where("addresses.addressable_type", $mainModalName)
-                        ->whereNull("addresses.deleted_at");
-                })
+                ->leftJoin(
+                    'addresses',
+                    function ($join) use ($mainTableName, $mainModalName) {
+                        $join->on("$mainTableName.id", "addresses.addressable_id")
+                            ->where("addresses.addressable_type", $mainModalName)
+                            ->whereNull("addresses.deleted_at");
+                    }
+                )
                 ->orderBy("addresses.{$columnMap[1]}", $sortDirection);
         }
 

@@ -1,26 +1,45 @@
 // Fonts
-//@import url('https://fonts.googleapis.com/css?family=Nunito');
-//@import '~font-awesome/scss/font-awesome';
 
 // Variables
 @import 'variables';
 
-//@import "calypso";
 @import "./bootstrap-4.3.1/scss/bootstrap";
 @import "../calypso-theme/scss/theme";
-//@import "./space";
-//@import "./grid";
 @import "./color";
-@import "./jssor";
 
 //@import "~tinymce/skins/ui/oxide-dark/skin.css";
 
-* {
-    font-family: "Helvetica Neue LT Std - Bd Cn", sans-serif;
+//* {
+//    font-family: "Helvetica Neue LT Std - Bd Cn", sans-serif;
+//}
+
+.custom-title {
+    font-size: 16px;
+    line-height: 17px;
+    text-transform: uppercase;
+
+    @extend .font-weight-bolder;
+    @extend .text-primary;
+}
+
+.custom-section-title {
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+
+    @extend .font-weight-bolder;
+    @extend .text-primary;
+}
+
+.navbar-nav > li.active > a, .navbar-nav > li.active > a {
+    &:hover, &:focus {
+        background: $primary;
+    }
 }
 
 .navbar {
     z-index: 10000;
+    height: 85px;
 
     .nav-item.dropdown {
         .dropdown-item {
@@ -28,6 +47,18 @@
             @extend .bg-dark;
         }
     }
+}
+
+.wrapsemibox {
+    max-width: 1200px;
+    background: #fff;
+    box-shadow: 0 0 4px rgb(0 0 0 / 15%);
+    z-index: 1000;
+    position: relative;
+    margin: -40px auto -100px;
+    padding-bottom: 40px;
+    border-bottom: medium double #ccc;
+    padding-top: 0;
 }
 
 //.wowmenu{
@@ -40,23 +71,49 @@
     & > li {
         margin-right: 10px;
     }
-    img{
+
+    img {
         height: 55px;
     }
 }
 
-.list-louver-pull-left{
-    position: relative;
-    left: -161px;
+//@media
+@media screen and (min-width: 991px) {
+    .list-louver-pull-left {
+        position: relative;
+        left: -161px;
+    }
 }
 
-.select-based-on-push-right{
+.select-based-on-push-right {
     margin-left: 20px;
 }
 
-.header-icon{
+.header-icon {
     width: 63px;
     height: 55px;
+}
+
+.main-top-nav{
+    .navbar-nav > li > a{
+        padding-top: 30px;
+        padding-bottom: 25px;
+
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .dropdown-menu {
+        transition: opacity 1s ease-out;
+
+        &.show {
+            margin-top: 3px !important;
+        }
+    }
+}
+
+.footer {
+    color: #fff;
 }
 
 .footer-logo {
@@ -67,8 +124,8 @@
 
 .logo-nav {
     img {
-        max-width: 200px !important;
-
+        max-width: 300px !important;
+        height: 35px;
         @media (max-width 1021px) {
             max-width: 100px !important;
         }
@@ -178,11 +235,19 @@
 .wrapsemibox {
     min-height: 500px;
 }
+.product-table th, .product-table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.action-icon {
+    cursor: pointer;
+    padding: 2px;
+    margin: 2px;
+}
 
 
-
-
-.ulTress{
+.ulTress {
 
     /* Remove margins and padding from the parent ul */
     margin: 0;
@@ -190,7 +255,7 @@
     list-style-type: none;
 
     /* Remove default bullets */
-    & ul{
+    & ul {
         list-style-type: none;
 
 

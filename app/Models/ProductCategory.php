@@ -31,10 +31,10 @@ class ProductCategory extends Model
      * @var array
      */
     protected $casts = [
-        'id' => 'integer',
-        'parent_id' => 'integer',
+        'id'          => 'integer',
+        'parent_id'   => 'integer',
         'category_id' => 'integer',
-        'product_id' => 'integer',
+        'product_id'  => 'integer',
     ];
 
     public function getNameAttribute()

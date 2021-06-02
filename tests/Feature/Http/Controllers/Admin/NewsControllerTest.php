@@ -65,12 +65,15 @@ class NewsControllerTest extends TestCase
         $summary = $this->faker->text;
         $content = $this->faker->paragraphs(3, true);
 
-        $response = $this->post(route('news.store'), [
-            'uuid'    => $uuid,
-            'title'   => $title,
-            'summary' => $summary,
-            'content' => $content,
-        ]);
+        $response = $this->post(
+            route('news.store'),
+            [
+                'uuid'    => $uuid,
+                'title'   => $title,
+                'summary' => $summary,
+                'content' => $content,
+            ]
+        );
 
         $news = News::query()
             ->where('uuid', $uuid)
@@ -140,12 +143,15 @@ class NewsControllerTest extends TestCase
         $summary = $this->faker->text;
         $content = $this->faker->paragraphs(3, true);
 
-        $response = $this->put(route('news.update', $news), [
-            'uuid'    => $uuid,
-            'title'   => $title,
-            'summary' => $summary,
-            'content' => $content,
-        ]);
+        $response = $this->put(
+            route('news.update', $news),
+            [
+                'uuid'    => $uuid,
+                'title'   => $title,
+                'summary' => $summary,
+                'content' => $content,
+            ]
+        );
 
         $news->refresh();
 

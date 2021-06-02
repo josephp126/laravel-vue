@@ -9,7 +9,7 @@
 
     <title>{{ config('app.name', 'Pottorff') }}</title>
 
-    @livewireStyles
+@livewireStyles
 
 <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -19,6 +19,8 @@
     <!-- Styles -->
     @yield('skel_styles')
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+
+    @livewireScripts
 </head>
 <body class="off">
 
@@ -26,12 +28,8 @@
     @yield('skel_content')
 </div>
 
-
-<script src="{{ mix('js/app.js') }}"></script>
-
 <!-- Scripts -->
+<script src="{{ mix('js/app.js') }}"></script>
 @yield('skel_scripts')
-
-@livewireScripts
 </body>
 </html>
