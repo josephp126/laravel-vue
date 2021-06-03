@@ -6,7 +6,7 @@
 
     <div class="d-flex literature-images flex-wrap h-100 items-center" style="gap: 10px;">
         <img src="/images/News and Literature Section/Louver Brochure.jpg" alt="Louver Brochure" />
-        <img src="/images/News and Literature Section/Pottorff UL Brochure.jpg" alt="Pottorff UL Brochure.jpg" />
+        <img src="/images/News and Literature Section/Pottorff UL Brochure.svg" alt="Pottorff UL Brochure" />
     </div>
 
     <div class="text-muted">
