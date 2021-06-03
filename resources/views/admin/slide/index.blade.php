@@ -1,6 +1,6 @@
 @extends('admin.layouts.main-admin')
 
-@section('title', 'PROJECTS AND CASE STUDIES');
+@section('title', 'PROJECTS AND CASE STUDIES')
 
 @section('content')
     <label class="btn btn-primary" for="file" style="cursor: pointer"> Add New Image</label>
