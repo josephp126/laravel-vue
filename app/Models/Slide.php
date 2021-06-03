@@ -26,6 +26,7 @@ class Slide extends Model
         'is_homepage',
         'title',
         'description',
+        'sort'
     ];
 
     /**
