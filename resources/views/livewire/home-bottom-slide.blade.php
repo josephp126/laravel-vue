@@ -20,8 +20,8 @@
                                     </a>
                                 </div>
                             </div>
-                            <h1><a href="projectdetail.html" class="text-primary">{{$slider->title}}</a></h1>
-                            <p>{{$slider->description}}</p>
+                            <h1 class="text-primary mt-2"><a class="text-primary">{{$slider->title}}</a></h1>
+                            <p class="text-black">{{$slider->description}}</p>
                         </div>
                     </div>
                 @endforeach

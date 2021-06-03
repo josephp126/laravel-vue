@@ -2740,6 +2740,10 @@ ul#skill {
     padding-right: 5px;
 }
 
+.list_carousel .boxcontainer p {
+    font-weight: 500 !important;
+}
+
 .grayarea .list_carousel .carousel_nav {
     background: #f9f9f9;
 }
@@ -11335,6 +11339,9 @@ img {
 }
 .text-primary:hover {
     color:#426590 !important
+}
+.text-black {
+    color: #000 !important;
 }
 .btn-primary {
     background-color:#42659f !important
