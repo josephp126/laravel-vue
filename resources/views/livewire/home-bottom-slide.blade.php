@@ -5,22 +5,24 @@
     </div>
     <div class="col-lg-12">
         <div class="list_carousel text-center">
-            <div class="d-flex flex-row justify-content-between flex-wrap">
+            <div class="d-flex flex-row row justify-content-between flex-wrap">
                 <!--featured-projects 1-->
                 @foreach ($sliders as $slider)
-                    <div class="boxcontainer flex-grow-0" style="width: 200px">
-                        <img src="{{ $slider->image->url }}" alt="">
-                        <div class="roll" style="top: 0">
-                            <div class="wrapcaption">
-                                {{-- <a href="projectdetail.html"><i class="icon-link captionicons"></i></a> --}}
-                                <a
-                                    data-gal="prettyPhoto[gallery1]" href="{{ $slider->image->url }}"
-                                    title="{{ $slider->filename }}"><i class="icon-zoom-in captionicons"></i>
-                                </a>
+                    <div class="col-3">
+                        <div class="boxcontainer">
+                            <img src="{{ $slider->image->url }}" alt="" >
+                            <div class="roll" style="top: 0">
+                                <div class="wrapcaption">
+                                    {{-- <a href="projectdetail.html"><i class="icon-link captionicons"></i></a> --}}
+                                    <a
+                                        data-gal="prettyPhoto[gallery1]" href="{{ $slider->image->url }}"
+                                        title="{{ $slider->filename }}"><i class="icon-zoom-in captionicons"></i>
+                                    </a>
+                                </div>
                             </div>
+                            <h1><a href="projectdetail.html" class="text-primary">{{$slider->title}}</a></h1>
+                            <p>{{$slider->description}}</p>
                         </div>
-                        {{-- <h1><a href="projectdetail.html">Automobiles</a></h1>
-                        <p>Jura mountains</p> --}}
                     </div>
                 @endforeach
             </div>
