@@ -2735,6 +2735,11 @@ ul#skill {
     background: #fff;
 }
 
+.list_carousel .col-3 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 .grayarea .list_carousel .carousel_nav {
     background: #f9f9f9;
 }
@@ -3438,6 +3443,8 @@ a.prev span, a.next span {
 .boxcontainer img {
     position: relative;
     max-width: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .recent-projects-home .boxcontainer img {
