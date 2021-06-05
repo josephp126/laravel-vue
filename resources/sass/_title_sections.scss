@@ -1,0 +1,37 @@
+
+.custom-title {
+    font-size: 16px;
+    line-height: 17px;
+    text-transform: uppercase;
+
+    @extend .font-weight-bolder;
+    @extend .text-primary;
+}
+
+.custom-section-title {
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+
+    @extend .font-weight-bolder;
+    @extend .text-primary;
+}
+
+
+.heading {
+    @extend .text-primary;
+    min-height: 14px;
+    color: #42659f !important;
+    font-size: 32px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 24px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.article-heading {
+    @extend .text-primary;
+    margin-bottom: 15px;
+}

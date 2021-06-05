@@ -3,16 +3,15 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\SlideRequest;
+use App\Jobs\SaveImageJob;
 use App\Models\Slide;
-use Exception;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Storage;
-use Throwable;
 
 class SliderController extends Controller
 {
@@ -23,23 +22,61 @@ class SliderController extends Controller
      */
     public function index()
     {
-        $sliders = Slide::all();
-
-        foreach ($sliders as $key => $value) {
-            $value->path = Storage::url($value->link);
-        }
+        $sliders = Slide::sorted()->get();
 
         return view('admin.slide.index', compact('sliders'));
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
+     * @param SlideRequest $request
+     * @param Slide        $slider
+     * @return RedirectResponse
      */
-    public function create()
+    public function update(SlideRequest $request, Slide $slider)
     {
-        //
+        $count = Slide::where('sort', 0)->count();
+        if ($count > 0) {
+            $count = 0;
+            Slide::all()->each(
+                function ($s) use (&$count) {
+                    $count++;
+                    $s->update(['sort' => $count]);
+                }
+            );
+
+            return redirect()->route('admin.slider.index');
+        }
+
+        if ($request->type) {
+            $model     = new Slide;
+            $data      = $model->orderby('sort')->get();
+            $old_order = 0;
+            $new_order = 0;
+            $slider_id = 0;
+            foreach ($data as $key => $value) {
+                if ($value->id == $slider->id) {
+                    $old_order = $value->sort;
+                    if ($request->type == "left") {
+                        $slider_id = $data[$key - 1]->id;
+                        $new_order = $data[$key - 1]->sort;
+                    } else {
+                        $slider_id = $data[$key + 1]->id;
+                        $new_order = $data[$key + 1]->sort;
+                    }
+                    break;
+                }
+            }
+            $model->where("id", $slider->id)->update(['sort' => $new_order]);
+            $model->where("id", $slider_id)->update(['sort' => $old_order]);
+        }
+        $slider->update($request->validated());
+
+        return redirect()->route('admin.slider.index');
+    }
+
+    public function show()
+    {
+        return redirect()->route('admin.slider.index');
     }
 
     /**
@@ -54,68 +91,32 @@ class SliderController extends Controller
 
         if ($files) {
             foreach ($files as $key => $file) {
-                $fileName = time() . $key . '.' . ($file->extension());
-                $filePath = $file->storeAs("public/slide", $fileName);
-                Slide::create([
-                    'link' => $filePath,
-                    'filename' => $file->getClientOriginalName()
-                ]);
+                $sort       = Slide::max('sort') ?? -1 + 1;
+                $slideProps = [
+                    'link'     => sprintf("slide-%s", $key),
+                    'filename' => $file->getClientOriginalName(),
+                    'sort'     => $sort,
+                ];
+
+                $slide = Slide::create($slideProps);
+
+                $this->dispatch(new SaveImageJob($slide, $file));
             }
         }
 
-        return back();
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param int $id
-     * @return Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param int $id
-     * @return Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param Request $request
-     * @param int     $id
-     * @return Response
-     */
-    public function update(Request $request, $id)
-    {
+        return redirect()->route('admin.slider.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param int $id
+     * @param Slide $slider
      * @return Response
-     * @throws Exception
      */
-    public function destroy(Slide $slide)
+    public function destroy(Slide $slider)
     {
-        $link = $slide->link;
+        $slider->delete();
 
-        try {
-            $slide->delete();
-            Storage::delete($link);
-        } catch (Throwable $th) {
-        }
-
-        return back()->withStatus(__('Slide successfully deleted.'));
+        return redirect()->route('admin.slider.index')->withStatus(__('Slide successfully deleted.'));
     }
 }

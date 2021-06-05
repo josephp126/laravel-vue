@@ -12,12 +12,14 @@
         "intervention/image": "^2.5",
         "jasonmccreary/laravel-test-assertions": "^1.1",
         "laravel/framework": "^8.12",
+        "laravel/telescope": "^4.4",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.2",
         "laravelcollective/html": "^6.2",
         "livewire/livewire": "^2.4",
         "silber/bouncer": "v1.0.0-rc.10",
-        "venturecraft/revisionable": "^1.38"
+        "venturecraft/revisionable": "^1.38",
+        "zach2825/laravel-ftp-deployment": "^0.0.3"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",

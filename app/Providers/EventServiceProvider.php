@@ -4,8 +4,10 @@ namespace App\Providers;
 
 use App\Models\Category;
 use App\Models\Contact;
+use App\Models\Slide;
 use App\Observers\CategoryObserver;
 use App\Observers\ContactObserver;
+use App\Observers\SlideObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -32,5 +34,6 @@ class EventServiceProvider extends ServiceProvider
     {
         Contact::observe(ContactObserver::class);
         Category::observe(CategoryObserver::class);
+        Slide::observe(SlideObserver::class);
     }
 }

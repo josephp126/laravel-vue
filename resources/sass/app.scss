@@ -1,79 +1,52 @@
 // Fonts
-//@import url('https://fonts.googleapis.com/css?family=Nunito');
-//@import '~font-awesome/scss/font-awesome';
 
 // Variables
 @import 'variables';
 
-//@import "calypso";
+// Theme files
 @import "./bootstrap-4.3.1/scss/bootstrap";
 @import "../calypso-theme/scss/theme";
-//@import "./space";
-//@import "./grid";
 @import "./color";
 
-//@import "~tinymce/skins/ui/oxide-dark/skin.css";
+// customizations
+@import "./nav_custom";
+@import "./title_sections";
+@import "./containers";
 
-* {
-    font-family: "Helvetica Neue LT Std - Bd Cn", sans-serif;
-}
+// pages
+@import "./homepage";
 
-.navbar {
-    z-index: 10000;
-
-    .nav-item.dropdown {
-        .dropdown-item {
-            @extend .text-white;
-            @extend .bg-dark;
-        }
-    }
-}
-
-//.wowmenu{
-//    position: -webkit-sticky;
-//    position: sticky;
-//    top: 35px;
-//}
 
 .bragging-logos {
     & > li {
         margin-right: 10px;
     }
-    img{
+
+    img {
         height: 55px;
     }
 }
 
-.list-louver-pull-left{
-    position: relative;
-    left: -161px;
+//@media
+@media screen and (min-width: 991px) {
+    .list-louver-pull-left {
+        position: relative;
+        left: -161px;
+    }
 }
 
-.select-based-on-push-right{
+.select-based-on-push-right {
     margin-left: 20px;
 }
 
-.header-icon{
+.header-icon {
     width: 63px;
     height: 55px;
 }
 
-.main-top-nav{
-    .navbar-nav > li > a{
-        padding-top: 30px;
-        padding-bottom: 25px;
 
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    .dropdown-menu{
-        transition: opacity 1s ease-out;
-
-        &.show{
-            margin-top: 3px !important;
-        }
-    }
+.footer {
+    color: #fff;
 }
 
 .footer-logo {
@@ -84,75 +57,15 @@
 
 .logo-nav {
     img {
-        max-width: 200px !important;
-
+        max-width: 300px !important;
+        height: 35px;
         @media (max-width 1021px) {
             max-width: 100px !important;
         }
     }
 }
 
-.heading {
-    @extend .text-primary;
-    min-height: 14px;
-    color: #42659f !important;
-    font-size: 32px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 24px;
-    text-align: left;
-    text-transform: uppercase;
-}
 
-.article-heading {
-    @extend .text-primary;
-    margin-bottom: 15px;
-}
-
-.news-section {
-    .heading-image {
-        width: 42px;
-        height: 36px;
-    }
-
-    .col-md-6 {
-        min-height: 200px;
-
-        .article-image {
-            width: 124px;
-            height: 100px;
-            padding-right: 15px;
-        }
-
-        .article-text {
-            color: #010000;
-            font-size: 17px;
-            font-weight: 400;
-            font-style: normal;
-            letter-spacing: normal;
-            line-height: 17px;
-            text-align: left;
-
-            .title {
-                display: block;
-            }
-        }
-
-    }
-}
-
-.article-divider{
-    border-top: 1px solid #ebebeb;
-
-    .row {
-        margin-top: 10px;
-
-        .col-md-6:first-child {
-            border-right: 1px solid #ebebeb;
-        }
-    }
-}
 
 .img-sm {
     max-height: 300px;
@@ -177,24 +90,8 @@
     }
 }
 
-.mew-literature {
-    color: #010000;
-    font-size: 23px;
-    line-height: 23px;
-    font-weight: 500;
-}
 
-.literature-section {
-    .literature-images {
-        img {
-            height: 318px;
-        }
-    }
-}
 
-.wrapsemibox {
-    min-height: 500px;
-}
 .product-table th, .product-table td {
     text-align: center;
     vertical-align: middle;
@@ -204,49 +101,4 @@
     cursor: pointer;
     padding: 2px;
     margin: 2px;
-}
-
-
-.ulTress {
-
-    /* Remove margins and padding from the parent ul */
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-
-    /* Remove default bullets */
-    & ul {
-        list-style-type: none;
-
-
-        /* Style the caret/arrow */
-        .caret {
-            cursor: pointer;
-            user-select: none; /* Prevent text selection */
-        }
-
-        /* Create the caret/arrow with a unicode, and style it */
-        .caret::before {
-            content: "\25B6";
-            color: black;
-            display: inline-block;
-            margin-right: 6px;
-        }
-
-        /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
-        .caret-down::before {
-            transform: rotate(90deg);
-        }
-
-        /* Hide the nested list */
-        .nested {
-            display: none;
-            margin-left: 20px;
-        }
-
-        /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
-        .active {
-            display: block;
-        }
-    }
 }

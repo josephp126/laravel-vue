@@ -1,0 +1,60 @@
+
+.news-section {
+    .heading-image {
+        width: 42px;
+        height: 36px;
+    }
+
+    .col-md-6 {
+        min-height: 200px;
+
+        .article-image {
+            width: 124px;
+            height: 100px;
+            padding-right: 15px;
+        }
+
+        .article-text {
+            color: #010000;
+            font-size: 17px;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: 17px;
+            text-align: left;
+
+            .title {
+                display: block;
+            }
+        }
+
+    }
+}
+
+.article-divider {
+    border-top: 1px solid #ebebeb;
+
+    .row {
+        margin-top: 10px;
+
+        .col-md-6:first-child {
+            border-right: 1px solid #ebebeb;
+        }
+    }
+}
+
+
+.mew-literature {
+    color: #010000;
+    font-size: 23px;
+    line-height: 23px;
+    font-weight: 500;
+}
+
+.literature-section {
+    .literature-images {
+        img {
+            height: 318px;
+        }
+    }
+}

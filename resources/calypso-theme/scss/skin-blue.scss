@@ -1,182 +1,182 @@
 .colortext {
-    color: #2ac4ea;
+    color: $primary;
 }
 
 .colorbg {
-    background: #2ac4ea;
+    background: $primary;
 }
 
 a {
-    color: #2ac4ea;
+    color: $primary;
 }
 
 ::selection {
-    background: #2ac4ea;
+    background: $primary;
 }
 
 .navbar-nav > li.active > a, .navbar-nav > li.active > a:hover, .navbar-nav > li.active > a:focus {
-    background-color: #2ac4ea;
+    background-color: $primary;
 }
 
 .navbar-nav > li.active > a:before, .navbar-nav > li > a:hover:before, .navbar-nav > li > a:focus:before, .extra-nav-class a.dropdown-toggle:before {
-    border-bottom: 6px solid #2ac4ea;
+    border-bottom: 6px solid $primary;
 }
 
 .navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
-    background-color: #2ac4ea;
+    background-color: $primary;
 }
 
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
-    background-color: #2ac4ea !Important;
+    background-color: #426590 !Important;
 }
 
 .extra-nav-class a.dropdown-toggle {
-    background-color: #2ac4ea !Important;
+    background-color: #426590 !Important;
 }
 
 .car-highlight1 {
-    background-color: #2ac4ea;
+    background-color: $primary;
 }
 
 .car-smallcircle {
-    background: #2ac4ea;
+    background: $primary;
 }
 
 .carouselText2 {
-    background: #2ac4ea;
+    background: $primary;
 }
 
 .icon-box-top i:hover {
-    background-color: #2ac4ea;
+    background-color: $primary;
 }
 
 .fontawesome-icon.circle-white {
-    color: #2ac4ea;
+    color: $primary;
 }
 
 .grey-box-icon:hover .fontawesome-icon.circle-white, .grey-box-icon.active .fontawesome-icon.circle-white, .active i.fontawesome-icon {
-    background-color: #2ac4ea;
+    background-color: $primary;
 }
 
 .home-features .icon {
-    background: #2ac4ea;
+    background: $primary;
 }
 
 .copyright {
-    background-color: #2ac4ea;
+    background-color: $primary;
 }
 
 .panel1 {
-    border-left: 6px solid #2ac4ea;
+    border-left: 6px solid $primary;
 }
 
 .buttoncolor {
-    background: #2ac4ea;
+    background: $primary;
 }
 
 .panel, .panel2 {
-    border-left: 8px solid #2ac4ea;
+    border-left: 8px solid $primary;
 }
 
 .btn-default {
-    background-color: #2ac4ea;
+    background-color: $primary;
 }
 
 .btn-minimal:hover {
-    color: #2ac4ea;
+    color: $primary;
 }
 
 #accordion div h4:before {
-    background: #2ac4ea url('../img/plus.png') center center no-repeat;
+    background: #426590 url('../img/plus.png') center center no-repeat;
 }
 
 #accordion div.active h4:before {
-    background: #2ac4ea url('../img/minus.png') center center no-repeat;
+    background: #426590 url('../img/minus.png') center center no-repeat;
 }
 
 .sidebar h4 {
-    color: #2ac4ea;
+    color: $primary;
 }
 
 .nav-tabs > .active > a, .nav-tabs > .active > a:hover {
-    color: #2ac4ea !important;
+    color: #426590 !important;
 }
 
 blockquote {
-    border-left: 5px solid #2ac4ea;
+    border-left: 5px solid $primary;
 }
 
 #skill i {
-    background: #2ac4ea;
+    background: $primary;
 }
 
 .service-fancybox:hover i {
-    color: #2ac4ea;
+    color: $primary;
 }
 
 .service-fancybox:hover {
-    background: #2ac4ea;
+    background: $primary;
 }
 
 .service-fancybox.featured {
-    background: #2ac4ea;
+    background: $primary;
 }
 
 .service-fancybox.featured .circleicon i {
-    color: #2ac4ea;
+    color: $primary;
 }
 
 .service-fancybox.black .circleicon i {
-    color: #2ac4ea;
+    color: $primary;
 }
 
 .cbp_tmtimeline > li .cbp_tmicon {
-    background: #2ac4ea;
+    background: $primary;
 }
 
 .services i {
-    color: #2ac4ea;
+    color: $primary;
 }
 
 .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
-    background-color: #2ac4ea;
-    border-color: #2ac4ea;
+    background-color: $primary;
+    border-color: $primary;
 }
 
 .landingpage-button {
-    color: #2ac4ea;
+    color: $primary;
 }
 
 .landingpage-button {
-    color: #2ac4ea;
+    color: $primary;
 }
 
 .landingpage-button span {
-    color: #2ac4ea;
+    color: $primary;
 }
 
 .landingpage-button strong {
-    color: #2ac4ea;
+    color: $primary;
 }
 
 .landingpage-button i {
-    color: #2ac4ea;
+    color: $primary;
 }
 
 .active-header {
-    background: #2ac4ea;
+    background: $primary;
 }
 
 .active-header:hover {
-    background: #2ac4ea;
+    background: $primary;
 }
 
 #filter ul li .selected {
-    background: #2ac4ea !Important;
+    background: #426590 !Important;
 }
 
 .drop-cap, .captionicons {
-    background: #2ac4ea;
+    background: $primary;
 }
 
 .pageheader-default .semitransparentbg, .bgarea-semitransparent {

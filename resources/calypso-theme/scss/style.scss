@@ -1,6 +1,6 @@
 
 body {
-    font-family: "Helvetica Neue LT Std - Bd Cn", 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 13px;
     line-height: 22px;
     color: #777;
@@ -152,10 +152,11 @@ strong, b {
 
 .navbar-nav > li {
     margin-left: 2px;
+    margin-top: -10px;
 }
 
 .navbar-nav > li > a {
-    color: #555;
+    color: #fff;
     border-radius: 0px;
     margin-top: -26px;
     padding-top: 26px;
@@ -202,7 +203,7 @@ strong, b {
 }
 
 .navbar-nav > li > .dropdown-menu {
-    margin: 20px 0px 0 0px !Important;
+    margin: 0 !important;
     background-color: #444;
     border: 0;
     -webkit-border-radius: 0;
@@ -599,7 +600,7 @@ strong, b {
 }
 
 .carousel .item {
-    padding: 30px 0px;
+    padding: 0px;
     height: 390px;
     overflow: hidden;
     -webkit-background-size: cover !Important;
@@ -632,6 +633,7 @@ strong, b {
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
     display: block;
     max-width: 100%;
+    object-fit: cover;
     height: auto;
     line-height: 1;
 }
@@ -863,7 +865,7 @@ strong, b {
 }
 
 .carousel-control.left, .carousel-control.right {
-    margin-top: 11%;
+    margin-top: 10%;
 }
 
 /*--------------------------------------------------	CAROUSEL FEATURED WORK---------------------------------------------------*/
@@ -1147,7 +1149,7 @@ h1.small {
 }
 
 .bgarea {
-    background: url('/images/Louver Selection Tool Area/Blue Louver.png');
+    background: url('/images/Louver Selection Tool Area/Blue Louver.svg');
     position: relative;
     -webkit-background-size: cover !important;
     -moz-background-size: cover !important;
@@ -1349,7 +1351,7 @@ h1.small {
 
 .footer {
     background: #222 url(../img/bgfooter.jpg);
-    color: #888;
+    color: #fff;
     margin-top: 50px;
     padding-top: 50px;
     padding-bottom: 30px;
@@ -2745,6 +2747,15 @@ ul#skill {
     background: #fff;
 }
 
+.list_carousel .col-3 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.list_carousel .boxcontainer p {
+    font-weight: 500 !important;
+}
+
 .grayarea .list_carousel .carousel_nav {
     background: #f9f9f9;
 }
@@ -3448,6 +3459,8 @@ a.prev span, a.next span {
 .boxcontainer img {
     position: relative;
     max-width: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .recent-projects-home .boxcontainer img {
@@ -11314,7 +11327,7 @@ ul.ca-menu {
         animation: none !important;
     }
 }
-.carousel-item img {
+img {
     visibility: visible !important;
 }
 .carousel-indicators li, .carousel-indicators .active {
@@ -11323,4 +11336,45 @@ ul.ca-menu {
 }
 .carousel-control-prev, .carousel-control-next {
     width: 10%;
+}
+@media (max-width: 1199px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0.2rem;
+        padding-left: 0.2rem;
+    }
+}
+.active > .nav-link {
+    color: #fff !important;
+}
+.text-primary {
+    color:#42659f !important
+}
+.text-primary:hover {
+    color:#426590 !important
+}
+.text-black {
+    color: #000 !important;
+}
+.btn-primary {
+    background-color:#42659f !important
+}
+.btn-primary:hover {
+    background-color:#426590 !important
+}
+.learn-more-title {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.learn-more {
+ position: relative;
+}
+.learn-more button {
+    top: 100px;
+    position: absolute;
+    right: 30px;
+    width: 120px;
+}
+.select-louvers-based h4, .select-louvers-based li {
+    font-weight: bold;
 }

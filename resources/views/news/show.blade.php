@@ -8,7 +8,7 @@
 
 @section('content')
 
-    <div class="wrapsemibox">
+    <div class="wrapsemibox pt-5">
         <div class="content p-3">
 
             <img src="{{$news->imageUrl}}" alt="{{$news->title}}" class="rounded mx-auto d-block">
