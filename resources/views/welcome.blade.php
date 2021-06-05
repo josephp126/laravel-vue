@@ -3,38 +3,46 @@
 @section('content')
     <!-- CAROUSEL
 ================================================== -->
-    <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="10000">
-        <ol class="carousel-indicators">
+    <div id="carousel" class="carousel carousel-fade slide" data-ride="carousel" data-interval="1000000" data-auto="false">
+        <ul class="carousel-indicators">
             <li data-target="#carousel" data-slide-to="0" class="active"></li>
             <li data-target="#carousel" data-slide-to="1"></li>
             <li data-target="#carousel" data-slide-to="2"></li>
-        </ol>
+        </ul>
+        
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="{{ url('images/homepage/carousel/slider-1.png') }}" alt="First slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="{{ url('images/homepage/carousel/slider-2.png') }}" alt="Second slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="{{ url('images/homepage/carousel/slider-3.png') }}" alt="Third slide">
-      </div>
+            <div class="carousel-item active" style="background: url('images/homepage/carousel/slider-1.png')">
+                <div class="carousel-container">
+                    <div class="carouselText1" style="margin-left:10px">
+                    HIGH-PERFORMING LOUVERS
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" style="background: url('images/homepage/carousel/slider-2.png')">
+                <div class="container">
+                </div>
+            </div>
+            <div class="carousel-item" style="background: url('images/homepage/carousel/slider-3.png')">
+                <div class="container">
+                </div>
+            </div>
+        </div>
+        
+        <a class="carousel-control-prev left carousel-control animated" href="#carousel" role="button"
+           data-slide="prev">
+            <i class="icon-angle-left"></i>
+        </a>
+        <a class="carousel-control-next right carousel-control" href="#carousel" role="button" data-slide="next">
+            <i class="icon-angle-right"></i>
+        </a>
     </div>
-    <a class="carousel-control-prev left carousel-control animated" href="#carousel" role="button" data-slide="prev">
-      <i class="icon-angle-left"></i>
-    </a>
-    <a class="carousel-control-next right carousel-control" href="#carousel" role="button" data-slide="next">
-      <i class="icon-angle-right"></i>
-    </a>
-  </div>
-
     <!-- /.carousel end-->
 
 
     <!-- /.wrapsemibox start-->
     <div class="wrapsemibox shadow">
-        <div class="semiboxshadow text-center">
-            {{--            <img src="img/shp.png" class="img-fluid" alt="">--}}
+        <div class="semiboxshadow">
+            <img src="{{url('images/shp.png')}}" class="img-fluid" alt="">
         </div>
         <!-- INTRO NOTE==================================================-->
 
@@ -102,10 +110,10 @@
                                 <img src="/images/icons/Revit Logo.png" alt="News" />
                             </li>
                             <li>
-                                <img src="/images/icons/News.jpg" alt="News" />
+                                <img src="/images/icons/News.png" alt="News" />
                             </li>
                             <li>
-                                <img src="/images/icons/Case Studies.jpg" alt="Case" />
+                                <img src="/images/icons/Case Studies.png" alt="Case" />
                             </li>
                             <li>
                                 <img src="/images/icons/CSI.png" alt="CSI" />
@@ -151,15 +159,12 @@
 
                 <div class="container">
 
-                    <img class="float-left" src="{{url('/images/Louver Selection Tool Area/Monitor.png')}}" alt="Computer" height="447" />
+                    <img class="float-left" src="{{url('/images/Louver Selection Tool Area/Monitor.png')}}"
+                         alt="Computer" height="447" style="max-width: 100%" />
 
-                    <div class="list-louver-pull-left">
-                        <h1 class="small animated fadeInLeftNow notransition">
-                            LIST LOUVER INFORMATION AND SELECTION
-                        </h1>
-
-                        <p class="animated fadeInRightNow notransition  topspace20">
-
+                    <div class="list-louver-pull-left" style="width: 105%; ">
+                        <p class="animated fadeInLeftNow notransition learn-more-title">LIST LOUVER INFORMATION AND SELECTION</p>
+                        <p class="animated fadeInRightNow notransition  topspace20" style="font-size: 14px">
                             Pottorff's LIST Louver Information and Selection program was developed
                             with engineers and architects in mind. With its intuitive design, this industry
                             leading online tool takes all the guesswork out of picking the right louver
@@ -187,11 +192,15 @@
                         </ul>
                     </div>
 
+                    <div class="learn-more">
+                        <button type="button" class="btn btn-danger btn-sm">LEARN MORE</button>
+                    </div>
                     <div class="clearfix"></div>
                 </div>
             </div>
-            <div class="bottom bg-primary w-100 mt-3 py-3 text-center">
-                NO NEED TO REGISTER TO SELECT LOUVERS AND CREATE YOUR PRODUCT SCHEDULE. IMPORT DIRECTLY INTO SPECS PRICING PROGRAM.
+            <div class="bottom bg-primary w-100 mt-3 py-3 text-center font-weight-bold">
+                NO NEED TO REGISTER TO SELECT LOUVERS AND CREATE YOUR PRODUCT SCHEDULE. IMPORT DIRECTLY INTO SPECS
+                PRICING PROGRAM.
             </div>
         </section>
         <!-- /.recent-work end-->
@@ -253,48 +262,6 @@
 
 
 @section('scripts')
-    <script>
-        /* ---------------------------------------------------------------------- */
-        /*  http://caroufredsel.falsecode.ru/
-        /*	Bottom carousel
-        /* ---------------------------------------------------------------------- */
-        $(document).ready(function() {
-            $('#carousel-projects').carouFredSel({
-                responsive: true,
-                items: {
-                    width: 200,
-                    height: 295,
-                    visible: {
-                        min: 1,
-                        max: 4,
-                    },
-                },
-                width: '200px',
-                height: '295px',
-                auto: true,
-                circular: true,
-                infinite: false,
-                prev: {
-                    button: '#car_prev',
-                    key: 'left',
-                },
-                next: {
-                    button: '#car_next',
-                    key: 'right',
-                },
-                swipe: {
-                    onMouse: true,
-                    onTouch: true,
-                },
-                scroll: {
-                    items:1,
-                    easing: 'swing',
-                    duration: 1200,
-                },
-            });
-        });
-        /* ----------------------------------------------------------------------*/
-    </script>
     <script>
         //CALL TESTIMONIAL ROTATOR
         $(function () {

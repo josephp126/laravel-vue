@@ -524,18 +524,25 @@ strong, b {
     font-size: 19px;
 }
 
+.carousel-container {
+    padding-left: 80px;
+    padding-right: 80px;
+    height: 100%;
+}
+
 .carouselText1 {
-    font-weight: 800;
-    margin-top: 50px;
+    font-weight: 600;
+    margin-top: 84px;
     margin-bottom: 20px;
-    font-size: 25px;
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
+    font-size: 31px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #221f20;
+    padding: 22px 20px;
     display: inline-block;
     text-transform: uppercase;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 0 rgb(0 0 0 / 20%);
     border-radius: 0;
+    letter-spacing: 0.2px;
 }
 
 .carouselText2 {
@@ -599,6 +606,11 @@ strong, b {
     -moz-background-size: cover !Important;
     -o-background-size: cover !Important;
     background-size: cover !Important;
+}
+
+.carousel .carousel-item {
+    height: 479px;
+    background-size: cover !important;
 }
 
 .carousel {
