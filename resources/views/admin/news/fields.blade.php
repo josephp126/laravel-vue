@@ -15,8 +15,8 @@
     </div>
     <div class="col-md-12">
         <div class="form-group">
-            <label for="summary">Summary</label>
-            {!! Form::textarea('summary', null, ['class' => 'form-control', 'id' => 'summary', 'required' => true]) !!}
+            <label for="summary">Summary(this is the small description) try to keep it less then 100 charecters.</label>
+            {!! Form::textarea('summary', null, ['class' => 'form-control tinymce', 'id' => 'summary', 'required' => true]) !!}
         </div>
     </div>
     <div class="col-md-12">

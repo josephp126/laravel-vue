@@ -25,12 +25,7 @@ return [
      */
     'purge_excludes' => [
         'artisan',
-        'composer.json',
-        'storage/app',
-        'storage/logs',
-        'storage/framework/cache',
-        'storage/framework/sessions',
-        'storage/framework/views',
+        //        'composer.json',
     ],
 
     /**
@@ -47,11 +42,6 @@ return [
         'database',
         'resources/views',
         'resources/lang',
-        //        'storage/app',
-        //        'storage/logs',
-        //        'storage/framework/cache',
-        //        'storage/framework/sessions',
-        //        'storage/framework/views',
         'routes',
         'vendor',
         'yarn.lock',

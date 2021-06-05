@@ -154,11 +154,12 @@
 
                 <div class="container">
 
-                    <img class="float-left" src="{{url('/images/Louver Selection Tool Area/Monitor.png')}}"
+                    <img class="float-left" src="{{url('/images/Louver Selection Tool Area/Monitor.svg')}}"
                          alt="Computer" height="447" style="max-width: 100%" />
 
                     <div class="list-louver-pull-left" style="width: 105%; ">
-                        <p class="animated fadeInLeftNow notransition learn-more-title">LIST LOUVER INFORMATION AND SELECTION</p>
+                        <p class="animated fadeInLeftNow notransition learn-more-title">LIST LOUVER INFORMATION AND
+                            SELECTION</p>
                         <p class="animated fadeInRightNow notransition  topspace20" style="font-size: 14px">
                             Pottorff's LIST Louver Information and Selection program was developed
                             with engineers and architects in mind. With its intuitive design, this industry

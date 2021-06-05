@@ -1,8 +1,6 @@
 @extends('layouts.main')
 
-@section('breadcrumbs')
-    News
-@endsection
+@section('breadcrumbs', 'News')
 
 @section('content')
     <div class="wrapsemibox d-flex flex-wrap flex-row">
@@ -14,7 +12,7 @@
                     </div>
                     <div class="article d-flex flex-column flex-grow-1">
                         <h5 class="card-title">{{$article->title}}</h5>
-                        <p class="card-text">{{$article->summary}}</p>
+                        <p class="card-text">{!! $article->summary !!}</p>
                         <div class="mt-auto">
                             <a href="{{route('news.show', $article)}}" class="btn btn-outline-primary">Read More</a>
                         </div>
