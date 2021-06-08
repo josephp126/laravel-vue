@@ -16,6 +16,17 @@
 // pages
 @import "./homepage";
 
+.footer{
+    p {
+        margin-bottom: .4em !important;
+    }
+}
+
+#tinynav1{
+    @media (min-width: 768px) AND (max-width: 991px) {
+        display: none;
+    }
+}
 
 .bragging-logos {
     & > li {

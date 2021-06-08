@@ -1,10 +1,5 @@
 <!-- BEGIN FOOTER ================================================== -->
 <section>
-    <style>
-        p {
-            margin-bottom: .4em !important;
-        }
-    </style>
     <div class="footer">
         <div class="container animated fadeInUpNow notransition">
             <h1 class="footerbrand">
