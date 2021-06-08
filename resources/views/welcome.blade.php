@@ -80,20 +80,20 @@
 
                 <div class="row">
 
-                    <livewire:home-product-card title="Air Control Dampers"
-                                                description="Commercial, Industrial, Manual Balancing, Specialty, Backdraft Dampers"
+                    <livewire:home-product-card title="AIR CONTROL DAMPERS"
+                                                description="Commercial, Industrial, Manual Balancing and Backdraft Dampers"
                                                 image="images/Product Photos/Backdraft Damper.png" />
 
-                    <livewire:home-product-card title="Ceiling Radiation Dampers"
-                                                description="Butterfly, Curtain Style, Wood Truss and Steel Truss"
+                    <livewire:home-product-card title="CEILING RADIATION DAMPERS"
+                                                description="Butterfly, Curtain Style, Wood Truss, Steel Truss and Specialty"
                                                 image="images/Product Photos/Ceiling Radiation Damper.png" />
 
-                    <livewire:home-product-card title="Fire/Smoke Dampers"
-                                                description="Fire/Smoke Dampers, Dynamic and Static Fire Dampers, Corridor and Smoke Dampers"
+                    <livewire:home-product-card title="FIRE/SMOKE DAMPERS"
+                                                description="UL Rated Fire, Smoke and Combination Fire/Smoke Dampers"
                                                 image="images/Product Photos/FSD.png" />
 
-                    <livewire:home-product-card title="Louvers and Penthouses"
-                                                description="Drainable, Operable, Miami-Dade,Florida Building Code, Penthouses, Specialty"
+                    <livewire:home-product-card title="LOUVERS (need space after Miami-Dade, and Florida)"
+                                                description="Drainable, Operable, Miami-Dade, Florida Building Code, Penthouses, Specialty"
                                                 image="images/Product Photos/Louver.png" />
                 </div>
 
