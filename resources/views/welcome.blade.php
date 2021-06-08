@@ -11,19 +11,16 @@
         </ul>
         
         <div class="carousel-inner">
-            <div class="carousel-item active" style="background: url('images/homepage/carousel/slider-1.png')">
+            <div class="carousel-item active" style="background: url('images/homepage/carousel/slider-1.jpg')">
                 <div class="carousel-container">
-                    <div class="carouselText1" style="margin-left:10px">
-                    HIGH-PERFORMING LOUVERS
-                    </div>
                 </div>
             </div>
-            <div class="carousel-item" style="background: url('images/homepage/carousel/slider-2.png')">
-                <div class="container">
+            <div class="carousel-item" style="background: url('images/homepage/carousel/slider-2.jpg')">
+                <div class="carousel-container">
                 </div>
             </div>
-            <div class="carousel-item" style="background: url('images/homepage/carousel/slider-3.png')">
-                <div class="container">
+            <div class="carousel-item" style="background: url('images/homepage/carousel/slider-3.jpg')">
+                <div class="carousel-container">
                 </div>
             </div>
         </div>
