@@ -9,7 +9,7 @@
             <li data-target="#carousel" data-slide-to="1"></li>
             <li data-target="#carousel" data-slide-to="2"></li>
         </ul>
-        
+
         <div class="carousel-inner">
             <div class="carousel-item active" style="background: url('images/homepage/carousel/slider-1.jpg')">
                 <div class="carousel-container">
@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-        
+
         <a class="carousel-control-prev left carousel-control animated" href="#carousel" role="button"
            data-slide="prev">
             <i class="icon-angle-left"></i>
@@ -92,7 +92,7 @@
                                                 description="UL Rated Fire, Smoke and Combination Fire/Smoke Dampers"
                                                 image="images/Product Photos/FSD.png" />
 
-                    <livewire:home-product-card title="LOUVERS (need space after Miami-Dade, and Florida)"
+                    <livewire:home-product-card title="LOUVERS"
                                                 description="Drainable, Operable, Miami-Dade, Florida Building Code, Penthouses, Specialty"
                                                 image="images/Product Photos/Louver.png" />
                 </div>
