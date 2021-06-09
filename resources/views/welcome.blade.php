@@ -1,40 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <!-- CAROUSEL
-================================================== -->
-    <div id="carousel" class="carousel carousel-fade slide" data-ride="carousel" data-interval="1000000" data-auto="false">
-        <ul class="carousel-indicators">
-            <li data-target="#carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel" data-slide-to="1"></li>
-            <li data-target="#carousel" data-slide-to="2"></li>
-        </ul>
-
-        <div class="carousel-inner">
-            <div class="carousel-item active" style="background: url('images/homepage/carousel/slider-1.jpg')">
-                <div class="carousel-container">
-                </div>
-            </div>
-            <div class="carousel-item" style="background: url('images/homepage/carousel/slider-2.jpg')">
-                <div class="carousel-container">
-                </div>
-            </div>
-            <div class="carousel-item" style="background: url('images/homepage/carousel/slider-3.jpg')">
-                <div class="carousel-container">
-                </div>
-            </div>
-        </div>
-
-        <a class="carousel-control-prev left carousel-control animated" href="#carousel" role="button"
-           data-slide="prev">
-            <i class="icon-angle-left"></i>
-        </a>
-        <a class="carousel-control-next right carousel-control" href="#carousel" role="button" data-slide="next">
-            <i class="icon-angle-right"></i>
-        </a>
-    </div>
-    <!-- /.carousel end-->
-
+    <livewire:homepage-carousel />
 
     <!-- /.wrapsemibox start-->
     <div class="wrapsemibox shadow">
