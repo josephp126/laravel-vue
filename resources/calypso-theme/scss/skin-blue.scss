@@ -31,7 +31,11 @@ a {
 }
 
 .extra-nav-class a.dropdown-toggle {
-    background-color: #426590 !Important;
+    background-color: $primary !Important;
+}
+
+.nav-item .nav-link:hover {
+    color: #fff !Important;
 }
 
 .car-highlight1 {
