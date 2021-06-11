@@ -60,7 +60,7 @@
                                                 image="images/Product Photos/FSD.png" />
 
                     <livewire:home-product-card title="LOUVERS"
-                                                description="Drainable, Operable, Miami-Dade, Florida Building Code, Penthouses, Specialty"
+                                                description="Drainable, Operable, Miami-Dade, Florida Building Code, Penthouses"
                                                 image="images/Product Photos/Louver.png" />
                 </div>
 
