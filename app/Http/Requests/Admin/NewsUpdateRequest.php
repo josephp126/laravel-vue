@@ -24,11 +24,11 @@ class NewsUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'uuid' => ['required', 'string', 'max:36'],
-            'title' => ['required', 'string'],
-            'slug' => ['string'],
-            'summary' => ['required', 'string'],
-            'content' => ['required', 'string'],
+            'uuid'        => ['required', 'string', 'max:36'],
+            'title'       => ['required', 'string'],
+            'slug'        => ['string'],
+            'summary'     => ['string'],
+            'content'     => ['required', 'string'],
             'is_homepage' => ['string'],
         ];
     }

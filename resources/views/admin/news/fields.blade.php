@@ -1,28 +1,14 @@
 <div class="row">
     <div class="col-md-6">
-        <div class="form-group">
-            <div class="form-group">
-                <label for="title">Title</label>
-                {!! Form::text('title', null, ['class' => 'form-control', 'id' => 'title', 'required' => true]) !!}
-            </div>
-        </div>
+            {!! Form::basicInput('title', null, ['label' => 'Title', 'required' => true]) !!}
     </div>
     <div class="col-md-6">
-        <div class="form-group">
-            <label for="file">File</label>
-            {!! Form::file('file', null, ['class' => 'form-control', 'id' => 'file', 'required' => false]) !!}
-        </div>
+        {!! Form::basicInput('file', null, ['label' => 'File', 'type' => 'file']) !!}
     </div>
     <div class="col-md-12">
-        <div class="form-group">
-            <label for="summary">Summary(this is the small description) try to keep it less then 100 charecters.</label>
-            {!! Form::textarea('summary', null, ['class' => 'form-control tinymce', 'id' => 'summary', 'required' => true]) !!}
-        </div>
+        {!! Form::editor('summary', null, ['label' => 'Summary (this is the small description) try to keep it less then 100 characters.']) !!}
     </div>
     <div class="col-md-12">
-        <div class="form-group">
-            <label for="content">Content</label>
-            {!! Form::textarea('content', null, ['class' => 'form-control tinymce', 'id' => 'content']) !!}
-        </div>
+        {!! Form::editor('content', null, ['label' => 'Content']) !!}
     </div>
 </div>

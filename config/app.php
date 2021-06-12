@@ -28,6 +28,8 @@ return [
         'youtube'  => 'https://www.youtube.com/channel/UClNKNFnQ2R7SoKpEJi_GBEQ',
     ],
 
+    'timymce_api_key' => env('TINY_MCE_API_KEY'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
