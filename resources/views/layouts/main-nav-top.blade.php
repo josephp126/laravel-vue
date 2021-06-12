@@ -6,12 +6,10 @@
         </a>
 
         <ul id="nav" class="nav navbar-nav float-right">
-            <livewire:nav-item title="Repfinder" href="/" />
-
-            <livewire:nav-item title="Training" href="/training" />
+            <livewire:nav-item title="HOME" href="/" />
 
             <livewire:nav-dropdown
-                title="Products"
+                title="PRODUCTS"
                 :navItems="[
                     '/product?type=1' => [
                         'label' => 'Air Control and Backdraft Dampers',
@@ -32,8 +30,6 @@
                  ]"
             />
 
-            <livewire:nav-item title="Louver Selection Tool" href="/selection-tools" />
-
             <livewire:nav-dropdown
                 title="Quick Reference"
                 :navItems="[
@@ -42,8 +38,21 @@
                  ]"
             />
 
+            <livewire:nav-item title="SELECTION TOOLS" href="/selection-tools" />
+
             <livewire:nav-dropdown
-                title="About"
+                title="RESOURCES"
+                :navItems="[
+                    '/quick-ship' => ['label' => 'Quick Ship'],
+                     '/literature' => ['label' => 'Literature'],
+                     '/projects' => ['label' => 'Projects/ Cases Studies'],
+                     '/training' => ['label' => 'Training'],
+                     '#revit' => ['label' => 'Revit/CSI/Installation'],
+                 ]"
+            />
+
+            <livewire:nav-dropdown
+                title="ABOUT"
                 :navItems="[
                     route('company.index') => ['label' => 'Company'],
                     route('repfinder.index') => ['label' => 'Repfinder'],
@@ -52,6 +61,8 @@
                     route('contact.index') => ['label' => 'Contact'],
                  ]"
             />
+
+            <livewire:nav-item title="REP LOGIN" href="/rep-login" />
         </ul>
     </div>
 </nav>
