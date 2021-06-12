@@ -27,7 +27,9 @@
                         <div><strong>Address: </strong> {{config('app.contact.address')}}</div>
                         <div><strong>Phone: </strong> + 1 {{config('app.contact.phone')}}</div>
                         <div><strong>Fax: </strong> + 1 {{config('app.contact.fax')}}</div>
-                        <div><strong>Email: </strong> {{config('app.contact.email')}}</div>
+                        <div><strong>Email: </strong> <a
+                                href="mailto:{{config('app.contact.email')}}?subject=Hello from the website. I have a question.">{{config('app.contact.email')}}</a>
+                        </div>
                         <ul class="social-icons list-soc">
                             <li><a target="_blank" rel="nofollow" href="{{config('app.contact.facebook')}}"><i
                                         class="icon-facebook"></i></a></li>
