@@ -46,6 +46,12 @@
 
 
 .news-section {
+    font-size: 14px;
+
+    strong{
+        font-weight: 600;
+    }
+
     .heading-image {
         width: 42px;
         height: 36px;
@@ -55,18 +61,17 @@
         min-height: 200px;
 
         .article-image {
-            width: 124px;
-            height: 100px;
+            width: 200px;
             padding-right: 15px;
         }
 
         .article-text {
-            color: #010000;
-            font-size: 17px;
+            //color: #010000;
+            //font-size: 17px;
             font-weight: 400;
             font-style: normal;
             letter-spacing: normal;
-            line-height: 17px;
+            //line-height: 17px;
             text-align: left;
 
             .title {

@@ -36,7 +36,7 @@ class SaveImageJob
         $relate = $this->relate;
 
         if ($file) {
-            $image = $relate->image()->create(
+            $image = $relate->image()->updateOrCreate(
                 [
                     'mime_type'   => $file->getMimeType(),
                     'title'       => $file->getClientOriginalName(),

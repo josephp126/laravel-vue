@@ -164,8 +164,7 @@
                 </div>
             </div>
             <div class="bottom bg-primary w-100 mt-3 py-3 text-center font-weight-bold">
-                NO NEED TO REGISTER TO SELECT LOUVERS AND CREATE YOUR PRODUCT SCHEDULE. IMPORT DIRECTLY INTO SPECS
-                PRICING PROGRAM.
+                NO NEED TO REGISTER TO SELECT LOUVERS FOR YOUR PROJECT. CREATE AND IMPORT YOUR SCHEDULE DIRECTLY INTO OUR SPECS PRICING PROGRAM.
             </div>
         </section>
         <!-- /.recent-work end-->
