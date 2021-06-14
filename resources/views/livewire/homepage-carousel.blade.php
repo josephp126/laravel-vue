@@ -2,7 +2,8 @@
     <livewire:carousel-indicators count="3" active="2" />
 
     <div class="carousel-inner">
-        <div id="carousel-item-1" class="carousel-item" style="background: url('{{url('images/homepage/carousel/slide-1-bg.svg')}}')">
+        <div id="carousel-item-1" class="carousel-item active"
+             style="background: url('{{url('images/homepage/carousel/slide-1-bg.svg')}}')">
             <div class="carousel-container">
 
                 <div class="row h-100 align-content-center">
