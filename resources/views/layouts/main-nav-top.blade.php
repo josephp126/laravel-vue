@@ -66,6 +66,7 @@
             />
 
             <livewire:nav-item title="Rep finder" href="/repfinder" />
+            <livewire:nav-item title="Rep Login" href="/repfinder" class="d-md-none" />
         </ul>
     </div>
 </nav>

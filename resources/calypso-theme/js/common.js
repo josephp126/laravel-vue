@@ -14,6 +14,7 @@ $(document).ready(function () {
         active: 'selected', // String: Set the "active" class
         header: 'MENU +', // String: Specify text for "header" and show header instead of the active item
         label: '', // String: Sets the <label> text for the <select> (if not set, no label will be added)
+        indent: '- ', // String: Specify text for indenting sub-items
     });
 });
 
