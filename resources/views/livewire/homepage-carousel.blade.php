@@ -28,14 +28,21 @@
         </div>
 
 
-        <div class="carousel-item" style="background: url('images/homepage/carousel/slider-2.jpg')">
+        <div id="carousel-item-2" class="carousel-item" style="background: url('images/homepage/carousel/slide-2-bg.svg')">
             <div class="carousel-container">
+                <div class="row h-100 align-content-center">
+                    <div class="animated fadeInRight w-100 h-100" style="background: url('images/homepage/carousel/slide-2-fg.svg');"></div>
+                </div>
             </div>
         </div>
 
 
-        <div class="carousel-item" style="background: url('images/homepage/carousel/slider-3.jpg')">
+        <div id="carousel-item-3" class="carousel-item" style="background: url('images/homepage/carousel/slide-3-bg.svg')">
             <div class="carousel-container">
+                <div class="row h-100 align-content-center">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-9 h-100 animated fadeInLeft" style="background: url('images/homepage/carousel/slide-3-fg.svg');"></div>
+                </div>
             </div>
         </div>
     </div>
