@@ -66,7 +66,7 @@
 
             </div>
 
-            <div class="container">
+            <div class="container mt-3">
                 <div class="row">
                     <div class="col-md-8">
                         <ul class="d-flex list-unstyled bragging-logos">
@@ -117,7 +117,7 @@
         <!-- /.service-box end-->
         <!-- RECENT WORK==================================================-->
 
-        <section class="home-portfolio bgarea mt-5 pt-3">
+        <section class="home-portfolio bgarea mt-3 pt-3">
 
             <div class="">
 
