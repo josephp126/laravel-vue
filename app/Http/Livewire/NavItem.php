@@ -11,10 +11,12 @@ class NavItem extends Component
 
     public $title = '';
     public $href = '';
+    public $class = '';
 
-    public function mount($title, $href)
+    public function mount($title, $href, $class = '')
     {
         $this->title = $title;
+        $this->class = $class;
         $this->href  = $href;
 
         $this->navItems = [$href => true];
