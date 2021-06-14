@@ -12,7 +12,7 @@
                 title="PRODUCTS"
                 :navItems="[
                     '/product?type=1' => [
-                        'label' => 'Air Control and Backdraft Dampers',
+                        'label' => 'Air Control Dampers',
                         //'image' => url('images/menu/menu1.png'),
                     ],
                     '/product?type=2' => [
@@ -49,7 +49,7 @@
                 :navItems="[
                     '/quick-ship' => ['label' => 'Quick Ship'],
                      '/literature' => ['label' => 'Literature'],
-                     '/projects' => ['label' => 'Projects/ Cases Studies'],
+                     '/projects' => ['label' => 'Projects/Case Studies'],
                      '/training' => ['label' => 'Training'],
                      '#revit' => ['label' => 'Revit/CSI/Installation'],
                  ]"
@@ -65,7 +65,7 @@
                  ]"
             />
 
-            <livewire:nav-item title="Repfinder" href="/repfinder" />
+            <livewire:nav-item title="Rep finder" href="/repfinder" />
         </ul>
     </div>
 </nav>
