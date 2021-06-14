@@ -5,7 +5,7 @@
     </div>
     @forelse($articles as $article)
         <div class="d-flex mb-3">
-            <img src="{{$article->imageUrl}}" class="article-image" alt="image" height="75" />
+            <img src="{{$article->imageUrl}}" class="article-image align-self-start flex-grow-0" alt="image" />
             <div class="article-text">
                 <a href="{{route('news.show', $article)}}" class="custom-title">{{$article->title}}</a>
                 <div class="summary mt-3">{!! $article->summary !!}</div>

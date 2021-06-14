@@ -2,21 +2,25 @@
     <livewire:carousel-indicators count="3" active="0" />
 
     <div class="carousel-inner">
-        <div id="carousel-item-1" class="carousel-item active" style="background: url('{{url('images/homepage/carousel/bg-slide-1.svg')}}')">
+        <div id="carousel-item-1" class="carousel-item active" style="background: url('{{url('images/homepage/carousel/slide-1-bg.svg')}}')">
             <div class="carousel-container">
 
-                <div class="row h-100">
+                <div class="row h-100 align-content-center">
                     <div class="col-lg left">
                         <div class="top">
-                            <img class="animated fadeInLeft high-preforming-louvers" src="{{url('images/homepage/carousel/high-preforming-louvers.png')}}" alt="high-preforming-louvers"/>
+                            <div class="">
+                                <div class="text animated fadeInLeft">
+                                    HIGH-PERFORMING LOUVERS
+                                </div>
+                            </div>
                         </div>
 
                         <div class="bottom">
-                            <img class="animated fadeInLeft perfect-for-any-condition" src="{{url('images/homepage/carousel/perfect-for-any-condition.png')}}" alt="perfect-for-any-condition"/>
+                            <img class="animated fadeInLeft perfect-for-any-condition" src="{{url('images/homepage/Air-Control-Text2.svg')}}" alt="perfect-for-any-condition"/>
                         </div>
                     </div>
-                    <div class="col-lg right">
-                        <img class="animated fadeInRight" src="{{url('images/homepage/carousel/slide-1-right-img.png')}}" alt="Slide one right image"/>
+                    <div class="col-lg right ">
+                        <img class="animated fadeInRight" src="{{url('images/homepage/slide-1-right-img.png')}}" alt="Slide one right image"/>
                     </div>
                 </div>
 

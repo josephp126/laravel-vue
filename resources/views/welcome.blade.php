@@ -60,7 +60,7 @@
                                                 image="images/Product Photos/FSD.png" />
 
                     <livewire:home-product-card title="LOUVERS"
-                                                description="Drainable, Operable, Miami-Dade, Florida Building Code, Penthouses, Specialty"
+                                                description="Drainable, Operable, Miami-Dade, Florida Building Code, Penthouses"
                                                 image="images/Product Photos/Louver.png" />
                 </div>
 
@@ -164,8 +164,7 @@
                 </div>
             </div>
             <div class="bottom bg-primary w-100 mt-3 py-3 text-center font-weight-bold">
-                NO NEED TO REGISTER TO SELECT LOUVERS AND CREATE YOUR PRODUCT SCHEDULE. IMPORT DIRECTLY INTO SPECS
-                PRICING PROGRAM.
+                NO NEED TO REGISTER TO SELECT LOUVERS FOR YOUR PROJECT. CREATE AND IMPORT YOUR SCHEDULE DIRECTLY INTO OUR SPECS PRICING PROGRAM.
             </div>
         </section>
         <!-- /.recent-work end-->

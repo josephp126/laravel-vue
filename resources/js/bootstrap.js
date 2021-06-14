@@ -47,6 +47,6 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     forceTLS: true
 // });
 
-require('./tinymce');
+// require('./tinymce');
 require('../../public/js/plugins');
 require('../../public/js/common');
