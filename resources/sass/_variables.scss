@@ -22,3 +22,12 @@ $teal: #4dc0b5;
 $cyan: #6cb2eb;
 
 $primary: $blue;
+
+//  Device sizes
+$xlmax-device: 'only screen and (min-width: 1200px) and (max-width: 1599.98px)';
+$laptop-device: 'only screen and (min-width: 1200px) and (max-width: 1499px)';
+$desktop-device: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$tablet-device:'only screen and (min-width: 768px) and (max-width: 991px)';
+$large-mobile:'only screen and (max-width: 767px)';
+$small-mobile: 'only screen and (max-width: 575px)';
+$extra-small-mobile: 'only screen and (max-width: 479px)';
