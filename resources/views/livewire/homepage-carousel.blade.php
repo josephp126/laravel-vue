@@ -21,7 +21,6 @@
                     <div class="col-lg-5 right p-0">
                         <img class="animated fadeInRight" src="{{url('images/homepage/slide-1-right-img.png')}}" alt="Slide one right image"/>
                     </div>
-                    <div class="col-lg-1 left p-0"></div>
                 </div>
 
             </div>
