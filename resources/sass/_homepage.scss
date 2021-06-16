@@ -12,7 +12,7 @@
             padding-left: 100px;
             padding-right: 100px;
         }
-        
+
         .left {
             display: flex;
             flex-direction: column;
@@ -43,13 +43,14 @@
             .high-preforming-louvers {
                 max-width: 510px;
                 width: 100%;
+
             }
 
             .text{
                 word-break: keep-all;
                 white-space: nowrap;
                 padding: 25px 17px;
-                background: rgba(255,255,255, .8);
+                background: rgba(255, 255, 255, .8);
                 /* Style for "HIGH-PERFO" */
                 text-shadow: -3px 2px 3px rgba(34, 31, 32, 0.43);
                 font-size: 34px;
@@ -59,11 +60,20 @@
                 text-align: center;
                 text-transform: uppercase;
                 color: #221f20;
+
+                @media #{$small-mobile}{
+                    white-space: unset;
+                }
             }
 
-            .perfect-for-any-condition{
+            .perfect-for-any-condition {
                 max-width: 400px;
                 width: 100%;
+
+                @media #{$large-mobile}{
+                    width: 285px;
+                    min-width: unset;
+                }
             }
 
             .top {
@@ -102,6 +112,11 @@
                 @media #{$laptop-device}{
                     max-width: 550px;
                 }
+
+                @media #{$large-mobile}{
+                    width: 285px;
+                    min-width: unset;
+                }
             }
         }
     }
@@ -111,7 +126,7 @@
             background-repeat: no-repeat !important;
         }
     }
-    
+
     #carousel-item-3{
         .carousel-container .align-content-center div {
             background-repeat: no-repeat !important;
