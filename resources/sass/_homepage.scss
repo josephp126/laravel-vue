@@ -88,7 +88,7 @@
 
         .right{
             img{
-                max-width: 700px;
+                max-width: 720px;
 
                 @media screen and (max-width: 991px) {
                     max-height: 300px;
@@ -99,7 +99,7 @@
                 }
 
                 @media #{$laptop-device}{
-                    max-width: 580px;
+                    max-width: 600px;
                 }
             }
         }
