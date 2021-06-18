@@ -1,6 +1,6 @@
 <!-- NAV ================================================== -->
 <nav class="main-top-nav navbar navbar-expand-lg navbar-light bg-light m-0 p-0" role="navigation">
-    <div class="container">
+    <div class="container container-lg">
         <a class="navbar-brand logo-nav" href="/">
             <img src="/images/Pottorff-Logo-Black.png" alt="{{config('app.name')}}">
         </a>

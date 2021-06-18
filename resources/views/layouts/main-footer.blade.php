@@ -15,10 +15,10 @@
                 </div>
                 <div class="col-md-3 text-white">
                     <p class="mt-2 mb-2">About</p>
-                    <p class="mt-2 mb-2"><a href="{{route('about.index')}}">History</a></p>
-                    <p class="mt-3 mb-2"><a href="#">Quick Reference</a></p>
-                    <p class="mt-2 mb-2"><a href="#">Cross Reference</a></p>
+                    <p class="mt-2 mb-2"><a href="#">Quick Reference</a></p>
                     <p class="mt-2 mb-2"><a href="#">Louver Selection Tool</a></p>
+                    <p class="mt-2 mb-2"><a href="#">Products</a></p>
+                    <p class="mt-2 mb-2"><a href="#">Training</a></p>
                     <p class="mt-2 mb-2"><a href="{{route('repfinder.index')}}">Repfinder</a></p>
                 </div>
                 <div class="col-md-3" id="footer-find-us" data-label="find us">
