@@ -45,6 +45,13 @@ class AppServiceProvider extends ServiceProvider
                 $required = $attributes['required'] ?? false;
                 $value    = $this->getValueAttribute('content', $value);
 
+                if ($type == 'password') {
+                    return view(
+                        'components.form.basic-input-password',
+                        compact('value', 'name', 'label', 'required', 'type')
+                    );
+                }
+
                 return view('components.form.basic-input', compact('value', 'name', 'label', 'required', 'type'));
             }
         );
