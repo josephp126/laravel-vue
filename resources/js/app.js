@@ -22,6 +22,9 @@ const Editor = require('@tinymce/tinymce-vue').default;
 Vue.component('example-component',
     require('./components/ExampleComponent.vue').default);
 
+Vue.component('basic-input',
+    require('./components/elemements/input.vue').default);
+
 Vue.component('carousel-slide-editor',
     require('./components/CarouselSlideEditor').default);
 

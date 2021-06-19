@@ -109,3 +109,13 @@
     padding: 2px;
     margin: 2px;
 }
+
+.selectable {
+    -webkit-touch-callout: all;
+    -webkit-user-select: all;
+    -khtml-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
+    user-select: all;
+    cursor: pointer;
+}

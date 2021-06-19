@@ -34,6 +34,31 @@ class CarouselSlide extends Model
         'fg_lg_image_id',
     ];
 
+    protected $with = [
+        'bg_default_image',
+        'bg_default_md',
+        'bg_default_sm',
+    ];
+
+    protected $appends = [
+        'backgroundImageDefaultUrl',
+        'backgroundImageMdUrl',
+        'backgroundImageSmUrl',
+
+        'fgLgImageUrl',
+        'fgMdImageUrl',
+        'fgSmImageUrl',
+    ];
+
+    public function images()
+    {
+        return $this->morphMany(Image::class, 'imageable');
+    }
+
+    public function image()
+    {
+        return $this->morphMany(Image::class, 'imageable');
+    }
 
     public function bg_default_image()
     {
@@ -54,17 +79,17 @@ class CarouselSlide extends Model
 
     public function getBackgroundImageDefaultUrlAttribute()
     {
-        return Arr::get($this->bg_default, 'url', url('images/broken.png'));
+        return Arr::get($this->bg_default, 'url');
     }
 
     public function getBackgroundImageMdUrlAttribute()
     {
-        return Arr::get($this->bg_default_md, 'url', url('images/broken.png'));
+        return Arr::get($this->bg_default_md, 'url');
     }
 
     public function getBackgroundImageSmUrlAttribute()
     {
-        return Arr::get($this->bg_default_sm, 'url', url('images/broken.png'));
+        return Arr::get($this->bg_default_sm, 'url');
     }
 
     public function fg_sm_image()
@@ -84,16 +109,16 @@ class CarouselSlide extends Model
 
     public function getFgSmImageUrlAttribute()
     {
-        return Arr::get($this->fg_sm_image, 'url', url('images/broken.png'));
+        return Arr::get($this->fg_sm_image, 'url');
     }
 
     public function getFgMdImageUrlAttribute()
     {
-        return Arr::get($this->fg_md_image, 'url', url('images/broken.png'));
+        return Arr::get($this->fg_md_image, 'url');
     }
 
     public function getFgLgImageUrlAttribute()
     {
-        return Arr::get($this->fg_lg_image, 'url', url('images/broken.png'));
+        return Arr::get($this->fg_lg_image, 'url');
     }
 }

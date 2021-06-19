@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Jobs\SaveImageJob;
 use App\Models\Carousel;
 use App\Models\CarouselSlide;
 use Illuminate\Http\Request;
@@ -18,7 +19,7 @@ class CarouselSlidesController extends Controller
      */
     public function index(Carousel $carousel)
     {
-        $carousel->load('slides');
+        $carousel->load('slides.images');
 
         return $carousel;
     }
@@ -32,19 +33,40 @@ class CarouselSlidesController extends Controller
      */
     public function store(Request $request, Carousel $carousel)
     {
-        //
+        $carousel->slides()->create();
+
+        return response()->noContent();
     }
 
     /**
      * Display the specified resource.
      *
      * @param Carousel      $carousel
-     * @param CarouselSlide $carouselSlide
+     * @param CarouselSlide $slide
      * @return Response
      */
-    public function show(Carousel $carousel, CarouselSlide $carouselSlide)
+    public function show(Carousel $carousel, CarouselSlide $slide)
     {
-        //
+        return $slide;
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param Carousel      $carousel
+     * @param CarouselSlide $slide
+     * @return Response
+     */
+    public function images(Carousel $carousel, CarouselSlide $slide)
+    {
+        return $slide->images;
+    }
+
+    public function pushImage(Carousel $carousel, CarouselSlide $slide, Request $request)
+    {
+        $this->dispatch(new SaveImageJob($slide, $request->file('file')));
+
+        return response()->noContent();
     }
 
     /**
@@ -52,23 +74,27 @@ class CarouselSlidesController extends Controller
      *
      * @param Request       $request
      * @param Carousel      $carousel
-     * @param CarouselSlide $carouselSlide
-     * @return Response
+     * @param CarouselSlide $slide
+     * @return CarouselSlide
      */
-    public function update(Request $request, Carousel $carousel, CarouselSlide $carouselSlide)
+    public function update(Request $request, Carousel $carousel, CarouselSlide $slide)
     {
-        //
+        $slide->update($request->all());
+
+        return $slide;
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param Carousel      $carousel
-     * @param CarouselSlide $carouselSlide
+     * @param CarouselSlide $slide
      * @return Response
      */
-    public function destroy(Carousel $carousel, CarouselSlide $carouselSlide)
+    public function destroy(Carousel $carousel, CarouselSlide $slide)
     {
-        //
+        $slide->delete();
+
+        return response()->noContent();
     }
 }
