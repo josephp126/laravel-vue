@@ -2,6 +2,8 @@
 
 @section('content')
     <div class="container-fluid">
-        @livewire('admin-carousel-editor', ['carousel_id' => $carousel->id])
+        ++
+        <carousel-slide-editor carousel_id="{{$carousel->id}}"></carousel-slide-editor>
+        --
     </div>
 @endsection

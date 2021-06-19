@@ -19,6 +19,10 @@ class CreateCarouselSlidesTable extends Migration
                 $table->id();
                 $table->foreignId('carousel_id')->constrained();
 
+                $table->foreignId('bg_default_image_id')->nullable();
+                $table->foreignId('bg_md_image_id')->nullable();
+                $table->foreignId('bg_sm_image_id')->nullable();
+
                 $table->foreignId('fg_sm_image_id')->nullable();
                 $table->foreignId('fg_md_image_id')->nullable();
                 $table->foreignId('fg_lg_image_id')->nullable();

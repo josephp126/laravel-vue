@@ -25,21 +25,46 @@ class CarouselSlide extends Model
      * @var array
      */
     protected $fillable = [
-        'bg_image_id',
+        'bg_default_image_id',
+        'bg_md_image_id',
+        'bg_sm_image_id',
+
         'fg_sm_image_id',
         'fg_md_image_id',
         'fg_lg_image_id',
     ];
 
 
-    public function background()
+    public function bg_default_image()
     {
-        return $this->belongsTo(Image::class, 'background_id');
+        return $this->belongsTo(Image::class, 'bg_default_image_id');
     }
 
-    public function getBackgroundImageUrlAttribute()
+
+    public function bg_default_md()
     {
-        return Arr::get($this->background, 'url', url('images/broken.png'));
+        return $this->belongsTo(Image::class, 'bg_md_image_id');
+    }
+
+
+    public function bg_default_sm()
+    {
+        return $this->belongsTo(Image::class, 'bg_sm_image_id');
+    }
+
+    public function getBackgroundImageDefaultUrlAttribute()
+    {
+        return Arr::get($this->bg_default, 'url', url('images/broken.png'));
+    }
+
+    public function getBackgroundImageMdUrlAttribute()
+    {
+        return Arr::get($this->bg_default_md, 'url', url('images/broken.png'));
+    }
+
+    public function getBackgroundImageSmUrlAttribute()
+    {
+        return Arr::get($this->bg_default_sm, 'url', url('images/broken.png'));
     }
 
     public function fg_sm_image()

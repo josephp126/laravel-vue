@@ -3,7 +3,7 @@
 @section('content')
     <div class="container-fluid">
         {!! Form::open(['route' => 'admin.carousel.store']) !!}
-        @include('admin.carouse.fields')
+        @include('admin.carousel.fields')
         @include('partials.form-buttons')
         {!! Form::close() !!}
     </div>

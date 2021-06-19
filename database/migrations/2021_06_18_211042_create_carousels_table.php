@@ -26,8 +26,6 @@ class CreateCarouselsTable extends Migration
                 $table->longText('height_md')->nullable();
                 $table->longText('height_lg')->nullable();
 
-                $table->foreignId('bg_image_id')->nullable();
-
                 $table->timestamps();
                 $table->softDeletes();
             }

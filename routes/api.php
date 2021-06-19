@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\CarouselSlidesController;
 use App\Http\Controllers\Api\CategoryController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -26,6 +27,12 @@ Route::put('sort/category/save', [CategoryController::class, 'saveSort']);
 Route::resources(
     [
         'category' => CategoryController::class,
+    ]
+);
+
+Route::apiResources(
+    [
+        'carousel.slide' => CarouselSlidesController::class,
     ]
 );
 
