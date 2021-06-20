@@ -1,11 +1,11 @@
 @foreach($carousel->slides as $inc => $slide)
-.carousel-homepage #carousel-item-{{$inc}} {
+.carousel-homepage #carousel-item-{{$slide->id}} {
     background: url('{{$slide->backgroundImageDefaultUrl}}')
 }
 
 @if($slide->backgroundImageMdUrl)
 @media (max-width: 991.98px) {
-    .carousel-homepage #carousel-item-{{$inc}} {
+    .carousel-homepage #carousel-item-{{$slide->id}} {
         background: url('{{$slide->backgroundImageMdUrl}}')
     }
 }
@@ -13,7 +13,7 @@
 
 @if($slide->backgroundImageSmUrl)
 @media (max-width: 767.98px) {
-    .carousel-homepage #carousel-item-{{$inc}} {
+    .carousel-homepage #carousel-item-{{$slide->id}} {
         background: url('{{$slide->backgroundImageSmUrl}}')
     }
 }
