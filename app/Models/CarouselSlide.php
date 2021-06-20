@@ -79,7 +79,7 @@ class CarouselSlide extends Model
 
     public function getBackgroundImageDefaultUrlAttribute()
     {
-        return Arr::get($this->bg_default, 'url');
+        return Arr::get($this->bg_default_image, 'url');
     }
 
     public function getBackgroundImageMdUrlAttribute()
