@@ -28,6 +28,7 @@
 
 
         <livewire:carousel-control carousel-id="carousel" direction="left" />
-        <livewire:carousel-control carousel-id="carousel" direction="right" />
+            <livewire:carousel-control carousel-id="carousel" direction="right" />
     </div>
+</div>
 @endif
