@@ -24,6 +24,9 @@
             </li>
             <li class="{{request()->is('news')? "active": ""}} nav-item"><a href="{{route('admin.news.index')}}"
                                                                             class="nav-link">News</a></li>
+            
+            <li class="{{request()->is('user')? "active": ""}} nav-item"><a href="{{route('admin.user.index')}}"
+                                                                            class="nav-link">Users</a></li>
             @can('run-special-commands')
                 <li class="nav-divider"></li>
                 <li class="{{request()->is('admin/commands*')? "active": ""}} nav-item"><a

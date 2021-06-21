@@ -78,6 +78,12 @@
     max-height: 300px;
 }
 
+.img-xs {
+    max-height: 100px;
+    max-width: 100px;
+    object-fit: contain;
+}
+
 .what-our-reps-say {
     .quotes {
         list-style: none;
