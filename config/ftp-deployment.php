@@ -16,6 +16,8 @@ return [
     'remote'         => [
         'yarn install --prod',
         'yarn production',
+        'php artisan route:clear',
+        'php artisan config:clear',
     ],
 
     /**

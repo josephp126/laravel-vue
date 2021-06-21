@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use Form;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
 

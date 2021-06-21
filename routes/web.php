@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\CarouselController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ImagesController;
@@ -22,6 +23,8 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'welcome')->name('home');
 
 Auth::routes();
+
+Route::get('carousel/{carousel:slug}/style.css', [CarouselController::class, 'carouselStyles']);
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 

@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section('skel_styles')
+    <link rel="stylesheet" href="/carousel/homepage/style.css?{{Str::random(4)}}" />
+@endsection
+
 @section('content')
     <livewire:homepage-carousel />
 
