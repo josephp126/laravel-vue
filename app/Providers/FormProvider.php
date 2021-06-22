@@ -52,5 +52,16 @@ class FormProvider extends ServiceProvider
                 return view('components.form.basic-input', compact('value', 'name', 'label', 'required', 'type'));
             }
         );
+
+        Form::macro(
+            'basicCheckbox',
+
+            function ($name, $value, $attributes) {
+                $label = $attributes['label'] ?? false;
+                $value = $this->getValueAttribute('content', $value) ?? false;
+
+                return view('components.form.basic-checkbox', compact('value', 'name', 'label'));
+            }
+        );
     }
 }
