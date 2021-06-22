@@ -38,6 +38,7 @@
         {!! Form::basicInput('password_confirmation', null, ['label' => 'Confirm Password', 'type' => 'password']) !!}
     </div>
     <div class="col-md-6">
+        {!! Form::Label('date_joined', 'Date Joined') !!}
         <input type="date" id="date_joined" class="form-control" name="date_joined" value="{{ date('Y-m-d') }}" />
     </div>
     <div class="col-md-6">
