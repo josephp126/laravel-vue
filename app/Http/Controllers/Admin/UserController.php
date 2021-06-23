@@ -30,7 +30,9 @@ class UserController extends Controller {
 
     public function create( Request $request ) {
         $states = State::all( ['id', 'name'] );
-        return view( 'admin.users.create', compact( 'states' ) );
+        $user = new User;
+        $user['imageUrl'] = '';
+        return view( 'admin.users.create', compact( ['states', 'user'] ) );
     }
 
     /**
@@ -70,7 +72,6 @@ class UserController extends Controller {
     */
 
     public function edit( Request $request, User $user ) {
-
         $address = $user->address;
         $user['address'] = $address->address ?? '';
         $user['zip'] = $address->zip ?? '';

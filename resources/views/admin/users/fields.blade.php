@@ -42,7 +42,19 @@
         <input type="date" id="date_joined" class="form-control" name="date_joined" value="{{ date('Y-m-d') }}" />
     </div>
     <div class="col-md-6">
-        {!! Form::basicInput('file', null, ['label' => 'Logo', 'type' => 'file']) !!}
+        {!! Form::Label('file', 'Logo') !!}
+        <div id="userLogoPreview">
+            <img class="img-thumbnail img-xs w-100 h-100" src="{{ $user->imageUrl }}" />
+        </div>
+        <div class="row m-0" style="padding-top: 10px">
+            <div class="col-md-3 p-0 m-0">
+                <span class="btn btn-primary">Choose Logo</span>
+                <input type="file" id="file" name="file" class="file-input">
+            </div>
+            <div class="col-md-3 p-0 m-0" {{ $user->uuid ? '' : 'style=display:none' }}>
+                <button class="btn btn-danger" type="submit" name="action" value="remove-logo">Remove Logo</button>
+            </div>
+        </div>
     </div>
     <div class="col-md-6">
         {!! Form::basicCheckbox('is_active', true, ['label' => 'Is Active']) !!}
