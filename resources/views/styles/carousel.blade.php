@@ -1,3 +1,12 @@
+.carousel-homepage .carousel-container img{
+{{--    height: 100%;--}}
+    margin: 0 auto;
+
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .carousel-homepage, .carousel-homepage, .carousel-inner {
 height: {{(int)($carousel->height_lg ?? config('carousel.heights.lg')) - 27}}px;
 }

@@ -9,17 +9,17 @@
                 id="carousel-item-{{$slide->id}}"
                 class="carousel-item {{ $slide->id == $slides[0]->id? 'active': ''}}"
             >
-                <div class="carousel-container">
+                <div class="carousel-container d-flex">
                     @if($slide->fgSmImageUrl)
-                        <img src="{!! $slide->fgSmImageUrl !!}" alt="Slide sm" class="h-100 w-100 d-md-none animated fadeInLeft" />
+                        <img src="{!! $slide->fgSmImageUrl !!}" alt="Slide sm" class="d-md-none animated fadeInLeft" style="height: 100%; margin: 0 auto" />
                     @endif
 
                     @if($slide->fgMdImageUrl)
-                        <img src="{!! $slide->fgMdImageUrl !!}" alt="Slide md" class="h-100 w-100 d-none d-md-block d-lg-none animated fadeInLeft" />
+                        <img src="{!! $slide->fgMdImageUrl !!}" alt="Slide md" class="d-none d-md-block d-lg-none animated fadeInLeft" style="height: 100%; margin: 0 auto" />
                     @endif
 
                     @if($slide->fgLgImageUrl)
-                        <img src="{!! $slide->fgLgImageUrl !!}" alt="Slide lg" class="h-100 w-100 d-none d-lg-block animated fadeInLeft" />
+                        <img src="{!! $slide->fgLgImageUrl !!}" alt="Slide lg" class="d-none d-lg-block animated fadeInLeft" style="height: 100%; margin: 0 auto" />
                     @endif
 
                 </div>
