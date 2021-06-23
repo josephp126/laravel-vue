@@ -23,10 +23,18 @@ class AddressFactory extends Factory
     public function definition()
     {
         return [
-            'address' => $this->faker->word,
-            'zip' => $this->faker->postcode,
-            'state_id' => State::factory(),
-            'city' => $this->faker->city,
+            'address'  => $this->faker->word,
+            'zip'      => $this->faker->postcode,
+            'city'     => $this->faker->city,
+            'state_id' => function () {
+                $state = State::inRandomOrder()->first();
+
+                if ($state) {
+                    return $state;
+                }
+
+                return State::factory()->create();
+            },
         ];
     }
 }

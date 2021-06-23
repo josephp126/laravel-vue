@@ -2,9 +2,8 @@
 
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 use App\Models\State;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class StateFactory extends Factory
 {
@@ -23,10 +22,11 @@ class StateFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name,
+            'name'                  => $this->faker->name,
             'standard_abbreviation' => $this->faker->word,
-            'postal_abbreviation' => $this->faker->word,
-            'capital_city' => $this->faker->word,
+            'postal_abbreviation'   => $this->faker->word,
+            'capital_city'          => $this->faker->word,
+            'country_id'            => 1,
         ];
     }
 }

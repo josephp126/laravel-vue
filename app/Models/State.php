@@ -20,6 +20,7 @@ class State extends Model
         'standard_abbreviation',
         'postal_abbreviation',
         'capital_city',
+        'country_id',
     ];
 
     /**
@@ -30,4 +31,9 @@ class State extends Model
     protected $casts = [
         'id' => 'integer',
     ];
+
+    public function country()
+    {
+        return $this->belongsTo(Country::class);
+    }
 }

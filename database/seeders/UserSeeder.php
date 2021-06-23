@@ -15,15 +15,20 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        User::factory()->count(5)->create();
         Bouncer::allow('admin')->everything();
 
-        if (User::where(['email' => 'admin@admin.com'])->count() == 0) {
-            $user = User::factory()
+        if (User::count() < 5) {
+            User::factory()
                 ->hasAddress()
-                ->create(['email' => 'admin@admin.com', 'is_contact' => true]);
+                ->count(5)
+                ->create();
+        }
 
-            $user->assign('admin');
+        if (User::where(['email' => 'admin@admin.com'])->count() == 0) {
+            User::factory()
+                ->hasAddress()
+                ->create(['email' => 'admin@admin.com', 'is_contact' => true])
+                ->assign('admin');
         }
     }
 }
