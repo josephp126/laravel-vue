@@ -37,10 +37,11 @@ class FormProvider extends ServiceProvider
         Form::macro(
             'basicInput',
             function ($name, $value, $attributes) {
-                $label    = $attributes['label'] ?? false;
-                $type     = $attributes['type'] ?? 'text';
-                $required = $attributes['required'] ?? false;
-                $value    = $this->getValueAttribute('content', $value);
+                $label       = $attributes['label'] ?? false;
+                $type        = $attributes['type'] ?? 'text';
+                $required    = $attributes['required'] ?? false;
+                $value       = $this->getValueAttribute('content', $value);
+                $placeholder = $attributes['placeholder'] ?? false;
 
                 if ($type == 'password' || $type == 'file') {
                     return view(
@@ -49,7 +50,10 @@ class FormProvider extends ServiceProvider
                     );
                 }
 
-                return view('components.form.basic-input', compact('value', 'name', 'label', 'required', 'type'));
+                return view(
+                    'components.form.basic-input',
+                    compact('value', 'name', 'label', 'required', 'type', 'placeholder')
+                );
             }
         );
 

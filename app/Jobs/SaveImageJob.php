@@ -48,13 +48,7 @@ class SaveImageJob
             if ($file->getMimeType() == 'image/svg+xml') {
                 $newFile = $file->getContent();
             } else {
-                $newFile = Imager::make($file)->resize(
-                    900,
-                    null,
-                    function ($c) {
-                        $c->aspectRatio();
-                    }
-                )->encode();
+                $newFile = Imager::make($file)->encode();
             }
 
             Storage::disk('images')->put($image->hash, (string)$newFile);
