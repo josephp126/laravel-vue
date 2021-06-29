@@ -22,11 +22,12 @@ class NewsFactory extends Factory
     public function definition()
     {
         return [
-//            'link'        => $this->faker->url,
-'summary'     => $this->faker->realText(),
-'title'       => $this->faker->jobTitle,
-'content'     => $this->faker->realText(200),
-'is_homepage' => $this->faker->boolean(80),
+            'uuid' => $this->faker->uuid,
+            'title' => $this->faker->sentence(4),
+            'slug' => $this->faker->slug,
+            'summary' => $this->faker->text,
+            'content' => $this->faker->paragraphs(3, true),
+            'is_homepage' => $this->faker->boolean,
         ];
     }
 }

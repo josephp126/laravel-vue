@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Address;
+use App\Models\State;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class AddressFactory extends Factory
@@ -22,10 +23,18 @@ class AddressFactory extends Factory
     public function definition()
     {
         return [
-            'address'  => $this->faker->streetAddress,
+            'address'  => $this->faker->word,
             'zip'      => $this->faker->postcode,
-            'state_id' => $this->faker->numberBetween(1, 50),
             'city'     => $this->faker->city,
+            'state_id' => function () {
+                $state = State::inRandomOrder()->first();
+
+                if ($state) {
+                    return $state;
+                }
+
+                return State::factory()->create();
+            },
         ];
     }
 }

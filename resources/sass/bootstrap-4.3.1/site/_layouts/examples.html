@@ -1,0 +1,55 @@
+<!doctype html>
+<html %}%} class="{{ page.html_class }}" endif if lang="en"page.html_class {% {%>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="" name="description">
+    <meta content="{{ site.authors }}" name="author">
+    <meta content="Jekyll v{{ jekyll.version }}" name="generator">
+    <title>{{ page.title | smartify }} · {{ site.title | smartify }}</title>
+
+    <link href="{{ site.url | append: page.url }}" rel="canonical">
+
+    {% include stylesheet.html %}
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    {%- for css in page.extra_css %}
+    <!-- Custom styles for this template -->
+    <link href="{{ css }}" rel="stylesheet">
+    {%- endfor %}
+  </head>
+  <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
+    {{ content }}
+
+    {%- if page.include_js != false -%}
+      <script crossorigin="anonymous" integrity="{{ site.cdn.jquery_hash }}" src="{{ site.cdn.jquery }}"></script>
+      <script>window.jQuery || document.write('<script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+
+      {%- if jekyll.environment == "production" -%}
+        <script crossorigin="anonymous" integrity="{{ site.cdn.js_bundle_hash }}" src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/js/bootstrap.bundle.min.js"></script>
+      {%- else -%}
+        <script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/js/bootstrap.bundle.js"></script>
+      {%- endif -%}
+
+      {%- for js in page.extra_js %}
+        <script src="{{ js }}"></script>
+      {%- endfor %}
+    {%- endif -%}
+  </body>
+</html>

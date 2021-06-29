@@ -2,12 +2,9 @@
 
 namespace Tests\Feature;
 
-use App\Models\Member;
-use App\Models\Request;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
-use Laravel\Passport\Passport;
 use Tests\TestCase;
 
 /**
@@ -22,7 +19,7 @@ class RequestImageTest extends TestCase
     /**
      * @var User
      */
-//    private $user;
+    private $user;
 
     /**
      * A basic feature test example.
@@ -83,6 +80,5 @@ class RequestImageTest extends TestCase
         // this will store a new user with random attributes in the database.
         /* @var User $user */
         $this->user   = User::factory(['password' => Hash::make('password')])->create();
-        $this->member = Member::factory()->hasAddresses(1, ['is_primary' => true])->create();
     }
 }

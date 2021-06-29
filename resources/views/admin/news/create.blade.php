@@ -1,7 +1,7 @@
-@extends('layouts.main-admin')
+@extends('admin.layouts.main-admin')
 
 @section('content')
-    <div class="container mt-30">
+    <div class="container mt-3">
         {!! Form::open(['route' => 'admin.news.store', 'method' => 'post', 'files' => true]) !!}
 
         @include('admin.news.fields')

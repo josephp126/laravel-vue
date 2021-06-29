@@ -1,0 +1,18 @@
+<!-- Twitter -->
+<meta content="{% if page.title %}summary{% else %}summary_large_image{% endif %}" name="twitter:card">
+<meta content="@{{ site.twitter }}" name="twitter:site">
+<meta content="@{{ site.twitter }}" name="twitter:creator">
+<meta content="{{ page.title | default: site.title | smartify }}" name="twitter:title">
+<meta content="{{ page.description | default: site.description | smartify }}" name="twitter:description">
+<meta content="{% if page.title %}{{ site.url | append: site.social_logo_path }}{% else %}{{ site.url | append: site.social_image_path }}{% endif %}" name="twitter:image">
+
+<!-- Facebook -->
+<meta content="{{ site.url | append: page.url }}" property="og:url">
+<meta content="{{ page.title | default: site.title | smartify }}" property="og:title">
+<meta content="{{ page.description | default: site.description | smartify }}" property="og:description">
+<meta content="website" property="og:type">
+<meta content="{{ site.url | replace: 'https://', 'http://' | append: site.social_image_path }}" property="og:image">
+<meta content="{{ site.url | append: site.social_image_path }}" property="og:image:secure_url">
+<meta content="image/png" property="og:image:type">
+<meta content="1200" property="og:image:width">
+<meta content="630" property="og:image:height">

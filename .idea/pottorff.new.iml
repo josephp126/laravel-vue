@@ -128,11 +128,17 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/container" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-client" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/react/promise" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/joetannenbaum/obfuscate" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/silber/bouncer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravelcollective/html" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/intervention/image" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/deprecations" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/telescope" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/zach2825/laravel-ftp-deployment" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/jasonmccreary/laravel-test-assertions" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/venturecraft/revisionable" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laravel-shift/blueprint" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laravel-shift/faker-registry" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/yaml" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

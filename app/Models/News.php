@@ -2,20 +2,20 @@
 
 namespace App\Models;
 
-use App\Traits\Uuidable;
+use Arr;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Support\Arr;
+use Str;
+use Venturecraft\Revisionable\RevisionableTrait;
 
 /**
- *
- *
- * @property bool is_homepage
+ * @property mixed uuid
+ * @property mixed image
  */
 class News extends Model
 {
-    use HasFactory, SoftDeletes, Uuidable;
+    use HasFactory, SoftDeletes, RevisionableTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -23,16 +23,39 @@ class News extends Model
      * @var array
      */
     protected $fillable = [
-        'mime_type',
+        'uuid',
+        'title',
+        'slug',
         'summary',
         'content',
-        'title',
-        'code_number',
         'is_homepage',
-        'hash',
     ];
 
-    protected $casts = ['is_homepage' => 'bool'];
+    protected $revisionEnabled = true;
+    protected $revisionCleanup = true; //Remove old revisions (works only when used with $historyLimit)
+    protected $historyLimit = 500;
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'id'          => 'integer',
+        'is_homepage' => 'boolean',
+    ];
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(
+            function ($model) {
+                $model->setAttribute('uuid', (string)Str::uuid());
+                $model->setAttribute('slug', Str::slug($model->title));
+            }
+        );
+    }
 
     public function image()
     {
@@ -47,5 +70,10 @@ class News extends Model
     public function getImageUrlAttribute()
     {
         return Arr::get($this->image, 'url', url('images/broken.png'));
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
     }
 }

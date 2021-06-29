@@ -25,7 +25,7 @@ class NewsRequest extends FormRequest
     {
         return [
             'title'       => 'required',
-            'summary'     => 'required',
+            'summary'     => '',
             'content'     => 'required',
             'is_homepage' => 'boolean',
             'file'        => 'image',

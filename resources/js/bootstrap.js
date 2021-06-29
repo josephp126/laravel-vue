@@ -8,9 +8,16 @@ window._ = require('lodash');
 
 try {
     window.Popper = require('popper.js').default;
+    window.$ = window.jQuery = require('jquery');
+
+    require('bootstrap');
+} catch (e) {}
+
+try {
+    require('jquery-appear-original');
 } catch (e) {
-    alert("error1");
-    console.log({e});
+    // alert("error1");
+    console.log({ e });
 }
 
 /**
@@ -39,3 +46,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+// require('./tinymce');
+require('../../public/js/plugins');
+require('../../public/js/common');

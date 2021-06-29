@@ -11,7 +11,11 @@ class HomeNewsList extends Component
 
     public function mount()
     {
-        $this->articles = News::orderBy('is_homepage')->orderBy('created_at', 'desc')->limit(2)->get();
+        $this->articles = News::with('image')
+            ->where('is_homepage', true)
+            ->orderBy('updated_at', 'desc')
+            ->limit(3)
+            ->get();
     }
 
     public function render()

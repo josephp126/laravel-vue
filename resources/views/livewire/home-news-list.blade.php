@@ -1,9 +1,16 @@
 <div class="article">
-    <h3 class="text-primary">POTTORFF NEWS</h3>
+    <div class="custom-section-title mb-3">
+        <img src="{{url('images/icons/News.png')}}" alt="News" class="heading-image" />
+        POTTORFF NEWS
+    </div>
     @forelse($articles as $article)
-        <img src="{{$article->imageUrl}}" alt="image" height="75" />
-        <a href="{{$article->link}}" class="title">{{$article->title}}</a>
-        <div class="summary">{!! $article->summary !!}</div>
+        <div class="d-flex mb-3">
+            <img src="{{$article->imageUrl}}" class="article-image align-self-start flex-grow-0" alt="image" />
+            <div class="article-text">
+                <a href="{{route('news.show', $article)}}" class="custom-title">{{$article->title}}</a>
+                <div class="summary mt-3">{!! $article->summary !!}</div>
+            </div>
+        </div>
     @empty
         No news today
     @endforelse

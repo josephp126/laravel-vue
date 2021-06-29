@@ -1,9 +1,13 @@
 # Pottorff
 
+
+
 ## Links
 
+* https://laravelcollective.com/docs/6.x/html
 * Components - https://laravel-livewire.com/docs/2.x/
 * Permissions and roles - https://github.com/JosephSilber/bouncer
+* theme demo -  http://www.themepush.com/demo/calypso/index.html
 
 ### Development
 
@@ -11,9 +15,14 @@
 * ide helper - https://github.com/barryvdh/laravel-ide-helper
 * dev daemon - https://pm2.keymetrics.io/
 
+Sail is a pre-configured docker
+
+* https://laravel.com/docs/8.x/sail#installing-sail-into-existing-applications
+
 ## Theme files and documentation
 
 * https://www.dropbox.com/sh/169khc3kl7bl3uf/AADX6XUdC0CsScMxU5QZciJNa?dl=0
+* https://app.avocode.com/view/83950cba4cfa43db95bcbdd86a246b58/_/inspect
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 

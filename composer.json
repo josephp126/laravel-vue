@@ -10,25 +10,29 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "intervention/image": "^2.5",
-        "joetannenbaum/obfuscate": "9999999-dev",
+        "jasonmccreary/laravel-test-assertions": "^1.1",
         "laravel/framework": "^8.12",
+        "laravel/telescope": "^4.4",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.2",
         "laravelcollective/html": "^6.2",
         "livewire/livewire": "^2.4",
-        "silber/bouncer": "v1.0.0-rc.9"
+        "silber/bouncer": "v1.0.0-rc.10",
+        "venturecraft/revisionable": "^1.38",
+        "zach2825/laravel-ftp-deployment": "^0.0.3"
     },
     "require-dev": {
-        "roave/security-advisories": "dev-latest",
         "barryvdh/laravel-debugbar": "^3.5",
         "barryvdh/laravel-ide-helper": "^2.9",
         "brianium/paratest": "^6.2",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
-        "laravel/sail": "^1.0.1",
+        "laravel-shift/blueprint": "^1.24",
+        "laravel/sail": "^1.4",
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^5.0",
-        "phpunit/phpunit": "^9.3.3"
+        "phpunit/phpunit": "^9.3.3",
+        "roave/security-advisories": "dev-latest"
     },
     "autoload": {
         "psr-4": {

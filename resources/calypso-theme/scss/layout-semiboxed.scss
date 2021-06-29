@@ -12,15 +12,13 @@ body {
 
 .wrapsemibox {
     max-width: 1200px;
-    margin: 0px auto;
+    margin: -40px auto -100px;
     background: #fff;
-    margin-top: -10px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+    //box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
     z-index: 1000;
     position: relative;
-    margin-bottom: -100px;
-    padding-bottom: 40px;
-    border-bottom: medium double #ccc;
+    //padding-bottom: 40px;
+    //border-bottom: medium double #ccc;
     padding-top: 0;
 }
 

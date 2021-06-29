@@ -8,12 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Storage;
 
-/**
- *
- **/
 class Image extends Model
 {
-    use HasFactory, SoftDeletes, Uuidable;
+    use HasFactory, Uuidable, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -21,19 +18,28 @@ class Image extends Model
      * @var array
      */
     protected $fillable = [
-        'path',
+        'uuid',
+        'mime_type',
         'title',
         'code_number',
         'hash',
-        'mime_type',
     ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'id' => 'integer',
+    ];
+
+    protected $appends = ['url'];
 
     public function imageable()
     {
         return $this->morphTo();
     }
-
-    protected $appends = ['url'];
 
     public function getFileNameAttribute()
     {
@@ -58,7 +64,7 @@ class Image extends Model
     public function getUrlAttribute()
     {
         if (!$this->fileExists) {
-            return url('broken.png');
+            return url('/images/broken.png');
         }
 
         return route(

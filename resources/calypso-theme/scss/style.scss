@@ -1,7 +1,7 @@
 
 body {
-    font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
     line-height: 22px;
     color: #777;
     overflow-y: hidden;
@@ -65,7 +65,7 @@ strong, b {
     color: #ccc;
     padding-top: 15px;
     padding-bottom: 15px;
-    margin-bottom: 75px;
+    //margin-bottom: 75px;
 }
 
 .toparea a {
@@ -143,7 +143,7 @@ strong, b {
 }
 
 .navbar-fixed-top {
-    top: 47px;
+    //top: 47px;
 }
 
 .navbar > .container .navbar-brand {
@@ -152,10 +152,11 @@ strong, b {
 
 .navbar-nav > li {
     margin-left: 2px;
+    margin-top: -10px;
 }
 
 .navbar-nav > li > a {
-    color: #555;
+    color: #fff;
     border-radius: 0px;
     margin-top: -26px;
     padding-top: 26px;
@@ -165,7 +166,7 @@ strong, b {
     text-transform: uppercase;
     font-weight: 700;
     font-family: Roboto;
-    font-size: 13px;
+    font-size: 14px;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
@@ -179,21 +180,21 @@ strong, b {
     border-radius: 3px 3px 0 0 !Important;
 }
 
-.navbar-nav > li.active > a:before, .navbar-nav > li > a:hover:before, .navbar-nav > li > a:focus:before, .extra-nav-class a.dropdown-toggle:before {
-    content: "";
-    width: 0;
-    height: 0;
-    border-bottom: 6px solid #f54828;
-    border-right: 6px solid transparent;
-    position: absolute;
-    top: 0px;
-    right: -4px;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-}
+//.navbar-nav > li.active > a:before, .navbar-nav > li > a:hover:before, .navbar-nav > li > a:focus:before, .extra-nav-class a.dropdown-toggle:before {
+//    content: "";
+//    width: 0;
+//    height: 0;
+//    border-bottom: 6px solid #f54828;
+//    border-right: 6px solid transparent;
+//    position: absolute;
+//    top: 0px;
+//    right: -4px;
+//    -webkit-transition: all 0.2s ease-in-out;
+//    -moz-transition: all 0.2s ease-in-out;
+//    -o-transition: all 0.2s ease-in-out;
+//    -ms-transition: all 0.2s ease-in-out;
+//    transition: all 0.2s ease-in-out;
+//}
 
 .navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
     border-radius: 3px 3px 0 0 !Important;
@@ -202,7 +203,7 @@ strong, b {
 }
 
 .navbar-nav > li > .dropdown-menu {
-    margin: 20px 0px 0 0px !Important;
+    margin: 0 !important;
     background-color: #444;
     border: 0;
     -webkit-border-radius: 0;
@@ -213,7 +214,7 @@ strong, b {
     box-shadow: none;
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
-    font-size: 13px;
+    font-size: 14px;
     padding-top: 0;
     padding-bottom: 0;
     min-width: 165px;
@@ -226,11 +227,11 @@ strong, b {
     box-shadow: none;
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
-    font-size: 13px;
+    font-size: 14px;
     padding-top: 0;
     padding-bottom: 0;
     border: 0px;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .dropdown-menu > li > a {
@@ -315,6 +316,10 @@ strong, b {
     left: 10px;
     top: 11px;
     left: -6px;
+}
+
+.wowmenu{
+    //top: 53px;
 }
 
 .wowmenu.tiny {
@@ -520,18 +525,25 @@ strong, b {
     font-size: 19px;
 }
 
+.carousel-container {
+    padding-left: 80px;
+    padding-right: 80px;
+    height: 100%;
+}
+
 .carouselText1 {
-    font-weight: 800;
-    margin-top: 50px;
+    font-weight: 600;
+    margin-top: 84px;
     margin-bottom: 20px;
-    font-size: 25px;
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
+    font-size: 31px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #221f20;
+    padding: 22px 20px;
     display: inline-block;
     text-transform: uppercase;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 0 rgb(0 0 0 / 20%);
     border-radius: 0;
+    letter-spacing: 0.2px;
 }
 
 .carouselText2 {
@@ -588,13 +600,18 @@ strong, b {
 }
 
 .carousel .item {
-    padding: 30px 0px;
+    padding: 0px;
     height: 390px;
     overflow: hidden;
     -webkit-background-size: cover !Important;
     -moz-background-size: cover !Important;
     -o-background-size: cover !Important;
     background-size: cover !Important;
+}
+
+.carousel .carousel-item {
+    height: 600px;
+    background-size: cover !important;
 }
 
 .carousel {
@@ -616,6 +633,7 @@ strong, b {
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
     display: block;
     max-width: 100%;
+    object-fit: cover;
     height: auto;
     line-height: 1;
 }
@@ -847,7 +865,7 @@ strong, b {
 }
 
 .carousel-control.left, .carousel-control.right {
-    margin-top: 11%;
+    margin-top: 10%;
 }
 
 /*--------------------------------------------------	CAROUSEL FEATURED WORK---------------------------------------------------*/
@@ -887,7 +905,7 @@ strong, b {
 
 .service-box p {
     font-family: Open Sans;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 22px;
 }
 
@@ -1131,7 +1149,7 @@ h1.small {
 }
 
 .bgarea {
-    background: url(../img/demo/1.jpg);
+    background: url('/images/Louver Selection Tool Area/Blue Louver.svg');
     position: relative;
     -webkit-background-size: cover !important;
     -moz-background-size: cover !important;
@@ -1333,11 +1351,11 @@ h1.small {
 
 .footer {
     background: #222 url(../img/bgfooter.jpg);
-    color: #888;
+    color: #fff;
     margin-top: 50px;
     padding-top: 50px;
     padding-bottom: 30px;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 20px;
     -webkit-background-size: cover !Important;
     -moz-background-size: cover !Important;
@@ -1415,7 +1433,7 @@ h1.small {
     background: #333;
     text-shadow: none;
     padding: 6px 12px;
-    font-size: 13px;
+    font-size: 14px;
     color: #888;
 }
 
@@ -2143,7 +2161,7 @@ ul.social-icons li a:hover {
 
     margin-top: 30px;
     margin-bottom: 0;
-    line-height: 0;
+    line-height: 45px;
     font-size: 35px;
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
 }
@@ -2161,7 +2179,7 @@ ul.social-icons li a:hover {
 /*--------------------------------------------------	PAGE HEADER STYLES---------------------------------------------------*/
 .thumbnail {
     border: 1px solid #f3f3f3;
-    font-size: 13px;
+    font-size: 14px;
     background: #fff;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
@@ -2272,7 +2290,7 @@ ul.social-icons li a:hover {
     color: #444;
     background: #F8F8F8;
     font-weight: 300;
-    font-size: 13px;
+    font-size: 14px;
     padding: 15px 25px;
     margin-right: 0px;
     -webkit-border-radius: 0px;
@@ -2331,7 +2349,7 @@ blockquote {
 }
 
 blockquote p {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 22px;
     font-weight: 400;
 }
@@ -2729,6 +2747,15 @@ ul#skill {
     background: #fff;
 }
 
+.list_carousel .col-3 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.list_carousel .boxcontainer p {
+    font-weight: 500 !important;
+}
+
 .grayarea .list_carousel .carousel_nav {
     background: #f9f9f9;
 }
@@ -2856,7 +2883,7 @@ a.prev span, a.next span {
 }
 
 .featured-projects-content h1 {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1;
     font-weight: bold;
 }
@@ -3392,7 +3419,7 @@ a.prev span, a.next span {
     border: 1px solid #ededed;
     border-bottom: double medium #ececec;
     background: #fff;
-    font-size: 13px;
+    font-size: 14px;
     text-align: center;
     transition: border 500ms ease-out;
     -webkit-transition: border 500ms ease-out;
@@ -3413,7 +3440,7 @@ a.prev span, a.next span {
 }
 
 .boxcontainer h1 {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1;
     padding-left: 10px;
     padding-right: 10px;
@@ -3432,6 +3459,8 @@ a.prev span, a.next span {
 .boxcontainer img {
     position: relative;
     max-width: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .recent-projects-home .boxcontainer img {
@@ -3641,7 +3670,7 @@ h1.pagenotfound {
 }
 
 .faqs dt {
-    font-size: 13px;
+    font-size: 14px;
     background: url(../img/plust.png) 0 4px no-repeat;
     padding: 3px 0 10px 30px;
     position: relative;
@@ -9338,9 +9367,6 @@ html, body {
     opacity: 1 !important;
 }
 
-.fade {
-    opacity: 0;
-}
 
 html.ie9 .fade {
     opacity: 1 !important;
@@ -9881,7 +9907,7 @@ body {
 
 /* Accordion Simple 1 (Valentiono)================================================== */
 #accordion-container {
-    font-size: 13px;
+    font-size: 14px;
     background: #ffffff;
 }
 
@@ -9987,7 +10013,7 @@ h2.resp-accordion {
 }
 
 h2.resp-accordion {
-    font-size: 13px;
+    font-size: 14px;
     border: 1px solid #ebebeb;
     border-top: 0px solid #ebebeb;
     margin: 0px;
@@ -11190,7 +11216,7 @@ Animated Boxes
 
 .ca-sub {
     text-align: center;
-    font-size: 13px;
+    font-size: 14px;
     color: #333;
     line-height: 24px;
     opacity: 0.8;
@@ -11300,4 +11326,55 @@ ul.ca-menu {
         -ms-animation: none !important;
         animation: none !important;
     }
+}
+img {
+    visibility: visible !important;
+}
+.carousel-indicators li, .carousel-indicators .active {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.carousel-control-prev, .carousel-control-next {
+    width: 10%;
+}
+@media (max-width: 1199px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0.2rem;
+        padding-left: 0.2rem;
+    }
+}
+.active > .nav-link {
+    color: #fff !important;
+}
+.text-primary {
+    color:#42659f !important
+}
+.text-primary:hover {
+    color:#426590 !important
+}
+.text-black {
+    color: #000 !important;
+}
+.btn-primary {
+    background-color:#42659f !important
+}
+.btn-primary:hover {
+    background-color:#426590 !important
+}
+.learn-more-title {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.learn-more {
+ position: relative;
+}
+.learn-more button {
+    top: 100px;
+    position: absolute;
+    right: 30px;
+    width: 120px;
+}
+.select-louvers-based h4, .select-louvers-based li {
+    font-weight: bold;
 }

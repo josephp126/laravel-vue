@@ -36,22 +36,20 @@ class SaveImageJob
         $relate = $this->relate;
 
         if ($file) {
-            $image = $relate->image()->create(
+            $image = $relate->image()->updateOrCreate(
                 [
                     'mime_type'   => $file->getMimeType(),
-                    'title'       => $file->getFilename(),
+                    'title'       => $file->getClientOriginalName(),
                     'code_number' => 1,
                     'hash'        => $file->hashName(),
                 ]
             );
 
-            $newFile = Imager::make($file)->resize(
-                200,
-                null,
-                function ($c) {
-                    $c->aspectRatio();
-                }
-            )->encode();
+            if ($file->getMimeType() == 'image/svg+xml') {
+                $newFile = $file->getContent();
+            } else {
+                $newFile = Imager::make($file)->encode();
+            }
 
             Storage::disk('images')->put($image->hash, (string)$newFile);
         }

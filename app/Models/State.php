@@ -6,9 +6,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- *
- **/
 class State extends Model
 {
     use HasFactory, SoftDeletes;
@@ -19,6 +16,24 @@ class State extends Model
      * @var array
      */
     protected $fillable = [
-        //TODO :: add columns here
+        'name',
+        'standard_abbreviation',
+        'postal_abbreviation',
+        'capital_city',
+        'country_id',
     ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'id' => 'integer',
+    ];
+
+    public function country()
+    {
+        return $this->belongsTo(Country::class);
+    }
 }
