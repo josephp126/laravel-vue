@@ -2,7 +2,7 @@
 <nav class="main-top-nav navbar navbar-expand-lg navbar-light bg-light m-0 p-0" role="navigation">
     <div class="container">
         <a class="navbar-brand logo-nav" href="/">
-            <img src="/images/Pottorff-Logo-Black.png" alt="logo">
+            <img src="/images/Pottorff-Logo-Black.png"  alt="logo">
         </a>
         <ul id="nav" class="nav navbar-nav float-right">
             <li class="{{ request()->is('admin') ? 'active' : '' }} nav-item"><a href="/admin" class="nav-link">HOME</a>
