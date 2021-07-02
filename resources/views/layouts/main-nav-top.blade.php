@@ -1,8 +1,16 @@
 <!-- NAV ================================================== -->
+<style>
+
+    /*@media only screen and (max-width: 768px) {*/
+        .logo-black{
+            padding-bottom: 10px!important;
+        }
+    /*}*/
+</style>
 <nav class="main-top-nav navbar navbar-expand-lg navbar-light bg-light m-0 p-0" role="navigation">
     <div class="container container-lg">
         <a class="navbar-brand logo-nav" href="/">
-            <img src="/images/Pottorff-Logo-Black.png" alt="{{config('app.name')}}">
+            <img src="/images/Pottorff-Logo-Black.png" class="logo-black" alt="{{config('app.name')}}">
         </a>
 
         <ul id="nav" class="nav navbar-nav">

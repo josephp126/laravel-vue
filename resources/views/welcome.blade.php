@@ -74,29 +74,20 @@
             <div class="container mt-3">
                 <div class="row">
                     <div class="col-lg-8">
-                        <ul class="d-flex list-unstyled bragging-logos">
-                            <li>
-                                <img src="/images/icons/Revit Logo.png" alt="News" />
-                            </li>
-                            <li>
-                                <img src="/images/icons/News.png" alt="News" />
-                            </li>
-                            <li>
-                                <img src="/images/icons/Case Studies.png" alt="Case" />
-                            </li>
-                            <li>
-                                <img src="/images/icons/CSI.png" alt="CSI" />
-                            </li>
-                            <li>
-                                <img src="/images/icons/Installation.png" alt="Installation" />
-                            </li>
-                            <li>
-                                <img src="/images/icons/Educate.png" alt="Educate" />
-                            </li>
-                            <li>
-                                <img src="/images/icons/warranty.png" alt="Waranty" />
-                            </li>
-                        </ul>
+                                <img src="/images/icons/Revit Logo.png" alt="News" style="height: 55px" />
+
+                                <img src="/images/icons/News.png" alt="News" style="height: 55px" />
+
+                                <img src="/images/icons/Case Studies.png" alt="Case" style="height: 55px" />
+
+                                <img src="/images/icons/CSI.png" alt="CSI" style="height: 55px" />
+
+                                <img src="/images/icons/Installation.png" alt="Installation" style="height: 55px" />
+
+                                <img src="/images/icons/Educate.png" alt="Educate" style="height: 55px" />
+
+                                <img src="/images/icons/warranty.png" alt="Waranty" style="height: 55px" />
+
                     </div>
                     <div class="col-lg-4">
                         <ul class="d-flex list-unstyled bragging-logos">

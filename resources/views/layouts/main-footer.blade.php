@@ -2,11 +2,11 @@
 <section>
     <div class="footer">
         <div class="container animated fadeInUpNow notransition">
-            <h1 class="footerbrand">
-                <img style="height: 30px;" src="{{url('/images/Pottorff Logo White.png')}}" alt="POTTORFF" />
-            </h1>
             <div class="row">
                 <div class="col-md-3">
+                    <h1 class="footerbrand">
+                        <img style="height: 30px;" src="{{url('/images/Pottorff Logo White.png')}}" alt="POTTORFF" />
+                    </h1>
                     <p class="mt-2 mb-2">The Preferred Solution for Life Safety and Air Control Products</p>
                     <p class="mt-4 mb-2">Air Control Damper</p>
                     <p class="mt-2 mb-2">Ceiling Radiation Dampers</p>
@@ -73,12 +73,12 @@
     <div class="copyright">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" style="max-height: 50px">
                     <p class="pull-left">
                         &copy; Copyright {{date('Y')}} {{config('app.name')}}
                     </p>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8" style="max-height: 50px">
                     <ul class="footermenu pull-right">
                         <li><a href="{{route('home')}}">Home</a></li>
                         <li><a href="#">Work</a></li>

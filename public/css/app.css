@@ -604,7 +604,7 @@ pre code {
 
 @media (min-width: 992px) {
   .container {
-    max-width: 960px;
+    max-width: 1000px;
   }
 }
 
@@ -20465,7 +20465,7 @@ img {
   }
 }
 
-@media screen and (min-width: 600px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
   #c-slide {
     margin-top: 127px;
   }
@@ -20520,7 +20520,7 @@ img {
   opacity: 1 !important;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .landingpage-button strong {
     margin-left: 0;
     font-size: 14px;
@@ -21257,6 +21257,11 @@ blockquote {
   height: 55px;
 }
 
+@media only screen and (max-width: 768px) {
+    .logo-black{
+        padding-bottom: 10px!important;
+    }
+}
 .logo-nav img {
   max-width: 300px !important;
   height: 35px;

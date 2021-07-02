@@ -19,7 +19,7 @@
                     @endif
 
                     @if($slide->fgLgImageUrl)
-                        <img src="{!! $slide->fgLgImageUrl !!}" alt="Slide lg" class="d-none d-lg-block animated fadeInLeft" style="height: 100%; margin: 0 auto" />
+                        <img src="{!! $slide->fgLgImageUrl !!}" alt="Slide lg" class="d-none d-lg-block animated fadeInLeft" style="height: 90%; margin: 0 auto" />
                     @endif
 
                 </div>
