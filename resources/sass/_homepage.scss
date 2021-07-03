@@ -8,10 +8,6 @@
     }
 
     #carousel-item-1{
-        .carousel-container {
-            padding-left: 100px;
-            padding-right: 100px;
-        }
 
         .left {
             display: flex;
@@ -202,5 +198,11 @@
         img {
             height: 318px;
         }
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 975px;
     }
 }

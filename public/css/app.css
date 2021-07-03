@@ -560,7 +560,7 @@ pre code {
 }
 @media (min-width: 992px) {
   .container {
-    max-width: 1100px;
+    max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
@@ -9765,7 +9765,7 @@ h3 {
 }
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 22px;
   color: #777;
   overflow-y: hidden;
@@ -9919,7 +9919,7 @@ strong, b {
   text-transform: uppercase;
   font-weight: 700;
   font-family: Roboto;
-  font-size: 14px;
+  font-size: 12px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -10241,8 +10241,8 @@ strong, b {
 }
 
 .carousel-container {
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 30px;
+  padding-right: 30px;
   height: 100%;
 }
 
@@ -18783,10 +18783,6 @@ img {
 }
 
 @media screen and (max-width: 992px) {
-    .navbar{
-        height: 95px!important;
-        padding-bottom: 5px!important;
-    }
   .landingpage-button strong {
     margin-left: 0;
     font-size: 14px;
@@ -19206,6 +19202,11 @@ blockquote {
   z-index: 10000;
   height: 85px;
 }
+@media only screen and (max-width: 992px) {
+  .navbar {
+    height: 95px;
+  }
+}
 .main-top-nav .navbar-nav > li > a {
   padding-top: 30px;
   padding-bottom: 25px;
@@ -19262,10 +19263,6 @@ blockquote {
   top: 50%;
   transform: translate(0, -40px);
   margin-top: 0;
-}
-#carousel #carousel-item-1 .carousel-container {
-  padding-left: 100px;
-  padding-right: 100px;
 }
 #carousel #carousel-item-1 .left {
   display: flex;
@@ -19424,6 +19421,11 @@ blockquote {
   height: 318px;
 }
 
+@media (min-width: 992px) {
+  .container {
+    max-width: 975px;
+  }
+}
 .footer p {
   margin-bottom: 0.4em !important;
 }

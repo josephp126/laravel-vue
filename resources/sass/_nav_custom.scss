@@ -4,7 +4,6 @@
         background: $primary;
     }
 }
-
 .navbar {
     z-index: 10000;
     height: 85px;
@@ -14,6 +13,12 @@
             @extend .text-white;
             @extend .bg-dark;
         }
+    }
+}
+@media only screen and (max-width: 992px) {
+
+    .navbar {
+        height: 95px;
     }
 }
 
