@@ -3,8 +3,8 @@
     <div class="footer">
         <div class="container animated fadeInUpNow notransition">
             <div class="row">
-                <div class="col-md-3">
-                    <h1 class="footerbrand">
+                <div class="col-md-6 col-lg-3">
+                    <h1 class="footerbrand" style="margin-top: 0px;">
                         <img style="height: 30px;" src="{{url('/images/Pottorff Logo White.png')}}" alt="POTTORFF" />
                     </h1>
                     <p class="mt-2 mb-2">The Preferred Solution for Life Safety and Air Control Products</p>
@@ -13,7 +13,7 @@
                     <p class="mt-2 mb-2">UL Rated Fire/Smoke Dampers</p>
                     <p class="mt-2 mb-2">Louvers and Penthouses</p>
                 </div>
-                <div class="col-md-3 text-white">
+                <div class="col-md-6 col-lg-3 text-white">
                     <p class="mt-2 mb-2">About</p>
                     <p class="mt-2 mb-2"><a href="#">Quick Reference</a></p>
                     <p class="mt-2 mb-2"><a href="#">Louver Selection Tool</a></p>
@@ -21,7 +21,7 @@
                     <p class="mt-2 mb-2"><a href="#">Training</a></p>
                     <p class="mt-2 mb-2"><a href="{{route('repfinder.index')}}">Repfinder</a></p>
                 </div>
-                <div class="col-md-3" id="footer-find-us" data-label="find us">
+                <div class="col-md-6 col-lg-3" id="footer-find-us" data-label="find us">
                     <h1 class="title"><span class="colortext">F</span>ind <span class="font100">Us</span></h1>
                     <div class="footermap">
                         <div><strong>Address: </strong> {{config('app.contact.address')}}</div>
@@ -42,7 +42,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6 col-lg-3">
                     <h1 class="title"><span class="colortext">Q</span>uick <span class="font100">Message</span>
                     </h1>
                     <div class="done">
