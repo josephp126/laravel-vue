@@ -11,7 +11,7 @@
                         {!! Form::open(['route' => 'login', 'method' => 'post']) !!}
                         <div class="row">
                             <div class="col-md-12">
-                                {!! Form::basicInput('email', null, ['label' => 'Email', 'required' => true, 'type' => 'email']) !!}
+                                {!! Form::basicInput('email', null, ['label' => 'Email', 'required' => true, 'type' => 'email', 'autofocus' => true]) !!}
                             </div>
                             <div class="col-md-12">
                                 {!! Form::basicInput('password', null, ['label' => 'Password', 'required' => true, 'type' => 'password']) !!}
