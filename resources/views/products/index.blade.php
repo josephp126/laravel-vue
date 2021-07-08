@@ -8,8 +8,8 @@
 
 @section('content')
     <div class="wrapsemibox">
-        <div class="content p-3">
-        {{-- Content HERE --}}
+        <div class="content mt-5 p-3">
+            @livewire('products.product-table')
         </div>
     </div>
 @endsection

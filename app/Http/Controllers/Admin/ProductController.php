@@ -6,25 +6,28 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\ProductStoreRequest;
 use App\Http\Requests\Admin\ProductUpdateRequest;
 use App\Models\Product;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
+
+//use Illuminate\Http\Response;
 
 class ProductController extends Controller
 {
     /**
      * @param Request $request
-     * @return Response
+     * @return Application|Factory|View
      */
     public function index(Request $request)
     {
-        $products = Product::paginate(products)->get();
-
-        return view('products.index', compact('products'));
+        return view('products.index');
     }
 
     /**
      * @param Request $request
-     * @return Response
+     * @return Application|Factory|View
      */
     public function create(Request $request)
     {
@@ -33,7 +36,7 @@ class ProductController extends Controller
 
     /**
      * @param ProductStoreRequest $request
-     * @return Response
+     * @return RedirectResponse
      */
     public function store(ProductStoreRequest $request)
     {
@@ -47,9 +50,9 @@ class ProductController extends Controller
     /**
      * @param Request $request
      * @param Product $product
-     * @return Response
+     * @return Application|Factory|View
      */
-    public function show(Request $request, Product $product)
+    public function show(Product $product)
     {
         return view('product.show', compact('product'));
     }
@@ -57,9 +60,9 @@ class ProductController extends Controller
     /**
      * @param Request $request
      * @param Product $product
-     * @return Response
+     * @return Application|Factory|View
      */
-    public function edit(Request $request, Product $product)
+    public function edit(Product $product)
     {
         return view('product.edit', compact('product'));
     }
@@ -67,7 +70,7 @@ class ProductController extends Controller
     /**
      * @param ProductUpdateRequest $request
      * @param Product              $product
-     * @return Response
+     * @return RedirectResponse
      */
     public function update(ProductUpdateRequest $request, Product $product)
     {
@@ -81,9 +84,9 @@ class ProductController extends Controller
     /**
      * @param Request $request
      * @param Product $product
-     * @return Response
+     * @return RedirectResponse
      */
-    public function destroy(Request $request, Product $product)
+    public function destroy(Product $product)
     {
         $product->delete();
 

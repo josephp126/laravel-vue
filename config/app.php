@@ -15,6 +15,11 @@ return [
 
     'name' => env('APP_NAME', 'Pottorff'),
 
+    'formats' => [
+        'table_date'     => 'm/d/Y',
+        'table_datetime' => 'm/d/Y @ h:m A',
+    ],
+
     'contact' => [
         'phone'   => env('CONTACT_PHONE', '(817) 509-2300'),
         'fax'     => env('CONTACT_FAX', '(817) 318-3133'),

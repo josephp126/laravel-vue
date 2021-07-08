@@ -4,7 +4,7 @@ use App\Http\Controllers\Admin\CarouselController;
 use App\Http\Controllers\Admin\CategoriesController;
 use App\Http\Controllers\Admin\CommandsController;
 use App\Http\Controllers\Admin\NewsController;
-use App\Http\Controllers\Admin\ProductsController;
+use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Api\CarouselSlidesController;
@@ -30,7 +30,7 @@ Route::resources(
         'news'     => NewsController::class,
         'category' => CategoriesController::class,
         'slider'   => SliderController::class,
-        'product'  => ProductsController::class,
+        'product'  => ProductController::class,
         'user'     => UserController::class,
         'carousel' => CarouselController::class,
     ]

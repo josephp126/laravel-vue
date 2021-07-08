@@ -25,11 +25,11 @@ class ProductStoreRequest extends FormRequest
     {
         return [
             'description' => ['required', 'string'],
-            'link' => ['required', 'string'],
-            'code' => ['required', 'string'],
-            'more_info' => ['required', 'string'],
-            'subtitle' => ['required', 'string'],
-            'title' => ['required', 'string'],
+            'link'        => ['required', 'string'],
+            'code'        => ['required', 'string'],
+            'more_info'   => ['required', 'string'],
+            'subtitle'    => ['required', 'string'],
+            'title'       => ['required', 'string'],
         ];
     }
 }

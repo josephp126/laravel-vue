@@ -9,7 +9,7 @@
 @section('content')
     <div class="wrapsemibox">
         <div class="content p-3">
-        {{-- Content HERE --}}
+        @livewire('products.product-create')
         </div>
     </div>
 @endsection

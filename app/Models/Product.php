@@ -34,17 +34,17 @@ class Product extends Model
     ];
 
 
-    public function productAttributes()
+    public function attributes()
     {
         return $this->hasMany(ProductAttribute::class);
     }
 
-    public function productCategories()
+    public function categories()
     {
         return $this->hasMany(ProductCategory::class);
     }
 
-    public function productImages()
+    public function images()
     {
         return $this->hasMany(ProductImage::class);
     }
