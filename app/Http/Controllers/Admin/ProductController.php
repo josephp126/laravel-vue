@@ -22,7 +22,7 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-        return view('products.index');
+        return view('admin.product.index');
     }
 
     /**
@@ -31,7 +31,7 @@ class ProductController extends Controller
      */
     public function create(Request $request)
     {
-        return view('product.create');
+        return view('admin.product.create');
     }
 
     /**
@@ -42,9 +42,9 @@ class ProductController extends Controller
     {
         $product = Product::create($request->validated());
 
-        $request->session()->flash('product.id', $product->id);
+        $request->session()->flash('admin.product.id', $product->id);
 
-        return redirect()->route('product.index');
+        return redirect()->route('admin.product.index');
     }
 
     /**
@@ -54,7 +54,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('product.show', compact('product'));
+        return view('admin.product.show', compact('product'));
     }
 
     /**
@@ -64,7 +64,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('product.edit', compact('product'));
+        return view('admin.product.edit', compact('product'));
     }
 
     /**
@@ -76,9 +76,9 @@ class ProductController extends Controller
     {
         $product->update($request->validated());
 
-        $request->session()->flash('product.id', $product->id);
+        $request->session()->flash('admin.product.id', $product->id);
 
-        return redirect()->route('product.index');
+        return redirect()->route('admin.product.index');
     }
 
     /**
@@ -90,6 +90,6 @@ class ProductController extends Controller
     {
         $product->delete();
 
-        return redirect()->route('product.index');
+        return redirect()->route('admin.product.index');
     }
 }

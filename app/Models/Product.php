@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * @property bool active
+ */
 class Product extends Model
 {
     use HasFactory, SoftDeletes;
@@ -22,6 +25,7 @@ class Product extends Model
         'more_info',
         'subtitle',
         'title',
+        'active',
     ];
 
     /**
@@ -30,7 +34,8 @@ class Product extends Model
      * @var array
      */
     protected $casts = [
-        'id' => 'integer',
+        'id'     => 'integer',
+        'active' => 'boolean',
     ];
 
 
@@ -39,9 +44,14 @@ class Product extends Model
         return $this->hasMany(ProductAttribute::class);
     }
 
+    public function setCategoriesAttribute($values)
+    {
+        $this->categories()->sync($values);
+    }
+
     public function categories()
     {
-        return $this->hasMany(ProductCategory::class);
+        return $this->belongsToMany(Category::class, ProductCategory::class);
     }
 
     public function images()

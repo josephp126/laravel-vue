@@ -14,26 +14,37 @@
             </li>
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
+                   aria-expanded="false">
                     PRODUCTS
                 </a>
                 <div class="dropdown-menu">
-                    <a href="/" class="dropdown-item">Products</a>
+                    <a href="{{route('admin.product.index')}}" class="dropdown-item">Products</a>
                     <a href="/" class="dropdown-item">Categories</a>
                 </div>
             </li>
             <li class="{{ request()->is('news') ? 'active' : '' }} nav-item"><a href="{{ route('admin.news.index') }}"
-                    class="nav-link">News</a></li>
+                                                                                class="nav-link">News</a></li>
 
             <li class="{{ request()->is('user') ? 'active' : '' }} nav-item"><a href="{{ route('admin.user.index') }}"
-                    class="nav-link">Users</a></li>
+                                                                                class="nav-link">Users</a></li>
             <li class="{{ request()->is('carousel') ? 'active' : '' }} nav-item"><a
                     href="{{ route('admin.carousel.index') }}" class="nav-link">Carousels</a></li>
             @can('run-special-commands')
                 <li class="nav-divider"></li>
                 <li class="{{ request()->is('admin/commands*') ? 'active' : '' }} nav-item"><a
-                        href="{{ route('admin.special.commands.index') }}" class="nav-link text-danger">COMMANDS</a></li>
+                        href="{{ route('admin.special.commands.index') }}" class="nav-link text-danger">COMMANDS</a>
+                </li>
             @endcan
+
+            <li class="nav-item ">
+                <a href="{{route('logout')}}" class="nav-link"
+                   onclick="event.preventDefault(); document.getElementById('logout-form').submit()">
+                    {{__('Logout')}}
+                </a>
+                <form id="logout-form" class="d-none" method="POST" action="{{route('logout')}}">
+                    @csrf
+                </form>
+            </li>
         </ul>
     </div>
 </nav>

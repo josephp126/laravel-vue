@@ -28,7 +28,7 @@ class FormProvider extends ServiceProvider
             'editor',
             function ($name, $value, $attributes) {
                 $label = $attributes['label'] ?? false;
-                $value = $this->getValueAttribute('content', $value);
+                $value = $this->getValueAttribute($name, $value);
 
                 return view('components.form.editor', compact('value', 'name', 'label'));
             }
@@ -40,7 +40,7 @@ class FormProvider extends ServiceProvider
                 $label       = $attributes['label'] ?? false;
                 $type        = $attributes['type'] ?? 'text';
                 $required    = $attributes['required'] ?? false;
-                $value       = $this->getValueAttribute('content', $value);
+                $value       = $this->getValueAttribute($name, $value);
                 $placeholder = $attributes['placeholder'] ?? false;
 
                 if ($type == 'password' || $type == 'file') {
@@ -62,9 +62,20 @@ class FormProvider extends ServiceProvider
 
             function ($name, $value, $attributes) {
                 $label = $attributes['label'] ?? false;
-                $value = $this->getValueAttribute('content', $value) ?? false;
+                $value = $this->getValueAttribute($name, $value) ?? false;
 
                 return view('components.form.basic-checkbox', compact('value', 'name', 'label', 'attributes'));
+            }
+        );
+
+        Form::macro(
+            'basicSelect',
+
+            function ($name, $options, $value, $attributes) {
+                $label = $attributes['label'] ?? false;
+                $value = $this->getValueAttribute($name, $value) ?? false;
+
+                return view('components.form.basic-select', compact('value', 'name', 'label', 'attributes', 'options'));
             }
         );
     }

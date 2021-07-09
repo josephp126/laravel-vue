@@ -23,12 +23,12 @@
         </tr>
         </thead>
         <tbody>
-        @forelse($products as $row_inc => $product)
+        @forelse($products as $product)
             <tr>
                 <td>{{$product->title}}</td>
                 <td>{{$product->code}}</td>
                 <td>{{$product->subtitle}}</td>
-                <td>{{$product->description}}</td>
+                <td>{!!$product->description!!}</td>
                 <td>
                     <ul class="list-unstyled">
                         <li>{!! implode('</li><li>', $product->categories->pluck('name')->toArray()) !!}</li>
@@ -38,16 +38,23 @@
                 <td>{{$product->updated_at->format(config('app.formats.table_datetime'))}}</td>
                 <td>
                     <div class="dropdown open">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="buttonDropdown-{{$row_inc}}"
+                        <button class="btn btn-{{$product->active? 'secondary': 'primary'}} dropdown-toggle"
+                                type="button"
+                                id="buttonDropdown-{{$product->id . '-' . $product->active}}"
                                 data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
                             Actions
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="buttonDropdown-{{$row_inc}}">
+                        <div class="dropdown-menu"
+                             aria-labelledby="buttonDropdown-{{$product->id . '-' . $product->active}}">
+                            <a href="{{route('admin.product.edit', $product)}}" class="dropdown-item">Edit</a>
+                            <a href="#" class="dropdown-item text-danger"
+                               wire:click="toggleActive({{$product->id}})">{{$product->active? '': 'De '}}Activate</a>
                             <a href="#" class="dropdown-item">Manage Images</a>
                             <a href="#" class="dropdown-item">Picture as Pdf</a>
                             <a href="#" class="dropdown-item">Edit Note</a>
-                            <a href="#" class="dropdown-item text-danger">Delete</a>
+                            <a href="#" class="dropdown-item text-danger"
+                               wire:click="delete({{$product->id}})">Delete</a>
                         </div>
                     </div>
                 </td>
