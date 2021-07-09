@@ -16,7 +16,7 @@
                 <div class="col-md-6 col-lg-3 text-white">
                     <p class="mt-2 mb-2">About</p>
                     <p class="mt-2 mb-2"><a href="#">Quick Reference</a></p>
-                    <p class="mt-2 mb-2"><a href="#">Louver Selection Tool</a></p>
+                    <p class="mt-2 mb-2"><a href="https://www.pottorff.com/list/">Louver Selection Tool</a></p>
                     <p class="mt-2 mb-2"><a href="#">Products</a></p>
                     <p class="mt-2 mb-2"><a href="#">Training</a></p>
                     <p class="mt-2 mb-2"><a href="{{route('repfinder.index')}}">Repfinder</a></p>

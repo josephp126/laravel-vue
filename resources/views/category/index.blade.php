@@ -9,8 +9,8 @@
 @section('content')
     <div class="wrapsemibox">
         <div class="content p-3">
-        {{-- Content HERE --}}
-            
+            {{-- Content HERE --}}
+
         </div>
     </div>
 @endsection

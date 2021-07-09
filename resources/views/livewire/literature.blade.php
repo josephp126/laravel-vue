@@ -9,7 +9,7 @@
         <img src="/images/News and Literature Section/Pottorff UL Brochure.svg" alt="Pottorff UL Brochure" />
     </div>
 
-    <div class="text-muted mt-3">
+    <div class="text-muted mt-3" style="margin-bottom: 10px;">
         We have many sales tools to help you including brochures,
         case studies and product sales sheets - <a href="#">More Literature</a>
     </div>

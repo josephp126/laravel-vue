@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'welcome')->name('home');
+Route::view('/products', 'products')->name('products');
 
 Auth::routes();
 
@@ -34,5 +35,6 @@ Route::get('about', [AboutController::class, 'index'])->name('about.index');
 Route::get('contact', [ContactController::class, 'index'])->name('contact.index');
 Route::get('rep/finder', [RepFinderController::class, 'index'])->name('repfinder.index');
 Route::get('company', [CompanyController::class, 'index'])->name('company.index');
-
+//Route::get('category', [CategoryController::class, 'index'])->name('company.index');
+//Route::get('freddy',Category::class);
 Route::get('images/{image}/name/{name}', [ImagesController::class, 'show'])->name('image.request');

@@ -1,12 +1,12 @@
 @extends('layouts.main')
 
 @section('skel_styles')
-{{--    <link rel="stylesheet" href="/carousel/homepage/style.css?{{Str::random(4)}}" />--}}
+    {{--    <link rel="stylesheet" href="/carousel/homepage/style.css?{{Str::random(4)}}" />--}}
     <link rel="stylesheet" href="/carousel/homepage/style.css?{{Str::random(4)}}" />
 @endsection
 
 @section('content')
-    <livewire:homepage-carousel />
+    <livewire:product-banner />
 
     <!-- /.wrapsemibox start-->
     <div class="wrapsemibox shadow">
@@ -23,7 +23,7 @@
 
                     <div class="col-lg-12 text-center">
 
-
+{{--                        @livewire('category')--}}
                         <h1>THE <span class="colortext">PREFERRED SOLUTION</span> FOR LIFE SAFETY AND AIR CONTROL</h1>
 
                         <p>
@@ -75,19 +75,19 @@
             <div class="container mt-3">
                 <div class="row">
                     <div class="col-lg-8">
-                                <img src="/images/icons/Revit Logo.png" alt="News" style="height: 55px;margin: 5px 5px;max-width: 140px;" />
+                        <img src="/images/icons/Revit Logo.png" alt="News" style="height: 55px;margin: 5px 5px;max-width: 140px;" />
 
-                                <img src="/images/icons/News.png" alt="News" style="height: 55px;margin: 5px 5px;" />
+                        <img src="/images/icons/News.png" alt="News" style="height: 55px;margin: 5px 5px;" />
 
-                                <img src="/images/icons/Case Studies.png" alt="Case" style="margin: 5px 5px;height: 55px" />
+                        <img src="/images/icons/Case Studies.png" alt="Case" style="margin: 5px 5px;height: 55px" />
 
-                                <img src="/images/icons/CSI.png" alt="CSI" style="margin: 5px 5px;height: 55px" />
+                        <img src="/images/icons/CSI.png" alt="CSI" style="margin: 5px 5px;height: 55px" />
 
-                                <img src="/images/icons/Installation.png" alt="Installation" style="margin: 5px 5px;height: 55px" />
+                        <img src="/images/icons/Installation.png" alt="Installation" style="margin: 5px 5px;height: 55px" />
 
-                                <img src="/images/icons/Educate.png" alt="Educate" style="margin: 5px 5px;height: 55px" />
+                        <img src="/images/icons/Educate.png" alt="Educate" style="margin: 5px 5px;height: 55px" />
 
-                                <img src="/images/icons/warranty.png" alt="Waranty" style="margin: 5px 5px;height: 55px" />
+                        <img src="/images/icons/warranty.png" alt="Waranty" style="margin: 5px 5px;height: 55px" />
 
                     </div>
                     <div class="col-lg-4">
@@ -155,7 +155,7 @@
                     </div>
 
                     <div class="learn-more">
-                        <button type="button" href="https://www.pottorff.com/list/" class="btn btn-danger btn-sm">LEARN MORE</button>
+                        <button type="button" class="btn btn-danger btn-sm">LEARN MORE</button>
                     </div>
                     <div class="clearfix"></div>
                 </div>

@@ -23,8 +23,8 @@ return [
         'address' => env('CONTACT_ADDRESS', '5101 Blue Mound Road'),
 
         'facebook' => 'https://www.facebook.com/pottorffmanufacturing',
-        'twitter'  => '#',
-        'linkedin' => 'https://www.linkedin.com/company/pottorff/',
+        'twitter'  => 'https://twitter.com/home?lang=en',
+        'linkedin' => 'https://www.linkedin.com/company/252027/admin/',
         'youtube'  => 'https://www.youtube.com/channel/UClNKNFnQ2R7SoKpEJi_GBEQ',
     ],
 

@@ -47,8 +47,8 @@
             <livewire:nav-dropdown
                 title="Selection Tools"
                 :navItems="[
-                    '#LIST Louver Selection Tool' => ['label' => 'LIST Louver Selection Tool'],
-                    '#Louver and Damper Cross Reference' => ['label' => 'Louver and Damper Cross Reference'],
+                    'https://www.pottorff.com/list/' => ['label' => 'LIST Louver Selection Tool'],
+                    'http://apps.pottorff.com/CrossRef/' => ['label' => 'Louver and Damper Cross Reference'],
                 ]"
             />
 
