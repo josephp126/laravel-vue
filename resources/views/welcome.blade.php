@@ -91,20 +91,14 @@
 
                     </div>
                     <div class="col-lg-4">
-                        <ul class="d-flex list-unstyled bragging-logos">
-                            <li>
-                                <img src="/images/icons/Green Building Council.png" alt="Green Building Council" />
-                            </li>
-                            <li>
-                                <img src="/images/icons/UL Logo Revised.png" alt="UL Logo Revised" />
-                            </li>
-                            <li>
-                                <img src="/images/icons/Buy-American-Act.png" alt="Buy-American-Act" />
-                            </li>
-                            <li>
-                                <img src="/images/icons/AMCA Logo.png" alt="AMCA Logo" />
-                            </li>
-                        </ul>
+                                <img src="/images/icons/Green Building Council.png" alt="Green Building Council" style="height: 55px;margin: 5px 5px;" />
+
+                                <img src="/images/icons/UL Logo Revised.png" alt="UL Logo Revised" style="height: 55px;margin: 5px 5px;" />
+
+                                <img src="/images/icons/Buy-American-Act.png" alt="Buy-American-Act" style="height: 55px;margin: 5px 5px;" />
+
+                                <img src="/images/icons/AMCA Logo.png" alt="AMCA Logo" style="height: 55px;margin: 5px 5px;" />
+
                     </div>
                 </div>
             </div>
