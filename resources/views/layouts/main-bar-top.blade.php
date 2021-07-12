@@ -5,7 +5,7 @@
             <div class="col-md-6 top-text pull-left animated fadeInLeft">
 {{--                <img src="{{url('images/icons/RepFinder_Login.png')}}" style="width: 30px" /> --}}
                 <i class="icon-user"></i>
-                <a href="/rep-login">Rep Login</a> <span class="separator"></span>
+                <a href="https://www.pottorff.com/rep-connect">Rep Login</a> <span class="separator"></span>
                 <i class="icon-phone"></i> {{config('app.contact.phone')}} <span class="separator"></span>
                 <i class="icon-envelope"></i>
                 <a href="mailto:{{config('app.contact.email')}}?subject=Hello from the website. I have a question.">{{config('app.contact.email')}}</a>

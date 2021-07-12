@@ -21,7 +21,7 @@
                                 </div>
                             </div>
                             <h1 class="text-primary mt-2"><a class="text-primary">{{$slider->title}}</a></h1>
-                            <p class="text-black">{{$slider->description}}</p>
+                            <p style="color:#6C757D;">{{$slider->description}}</p>
                         </div>
                     </div>
                 @endforeach
