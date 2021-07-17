@@ -5,6 +5,7 @@
         <input
             :id="name"
             v-model="inputValue"
+            @change="handleChange"
             :aria-describedby="helpId"
             :class="className"
             :name="name"
@@ -35,6 +36,11 @@ export default {
         },
         value: {
             default: '',
+        },
+    },
+    methods: {
+        handleChange (e) {
+            this.$emit('change', e);
         },
     },
     computed: {

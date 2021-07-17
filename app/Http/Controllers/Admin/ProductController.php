@@ -22,7 +22,8 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-        return view('admin.product.index');
+        $products = Product::paginate($request->get('perPage', 50));
+        return view('admin.product.index', compact('products'));
     }
 
     /**
@@ -77,6 +78,13 @@ class ProductController extends Controller
         $product->update($request->validated());
 
         $request->session()->flash('admin.product.id', $product->id);
+
+        return redirect()->route('admin.product.index');
+    }
+
+    public function activeToggle(Product $product)
+    {
+        $product->update(['active' => !$product->active]);
 
         return redirect()->route('admin.product.index');
     }

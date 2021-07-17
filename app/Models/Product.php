@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * @property bool active
+ * @property bool  active
+ * @property image image
+ * @property int   id
  */
 class Product extends Model
 {
@@ -56,6 +58,6 @@ class Product extends Model
 
     public function images()
     {
-        return $this->hasMany(ProductImage::class);
+        return $this->morphMany(Image::class, 'imageable')->orderBy('sort')->orderBy('id', 'desc');
     }
 }

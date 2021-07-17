@@ -25,6 +25,9 @@ Vue.component('example-component',
 Vue.component('basic-input',
     require('./components/elemements/input.vue').default);
 
+Vue.component('gallery',
+    require('./components/Gallery.vue').default);
+
 Vue.component('carousel-slide-editor',
     require('./components/CarouselSlideEditor').default);
 

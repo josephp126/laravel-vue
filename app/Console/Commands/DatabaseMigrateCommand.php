@@ -2,8 +2,10 @@
 
 namespace App\Console\Commands;
 
+use App\Jobs\CategoryJob;
 use App\Jobs\ImportUsers;
 use App\Jobs\LegacyUsers;
+use App\Jobs\ProductImportJob;
 use DB;
 use Illuminate\Console\Command;
 
@@ -35,6 +37,12 @@ class DatabaseMigrateCommand extends Command
 
         $this->info('LegacyUsers');
         dispatch(new LegacyUsers($legacy_connection));
+
+        $this->info('ProductImportJob');
+        dispatch(new ProductImportJob($legacy_connection));
+
+        $this->info('CategoryJob');
+        dispatch(new CategoryJob($legacy_connection));
 
         return 0;
     }

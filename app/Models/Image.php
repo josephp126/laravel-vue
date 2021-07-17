@@ -6,8 +6,12 @@ use App\Traits\Uuidable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Http\UploadedFile;
 use Storage;
 
+/**
+ * @property array|UploadedFile|UploadedFile[]|mixed|null file
+ */
 class Image extends Model
 {
     use HasFactory, Uuidable, SoftDeletes;
@@ -23,6 +27,7 @@ class Image extends Model
         'title',
         'code_number',
         'hash',
+        'sort',
     ];
 
     /**

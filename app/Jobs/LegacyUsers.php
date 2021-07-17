@@ -38,26 +38,19 @@ class LegacyUsers
         $records = $db_connection->table('user')->get();
 
         foreach ($records as $record) {
-            $u = User::create(
+            $u = User::firstOrCreate(
+                ['email' => $record->Email],
                 [
                     'guid'        => $record->Guid,
                     'first_name'  => $record->Firstname,
                     'last_name'   => $record->Lastname,
                     'username'    => $record->Username,
-                    'password'    => $record->Password,
+                    'password'    => bcrypt('admin123'),
                     'email'       => $record->Email,
                     'date_joined' => $record->DateJoined,
-                    'phone'   => $record->Phone ?? null,
+                    'phone'       => $record->Phone ?? null,
                 ]
             );
-
-//            $u->address()->create(
-//                [
-//                    'address' => $record->Address,
-//                    'zip'     => $record->ZIP,
-//                    'city'    => $record->City,
-//                ]
-//            );
         }
     }
 }

@@ -12,6 +12,11 @@ class SaveImageJob
 
     private $file;
     private $relate;
+    /**
+     * @var false
+     */
+    private bool $multi;
+    private array $additional_image_props;
 
     /**
      * Create a new job instance.
@@ -19,10 +24,12 @@ class SaveImageJob
      * @param $relate
      * @param $file
      */
-    public function __construct($relate, $file)
+    public function __construct($relate, $file, $multi = false, $additional_image_props = [])
     {
-        $this->file   = $file;
-        $this->relate = $relate;
+        $this->file                   = $file;
+        $this->relate                 = $relate;
+        $this->multi                  = $multi;
+        $this->additional_image_props = $additional_image_props;
     }
 
     /**
@@ -32,25 +39,44 @@ class SaveImageJob
      */
     public function handle()
     {
-        $file   = $this->file;
-        $relate = $this->relate;
+        $file                   = $this->file;
+        $relate                 = $this->relate;
+        $additional_image_props = $this->additional_image_props ?? [];
 
         if ($file) {
-            $image = $relate->image()->updateOrCreate(
-                [
-                    'mime_type'   => $file->getMimeType(),
-                    'title'       => $file->getClientOriginalName(),
-                    'code_number' => 1,
-                    'hash'        => $file->hashName(),
-                ]
-            );
+            // create the image relationship to the model
+            if (!$this->multi) {
+                $image = $relate->image()->updateOrCreate(
+                    [
+                        'mime_type'   => $file->getMimeType(),
+                        'title'       => $file->getClientOriginalName(),
+                        'code_number' => 1,
+                        'hash'        => $file->hashName(),
+                    ]
+                );
+            } else {
+                $image = $relate->images()->create(
+                    [
+                        'mime_type'   => $file->getMimeType(),
+                        'title'       => $file->getClientOriginalName(),
+                        'code_number' => 1,
+                        'hash'        => $file->hashName(),
+                    ]
+                );
+            }
 
+            if (count($additional_image_props) > 0) {
+                $image->update($additional_image_props);
+            }
+
+            // get the image contents
             if ($file->getMimeType() == 'image/svg+xml') {
                 $newFile = $file->getContent();
             } else {
                 $newFile = Imager::make($file)->encode();
             }
 
+            // store the image to the images disk
             Storage::disk('images')->put($image->hash, (string)$newFile);
         }
     }

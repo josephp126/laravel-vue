@@ -11,8 +11,8 @@
         <div class="content p-3 mt-5">
             <h3 class="text-primary">Update</h3>
             <div class="row justify-content-end">
-                <button class="btn btn-sm btn-primary">Product Resources</button>
-                <button class="btn btn-sm btn-secondary ml-3">Product Images</button>
+                <a class="btn btn-primary" href="#">Product Resources</a>
+                <a href="{{route('admin.product.image.index', [$product])}}" class="btn btn-secondary ml-3">Product Images</a>
             </div>
             <br />
             {!! Form::model($product, ['route' => ['admin.product.update', $product], 'method' => 'put']) !!}

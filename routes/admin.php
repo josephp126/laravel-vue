@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\CategoriesController;
 use App\Http\Controllers\Admin\CommandsController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\ProductImagesController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Api\CarouselSlidesController;
@@ -27,14 +28,17 @@ Route::put('news/{news}/star', [NewsController::class, 'star'])->name('news.star
 
 Route::resources(
     [
-        'news'     => NewsController::class,
-        'category' => CategoriesController::class,
-        'slider'   => SliderController::class,
-        'product'  => ProductController::class,
-        'user'     => UserController::class,
-        'carousel' => CarouselController::class,
+        'news'          => NewsController::class,
+        'category'      => CategoriesController::class,
+        'slider'        => SliderController::class,
+        'product'       => ProductController::class,
+        'product.image' => ProductImagesController::class,
+        'user'          => UserController::class,
+        'carousel'      => CarouselController::class,
     ]
 );
+
+Route::get('product/{product}/active/toggle', [ProductController::class, 'activeToggle'])->name('product.active.toggle');
 
 
 Route::middleware('can:special-admin')->name('special.')->group(
