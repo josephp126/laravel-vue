@@ -22,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome')->name('home');
 Route::view('/products', 'products')->name('products');
+Route::view('/literature', 'literature')->name('literature');
 
 Auth::routes();
 

@@ -149,7 +149,7 @@
                     </div>
 
                     <div class="learn-more">
-                        <button type="button" href="https://www.pottorff.com/list/" class="btn btn-danger btn-sm">LEARN MORE</button>
+                        <a type="button" href="https://www.pottorff.com/list/" target="_blank" class="btn btn-danger btn-sm">LEARN MORE</a>
                     </div>
                     <div class="clearfix"></div>
                 </div>

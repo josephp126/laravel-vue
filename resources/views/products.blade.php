@@ -10,7 +10,7 @@
 
     <!-- /.wrapsemibox start-->
     <div class="wrapsemibox shadow">
-        <div class="semiboxshadow">
+        <div class="semiboxshadow" style="padding-bottom: 10px">
             <img src="{{url('images/shp.png')}}" class="img-fluid" alt="">
         </div>
         <!-- INTRO NOTE==================================================-->
@@ -21,202 +21,133 @@
 
                 <div class="row">
 
-                    <div class="col-lg-12 text-center">
-
-{{--                        @livewire('category')--}}
-                        <h1>THE <span class="colortext">PREFERRED SOLUTION</span> FOR LIFE SAFETY AND AIR CONTROL</h1>
-
-                        <p>
-
-                            Pottorff is one of the leading manufacturers of louvers and dampers in the industry. We are
-                            committed
-
-                            to superior customer service - delivering high-performing HVAC products on time and at
-                            competitive prices.
-
-                        </p>
-
+                    <div class="col-lg-12" style="padding-bottom: 20px;color: #5E5D62;font-weight: bold;font-size: 20px">
+                        Pottorff >
                     </div>
-
+                    <div class="col-sm-12 col-md-4 col-lg-3">
+                        <div class="filter-category-top">
+                            Air Control Dampers
+                        </div>
+                        <div class="filter-category">
+                            Commercial
+                        </div>
+                        <div class="filter-category">
+                            Industrial
+                        </div>
+                        <div class="filter-category">
+                            Manual Balancing
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="product-title">Air Control and Backdraft Dampers</h2>
+                                <h3 class="product-title">Commercial</h3>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4 mt-2">
+                                <div class="product-top-title">
+                                    3V Blade
+                                </div>
+                                <div  class="product-box">
+                                    <img src="images/Product%20Photos/product-test.png" style="width: 100%;">
+                                    <div style="padding: 5px 10px">
+                                        <div class="feature-item">
+                                            <span style="color:#2D9BB7">AC-42</span> <i>Opposed Blade</i>
+                                        </div>
+                                        <div class="feature-item">
+                                            <span style="color:#2D9BB7">AC-41</span> <i>Parallel Blade</i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4 mt-2">
+                                <div class="product-top-title">
+                                    3V Blade
+                                </div>
+                                <div  class="product-box">
+                                    <img src="images/Product%20Photos/product-test.png" style="width: 100%;">
+                                    <div style="padding: 5px 10px">
+                                        <div class="feature-item">
+                                            <span style="color:#2D9BB7">AC-42</span> <i>Opposed Blade</i>
+                                        </div>
+                                        <div class="feature-item">
+                                            <span style="color:#2D9BB7">AC-41</span> <i>Parallel Blade</i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4 mt-2">
+                                <div class="product-top-title">
+                                    3V Blade
+                                </div>
+                                <div  class="product-box">
+                                    <img src="images/Product%20Photos/product-test.png" style="width: 100%;">
+                                    <div style="padding: 5px 10px">
+                                        <div class="feature-item">
+                                            <span style="color:#2D9BB7">AC-42</span> <i>Opposed Blade</i>
+                                        </div>
+                                        <div class="feature-item">
+                                            <span style="color:#2D9BB7">AC-41</span> <i>Parallel Blade</i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4 mt-2">
+                                <div class="product-top-title">
+                                    3V Blade
+                                </div>
+                                <div  class="product-box">
+                                    <img src="images/Product%20Photos/product-test.png" style="width: 100%;">
+                                    <div style="padding: 5px 10px">
+                                        <div class="feature-item">
+                                            <span style="color:#2D9BB7">AC-42</span> <i>Opposed Blade</i>
+                                        </div>
+                                        <div class="feature-item">
+                                            <span style="color:#2D9BB7">AC-41</span> <i>Parallel Blade</i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4 mt-2">
+                                <div class="product-top-title">
+                                    3V Blade
+                                </div>
+                                <div  class="product-box">
+                                    <img src="images/Product%20Photos/product-test.png" style="width: 100%;">
+                                    <div style="padding: 5px 10px">
+                                        <div class="feature-item">
+                                            <span style="color:#2D9BB7">AC-42</span> <i>Opposed Blade</i>
+                                        </div>
+                                        <div class="feature-item">
+                                            <span style="color:#2D9BB7">AC-41</span> <i>Parallel Blade</i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4 mt-2">
+                                <div class="product-top-title">
+                                    3V Blade
+                                </div>
+                                <div  class="product-box">
+                                    <img src="images/Product%20Photos/product-test.png" style="width: 100%;">
+                                    <div style="padding: 5px 10px">
+                                        <div class="feature-item">
+                                            <span style="color:#2D9BB7">AC-42</span> <i>Opposed Blade</i>
+                                        </div>
+                                        <div class="feature-item">
+                                            <span style="color:#2D9BB7">AC-41</span> <i>Parallel Blade</i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
             </div>
-
         </section>
 
         <!-- /.intro-note end-->
         <!-- SERVICE BOXES==================================================-->
-
-        <section class="service-box my-2">
-
-            <div class="container">
-
-                <div class="row">
-
-                    <livewire:home-product-card title="AIR CONTROL DAMPERS"
-                                                description="Commercial, Industrial, Manual Balancing and Backdraft Dampers"
-                                                image="images/Product Photos/Backdraft Damper.png" />
-
-                    <livewire:home-product-card title="CEILING RADIATION DAMPERS"
-                                                description="Butterfly, Curtain Style, Wood Truss, Steel Truss and Specialty"
-                                                image="images/Product Photos/Ceiling Radiation Damper.png" />
-
-                    <livewire:home-product-card title="FIRE/SMOKE DAMPERS"
-                                                description="UL Rated Fire, Smoke and Combination Fire/Smoke Dampers"
-                                                image="images/Product Photos/FSD.png" />
-
-                    <livewire:home-product-card title="LOUVERS"
-                                                description="Drainable, Operable, Miami-Dade, Florida Building Code, Penthouses"
-                                                image="images/Product Photos/Louver.png" />
-                </div>
-
-            </div>
-
-            <div class="container mt-3">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <img src="/images/icons/Revit Logo.png" alt="News" style="height: 55px;margin: 5px 5px;max-width: 140px;" />
-
-                        <img src="/images/icons/News.png" alt="News" style="height: 55px;margin: 5px 5px;" />
-
-                        <img src="/images/icons/Case Studies.png" alt="Case" style="margin: 5px 5px;height: 55px" />
-
-                        <img src="/images/icons/CSI.png" alt="CSI" style="margin: 5px 5px;height: 55px" />
-
-                        <img src="/images/icons/Installation.png" alt="Installation" style="margin: 5px 5px;height: 55px" />
-
-                        <img src="/images/icons/Educate.png" alt="Educate" style="margin: 5px 5px;height: 55px" />
-
-                        <img src="/images/icons/warranty.png" alt="Waranty" style="margin: 5px 5px;height: 55px" />
-
-                    </div>
-                    <div class="col-lg-4">
-                        <ul class="d-flex list-unstyled bragging-logos">
-                            <li>
-                                <img src="/images/icons/Green Building Council.png" alt="Green Building Council" />
-                            </li>
-                            <li>
-                                <img src="/images/icons/UL Logo Revised.png" alt="UL Logo Revised" />
-                            </li>
-                            <li>
-                                <img src="/images/icons/Buy-American-Act.png" alt="Buy-American-Act" />
-                            </li>
-                            <li>
-                                <img src="/images/icons/AMCA Logo.png" alt="AMCA Logo" />
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- /.service-box end-->
-        <!-- RECENT WORK==================================================-->
-
-        <section class="home-portfolio bgarea mt-3 pt-3">
-
-            <div class="">
-
-                <div class="container">
-
-                    <img class="float-left" src="{{url('/images/Louver Selection Tool Area/Monitor.svg')}}"
-                         alt="Computer" height="447" style="max-width: 100%" />
-
-                    <div class="list-louver-pull-left" style="width: 105%; ">
-                        <p class="animated fadeInLeftNow notransition learn-more-title">LIST LOUVER INFORMATION AND
-                            SELECTION</p>
-                        <p class="animated fadeInRightNow notransition  topspace20" style="font-size: 14px">
-                            Pottorff's LIST Louver Information and Selection program was developed
-                            with engineers and architects in mind. With its intuitive design, this industry
-                            leading online tool takes all the guesswork out of picking the right louver
-                            for any project.
-
-                        </p>
-                    </div>
-
-                    <br>
-
-                    <div class="select-louvers-based select-based-on-push-right float-left">
-                        <h4 class="mb-3">SELECT LOUVERS BASED ON:</h4>
-
-                        <ul class="list-unstyled list">
-                            <li>Material</li>
-                            <li>Louver Type</li>
-                            <li>Blade Type</li>
-                            <li>Airflow Velocities</li>
-                            <li>Airflow Direction</li>
-                            <li>Opening Size</li>
-                            <li>Pressure Loss</li>
-                            <li>Free Area</li>
-                            <li>Beginning Point of Water Penetration</li>
-                            <li>AMCA, FBC, Miami-Dade and FEMA Certifications</li>
-                        </ul>
-                    </div>
-
-                    <div class="learn-more">
-                        <button type="button" class="btn btn-danger btn-sm">LEARN MORE</button>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-            <div class="bottom bg-primary w-100 mt-3 py-3 text-center font-weight-bold">
-                NO NEED TO REGISTER TO SELECT LOUVERS FOR YOUR PROJECT. CREATE AND IMPORT YOUR SCHEDULE DIRECTLY INTO OUR SPECS PRICING PROGRAM.
-            </div>
-        </section>
-        <!-- /.recent-work end-->
-        <!-- FEATURES==================================================-->
-
-        <section class="home-features mt-5 what-our-reps-say">
-            <div class="container animated fadeInUpNow notransition">
-                <h1 class="small text-center">WHAT OUR REPS SAY</h1>
-
-                <div class="br-hr type_short">
-                    <span class="br-hr-h">
-                        <i class="icon-pencil"></i>
-                    </span>
-                </div>
-
-                <ul class="quotes">
-                    <li>
-                        "Pottorff does what they say they will do. Honest, competitive and supportive" -
-                        <div class="name">Jeremy Hobbs, J.M. O'Conner, Inc.</div>
-                    </li>
-                    <li>
-                        "Quality manufacturing locations, knowledgeable staff and customer service" -
-                        <div class="name">Todd Williams, Florida Air Solutions</div>
-                    </li>
-                    <li>
-                        "Great customer service, factory support, product development, pricing software" -
-                        <div class="name">Joe Paul, Deckman Company</div>
-                    </li>
-                </ul>
-            </div>
-
-        </section>
-
-        <section id="news-section" class="news-section mt-3 animated fadeInUpNow notransition article-divider mx-40">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <livewire:home-news-list />
-                    </div>
-                    <div class="col-md-6">
-                        <livewire:literature />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- /.home-features end-->
-        <section class="grayarea recent-projects-home mt-5 animated fadeInUpNow notransition">
-            <div class="container">
-                <div class="row">
-                    <livewire:home-bottom-slide />
-                </div>
-            </div>
-        </section>
-        <!-- /.recent-projects-home end-->
     </div>
     <!-- /.wrapsemibox end-->
 @endsection
