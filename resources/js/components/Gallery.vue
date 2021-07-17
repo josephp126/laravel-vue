@@ -3,9 +3,9 @@
         <h3>Product Gallery</h3>
         <div v-if="product.description" class="mb-3">
             <blockquote>
-                <a :href="`/admin/product/${product_id}`">Go back to this product</a>
-                <span v-html="`Title: ${product.title}`" />
-                <span v-if="product.description" v-html="`Description: ${product.description}`" />
+                <a :href="`/admin/product/${product_id}/edit`">Go back to this product</a>
+                <div v-html="`Title: ${product.title}`" />
+                <div v-if="product.description" v-html="`Description: ${product.description}`" />
             </blockquote>
         </div>
         <div class="row">
