@@ -20,20 +20,20 @@ class CategoryController extends Controller
      */
     public function index(Request $request)
     {
-        $categories = Category::where('parent_id', $request->get('parent_id'))->get();
+        $categories = Category::where('parent_id', $request->get('parent_id'))->ordered()->get();
 
         return CategoryResource::collection($categories);
     }
 
     public function saveSort(Request $request)
     {
-        $ids = $request->get('ids');
+        $ids = $request->get('ids', []);
 
-        foreach ($ids as $sort => $id) {
-            Category::find($id)->update(compact('sort'));
+        foreach ($ids as $order => $id) {
+            Category::find($id)->update(compact('order'));
         }
 
-        return response()->json(['status' => true]);
+        return response()->noContent();
     }
 
     /**

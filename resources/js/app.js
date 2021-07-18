@@ -25,7 +25,9 @@ Vue.component('basic-input', require('./components/elemements/input.vue').defaul
 Vue.component('gallery', require('./components/Gallery.vue').default);
 Vue.component('carousel-slide-editor', require('./components/CarouselSlideEditor').default);
 Vue.component('text-editor', require('./components/TextEditorComponent.vue').default);
+
 Vue.component('page-product-resource', require('./components/Pages/ProducfResource.vue').default);
+Vue.component('page-category-manage', require('./components/Pages/CategoryManage.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
