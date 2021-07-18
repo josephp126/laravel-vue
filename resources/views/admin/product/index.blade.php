@@ -61,7 +61,7 @@
                                         <a href="{{route('admin.product.edit', $product)}}" class="dropdown-item">Edit</a>
                                         <a href="{{route('admin.product.active.toggle', $product)}}" class="dropdown-item text-danger">{{$product->active? '': 'De '}}Activate</a>
                                         <a href="{{route('admin.product.image.index', $product)}}" class="dropdown-item">Manage Images</a>
-                                        <a href="#" class="dropdown-item">Manage Resources</a>
+                                        <a href="{{route('admin.product.resource.index', $product)}}" class="dropdown-item">Manage Resources</a>
                                         <a href="{{route('admin.product.edit', $product)}}" class="dropdown-item">Edit Note</a>
                                         <a href="#delete" class="dropdown-item text-danger" onclick="document.getElementById('{{"product-delete-{$product->id}"}}').submit()">Delete</a>
                                         {!! Form::open(['id' => "product-delete-{$product->id}", 'class' => 'd-none', 'method' => 'delete', 'route' => ['admin.product.destroy', $product]]) !!}

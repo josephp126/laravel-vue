@@ -60,4 +60,9 @@ class Product extends Model
     {
         return $this->morphMany(Image::class, 'imageable')->orderBy('sort')->orderBy('id', 'desc');
     }
+
+    public function resources()
+    {
+        return $this->morphMany(Resource::class, 'resourceable')->orderBy('title');
+    }
 }

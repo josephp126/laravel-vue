@@ -1,13 +1,11 @@
 <template>
     <div class="container-fluid">
         <h3>Product Gallery</h3>
-        <div v-if="product.description" class="mb-3">
-            <blockquote>
-                <a :href="`/admin/product/${product_id}/edit`">Go back to this product</a>
-                <div v-html="`Title: ${product.title}`" />
-                <div v-if="product.description" v-html="`Description: ${product.description}`" />
-            </blockquote>
-        </div>
+        <blockquote class="mb-3">
+            <a :href="`/admin/product/${product_id}/edit`">Go back to this product</a>
+            <div v-html="`Title: ${product.title}`" />
+            <div v-if="product.description" v-html="`Description: ${product.description}`" />
+        </blockquote>
         <div class="row">
             <div class="col-md-12">
                 <basic-input
@@ -16,6 +14,7 @@
                     name="new_image"
                     type="file"
                     @change="handleUploadImage"
+                    multiple
                 />
             </div>
             <div class="col-md-12">
@@ -58,15 +57,17 @@ export default {
             const { images = [] } = data || {};
             this.images = images;
         },
+        pushImage (file) {
+            const form = new FormData();
+            form.append('file', file, file.name);
+            return axios.post(`/api/product/${this.product_id}/image`, form);
+        },
         async handleUploadImage ({ target }) {
             const { files = [] } = target;
             if (!files || files.length == 0) {
                 return true;
             }
-            const file = files[0];
-            const form = new FormData();
-            form.append('file', file, file.name);
-            await axios.post(`/api/product/${this.product_id}/image`, form);
+            await Promise.all(Array.from(files).map(this.pushImage));
             await this.loadImages();
         },
         async deleteImage ({ uuid }) {

@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\ProductImagesController;
+use App\Http\Controllers\Api\ProductResourcesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -28,8 +29,9 @@ Route::put('sort/category/save', [CategoryController::class, 'saveSort']);
 
 Route::apiResources(
     [
-        'category'      => CategoryController::class,
-        'product.image' => ProductImagesController::class,
+        'category'         => CategoryController::class,
+        'product.image'    => ProductImagesController::class,
+        'product.resource' => ProductResourcesController::class,
     ]
 );
 

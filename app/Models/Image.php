@@ -61,6 +61,11 @@ class Image extends Model
         return Storage::disk('images')->get($this->hash);
     }
 
+    public function deleteFile()
+    {
+        return Storage::disk('images')->delete($this->hash);
+    }
+
     public function setFileAttribute($fileContents)
     {
         Storage::disk('images')->putFileAs('', $fileContents, $this->hash);
