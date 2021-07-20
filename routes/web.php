@@ -6,6 +6,7 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ImagesController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RepFinderController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,6 +32,7 @@ Route::get('carousel/{carousel:slug}/style.css', [CarouselController::class, 'ca
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 
 Route::resource('news', NewsController::class)->only('index', 'show');
+Route::resource('product', ProductController::class)->only('index');
 Route::post('quick/message', [ContactController::class, 'store'])->name('contact.store');
 Route::get('about', [AboutController::class, 'index'])->name('about.index');
 Route::get('contact', [ContactController::class, 'index'])->name('contact.index');

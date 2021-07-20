@@ -16,31 +16,7 @@
         <ul id="nav" class="nav navbar-nav">
             <livewire:nav-item title="Home" href="/" />
 
-            <livewire:nav-dropdown
-                title="PRODUCTS"
-                :navItems="[
-                    '/product?type=1' => [
-                        'label' => 'Air Control Dampers',
-                        //'image' => url('images/menu/menu1.png'),
-                    ],
-                    '/product?type=2' => [
-                        'label' => 'Ceiling Radiation Dampers',
-                        //'image' => url('images/menu/menu2.png'),
-                    ],
-                    '/product?type=2.1' => [
-                        'label' => 'Fire/Smoke Dampers',
-                        //'image' => url('images/menu/menu2.png'),
-                    ],
-                    '/product?type=3' => [
-                        'label' => 'Louvers and Penthouses',
-                        //'image' => url('images/menu/menu3.png'),
-                    ],
-                    '/product?type=4' => [
-                        'label' => 'Actuators and Accessories',
-                        //'image' => url('images/menu/menu4.png'),
-                    ],
-                 ]"
-            />
+            <livewire:product-category-nav />
 
             <livewire:nav-item title="Quick Reference" href="/selection-tools" />
 

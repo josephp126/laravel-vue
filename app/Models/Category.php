@@ -55,4 +55,14 @@ class Category extends Model
     {
         return $this->hasMany(__CLASS__, 'id', 'parent_id');
     }
+
+    public function scopeOrdered($query)
+    {
+        return $query->orderBy('order')->orderBy('id');
+    }
+
+    public function products()
+    {
+        return $this->belongsToMany(Product::class, 'product_categories');
+    }
 }

@@ -1,9 +1,5 @@
 @extends('layouts.main')
 
-@section('skel_styles')
-    {{--    <link rel="stylesheet" href="/carousel/homepage/style.css?{{Str::random(4)}}" />--}}
-    <link rel="stylesheet" href="/carousel/homepage/style.css?{{Str::random(4)}}" />
-@endsection
 
 @section('content')
     <livewire:product-banner />
@@ -11,7 +7,7 @@
     <!-- /.wrapsemibox start-->
     <div class="wrapsemibox shadow">
         <div class="semiboxshadow" style="padding-bottom: 10px">
-            <img src="{{url('images/shp.png')}}" class="img-fluid" alt="">
+            <img src="{{url('/images/shp.png')}}" class="img-fluid" alt="">
         </div>
         <!-- INTRO NOTE==================================================-->
 
@@ -21,9 +17,9 @@
 
                 <div class="row">
 
-                    <div class="col-lg-12" style="padding-bottom: 20px;color: #5E5D62;font-weight: bold;font-size: 20px">
-                        Pottorff >
-                    </div>
+                    <h3 class="col-lg-12 pb-4">
+                        Pottorff > {{$category->name}}
+                    </h3>
                     <div class="col-sm-12 col-md-4 col-lg-3">
                         <div class="filter-category-top">
                             Air Control Dampers
