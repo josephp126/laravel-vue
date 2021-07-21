@@ -58,23 +58,24 @@
     }
 }
 
-.filter-category-top{
-    background-color: #3865A4;
-    color: #fff;
-    padding: 5px 20px;
-    font-weight: 500;
-}
 .filter-category{
     border-bottom: 2px solid #E8E8E8;
     padding: 5px 20px;
     color: #000;
     font-weight: bold;
     cursor: pointer;
-}
-.filter-category:hover{
-    color: #3665A3;
     font-size: 15px;
+
+    &.active {
+        background-color: #3865A4 !important;
+        color: #fff !important;
+    }
+
+    &:hover {
+        color: #3665A3;
+    }
 }
+
 .product-top-title{
     background-color: #D3D3D3;
     text-align: center;

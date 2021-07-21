@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container mt-3">
-        <example-component></example-component>
+        <page-category-manage></page-category-manage>
     </div>
 @endsection
 

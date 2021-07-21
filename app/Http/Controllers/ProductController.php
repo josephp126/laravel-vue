@@ -19,14 +19,12 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-        $category_id = $request->get('type', 1);
-        $category    = Category::find($category_id);
+        $category_id    = $request->get('type', 1);
+        $category       = Category::find($category_id);
+        $subcategory_id = $request->get('sub_type', $category->children()->first()->id ?? '');
         abort_if(!$category, 404);
-        $products = $category->products;
 
-        $data = Product::paginate($request->get('perPage', 50));
-
-        return view('product.index', compact('data', 'category', 'products'));
+        return view('product.index', compact('category_id', 'subcategory_id'));
     }
 
     /**

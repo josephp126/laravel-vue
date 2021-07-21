@@ -56,8 +56,18 @@ class Product extends Model
         return $this->belongsToMany(Category::class, ProductCategory::class);
     }
 
+    public function getImageAttribute()
+    {
+        return $this->images()->first();
+    }
+
     public function images()
     {
         return $this->morphMany(Image::class, 'imageable')->orderBy('sort')->orderBy('id', 'desc');
+    }
+
+    public function resources()
+    {
+        return $this->morphMany(Resource::class, 'resourceable')->orderBy('title');
     }
 }

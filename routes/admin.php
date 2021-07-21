@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\CommandsController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ProductImagesController;
+use App\Http\Controllers\Admin\ProductResourcesController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Api\CarouselSlidesController;
@@ -37,6 +38,8 @@ Route::resources(
         'carousel'      => CarouselController::class,
     ]
 );
+
+Route::resource('product.resource', ProductResourcesController::class)->only('index', 'show');
 
 Route::get('product/{product}/active/toggle', [ProductController::class, 'activeToggle'])->name('product.active.toggle');
 

@@ -25,7 +25,9 @@ class ProductResource extends JsonResource
             'updated_at'  => $this->updated_at,
             'active'      => $this->active,
 
-            'images' => ImageResource::collection($this->images),
+            'image'     => new ImageResource($this->image),
+            'images'    => ImageResource::collection($this->images),
+            'resources' => ResourceResource::collection($this->resources),
         ];
     }
 }

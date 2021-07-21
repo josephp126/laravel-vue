@@ -19,7 +19,7 @@
                 </a>
                 <div class="dropdown-menu">
                     <a href="{{route('admin.product.index')}}" class="dropdown-item">Products</a>
-                    <a href="/" class="dropdown-item">Categories</a>
+                    <a href="{{route('admin.category.index')}}" class="dropdown-item">Categories</a>
                 </div>
             </li>
             <li class="{{ request()->is('news') ? 'active' : '' }} nav-item"><a href="{{ route('admin.news.index') }}"

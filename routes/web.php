@@ -2,12 +2,14 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\CarouselController;
+use App\Http\Controllers\CategoryProductController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ImagesController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RepFinderController;
+use App\Http\Controllers\ResourceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,3 +43,4 @@ Route::get('company', [CompanyController::class, 'index'])->name('company.index'
 //Route::get('category', [CategoryController::class, 'index'])->name('company.index');
 //Route::get('freddy',Category::class);
 Route::get('images/{image}/name/{name}', [ImagesController::class, 'show'])->name('image.request');
+Route::get('resource/{resource}/name/{name}', [ResourceController::class, 'show'])->name('resource.request');

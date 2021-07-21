@@ -15,8 +15,7 @@ class CategoryObserver
     public function created(Category $category)
     {
         if (!$category->order) {
-            $order = (Category::where('parent_id', $request->get('parent_id'))->orderBy('order', 'desc')->first(
-                    )->order ?? 1) + 1;
+            $order = (Category::where('parent_id', request()->get('parent_id'))->orderBy('order', 'desc')->first()->order ?? 1) + 1;
 
             $category->update(compact('order'));
         }

@@ -19,22 +19,17 @@ const Editor = require('@tinymce/tinymce-vue').default;
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component',
-    require('./components/ExampleComponent.vue').default);
-
-Vue.component('basic-input',
-    require('./components/elemements/input.vue').default);
-
-Vue.component('gallery',
-    require('./components/Gallery.vue').default);
-
-Vue.component('carousel-slide-editor',
-    require('./components/CarouselSlideEditor').default);
-
 Vue.component('editor', Editor);
+Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('basic-input', require('./components/elemements/input.vue').default);
+Vue.component('gallery', require('./components/Gallery.vue').default);
+Vue.component('carousel-slide-editor', require('./components/CarouselSlideEditor').default);
 Vue.component('text-editor',
     require('./components/TextEditorComponent.vue').default);
 
+Vue.component('page-product', require('./Pages/Products/Index.vue').default);
+Vue.component('page-product-resource', require('./components/Pages/ProducfResource.vue').default);
+Vue.component('page-category-manage', require('./components/Pages/CategoryManage.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

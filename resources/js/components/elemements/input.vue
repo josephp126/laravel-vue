@@ -11,6 +11,7 @@
             :name="name"
             :placeholder="placeholder"
             :type="type"
+            :multiple="multiple"
         >
         <small v-if="help" :id="helpId" class="form-text text-muted mt-0" v-text="help" />
     </div>
@@ -36,6 +37,9 @@ export default {
         },
         value: {
             default: '',
+        },
+        multiple: {
+            default: false,
         },
     },
     methods: {
