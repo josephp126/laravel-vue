@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Api\CategoryController;
 use App\Models\Category;
+use App\Models\CategoryImage;
 use App\Models\Product;
 use Exception;
 use Illuminate\Contracts\View\View;
@@ -19,12 +21,40 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
+        $c = new CategoryController();
+        $category = new Category();
         $category_id    = $request->get('type', 1);
-        $category       = Category::find($category_id);
-        $subcategory_id = $request->get('sub_type', $category->children()->first()->id ?? '');
-        abort_if(!$category, 404);
+        $categories       = $c->all($request,'');
+        if($request->get('sub_type') !== null)
+        {
+            $subcategory_id = $request->get('sub_type', $categories->id ?? '');
+        }
+        else
+        {
+            $subcategory_id = 0;
+        }
+        abort_if(!$categories, 404);
+        if($request->get('sub_type') !== null) {
+            $auxs = $category->all()->where('parent_id', $_GET["sub_type"]);
+            foreach ($auxs as $aux)
+            {
+                $categoryShow[] = $aux;
+            }
+            for($i = 0;$i < count($categoryShow);$i++)
+            {
+                $auxs = CategoryImage::all()->where('category_id',$categoryShow[$i]->id);
+                foreach ($auxs as $aux){
+                    $categoryShow[$i]->img = $aux->image_url;
+                }
+            }
+        }
+        else
+        {
+            $categoryShow = new Category();
+        }
+        $products = Product:: all()->where('id',1);
 
-        return view('product.index', compact('category_id', 'subcategory_id'));
+        return view('product.index', compact('category_id','categoryShow','categories', 'subcategory_id','products'));
     }
 
     /**

@@ -28,6 +28,10 @@ Route::middleware('auth:api')->get(
 
 Route::put('sort/category/save', [CategoryController::class, 'saveSort']);
 
+
+Route::get('categories',[CategoryController::class,'all']);
+Route::post('images',[CategoryController::class,'image']);
+
 Route::apiResources(
     [
         'category'         => CategoryController::class,

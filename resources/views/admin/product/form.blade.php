@@ -9,7 +9,8 @@
         {!! Form::basicInput('subtitle', null, ['label' => 'Place', 'required' => true]) !!}
         {!! Form::basicInput('more_info', null, ['label' => 'Contractor', 'required' => true]) !!}
         {!! Form::basicSelect('categories[]', \App\Models\Category::ordered()->get()->pluck('name', 'id'), null, ['label' => 'Categories', 'multiple' => true, 'height' => '50']) !!}
-        {!! Form::editor('description', null, ['label' => 'Description']) !!}
+        {!! Form::basicInput('description', null, ['label' => 'Description']) !!}
+{{--        {!! Form::editor('description', null, ['label' => 'Description']) !!}--}}
     </div>
 </div>
 
