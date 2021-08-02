@@ -47,6 +47,7 @@ Route::get('product/resource/{product}', [ProductController::class, 'show']);
 
 Route::put('product/{product}/images/sort/save', [ProductImagesController::class, 'saveSort']);
 Route::apiResource('product', ProductController::class)->only('show');
+Route::get('product/details/{id}', [ProductController::class, 'details']);
 Route::apiResource('category.product', CategoryProductController::class)->only('index');
 
 

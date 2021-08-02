@@ -54,8 +54,8 @@
                                 <div style="padding: 5px 10px">
                                     @foreach ($show["products"] as $product)
                                         <div class="feature-item">
-                                            <span style="color:#2D9BB7">{{$product["title"]}}</span>
-                                            <i>{{$product["subtitle"] }}</i>
+                                            <a href="product/details/{{$product["id"]}}"><span style="color:#2D9BB7">{{$product["title"]}}</span></a>
+                                            <i>{{$product["more_info"] }}</i>
                                         </div>
                                     @endforeach
                                 </div>

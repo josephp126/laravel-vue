@@ -6,8 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Jobs\SaveImageJob;
 use App\Models\Image;
 use App\Models\Product;
+use App\Models\ProductImage;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use DB;
 
 class ProductImagesController extends Controller
 {
@@ -22,9 +24,11 @@ class ProductImagesController extends Controller
     {
         $last_image = $product->images()->orderBy('sort', 'desc')->first();
         $sort       = ($last_image->sort ?? 0) + 1;
-
         $this->dispatch(new SaveImageJob($product, $request->file('file'), true, compact('sort')));
 
+         $last_id = DB::table('images')->max('id');
+        $q = "insert into product_images (image_id, product_id) values ('".$last_id."', '".$product->id."')";
+        DB::insert($q);
         return response()->noContent();
     }
 

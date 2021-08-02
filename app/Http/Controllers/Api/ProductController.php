@@ -9,6 +9,7 @@ use App\Models\Resource;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use DB;
+use Illuminate\Http\Resources\Json\JsonResource;
 
 class ProductController extends Controller
 {
@@ -23,6 +24,12 @@ class ProductController extends Controller
         $product_id = $product->getAttributes()["id"];
         $product->resources = \App\Models\ProductResource::all()->where('product_id',$product_id);
         return new ProductResource($product);
+    }
+    public function details(Request $request)
+    {
+        $product = Product::all()->where('id',$request->id);
+        $product->resources = ProductResource::get('')->where('product_id',$request);
+        return $product;
     }
     public function postResources(Request $request)
     {

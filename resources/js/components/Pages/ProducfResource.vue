@@ -38,7 +38,7 @@
                     <button class="btn btn-primary" style="float: left;margin-right: 10px;" title="Edit" type="button" @click="reload(resource)">
                         <i class="icon-edit" />
                     </button>
-                    <a :href="`http://localhost:8000/${resource.filename}`" target="_blank" class="btn btn-primary" title="See more" type="button" >
+                    <a :href="`http://dev.pottorff.com/${resource.filename}`" target="_blank" class="btn btn-primary" title="See more" type="button" >
                         <i class="icon-file-text"></i>
                     </a>
                 </td>
