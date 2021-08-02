@@ -11,6 +11,7 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use DB;
 
 //use Illuminate\Http\Response;
 
@@ -44,6 +45,7 @@ class ProductController extends Controller
         $product = Product::create($request->validated());
 
         $request->session()->flash('admin.product.id', $product->id);
+        DB::insert("INSERT INTO `product_categories`(`product_id`,`category_id`) VALUES ('".$product->id."','".$request->post("categories")[0]."')");
 
         return redirect()->route('admin.product.index');
     }

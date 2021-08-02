@@ -23,7 +23,9 @@ class Category extends Model
     protected $fillable = [
         'name',
         'parent_id',
+        'subcategories',
         'root_id',
+        'img',
         'order',
     ];
 
@@ -53,11 +55,16 @@ class Category extends Model
 
     public function children()
     {
-        return $this->hasMany(__CLASS__, 'id', 'parent_id')->ordered();
+        return $this->hasMany(__CLASS__, 'parent_id', 'id')->ordered();
     }
 
     public function scopeOrdered($query)
     {
         return $query->orderBy('order')->orderBy('name');
+    }
+
+    public function products()
+    {
+        return $this->belongsToMany(Product::class, 'product_categories');
     }
 }

@@ -53,10 +53,17 @@
                             <page-category-manage :parent_id="category.id"></page-category-manage>
                         </div>
                     </div>
+                    <form action="/api/images" v-if="!category.subcategories" enctype="multipart/form-data" method="post">
+                        <input type="file" name="image">
+                        <input type="submit" value="submit">
+                        <input type="text" :value="`${category.id}`" name="category_id" style="visibility: hidden">
+                    </form>
+
                 </div>
             </draggable>
             <div v-if="!categories.length">
                 Nothing to show here.
+
             </div>
         </div>
     </div>
@@ -65,6 +72,7 @@
 <script>
 import draggable from 'vuedraggable';
 import axios from 'axios';
+import Input from "../elemements/input";
 
 export default {
     props: ['parent_id'],
@@ -75,7 +83,7 @@ export default {
             newCategory: '',
         };
     },
-    components: { draggable },
+    components: {Input, draggable },
     watch: {
         categories (val) {
             if (!this.loaded) {
@@ -110,6 +118,7 @@ export default {
             const data = {
                 parent_id: this.parent_id || '',
                 name: this.newCategory,
+                subcategories: this.categories.subcategories,
             };
 
             axios.post('/api/category', data).then(({ data }) => {

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\CategoryProductController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\ProductImagesController;
 use App\Http\Controllers\Api\ProductResourcesController;
@@ -27,6 +28,10 @@ Route::middleware('auth:api')->get(
 
 Route::put('sort/category/save', [CategoryController::class, 'saveSort']);
 
+
+Route::get('categories',[CategoryController::class,'all']);
+Route::post('images',[CategoryController::class,'image']);
+
 Route::apiResources(
     [
         'category'         => CategoryController::class,
@@ -35,8 +40,15 @@ Route::apiResources(
     ]
 );
 
+Route::post('product/resource', [ProductController::class, 'postResources']);
+Route::post('product/resource/put', [ProductController::class, 'putResources']);
+Route::post('product/resource/delete', [ProductController::class, 'deleteResources']);
+Route::get('product/resource/{product}', [ProductController::class, 'show']);
+
 Route::put('product/{product}/images/sort/save', [ProductImagesController::class, 'saveSort']);
 Route::apiResource('product', ProductController::class)->only('show');
+Route::get('product/details/{id}', [ProductController::class, 'details']);
+Route::apiResource('category.product', CategoryProductController::class)->only('index');
 
 
 
