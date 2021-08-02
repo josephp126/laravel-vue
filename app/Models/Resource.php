@@ -49,6 +49,11 @@ class Resource extends Model
 
     protected $appends = ['url'];
 
+
+    /**
+     * @var \App\Http\Resources\Api\ProductResource|mixed
+     */
+
     public function user()
     {
         return $this->belongsTo(User::class);

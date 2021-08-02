@@ -57,6 +57,11 @@ class ProductController extends Controller
         return view('product.index', compact('category_id','categoryShow','categories', 'subcategory_id','products'));
     }
 
+    public function details()
+    {
+        $categories = new Category();
+        return view('product.details');
+    }
     /**
      * Show the form for creating a new resource.
      *

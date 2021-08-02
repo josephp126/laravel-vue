@@ -4,6 +4,8 @@ namespace App\Http\Resources\Api;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
 class ProductResource extends JsonResource
 {
@@ -30,4 +32,5 @@ class ProductResource extends JsonResource
             'resources' => ResourceResource::collection($this->resources),
         ];
     }
+
 }

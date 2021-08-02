@@ -40,6 +40,10 @@ Route::apiResources(
     ]
 );
 
+Route::post('product/resource', [ProductController::class, 'postResources']);
+Route::post('product/resource/put', [ProductController::class, 'putResources']);
+Route::post('product/resource/delete', [ProductController::class, 'deleteResources']);
+Route::get('product/resource/{product}', [ProductController::class, 'show']);
 
 Route::put('product/{product}/images/sort/save', [ProductImagesController::class, 'saveSort']);
 Route::apiResource('product', ProductController::class)->only('show');

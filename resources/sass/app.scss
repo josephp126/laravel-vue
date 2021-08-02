@@ -76,7 +76,16 @@
         color: #3665A3;
     }
 }
-
+.main-top-nav{
+    z-index: 1000!important;
+}
+.modal-dialog{
+    z-index: 1001!important;
+}
+.modal-backdrop{
+    z-index: 1000!important;
+    display: none;
+}
 .product-top-title{
     background-color: #D3D3D3;
     text-align: center;

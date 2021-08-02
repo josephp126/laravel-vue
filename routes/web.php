@@ -26,6 +26,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome')->name('home');
 Route::view('/products', 'products')->name('products');
+Route::view('/product/details/{product}', 'product.details')->name('products-details');
 Route::view('/literature', 'literature')->name('literature');
 
 Auth::routes();
@@ -36,6 +37,7 @@ Route::get('carousel/{carousel:slug}/style.css', [CarouselController::class, 'ca
 
 Route::resource('news', NewsController::class)->only('index', 'show');
 Route::resource('product', ProductController::class)->only('index');
+//Route::resource('product/details/{product}', [ProductController::class,'details'])->only('details');
 Route::post('quick/message', [ContactController::class, 'store'])->name('contact.store');
 Route::get('about', [AboutController::class, 'index'])->name('about.index');
 Route::get('contact', [ContactController::class, 'index'])->name('contact.index');
