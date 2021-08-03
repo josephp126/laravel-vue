@@ -36,7 +36,7 @@ class ProductController extends Controller
     public function details(Request $request, Product $product)
     {
         $category_id    = $request->get('type', 1);
-        $categories     = Category::getChildrenRecursively();
+        $categories     = Category::childrenRecursively($request->get('parent_id'))->get();
         $subcategory_id = $request->get('sub_type', 0);
         $categoryShow   = [];
 

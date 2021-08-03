@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('admin.layouts.main-admin')
 
 {{--@section('pageTitle', _PAGE_TITLE_ )--}}
 

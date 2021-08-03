@@ -33,24 +33,27 @@
                             </p>
                         </div>
                         <div>
-                            <div class="row" >
+                            <div class="row">
                                 <div class="col-8">
                                     <h3 style="font-size: 23px">APPLICATION</h3><br>
                                     <p style="font-size: 15px">
-                                        {{$product->description}}
+                                        {!! $product->description !!}
                                     </p>
                                 </div>
                                 <div class="col-4">
                                     @foreach($product->images as $images)
-                                    <img src="http://{{$_SERVER["HTTP_HOST"]}}/images/{{$images->uuid}}/name/{{$images->title}}" style="width:150px">
+                                        <img src="{{$images->url}}" style="width:150px">
                                     @endforeach
                                 </div>
-                                <div class="col-6" style="border-radius: 10px;background-color: #FBFBFB;padding: 10px;border: 1px solid #DEDEDE">
+                                @if($product->resources->count()>0)
+                                    <div class="col-6" style="border-radius: 10px;background-color: #FBFBFB;padding: 10px;border: 1px solid #DEDEDE">
 
-                                    @foreach ($product->resources as $resources)
-                                        <div ><input type="checkbox" style="padding-right: 10px"> <a target="blank" href="http://{{$_SERVER["HTTP_HOST"]}}/{{$resources[0]->filename}}">{{$resources[0]->title}}</a></div>
-                                    @endforeach
-                                </div>
+                                        @foreach ($product->resources as $resources)
+                                            <div><input type="checkbox" style="padding-right: 10px"> <a target="blank" href="http://{{$_SERVER["HTTP_HOST"]}}/{{$resources[0]->filename}}">{{$resources[0]->title}}</a>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                @endif
                             </div>
                         </div>
                     </div>
