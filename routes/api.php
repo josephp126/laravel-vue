@@ -29,8 +29,8 @@ Route::middleware('auth:api')->get(
 Route::put('sort/category/save', [CategoryController::class, 'saveSort']);
 
 
-Route::get('categories',[CategoryController::class,'all']);
-Route::post('images',[CategoryController::class,'image']);
+Route::get('categories', [CategoryController::class, 'all']);
+Route::post('images/{category}', [CategoryController::class, 'image']);
 
 Route::apiResources(
     [
