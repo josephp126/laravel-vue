@@ -53,10 +53,10 @@
                             <page-category-manage :parent_id="category.id"></page-category-manage>
                         </div>
                     </div>
-                    <form action="/api/images" v-if="!category.subcategories" enctype="multipart/form-data" method="post">
+                    <form v-if="!category.subcategories" :action="`/api/images/${category.id}`" enctype="multipart/form-data" method="post">
                         <input type="file" name="image">
                         <input type="submit" value="submit">
-                        <input type="text" :value="`${category.id}`" name="category_id" style="visibility: hidden">
+                        <input :value="category.id" name="category_id" type="hidden">
                     </form>
 
                 </div>
@@ -72,7 +72,7 @@
 <script>
 import draggable from 'vuedraggable';
 import axios from 'axios';
-import Input from "../elemements/input";
+import Input from '../elemements/input';
 
 export default {
     props: ['parent_id'],

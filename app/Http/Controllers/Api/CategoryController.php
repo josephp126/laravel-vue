@@ -7,10 +7,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\CategoryUpdateRequest;
 use App\Http\Requests\Api\CategoryStoreRequest;
 use App\Http\Resources\Api\CategoryResource;
-use App\Http\Resources\CategoryProductResource;
-use App\Http\Resources\Api\ProductResource;
+use App\Jobs\SaveImageJob;
 use App\Models\Category;
-use App\Models\CategoryImage;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
@@ -24,58 +22,26 @@ class CategoryController extends Controller
      */
     public function index(Request $request)
     {
-        $categories = Category::where('parent_id', $request->get('parent_id'))->ordered()->get();
-
-        for ($i = 0; $i < count($categories);$i++)
-        {
-            $sub_categories = Category::where('parent_id',$categories[$i]->id)->ordered()->get();
-            $categories[$i]->subcategories = count($sub_categories);
-            unset($sub_categories);
-        }
-        //$categories->sub_categories = $subcategories;
-        return $categories;
-        //return CategoryResource::collection($categories);
+        return Category::childrenRecursively($request->get('parent_id'))->get();
     }
-    public function image(Request $request)
+
+    public function image(Request $request, Category $category)
     {
-        if($request->hasFile("image"))
-        {
-            $file = $request->file("image");
-            $name = "IMG_".time().".".$file->guessExtension();
-            $ruta = public_path("images/categories/".$name);
-            copy($file,$ruta);
-            (new \App\Models\CategoryImage)->upImage($name, $request->input('category_id'));
-            return redirect('admin/category');
-        }
-        else
-        {
-            dd("ERROR");
-        }
+        abort_if(!$request->hasFile("image"), 422, 'missing_file');
+
+        $this->dispatch(new SaveImageJob($category, $request->file('image')));
+
+        return redirect()->back();
     }
-    public function all(Request $request,$parent = '')
+
+    public function all(Request $request, $parent_id = null)
     {
-        $data = array();
-        if(empty($parent))
-            $categories = Category::all()->where('parent_id',null);
-        else {
-            $categories = Category::all()->where('parent_id', $parent);
+        if (($id = $request->get('id')) !== null) {
+            return Category::with(['image', 'products', 'sub_categories'])->find($id);
         }
-
-        foreach ($categories as $category) {
-        $data[] = [
-            'id'                   => $category->id,
-            'name'                 => $category->name,
-            'parent_id'            => $category->parent_id,
-            'order'                => $category->order,
-            'updated_at'           => $category->updated_at,
-            'updated_at_formatted' => $category->updated_at->format(config('app.formats.table_datetime')),
-
-            'products'       => ProductResource::collection($category->products),
-            'sub_categories' => CategoryController::all($request,$category->id),
-        ];
-        }
-        return $data;
+        return Category::childrenRecursively($parent_id)->with('image')->get();
     }
+
     public function saveSort(Request $request)
     {
         $ids = $request->get('ids', []);
