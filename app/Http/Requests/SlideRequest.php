@@ -16,6 +16,7 @@ class SlideRequest extends FormRequest
 
     public function authorize()
     {
+        dd("dfdsa");
         return auth()->user()->can('work-pottorff');
     }
 }
